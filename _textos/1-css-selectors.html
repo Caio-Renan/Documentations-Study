@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        p {
+            text-align: center;
+            color: green;
+        }
+
+        #id2 {
+            text-align: center;
+            color: yellowgreen;
+        }
+        
+        .center {
+            text-align: center;
+            color: red;
+        }
+
+        p.center2 {
+            text-align: center;
+            color: goldenrod;
+        }
+
+        #center {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 12pt;
+        }
+
+        p.center3 {
+            text-align: center;
+            color: orange;
+        }
+
+        p.large {
+            font-size: 200%;
+        }
+
+        * {
+            text-indent: 15pt;
+        }
+
+        h1#center4, h2#center4, p#center4 {
+            color: royalblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Temos 5 categorias de seletores:</h1>
+    <ul>
+        <li>Simple selectors (select elements based on name, id, class)</li>
+        <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+        <li>Pseudo-class selectors (select elements based on a certain state)</li>
+        <li>Pseudo-elements selectors (select and style a part of an element)</li>
+        <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+    </ul>
+    <h1>Sobre os seletores simples nós temos:</h1>
+    <h1>Element selector</h1>
+    <h2>Example:</h2>
+    <p>Tudo que estiver entre a tag p vai ficar centralizado e com cor verde</p>
+    <p id="id1">Mesmo uma tag p com id (essa). Então pense bem se vai querer que a formatação vá para todos</p>
+    
+    <h1>ID selector</h1>
+    <h2>Example:</h2>
+    <p id="id2">Esse p aqui tem o id pré formatado e por isso não está igual aos outros</p>
+    <p>Esse não tem</p>
+
+    <h1>Class selector</h1>
+    <h2>Example 1 (mudando qualquer tag que tenha x class):</h2>
+    <h1 class="center">Esse h1 tem uma class pré formatada, por isso está assim</h1>
+    <p class="center">Esse p tem uma class pré formatada e, como eu pedi para alterar todos que tem x class, ele também está igual ao h1, mesmo sendo de tags diferentes.</p> 
+    
+    <h2>Example 2 (mudando qualquer tag que tenha x class):</h2>
+    <h3 class="center2">Eu tenho a mesma class que p, mas não fui escolhido, por isso estou diferente</h3>
+    <p class="center2">This paragraph will be goldenrod and center-aligned.</p>
+
+    <h2>Example 3 (mudando tags com 1 e 2 class):</h2>
+    <h2 id="center">Todos as tags a seguir tem a class center3, mas só a última tem a class large também, separado por um espaço.</h2>
+    <h1 class="center3">This heading will not be affected</h1>
+    <p class="center3">This paragraph will be orange and center-aligned.</p>
+    <p class="center3 large">This paragraph will be orange, center-aligned, and in a large font-size.</p>
+    
+    <h1>Universal selector</h1>
+    <h2>Repare que todos os textos estão com um leve espaçamento da margem na primeira linha , isso ocorre porque usei o seletor *{} que faz comque todos os elementos html do documento seja de x jeito. Aparentemente algo que esteja fora de tags não é afetado</h2>
+    Estou sem tag, aparentemente o seletor universal não afeta quem não tem tag.
+
+    <h1>Grouping selector</h1>
+    <h2 id="center">Como todos os itens a seguir terão a mesma formatação e são de tags diferentes, basta você colocar eles separados por vírgulas no CSS, exemplo: h1, h2, p {}.</h2>
+    <h1 id="center4">Hello World!</h1>
+    <h2 id="center4">Smaller heading!</h2>
+    <p id="center4">This is a paragraph.</p>
+</body>
+</html>
