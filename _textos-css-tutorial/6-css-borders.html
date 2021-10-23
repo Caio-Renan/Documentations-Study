@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Borders</title>
+    <link rel="stylesheet" href="../_css/how-to-add-css.css"/>
+    <style>
+        h2 {
+            padding: 5px;
+            text-align: center;
+        }
+        
+        span {
+            font-weight: bold;
+            color: midnightblue;
+        }
+        h2.dotted {border-style: dotted;}
+        h2.dashed {border-style: dashed;}
+        h2.solid {border-style: solid;}
+        h2.double {border-style: double;}
+        h2.groove {border-style: groove; border-color: orange; border-width: 10px;}
+        h2.ridge {border-style: ridge; border-color: orangered; border-width: 10px;}
+        h2.inset {border-style: inset; border-color: salmon; border-width: 10px;}
+        h2.outset {border-style: outset;  border-color: sandybrown; border-width: 10px;}
+        h2.none {border-style: none;}
+        h2.hidden {border-style: hidden;}
+        h2.mix {border-style: dotted dashed solid double;}
+    </style> 
+</head>
+<body>
+    <h1>CSS Borders</h1>
+    <p>Você pode editar o estilo, a largura e a cor da borda de um elemento</p>
+    <h2 style="border: 2px solid black;">Eu tenho bordas em todos os lados</h2>
+    <h2 style="border-bottom: 2px solid orange; color: orange;">Eu tenho bordas somente embaixo</h2>
+    <h1>CSS Border Style</h1>
+    <p>Você pode alterar o tipo de borda usando "border-style: ;"</p>
+    <p>Se você não usar "border-style: ;" ou ao menos selecionar esse parâmetro, as outras formatações de borda não funcionarão.</p>
+    <p>Você pode selecionar esses tipos de borda:</p>
+    <ul type="circle">
+        <li><span>dotted</span> - Cria uma borda pontilhada;</li>
+        <li><span>dashed</span> - Cria uma borda tracejada;</li>
+        <li><span>solid</span> - Cria uma borda sólida;</li>
+        <li><span>double</span> - Cria uma borda dupla</li>
+        <li><span>groove</span> - Cria uma borda 3D em que a borda superior esquerda assumirá um tom diferente da cor selecionada. O efeito depende da cor da borda. Parece um quadro, da uma impressão de profundidade.</li>
+        <li><span>ridge</span> - Cria uma borda 3D em que a borda superior esquerda assumirá a cor selecionada. O efeito depende da cor da borda. Parece um quadro, da uma impressão de profundidade.</li>
+        <li><span>inset</span> - Cria uma borda 3D em que a borda superior esquerda assumirá um tom diferente da cor selecionada. O efeito depende da cor da borda.</li>
+        <li><span>outset</span> - Cria uma borda 3D em que a borda superior esquerda assumirá um tom a cor selecionada. O efeito depende da cor da borda.</li>
+        <li><span>none</span> - O elemento fica sem borda</li>
+        <li><span>hidden</span> - Cria uma borda escondida. Não sei bem pra que serve.</li>
+    </ul>
+    <p>Veja os exemplos a seguir:</p>
+    <h2 class="dotted">A dotted border.</h2>
+    <h2 class="dashed">A dashed border.</h2>
+    <h2 class="solid">A solid border.</h2>
+    <h2 class="double">A double border.</h2>
+    <h2 class="groove">A groove border.</h2>
+    <h2 class="ridge">A ridge border.</h2>
+    <h2 class="inset">An inset border.</h2>
+    <h2 class="outset">An outset border.</h2>
+    <h2 class="none">No border.</h2>
+    <h2 class="hidden">A hidden border.</h2>
+    <h2 class="mix">A mixed border.</h2>
+
+    
+</body>
+</html>
