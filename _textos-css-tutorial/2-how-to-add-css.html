@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../_css/how-to-add-css.css"/>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
     <title>How to Add CSS</title>
     <style>
         p {
@@ -21,29 +22,33 @@
     </style>
 </head>
 <body>
-    <h1>Nós temos 3 formas de adicionar CSS ao documento, essas são:</h1>
-    <ul>
-        <li>External CSS</li>
-        <li>Internal CSS</li>
-        <li>Inline CSS</li>
-    </ul>
-    <h1>External CSS</h1>
-    <p>Serve para quando você já tem um CSS pronto que vai servir para várias páginas, ele ficará fora do documento, num arquivo a parte. Para usá-lo link o seu arquivo HTML ao do CSS colocando dentro da tag: link rel="stylesheet" href="caminho-onde-esta-o-arquivo-css".</p>
-    <p>O text-indent, o tamanho das letras, a cor de fundo e a font-family foram definidas num arquivo fora daqui. Lá não terão tags, somente seletores e blocos de declaração</p>
-    <h1>Internal CSS</h1>
-    <p>Nesse caso a formatação fica dentro da tag style que fica dentro da tag head. Eu mudei os símbolos das listas dentro desse documento.</p>
-    <h1>Inline CSS</h1>
-    <p>Nesse caso você vai colocar uma formatação para uma tag <span style="color: royalblue;">específica</span> usando o parâmetro <span style="font-weight: bold;">style</span> dentro da tag.</p>
-    <h1>Multiple Style Sheets</h1>
-    <p>Em alguns casos você pode acabar formatando um mesmo elemento do seu documento internamente e externamente. A ordem de sobreposição depende de quem você colocou para vir primeiro lá no head, se você linkou o documento ao stylesheet externo antes de fazer seu CSS interno, o que irá se sobrepor é o que veio depois, no caso, o seu CSS interno. Se fizer o contrário, o CSS externo irá sobrepor.</p>
-    <p>Nesse documento eu coloquei o link primeiro, logo, o tamanho das letras do parágrafo são iguais aos que coloquei no CSS interno.</p>
-    <h1>Cascading Order</h1>
-    <p>Caso tenham muitos estilos para um elemento html, a ordem a seguir será seguida:</p>
-    <ol type="1">
-        <li>Inline style (inside an HTML element)</li>
-        <li>External and internal style sheets (in the head section)</li>
-        <li>Browser default</li>
-    </ol>
-    <p>Ou seja, a inline sobrepõe todos, tem o maior nível de prioridade.</p>
+    <div id="link">
+        <div id="explicacao">
+            <h1>Nós temos 3 formas de adicionar CSS ao documento, essas são:</h1>
+            <ul>
+                <li>External CSS</li>
+                <li>Internal CSS</li>
+                <li>Inline CSS</li>
+            </ul>
+            <h1>External CSS</h1>
+            <p>Serve para quando você já tem um CSS pronto que vai servir para várias páginas, ele ficará fora do documento, num arquivo a parte. Para usá-lo link o seu arquivo HTML ao do CSS colocando dentro da tag: link rel="stylesheet" href="caminho-onde-esta-o-arquivo-css".</p>
+            <p>O text-indent, o tamanho das letras, a cor de fundo e a font-family foram definidas num arquivo fora daqui. Lá não terão tags, somente seletores e blocos de declaração</p>
+            <h1>Internal CSS</h1>
+            <p>Nesse caso a formatação fica dentro da tag style que fica dentro da tag head. Eu mudei os símbolos das listas dentro desse documento.</p>
+            <h1>Inline CSS</h1>
+            <p>Nesse caso você vai colocar uma formatação para uma tag <span style="color: royalblue;">específica</span> usando o parâmetro <span style="font-weight: bold;">style</span> dentro da tag.</p>
+            <h1>Multiple Style Sheets</h1>
+            <p>Em alguns casos você pode acabar formatando um mesmo elemento do seu documento internamente e externamente. A ordem de sobreposição depende de quem você colocou para vir primeiro lá no head, se você linkou o documento ao stylesheet externo antes de fazer seu CSS interno, o que irá se sobrepor é o que veio depois, no caso, o seu CSS interno. Se fizer o contrário, o CSS externo irá sobrepor.</p>
+            <p>Nesse documento eu coloquei o link primeiro, logo, o tamanho das letras do parágrafo são iguais aos que coloquei no CSS interno.</p>
+            <h1>Cascading Order</h1>
+            <p>Caso tenham muitos estilos para um elemento html, a ordem a seguir será seguida:</p>
+            <ol type="1">
+                <li>Inline style (inside an HTML element)</li>
+                <li>External and internal style sheets (in the head section)</li>
+                <li>Browser default</li>
+            </ol>
+            <p>Ou seja, a inline sobrepõe todos, tem o maior nível de prioridade.</p>
+        </div>
+    </div>
 </body>
 </html>
