@@ -19,8 +19,10 @@ div#link {
 
 p {
     font-size: 12pt;
+    text-indent: 20pt;
+    
 }
 
-* {
+h1, h2, h3, h4, h5, h6 {
     text-indent: 20pt;
 }
