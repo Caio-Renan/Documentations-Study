@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Outline</title>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <style>
+        h2 {
+            text-align: center;
+            padding: 5px;
+        }
+
+        h2#um {
+            border: 5px solid orange;
+            outline: orangered solid 10px;
+            margin: 20px 20px auto 20px;
+        }
+
+        h2#dois {
+            border: 5px solid lightblue;
+            margin: 20px;
+        }
+
+        h2#tres {
+            border: 5px solid lightblue;
+            outline: steelblue solid 25px;
+            margin: 0px 20px auto 20px;
+        }
+
+        span {
+            font-weight: bold;
+            color: midnightblue;
+        }
+
+        h3 {
+            outline-color: midnightblue;
+            border: 3px solid olivedrab;
+            text-align: center;
+            padding: 5px;
+            margin: 15px 20px 30px 20px;
+        }
+
+        h3.dotted {outline-style: dotted;}
+        h3.dashed {outline-style: dashed;}
+        h3.solid {outline-style: solid;}
+        h3.double {outline-style: double;}
+        h3.groove {outline-style: groove; outline-color: orange; outline-width: 10px;}
+        h3.ridge {outline-style: ridge; outline-color: orangered; outline-width: 10px;}
+        h3.inset {outline-style: inset; outline-color: salmon; outline-width: 10px;}
+        h3.outset {outline-style: outset; outline-color: sandybrown; outline-width: 10px;}
+
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Outline</h1>
+            <p>Um contorno é uma espécie de "borda" que ficará ao redor da borda, destacando-a. Ela não entra nos cálculos de altura e comprimento, pois fica "fora" do elemento, por isso ela pode acabar sobrepondo elementos próximos.</p>
+            <h2 id="um">Eu tenho uma borda de 5px, um contorno de 10px e uma margin-left e right de 20px.</h2>
+            <p style="margin-top: 30px;">Veja como o contorno pode acabar sobrepondo outros elementos:</p>
+            <h2 id="dois">Ele não respeita meu espaço, mesmo tendo margin de 20px!</h2>
+            <h2 id="tres">Eu tenho uma borda de 5px, um contorno de 25px e uma margin-left e right de 20px.</h2>
+            <p style="margin-top: 40px;">As propriedades que podem ser definidas para o contorno são:</p>
+            <ul type="circle">
+                <li>outline-style</li>
+                <li>outline-color</li>
+                <li>outline-width</li>
+                <li>outline-offset</li>
+                <li>outline</li>
+            </ul>
+            <h1>CSS Outline Style</h1>
+            <p>Para mudar o estilo do contorno use "outline-style: ;".</p>
+            <p>Ele pode assumir os seguintes valores:</p>
+            <ul type="circle">
+                <li><span>dotted</span> - Cria um contorno pontilhado;</li>
+                <li><span>dashed</span> - Cria um contorno tracejado;</li>
+                <li><span>solid</span> - Cria um contorno sólido;</li>
+                <li><span>double</span> - Cria um contorno duplo;</li>
+                <li><span>groove</span> - Cria um contorno 3D em que o contorno superior esquerdo assumirá um tom diferente da cor selecionada. O efeito depende da cor do contorno. Parece um quadro, da uma impressão de profundidade;</li>
+                <li><span>ridge</span> - Cria um contorno 3D em que o contorno superior esquerdo assumirá a cor selecionada. O efeito depende da cor do contorno. Parece um quadro, da uma impressão de profundidade;</li>
+                <li><span>inset</span> - Cria um contorno 3D em que o contorno superior esquerdo assumirá um tom diferente da cor selecionada. O efeito depende da cor do contorno;</li>
+                <li><span>outset</span> - Cria um contorno 3D em que o contorno superior esquerdo assumirá um tom a cor selecionada. O efeito depende da cor do contorno;</li>
+                <li><span>none</span> - O elemento fica sem contorno;</li>
+                <li><span>hidden</span> - Cria um contorno escondido. Não sei bem pra que serve.</li>
+            </ul>
+            <p>Veja os exemplos a seguir:</h3>
+            <h3 class="dotted">A dotted outline with a olivedrab border.</h3>
+            <h3 class="dashed">A dashed outline with a olivedrab border.</h3>
+            <h3 class="solid">A solid outline with a olivedrab border.</h3>
+            <h3 class="double">A double outline with a olivedrab border.</h3>
+            <h3 class="groove">A groove outline with a olivedrab border.</h3>
+            <h3 class="ridge">A ridge outline with a olivedrab border.</h3>
+            <h3 class="inset">An inset outline with a olivedrab border.</h3>
+            <h3 class="outset">An outset outline with a olivedrab border.</h3>
+            <p>Se você não usar "outline-style: ;" ou ao menos selecionar esse parâmetro, as outras formatações de contorno não funcionarão.</p>
+        </div>
+    </div>
+</body>
+</html>
