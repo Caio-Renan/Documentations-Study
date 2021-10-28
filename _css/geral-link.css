@@ -3,12 +3,13 @@
 body {
     background-color: #78b4e3;
     font-family: Arial;
+    font-size: 100%;
 }
 
 div#explicacao {
     background-color: azure;
     margin: -8px auto 50px auto;
-    max-width: 850px;
+    max-width: 65vw;
     padding: 20px;
     min-height: 700px;
 }
