@@ -8,10 +8,10 @@ body {
 
 div#explicacao {
     background-color: azure;
-    margin: -8px auto 50px auto;
+    margin: -8px auto 10vw auto;
     max-width: 65vw;
     padding: 20px;
-    min-height: 700px;
+    min-height: 60vw;
 }
 
 div#link {
