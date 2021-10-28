@@ -8,27 +8,27 @@
     <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
     <link rel="stylesheet" href="../_css/geral-link.css"/>
     <style>
-        h2 {
+        h3 {
             padding: 5px;
             text-align: center;
         }
 
-        h2#um {
+        h3#um {
             border: 2px solid steelblue;
             padding: 0px;
         }
 
-        h2#dois {
+        h3#dois {
             border: 2px solid steelblue;
             padding: 10px;
         }
 
-        h2#tres {
+        h3#tres {
             border: 2px solid steelblue;
             padding: 25px;
         }
 
-        h2#quatro {
+        h3#quatro {
             border: 2px solid orangered;
             padding-top: 15px;
             padding-bottom: 10px;
@@ -36,59 +36,60 @@
             padding-right: 50px;
         }
 
-        h2#cinco {
+        h3#cinco {
             border: 2px solid orangered;
             padding: 0%;
         }
         
-        h2#seis {
+        h3#seis {
             border: 2px solid orangered;
             padding: 10%;
         }
 
-        h2#sete {
+        h3#sete {
             border: 2px solid orangered;
             padding: 25%;
         }
 
-        h2#oito {
+        h3#oito {
             border: 2px solid orangered;
             padding: inherit;
         }
 
-        h2#nove {
+        h3#nove {
             border: 2px solid orange;
             padding: 10px 20px 30px 40px;
         }
 
-        h2#dez {
+        h3#dez {
             background-color: palegreen;
             padding: 0px;
             margin: 10px auto 15px auto;
             width: 300px;
         }
 
-        h2#onze {
+        h3#onze {
             background-color: royalblue;
             margin: 15px auto 10px auto;
             padding: 25px;
             width: 300px;
         }
 
-        h2#doze {
+        h3#doze {
             background-color: palegreen;
             margin: 15px auto 10px auto;
             padding: 0px;
             width: 300px;
         }
 
-        h2#treze {
+        h3#treze {
             background-color: royalblue;
             margin: 15px auto 10px auto;
             padding: 25px;
             width: 300px;
             box-sizing: border-box;
         }
+
         div#exemplos {
             padding: 15px;
         }
@@ -98,10 +99,11 @@
     <div id="link">
         <div id="explicacao">
             <h1>CSS Padding</h1>
+            <h2>CSS Padding</h2>
             <p>O padding é usado para modificar a distância entre o conteúdo de uma tag e a sua borda interna.</p>
-            <h2 id="um">Eu não tenho padding.</h2>
-            <h2 id="dois">Eu tenho 10px de padding.</h2>
-            <h2 id="tres">Eu tenho 25px de padding.</h2>
+            <h3 id="um">Eu não tenho padding.</h3>
+            <h3 id="dois">Eu tenho 10px de padding.</h3>
+            <h3 id="tres">Eu tenho 25px de padding.</h3>
             <p>Você pode adicionar padding para cada lado que desejar, basta colocar "padding-lado: ;", exemplo: padding-top: ;.</p>
             <p>Você pode colocar os seguintes valores para o padding:</p>
             <ul type="circle">
@@ -112,30 +114,30 @@
             </ul>
             <p>Exemplos:</p>
             <div id="exemplos">
-                <h2 id="quatro">Eu tenho um padding no topo de 15px, em baixo de 10px, na esquerda de 30px e na direita de 50px.</h2>
-                <h2 id="cinco">Eu tenho um padding de 0%.</h2>
-                <h2 id="seis">Eu tenho um padding de 10%.</h2>
-                <h2 id="sete">Eu tenho um padding de 25%.</h2>
-                <h2 id="oito">Eu herdei o padding de meu elemento-pai (15px);</h2>
+                <h3 id="quatro">Eu tenho um padding no topo de 15px, em baixo de 10px, na esquerda de 30px e na direita de 50px.</h3>
+                <h3 id="cinco">Eu tenho um padding de 0%.</h3>
+                <h3 id="seis">Eu tenho um padding de 10%.</h3>
+                <h3 id="sete">Eu tenho um padding de 25%.</h3>
+                <h3 id="oito">Eu herdei o padding de meu elemento-pai (15px);</h3>
             </div>
-            <h1>Padding - Shorthand Property</h1>
+            <h2>Padding - Shorthand Property</h2>
             <p>Para definir o comprimento de cada padding coloque os valores no sentido horário (cima, direita, baixo, esquerda) usando o "padding: ;"</p>
-            <h2 id="nove">Eu tenho um padding no topo de 10px, na direita de 20px, embaixo de de 30px e na esquerda de 40px.</h2>
-            <h1>Regra geral:</h1>
+            <h3 id="nove">Eu tenho um padding no topo de 10px, na direita de 20px, embaixo de de 30px e na esquerda de 40px.</h3>
+            <h2>Regra geral:</h2>
             <ul type="circle">
                 <li>Se tiver 4 valores &rarr; cima, direita, baixo, esquerda;</li>
                 <li>Se tiver 3 valores &rarr; cima, direita e esquerda, baixo;</li>
                 <li>Se tiver 2 valores &rarr; cima e baixo, direita e esquerda;</li>
                 <li>Se tiver 1 valor   &rarr; todos os lados serão iguais.</li>
             </ul>
-            <h1>Padding and Element width</h1>
+            <h2>Padding and Element width</h2>
             <p>A propriedade "width: ;" do CSS define o comprimento da área de conteúdo ("box interna, dentro do padding, border, margin") de um elemento.</p>
             <p>A quantidade de padding adicionada a um elemento será adicionada ao comprimento total do elemento.</p>
-            <h2 id="dez">Eu tenho 0px de padding e 300 de width</h2>
-            <h2 id="onze">Eu também tenho 300 de width, mas tenho 25px de padding, logo meu total é de 350px de width.</h2>
+            <h3 id="dez">Eu tenho 0px de padding e 300 de width</h3>
+            <h3 id="onze">Eu também tenho 300 de width, mas tenho 25px de padding, logo meu total é de 350px de width.</h3>
             <p>Para resolver esse problema use a propriedade "box-sizing: ;". Usando "box-sizing" o valor do width irá se manter mesmo que você adicione padding, o que vai mudar é o espaço de conteúdo interno disponível.</p>
-            <h2 id="doze">Eu tenho 0px de padding e 300 de width</h2>
-            <h2 id="treze">Eu tenho 25px de padding e 300 de width, pois usei "box-sizing: border-box;".</h2>
+            <h3 id="doze">Eu tenho 0px de padding e 300 de width</h3>
+            <h3 id="treze">Eu tenho 25px de padding e 300 de width, pois usei "box-sizing: border-box;".</h3>
         </div>
     </div>
 </body>

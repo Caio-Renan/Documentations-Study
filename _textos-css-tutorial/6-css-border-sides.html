@@ -8,12 +8,12 @@
     <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
     <title>CSS Border Sides</title>
     <style>
-        h2 {
+        h3 {
             padding: 5px;
             text-align: center;
         }
 
-        h2#um {
+        h3#um {
             border-color: steelblue;
             border-top-style: dotted;
             border-bottom-style: dotted;
@@ -22,19 +22,19 @@
             border-width: 5px;
         }
 
-        h2#dois {
+        h3#dois {
             border-width: 5px;
             border-color: steelblue;
             border-style: dotted solid;
         }
 
-        h2#tres {
+        h3#tres {
             border-width: 5px;
             border-color: steelblue;
             border-style: double dashed dotted solid;
         }
 
-        h2#quatro {
+        h3#quatro {
             border-width: 5px;
             border-color: steelblue;
             border-style: double dotted solid;
@@ -44,16 +44,17 @@
 <body>
     <div id="link">
         <div id="explicacao">
-            <h1>CSS Border - Individual Sides</h1>
+            <h1>CSS Border Sides</h1>
+            <h2>CSS Border - Individual Sides</h2>
             <p>Você também pode deixar cada lado da borda com um estilo diferente, basta selecionar cada um colocando top, right, bottom ou left entre "border-style: ;", exemplo: "border-top-style: ;"</p>
-            <h2 id="um">Nesse caso eu criei 4 propriedades para as bordas</h2>
-            <h2 id="dois">Nesse caso eu criei só 1 propriedade que foi: "border-style: dotted solid;" </h2>
+            <h3 id="um">Nesse caso eu criei 4 propriedades para as bordas</h3>
+            <h3 id="dois">Nesse caso eu criei só 1 propriedade que foi: "border-style: dotted solid;"</h3>
             <p>Ou seja, caso você coloque dois valores em "border-style: ;" ele vai ler o primeiro como sendo valores do top e de baixo e o segundo como o da direita e o da esquerda</p>
-            <h2 id="tres">Nesse caso eu criei só 1 propriedade que foi: "border-style: double dashed dotted solid;"</h2>
+            <h3 id="tres">Nesse caso eu criei só 1 propriedade que foi: "border-style: double dashed dotted solid;"</h3>
             <p>Ou seja, quando temos 4 valores, eles serão lidos no sentido horário (cima, direita, baixo, esquerda)</p>
-            <h2 id="quatro">Nesse caso eu criei só 1 propriedade que foi: "border-style: double dotted solid;"</h2>
+            <h3 id="quatro">Nesse caso eu criei só 1 propriedade que foi: "border-style: double dotted solid;"</h3>
             <p>Ou seja, quando temos 3 valores, o primeiro valor será o topo, o segundo valor será do lado esquerdo e direito e o último valor será de baixo.</p>
-            <h1>Regra geral:</h1>
+            <h2>Regra geral:</h2>
             <ul type="circle">
                 <li>Se tiver 4 valores 	&rarr; cima, direita, baixo, esquerda;</li>
                 <li>Se tiver 3 valores 	&rarr; cima, direita e esquerda, baixo;</li>

@@ -8,7 +8,12 @@
     <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
     <link rel="stylesheet" href="../_css/geral-link.css"/>
     <style>
-        h2#um {
+        h3 {
+            text-align: center;
+            padding: 5px;
+        }
+
+        h3#um {
             margin-top: 10px;
             margin-right: 15px;
             margin-bottom: 20px;
@@ -16,29 +21,24 @@
             border: 2px solid orangered;
         }
 
-        h2#dois {
+        h3#dois {
             margin: 10px auto 10px auto;
             border: 2px solid orangered;
         }
         
-        h2#tres {
+        h3#tres {
             margin: 0px 0px 60px 0px;
             border: 2px solid orange;
         }
 
-        h2#quatro {
+        h3#quatro {
             margin: 75px 0px 135px 0px;
             border: 2px solid orange;
         }
         
-        h2#cinco {
+        h3#cinco {
             margin: 0px;
             border: 2px solid orange;
-        }
-
-        h2 {
-            text-align: center;
-            padding: 5px;
         }
     </style>
 </head>
@@ -47,6 +47,7 @@
         <div id="explicacao">
             <h1>CSS Margins</h1>
             <p>As margens são utilizadas para criar espaço entre as bordas externa do elemento e o seu entorno.</p>
+            <h2>CSS Margins</h2>
             <p>Você pode adicionar margin para cada lado que desejar, basta colocar "margin-lado: ;", exemplo: margin-top: ;.</p>
             <p>Você pode colocar os seguintes valores para o margins:</p>
             <ul type="circle">
@@ -56,10 +57,10 @@
                 <li>Inherit - O elemento-filho vai herdar o padding do elemento-pai.</li>
             </ul>
             <p>Valores negativos são permitidos.</p>
-            <h1>Margin - Shorthand Property</h1>
+            <h2>Margin - Shorthand Property</h2>
             <p>Para definir o comprimento de cada margin coloque os valores no sentido horário (cima, direita, baixo, esquerda) usando o "margin: ;"</p>
-            <h2 id="um">Eu tenho um margin no topo de 10px, na direita de 15px, embaixo de de 20px e na esquerda de 25px.</h2>
-            <h1>Regra geral:</h1>
+            <h3 id="um">Eu tenho um margin no topo de 10px, na direita de 15px, embaixo de de 20px e na esquerda de 25px.</h3>
+            <h2>Regra geral:</h2>
             <ul type="circle">
                 <li>Se tiver 4 valores &rarr; cima, direita, baixo, esquerda;</li>
                 <li>Se tiver 3 valores &rarr; cima, direita e esquerda, baixo;</li>
@@ -68,14 +69,14 @@
             </ul>
             <h1>The auto value</h1>
             <p>Você pode colocar a margin da direita e da esquerda como auto para fazer com que ele fique horizontalmente centralizado.</p>
-            <h2 id="dois">Eu estou bem no meio!</h2>
-            <h1>The inherit Value</h1>
+            <h3 id="dois">Eu estou bem no meio!</h3>
+            <h2>The inherit Value</h2>
             <p>Escolhendo "inherit" como valor de "margin: ;" fará com que a margem desse elemento-filho seja igual a do elemento pai.</p>
-            <h1>Margin Collapse</h1>
+            <h2>Margin Collapse</h2>
             <p>Se você colocar um "margin-bottom: ;" de um elemento no valor de 50px e um "margin-top: ;" de um elemento logo abaixo desse no valor de 70px, o valor final da distância entre eles não será 120px, mas sim do valor maior entre os dois, que no caso é 70px. Isso vale somente para o bottom e o top.</p>
-            <h2 id="tres">Eu tenho um margin de 60px.</h2>
-            <h2 id="quatro">E eu de 75px.</h2>
-            <h2 id="cinco">A minha distância do elemento de cima é de 135px, que, a primeira vista, deveria ser a distância do elemento de margin 60px e o de 75px.</h2>
+            <h3 id="tres">Eu tenho um margin de 60px.</h3>
+            <h3 id="quatro">E eu de 75px.</h3>
+            <h3 id="cinco">A minha distância do elemento de cima é de 135px, que, a primeira vista, deveria ser a distância do elemento de margin 60px e o de 75px.</h3>
         </div>
     </div>
 </body>

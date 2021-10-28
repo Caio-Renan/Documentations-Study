@@ -8,23 +8,23 @@
     <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
     <link rel="stylesheet" href="../_css/geral-link.css"/>
     <style>
-        h2 {
+        h3 {
             text-align: center;
             padding: 5px;
         }
 
-        h2#um {
+        h3#um {
             border: 5px solid orange;
             outline: orangered solid 10px;
             margin: 20px 20px auto 20px;
         }
 
-        h2#dois {
+        h3#dois {
             border: 5px solid lightblue;
             margin: 20px;
         }
 
-        h2#tres {
+        h3#tres {
             border: 5px solid lightblue;
             outline: steelblue solid 25px;
             margin: 0px 20px auto 20px;
@@ -35,7 +35,7 @@
             color: midnightblue;
         }
 
-        h3 {
+        h4 {
             outline-color: midnightblue;
             border: 3px solid olivedrab;
             text-align: center;
@@ -43,25 +43,26 @@
             margin: 15px 20px 30px 20px;
         }
 
-        h3#um{
+        h4#um{
             outline: 5px midnightblue solid;
             outline-offset: 10px;
             margin-bottom: 50px;
+            margin-top: 20px;
         }
 
-        h3#dois{
+        h4#dois{
             outline: 10px midnightblue solid;
             outline-offset: 15px;
         }
 
-        h3.dotted {outline-style: dotted;}
-        h3.dashed {outline-style: dashed;}
-        h3.solid {outline-style: solid;}
-        h3.double {outline-style: double;}
-        h3.groove {outline-style: groove; outline-color: orange; outline-width: 10px;}
-        h3.ridge {outline-style: ridge; outline-color: orangered; outline-width: 10px;}
-        h3.inset {outline-style: inset; outline-color: salmon; outline-width: 10px;}
-        h3.outset {outline-style: outset; outline-color: sandybrown; outline-width: 10px;}
+        h4.dotted {outline-style: dotted;}
+        h4.dashed {outline-style: dashed;}
+        h4.solid {outline-style: solid;}
+        h4.double {outline-style: double;}
+        h4.groove {outline-style: groove; outline-color: orange; outline-width: 10px;}
+        h4.ridge {outline-style: ridge; outline-color: orangered; outline-width: 10px;}
+        h4.inset {outline-style: inset; outline-color: salmon; outline-width: 10px;}
+        h4.outset {outline-style: outset; outline-color: sandybrown; outline-width: 10px;}
 
     </style>
 </head>
@@ -69,11 +70,12 @@
     <div id="link">
         <div id="explicacao">
             <h1>CSS Outline</h1>
+            <h2>CSS Outline</h2>
             <p>Um contorno é uma espécie de "borda" que ficará ao redor da borda, destacando-a. Ela não entra nos cálculos de altura e comprimento, pois fica "fora" do elemento, por isso ela pode acabar sobrepondo elementos próximos.</p>
-            <h2 id="um">Eu tenho uma borda de 5px, um contorno de 10px e uma margin-left e right de 20px.</h2>
+            <h3 id="um">Eu tenho uma borda de 5px, um contorno de 10px e uma margin-left e right de 20px.</h3>
             <p style="margin-top: 30px;">Veja como o contorno pode acabar sobrepondo outros elementos:</p>
-            <h2 id="dois">Ele não respeita meu espaço, mesmo tendo margin de 20px!</h2>
-            <h2 id="tres">Eu tenho uma borda de 5px, um contorno de 25px e uma margin-left e right de 20px.</h2>
+            <h3 id="dois">Ele não respeita meu espaço, mesmo tendo margin de 20px!</h3>
+            <h3 id="tres">Eu tenho uma borda de 5px, um contorno de 25px e uma margin-left e right de 20px.</h3>
             <p style="margin-top: 40px;">As propriedades que podem ser definidas para o contorno são:</p>
             <ul type="circle">
                 <li>outline-style</li>
@@ -82,7 +84,7 @@
                 <li>outline-offset</li>
                 <li>outline</li>
             </ul>
-            <h1>CSS Outline Width</h1>
+            <h2>CSS Outline Width</h2>
             <p>A propriedade "outline-width: ;" pode ter os valores a seguir:</p>
             <ul type="circle">
                 <li>thin (geralmente 1 px);</li>
@@ -90,9 +92,9 @@
                 <li>thick (geralmente 5 px);</li>
                 <li>Uma tamanho específico (in, px, pt, cm, etc.).</li>
             </ul>
-            <h1>CSS Outline Color</h1>
+            <h2>CSS Outline Color</h2>
             <p>A propriedade "outline-color: ;" pode ter como valores todos os tipos de definição de cores que você viu até agora e também tem a opção "invert", que serve para garantir que a cor do contorno seja visível independentemente da cor do fundo.</p>
-            <h1>CSS Outline Style</h1>
+            <h2>CSS Outline Style</h2>
             <p>Para mudar o estilo do contorno use "outline-style: ;".</p>
             <p>Ele pode assumir os seguintes valores:</p>
             <ul type="circle">
@@ -107,27 +109,27 @@
                 <li><span>none</span> - O elemento fica sem contorno;</li>
                 <li><span>hidden</span> - Cria um contorno escondido. Não sei bem pra que serve.</li>
             </ul>
-            <p>Veja os exemplos a seguir:</h3>
-            <h3 class="dotted">A dotted outline with a olivedrab border.</h3>
-            <h3 class="dashed">A dashed outline with a olivedrab border.</h3>
-            <h3 class="solid">A solid outline with a olivedrab border.</h3>
-            <h3 class="double">A double outline with a olivedrab border.</h3>
-            <h3 class="groove">A groove outline with a olivedrab border.</h3>
-            <h3 class="ridge">A ridge outline with a olivedrab border.</h3>
-            <h3 class="inset">An inset outline with a olivedrab border.</h3>
-            <h3 class="outset">An outset outline with a olivedrab border.</h3>
+            <p>Veja os exemplos a seguir:</p>
+            <h4 class="dotted">A dotted outline with a olivedrab border.</h4>
+            <h4 class="dashed">A dashed outline with a olivedrab border.</h4>
+            <h4 class="solid">A solid outline with a olivedrab border.</h4>
+            <h4 class="double">A double outline with a olivedrab border.</h4>
+            <h4 class="groove">A groove outline with a olivedrab border.</h4>
+            <h4 class="ridge">A ridge outline with a olivedrab border.</h4>
+            <h4 class="inset">An inset outline with a olivedrab border.</h4>
+            <h4 class="outset">An outset outline with a olivedrab border.</h4>
             <p>Se você não usar "outline-style: ;" ou ao menos selecionar esse parâmetro, as outras formatações de contorno não funcionarão.</p>
-            <h1>CSS Outline Shorthand</h1>
+            <h2>CSS Outline Shorthand</h2>
             <p>Você pode encurtar o código de contorno usando "outline: ;", você deve selecionar alguns dos valores a seguir (a ordem não importa):</p>
             <ul type="circle">
                 <li>outline-width;</li>
                 <li>outline-style (necessário);</li>
                 <li>outline-color.</li>
             </ul>
-            <h1>CSS Outline Offset</h1>
+            <h2>CSS Outline Offset</h2>
             <p>A propriedade "outline-offset: ;" adiciona espaço entre o contorno e a borda externa. Esse espaço será transparente.</p>
-            <h3 id="um">Offset de 10px. Tive que colocar 50px de margin-bottom para o elemento de baixo não me sobrepor.</h3>
-            <h3 id="dois">Offset de 15px.</h3>
+            <h4 id="um">Offset de 10px. Tive que colocar 50px de margin-bottom para o elemento de baixo não me sobrepor.</h4>
+            <h4 id="dois">Offset de 15px.</h4>
         </div>
     </div>
 </body>
