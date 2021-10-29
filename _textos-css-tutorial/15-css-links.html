@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Links</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+    <style>
+        div.examples {
+            text-align: center;
+        }
+
+        div.examples a.five, a.six, a.seven {
+            text-align: center;
+            padding: 10px;
+        }
+
+        div.examples a.six {
+            margin-right: 10vw;
+        }
+
+        a.one {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            color: steelblue;
+        }
+
+        a.two {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: normal;
+            font-size: 24px;
+            color: olive;
+            text-decoration: none;
+        }
+
+        a.three {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: bolder;
+            font-size: 24px;
+            color: olive;
+            text-decoration: overline;
+            text-transform: uppercase;
+        }
+        
+        /*Refers to group four*/
+        a.four:link {
+            color: olivedrab;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        a.four:visited {
+            color: goldenrod;
+        }
+
+        a.four:hover {
+            color: tomato;
+        }
+        
+        a.four:active {
+            color: steelblue;
+        }
+
+        /*Refers to group five*/
+        a.five:link {
+            color: olivedrab;
+            font-size: 20px;
+            text-decoration: none;
+            background-color: goldenrod;
+        }
+
+        a.five:visited {
+            color: goldenrod;
+            background-color: tomato;
+        }
+
+        a.five:hover {
+            color: tomato;
+            background-color: steelblue;
+        }
+        
+        a.five:active {
+            color: steelblue;
+            background-color: olivedrab;
+        }
+
+        /*Refers to group six*/
+        a.six:link, a.six:visited {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            background-color: steelblue;
+            display: inline-block;
+        }
+
+        a.six:hover, a.six:active {
+            background-color: red;
+        }
+        
+        /*Refers to group seven*/
+        a.seven:link, a.seven:visited  {
+            color: goldenrod;
+            font-size: 20px;
+            text-decoration: none;
+            background-color: tomato;
+        }
+
+        a.seven:hover, a.seven:active {
+            background-color: steelblue;
+        }
+
+        /*Refers to group eight*/
+        a.eight {
+            margin-right: 4vw;
+        }
+        
+        a.eight:link {
+            color: steelblue;
+            font-size: 20px;
+            text-decoration: none;
+        }
+            
+        a.eight:visited  {
+            color: lightgreen;
+            font-weight: bold;
+        }
+
+        a.eight:hover {
+            font-size: 36px;
+            text-decoration: underline;
+        }
+
+        a.eight:active {
+            color: olivedrab;
+        }
+
+        /*Refers to group nine*/
+        a.nine:link {
+            color: steelblue;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-right: 4vw;
+        }
+            
+        a.nine:visited  {
+            color: lightsalmon
+        }
+
+        a.nine:hover {
+            color: salmon;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+
+        }
+
+        a.nine:active {
+            font-size: 250%;
+        }
+
+        /*Refers to group ten*/
+        a.ten:link {
+            color: steelblue;
+            font-size: 20px;
+            text-decoration: none;
+        }
+            
+        a.ten:visited  {
+            color: orangered;
+        }
+
+        a.ten:hover {
+            background-color: orange;
+            padding: 5px;
+            text-transform: uppercase;
+        }
+
+        /*Refers to group eleven*/
+        a.eleven:link, a.eleven:visited  {
+            color: tomato;
+            font-size: 20px;
+            text-decoration: none;
+            border: 2px solid steelblue;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        a.eleven:hover, a.seven:active {
+            color: orange;
+            background-color: steelblue;
+        }
+
+        span.bold {
+            font-weight: bold;
+
+        }
+        
+        div.examples span {
+            border: 1px solid olivedrab;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Links</h1>
+            <h2>Styling Links</h2>
+            <p>Você pode estilizar os links com qualquer propriedade do CSS.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="examples">
+                <p><a class="one" target="_self" href="../_textos-css-tutorial/15-css-links.html">CSS Links</a></p>
+                <p><a class="two" target="_self" href="../_textos-css-tutorial/15-css-links.html">CSS Links</a></p>
+                <p><a class="three" target="_self" href="../_textos-css-tutorial/15-css-links.html">CSS Links</a></p>
+            </div>
+            <p>Além disso, você pode fazer com que links fiquem com estilos diferentes dependendo do estado em que estão.</p>
+            <p>Os quatro estados são:</p>
+            <ul type="circle">
+                <li><span class="bold">a:link</span> - É o estado normal de um link que não foi visitado ainda.</li>
+                <li><span class="bold">a:visited</span> - É o estado de um link que já foi visitado.</li>
+                <li><span class="bold">a:hover</span> - É o estado de um link quando o mouse está em cima dele.</li>
+                <li><span class="bold">a:active</span> - É o estado de um link assim que recebe um click.</li>
+            </ul>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="examples">
+                <p><a class="four" target="_self" href="../_textos-css-tutorial/15-css-links.html">CSS Links</a></p>
+            </div>
+            <p><span>Observações importantes:</span></p>
+            <p>"a:hover" deve vir depois de "a:link" e "a:visited" para ser eficiente.</p>
+            <p>"a:active" deve vir depois de "a:hover" para ser eficiente.</p>
+            <p>Se um link tiver como endereço a página que você já está, ele definirá que o link já foi visitado, mesmo você não tendo clicado nele.</p>
+            <h2>Text Decoration</h2>
+            <p>Você pode usar "text-decoration: ;" para tirar o sublinhado do link. Veja que alguns exemplos acima não possuem o sublinhado, foi devido a essa propriedade.</p>
+            <h2>Background Color</h2>
+            <p>Você também pode usar "background-color: ;" para mudar o fundo do texto.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="examples">
+                <p><a class="five" target="_self" href="../_textos-css-tutorial/15-css-links.html">CSS Links</a></p>
+            </div>
+            <h2>Link Buttons</h2>
+            <p>Você pode combinar várias propriedades do CSS para fazer um link em formato de botão.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="examples">
+                <a class="six" target="_self" href="../_textos-css-tutorial/15-css-links.html">CSS Links</a>
+                <a class="seven" target="_self" href="../_textos-css-tutorial/15-css-links.html">CSS Links</a>
+            </div>
+            <p>É recomendado usar o "display: inline-block;" para fazer esse botão, mas eu não entendi bem o motivo, o botão da direita funcionou mesmo sem usar.</p>
+            <p>Você também pode mudar o cursor que aparecerá ao passar o mouse por cima do link ou elemento.</p>
+            <p>Veja os exemplos a seguir (passe o mouse por cima dos blocos):</p>
+            <div class="examples">
+                <span style="cursor:auto">auto</span>
+                <span style="cursor:crosshair">crosshair</span>
+                <span style="cursor:default">default</span>
+                <span style="cursor:e-resize">e-resize</span>
+                <span style="cursor:help">help</span>
+                <span style="cursor:move">move</span>
+                <span style="cursor:n-resize">n-resize</span>
+                <span style="cursor:ne-resize">ne-resize</span>
+                <span style="cursor:nw-resize">nw-resize</span>
+                <span style="cursor:pointer">pointer</span>
+                <span style="cursor:progress">progress</span>
+                <span style="cursor:s-resize">s-resize</span>
+                <span style="cursor:se-resize">se-resize</span>
+                <span style="cursor:sw-resize">sw-resize</span>
+                <span style="cursor:text">text</span>
+                <span style="cursor:w-resize">w-resize</span>
+                <span style="cursor:wait">wait</span>
+            </div>
+            <p>Como é permitido qualquer estilizar um link com qualquer tipo de propriedade do CSS, há muitas possibilidades de como um link pode reagir aos seus estados.</p>
+            <p>Veja alguns exemplos a seguir:</p>
+            <div class="examples">
+                <a class="eight" target="_self" href="../_textos-css-tutorial/15-css-links.html">CSS Links</a>
+                <a class="nine" target="_self" href="../_textos-css-tutorial/15-css-links.html">CSS Links</a>
+                <a class="ten" target="_self" href="../_textos-css-tutorial/15-css-links.html">CSS Links</a>
+            </div>
+            <p>Veja outro exemplo de botão a seguir:</p>
+            <div class="examples">
+                <a class="eleven" target="_self" href="../_textos-css-tutorial/15-css-links.html">CSS Links</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
