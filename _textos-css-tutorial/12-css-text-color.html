@@ -8,9 +8,58 @@
     <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
     <link rel="stylesheet" href="../_css/geral-link.css"/>
     <style>
-        h2 {
+        div.example {
+            border: 2px solid steelblue;
+            padding: 8px;
+        }
+
+        h1.example {
             text-align: center;
+            text-transform: uppercase;
+            color: olivedrab;
+        }
+
+        p.example {
+            text-indent: 50px;
+            text-align: justify;
+            letter-spacing: 3px;
+        }
+
+        a {
+            text-decoration: none;
+            color: steelblue;
+        }
+
+        p.one {
+            color: seagreen;
+        }
+
+        p.two {
+            color: hsl(240, 100%, 50%);
+        }
+
+        p.three {
+            color: salmon;
+        }
+
+        div.examples p{
             padding: 5px;
+            text-align: center;
+        }
+
+        p.four {
+            color: steelblue;
+            background-color: orange;
+        }
+
+        p.five {
+            color: seagreen;
+            background-color: lightgreen;
+        }
+
+        p.six {
+            color: salmon;
+            background-color: lightslategray;
         }
     </style>
 </head>
@@ -18,7 +67,23 @@
     <div id="link">
         <div id="explicacao">
             <h1>CSS Text</h1>
-            <h2>CSS Text</h2>
+            <div class="example">
+                <h1 class="example">formatação de texto</h1>
+                <p class="example">Este texto é estilizado com algumas propriedades de formatação de texto. O título usa as propriedades "text-align: ;", "text-tranform: ;" e "color: ;". O parágrafo é identado, alinhado e os espaços entre os caracteres são especificados. O sublinhado foi removido deste <a href="12-css-text.html">"CSS Text"</a> link colorido.</p>
+            </div>
+            <p>Para fazer esses tipos de estilizações precisamos usar algumas propriedades do CSS.</p>
+            <h2>Text Color</h2>
+            <p>A propriedade "color: ;" pode receber qualquer valor relacionado a cor que você viu até agora (nome da cor, HEX, RGB e HSL).</p>
+            <p class="one">Exemplo 1.</p>
+            <p class="two">Exemplo 2.</p>
+            <p class="three">Exemplo 3.</p>
+            <h2>Text Color and Background Color</h2>
+            <p>Podemos mudar a cor de um fundo e a cor do texto também, basta usar "background-color: ;" e "color: ;".</p>
+            <div class="examples">
+                <p class="four">Exemplo 1.</p>
+                <p class="five">Exemplo 2.</p>
+                <p class="six">Exemplo 3.</p>
+            </div>
         </div>
     </div>
 </body>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text Alignment</title>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <style>
+        div.examples p {
+            padding: 5px;
+        }
+
+        p.one {
+            text-align: justify;
+        }
+
+        p.two {
+            text-align: center;
+        }
+
+        p.three {
+            text-align: right;
+        }
+
+        p.rtlfour {
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+
+        p.ltrfour {
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+
+        p.rtlfive {
+            direction: rtl;
+            unicode-bidi: embed;
+        }
+
+        p.ltrfive {
+            direction: ltr;
+            unicode-bidi: embed;
+        }
+        
+        p.rtlsix {
+            direction: rtl;
+            unicode-bidi: isolate;
+        }
+
+        p.ltrsix {
+            direction: ltr;
+            unicode-bidi: isolate;
+        }
+
+        p.rtlseven {
+            direction: rtl;
+            unicode-bidi: isolate-override;
+        }
+
+        p.ltrseven {
+            direction: ltr;
+            unicode-bidi: isolate-override;
+        }
+
+        p.rtleight {
+            direction: rtl;
+            unicode-bidi: plaintext;
+        }
+
+        p.ltreight {
+            direction: rtl;
+            unicode-bidi: plaintext;
+        }
+
+        p.bold {
+            font-weight: bold;
+        }
+
+        img.one {
+            vertical-align: text-top;
+        }
+
+        img.two {
+            vertical-align: baseline;
+        }
+
+        img.three {
+            vertical-align: text-bottom;
+        }
+
+        img.four {
+            vertical-align: sub;
+        }
+
+        img.five {
+            vertical-align: super;
+        }
+
+        img.six {
+            vertical-align: middle;
+        }
+
+        img.seven {
+            vertical-align: bottom;
+        }
+
+        img.eight {
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Text Alignment</h1>
+            <h2>Text Alignment</h2>
+            <p>Use "text-align: ;" para definir o alinhamento horizontal do elemento.</p>
+            <p>Um texto pode ser alinhado a esquerda ou a direita, justificado e centralizado.</p>
+            <div class="examples">
+                <p class="one">Eu estou justificado.</p>
+                <p class="two">Eu estou centralizado.</p>
+                <p class="three">Eu estou alinhado a direita.</p>
+            </div>
+            <p>O justificado faz o texto ter linhas com mesmo comprimento.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <p style="text-align: justify; text-indent: 0px;">Aut eveniet nihil qui provident inventore qui voluptatem perferendis et praesentium neque. Sed error voluptatum et omnis architecto a illo impedit. Rem facilis perferendis et aliquam libero et molestiae magni eos fuga magni ea tempora distinctio. Aut aliquam laudantium At quasi officiis est ipsam necessitatibus sit doloribus rerum non ullam excepturi est nesciunt esse.</p>
+            <h2>Text Direction</h2>
+            <p>Se text-direction for da esquerda para a direita, o alinhamento padrão será a esquerda, caso contrário será a direita.</p>
+            <p>Use "direction: ;" e "unicode-bidi" para a mudar a direção de texto e um elemento.</p>
+            <p>Veja os exemplos a seguir:</p>
+
+            <p  class="bold">"direction: rtl; unicode-bidi: bidi-override;"</p>
+            <p class="rtlfour">.Aut eveniet nihil qui provident inventore qui voluptatem perferendis et praesentium neque. Sed error voluptatum et omnis architecto a illo impedit. Rem facilis perferendis et aliquam libero et molestiae magni eos fuga magni ea tempora distinctio.</p>
+
+            <p class="bold">"direction: ltr; unicode-bidi: bidi-override;"</p>
+            <p class="ltrfour">Aut eveniet nihil qui provident inventore qui voluptatem perferendis et praesentium neque. Sed error voluptatum et omnis architecto a illo impedit. Rem facilis perferendis et aliquam libero et molestiae magni eos fuga magni ea tempora distinctio.</p>
+
+            <p class="bold">"direction: rtl; unicode-bidi: embed;"</p>
+            <p class="rtlfive">Aut eveniet nihil qui provident inventore qui voluptatem perferendis et praesentium neque. Sed error voluptatum et omnis architecto a illo impedit. Rem facilis perferendis et aliquam libero et molestiae magni eos fuga magni ea tempora distinctio.</p>
+
+            <p class="bold">"direction: ltr; unicode-bidi: embed;"</p>
+            <p class="ltrfive">Aut eveniet nihil qui provident inventore qui voluptatem perferendis et praesentium neque. Sed error voluptatum et omnis architecto a illo impedit. Rem facilis perferendis et aliquam libero et molestiae magni eos fuga magni ea tempora distinctio.</p>
+
+            <p class="bold">"direction: rtl; unicode-bidi: isolate;"</p>
+            <p class="rtlsix">Aut eveniet nihil qui provident inventore qui voluptatem perferendis et praesentium neque. Sed error voluptatum et omnis architecto a illo impedit. Rem facilis perferendis et aliquam libero et molestiae magni eos fuga magni ea tempora distinctio.</p>
+
+            <p class="bold">"direction: ltr; unicode-bidi: isolate;"</p>
+            <p class="ltrsix">Aut eveniet nihil qui provident inventore qui voluptatem perferendis et praesentium neque. Sed error voluptatum et omnis architecto a illo impedit. Rem facilis perferendis et aliquam libero et molestiae magni eos fuga magni ea tempora distinctio.</p>
+
+            <p class="bold">"direction: rtl; unicode-bidi: isolate-override;"</p>
+            <p class="rtlseven">Aut eveniet nihil qui provident inventore qui voluptatem perferendis et praesentium neque. Sed error voluptatum et omnis architecto a illo impedit. Rem facilis perferendis et aliquam libero et molestiae magni eos fuga magni ea tempora distinctio.</p>
+
+            <p class="bold">"direction: ltr; unicode-bidi: isolate-override;"</p>
+            <p class="ltrseven">Aut eveniet nihil qui provident inventore qui voluptatem perferendis et praesentium neque. Sed error voluptatum et omnis architecto a illo impedit. Rem facilis perferendis et aliquam libero et molestiae magni eos fuga magni ea tempora distinctio.</p>
+
+            <p class="bold">"direction: rtl; unicode-bidi: plaintext;"</p>
+            <p class="rtleight">Aut eveniet nihil qui provident inventore qui voluptatem perferendis et praesentium neque. Sed error voluptatum et omnis architecto a illo impedit. Rem facilis perferendis et aliquam libero et molestiae magni eos fuga magni ea tempora distinctio.</p>
+
+            <p class="bold">"direction: ltr; unicode-bidi: plaintext;"</p>
+            <p class="ltreight">Aut eveniet nihil qui provident inventore qui voluptatem perferendis et praesentium neque. Sed error voluptatum et omnis architecto a illo impedit. Rem facilis perferendis et aliquam libero et molestiae magni eos fuga magni ea tempora distinctio.</p>
+
+            <h2>Vertical Alignment</h2>
+            <p>Use "vertical-align: ;" para definir o alinhamento vertical de um elemento.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <p>Frase de teste.<img class="one" src="../_imagens/gold-kinstone-menor.png" alt=""> "vertical-align: text-top";</p>
+            <p>Frase de teste.<img class="two" src="../_imagens/gold-kinstone-menor.png" alt=""> "vertical-align: baseline;"</p>
+            <p>Frase de teste.<img class="three" src="../_imagens/green-kinstone-menor.png" alt=""> "vertical-align: text-bottom;"</p>
+            <p>Frase de teste.<img class="four" src="../_imagens/green-kinstone-menor.png" alt=""> "vertical-align: sub;"</p>
+            <p>Frase de teste.<img class="five" src="../_imagens/blue-kinstone-menor.png" alt=""> "vertical-align: super;"</p>
+            <p>Frase de teste.<img class="six" src="../_imagens/blue-kinstone-menor.png" alt=""> "vertical-align: middle;"</p>
+            <p>Frase de teste.<img class="seven" src="../_imagens/red-kinstone-menor.png" alt=""> "vertical-align: bottom;"</p>
+            <p>Frase de teste.<img class="eight" src="../_imagens/red-kinstone-menor.png" alt=""> "vertical-align: top;"</p>
+        </div>
+    </div>
+</body>
+</html>
