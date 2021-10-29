@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Table Alignment</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+    <style>
+        table {
+            margin: 0 auto 0 auto;
+        }
+
+        table, tr, th, td {
+            border: 2px solid black;
+        }
+        
+        div.examples table, div.examples tr, div.examples th, div.examples td {
+            text-align: center;
+            margin: 0 auto 0 auto;
+        }
+
+        table td {
+            padding: 5px;
+        }
+
+        table.one, table.three {
+            width: 80%;
+            border-collapse: collapse;
+        }
+
+        table.one th, table.three th {
+            height: 50px;
+        }
+
+        table.two, table.four {
+            width: 50%;
+            border-collapse: collapse;
+        }
+
+        table.two td, table.four td {
+            height: 30px;
+        }
+
+        table.two th, table.four th {
+            height: 60px;
+            
+        }
+
+        table.two td, table.two th, table.four td, table.four th {
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        table.three td {
+            height: 45px;
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        table.four td {
+            height: 25px;
+            padding: 10px;
+            vertical-align: bottom;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Table Alignment</h1>
+            <h2>Horizontal Alignmentt</h2>
+            <p>Por padrão o alinhamento de um cabeçalho de uma tabela é centralizado e o alinhamento dos dados são são alinhados a esquerda. Para mudar isso basta usar "text-align: ;".</p>
+            <p>Veja os exemplos a seguir:</p>
+            <span><p>Centralizado</p></span>
+            <div class="examples">
+                <table class="one">
+                    <tr>
+                        <th>Primeiro nome</th>
+                        <th>Último nome</th>
+                    </tr>
+                    <tr>
+                        <td>Caio</td>
+                        <td>Santos</td>
+                    </tr>
+                    <tr>
+                        <td>João</td>
+                        <td>Santos</td>
+                    </tr>
+                </table>
+            </div> 
+            <span><p>Alinhado a esquerda</p></span>
+            <div class="examples">
+                <table class="two">
+                    <tr>
+                        <th>Fruta</th>
+                        <th>Valor (R$/kg)</th>
+                    </tr>
+                    <tr>
+                        <td>Banana</td>
+                        <td>2,50</td>
+                    </tr>
+                    <tr>
+                        <td>Maçã</td>
+                        <td>4,20</td>
+                    </tr>
+                    <tr>
+                        <td>Melão</td>
+                        <td>3,00</td>
+                    </tr>
+                </table>
+            </div>
+            <h2>Vertical Alignment</h2>
+            <p>Use "vertical-align: ;" para definir qual será o alinhamento vertical (top, bottom, middle).</p>
+            <p>Veja os exemplos a seguir:</p>
+            <span><p>Dados da lista alinhados ao topo</p></span>
+            <table class="three">
+                <tr>
+                    <th>Primeiro nome</th>
+                    <th>Último nome</th>
+                </tr>
+                <tr>
+                    <td>Caio</td>
+                    <td>Santos</td>
+                </tr>
+                <tr>
+                    <td>João</td>
+                    <td>Santos</td>
+                </tr>
+            </table>
+            <span><p>Dados da lista alinhados ao fundo</p></span>
+            <table class="four">
+                <tr>
+                    <th>Fruta</th>
+                    <th>Valor (R$/kg)</th>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td>2,50</td>
+                </tr>
+                <tr>
+                    <td>Maçã</td>
+                    <td>4,20</td>
+                </tr>
+                <tr>
+                    <td>Melão</td>
+                    <td>3,00</td>
+                </tr>
+            </table>
+            <h2>Caption</h2>
+            <p>Use "caption-side: ;" para definit onde a legenda ficará (cima, fundo, etc.).</p>
+            <p><span>Observação.:</span> defina o valor de height para perceber o efeito do "vertical-align: ;".</p>
+        </div>
+    </div>
+</body>
+</html>

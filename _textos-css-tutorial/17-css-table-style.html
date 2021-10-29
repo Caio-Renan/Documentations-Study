@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Table Style</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+    <style>
+        table {
+            margin: 0 auto 0 auto;
+        }
+        
+        table.four {
+            margin: 0 auto 20px auto;
+        }
+
+        div.examples table, div.examples tr, div.examples th, div.examples td {
+            text-align: center;
+            margin: 0 auto 20px auto;
+            border: 2px solid black;
+        }
+
+        table.one td {
+            padding: 5px;
+        }
+
+        table.two td {
+            padding: 25px;
+        }
+
+        table.one, table.three, table.eight {
+            width: 60%;
+            border-collapse: collapse;
+        }
+
+        table.one th, table.three th, table.eight th {
+            height: 50px;
+        }
+
+        table.two, table.four, table.five, table.six, table.seven {
+            width: 60%;
+            border-collapse: collapse;
+        }
+
+        table.two td, table.four td, table.five td, table.six td, table.seven td {
+            height: 30px;
+        }
+
+        table.two th, table.four th, table.five th, table.six th, table.seven th {
+            height: 60px;
+            
+        }
+
+        table.two td, table.two th, table.four td, table.four th, table.five td, table.five th, table.six th, table.seven th {
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        table.three td {
+            height: 45px;
+            padding: 10px;
+            vertical-align: top;
+            text-align: left;
+            border-bottom: 2px solid steelblue;
+        }
+
+        table.three th {
+            text-align: left;
+            border-bottom: 2px solid steelblue;
+        }
+
+        table.four th, table.five th {
+            border-bottom: 2px solid olivedrab;
+        }
+
+        table.four td, table.five td{
+            height: 25px;
+            padding: 10px;
+            vertical-align: bottom;
+            border-bottom: 2px solid olivedrab;
+        }
+
+        table.four td:hover {
+            background-color: lightgreen;
+        }
+
+        table.four th:hover {
+            background-color: green;
+        }
+
+        table.five tr:hover {
+            background-color: lightgreen;
+        }
+
+        table.five tr.header:hover {
+            background-color: green;
+        }
+
+        table.six tr:nth-child(even) {
+            background-color: steelblue;
+        }
+
+        table.seven tr:nth-child(odd) {
+            background-color: steelblue;
+        }
+
+        table.six {
+            border-top: 2px solid black;
+        }
+        
+        table.seven {
+            border-top: 2px solid black;
+        }
+
+        table.eight tr:nth-child(even) {
+            background-color: greenyellow;
+        }
+
+        table.eight tr:nth-child(odd) {
+            background-color: lightgreen;
+        }
+
+        table.eight tr.header2 {
+            background-color: olivedrab;
+            color: white;
+            border-top: 4px solid black;
+        }
+        
+        table.six td, table.seven td, table.eight td {
+            padding: 10px;
+        }
+    
+        tr.last {
+            border-bottom: 4px solid black;
+        }
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Table Style</h1>
+            <h2>Table Padding</h2>
+            <p>Você pode usar padding nas suas tabelas também!</p>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="examples">
+                <table class="one">
+                    <tr>
+                        <th>Primeiro nome</th>
+                        <th>Último nome</th>
+                    </tr>
+                    <tr>
+                        <td>Caio</td>
+                        <td>Santos</td>
+                    </tr>
+                    <tr>
+                        <td>João</td>
+                        <td>Santos</td>
+                    </tr>
+                </table>
+                <table class="two">
+                    <tr>
+                        <th>Fruta</th>
+                        <th>Valor (R$/kg)</th>
+                    </tr>
+                    <tr>
+                        <td>Banana</td>
+                        <td>2,50</td>
+                    </tr>
+                    <tr>
+                        <td>Maçã</td>
+                        <td>4,20</td>
+                    </tr>
+                    <tr>
+                        <td>Melão</td>
+                        <td>3,00</td>
+                    </tr>
+                </table>
+            </div>
+            <h2>Horizontal Dividers</h2>
+            <p>Use "border-bottom: ;" para adicionar divisores horizontais a sua tabela.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <table class="three">
+                <tr>
+                    <th>Primeiro nome</th>
+                    <th>Último nome</th>
+                </tr>
+                <tr>
+                    <td>Caio</td>
+                    <td>Santos</td>
+                </tr>
+                <tr>
+                    <td>João</td>
+                    <td>Santos</td>
+                </tr>
+            </table>
+            <h2>Hoverable Table</h2>
+            <p>Use "elemento:hover {}" para fazer com que sua tabela responda de alguma forma quando o mouse passar.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <table class="four">
+                <tr>
+                    <th>Fruta</th>
+                    <th>Valor (R$/kg)</th>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td>2,50</td>
+                </tr>
+                <tr>
+                    <td>Maçã</td>
+                    <td>4,20</td>
+                </tr>
+                <tr>
+                    <td>Melão</td>
+                    <td>3,00</td>
+                </tr>
+            </table>
+            <table class="five">
+                <tr class="header">
+                    <th>Fruta</th>
+                    <th>Valor (R$/kg)</th>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td>2,50</td>
+                </tr>
+                <tr>
+                    <td>Maçã</td>
+                    <td>4,20</td>
+                </tr>
+                <tr>
+                    <td>Melão</td>
+                    <td>3,00</td>
+                </tr>
+            </table>
+            <h2>Striped Tables</h2>
+            <p>Use o "seletor nth-child(even or odd)" e adicine um "background-color: ;" para todas as linhas de tabela pares ou ímpares.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <span><p>tr:nth-child(even) {background-color: steelblue;}</p></span>
+            <table class="six">
+                <tr>
+                    <th>Fruta</th>
+                    <th>Valor (R$/kg)</th>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td>2,50</td>
+                </tr>
+                <tr>
+                    <td>Maçã</td>
+                    <td>4,20</td>
+                </tr>
+                <tr>
+                    <td>Melão</td>
+                    <td>3,00</td>
+                </tr>
+            </table>
+            <span><p>tr:nth-child(odd) {background-color: steelblue;}</p></span>
+            <table class="seven">
+                <tr>
+                    <th>Fruta</th>
+                    <th>Valor (R$/kg)</th>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td>2,50</td>
+                </tr>
+                <tr>
+                    <td>Maçã</td>
+                    <td>4,20</td>
+                </tr>
+                <tr>
+                    <td>Melão</td>
+                    <td>3,00</td>
+                </tr>
+            </table>
+            <h2>Table Color</h2>
+            <p>Veja um exemplo do que você pode fazer com cores numa tabela:</p>
+            <table class="eight">
+                <tr class="header2">
+                    <th>Primeiro nome</th>
+                    <th>Último nome</th>
+                </tr>
+                <tr>
+                    <td>Caio</td>
+                    <td>Santos</td>
+                </tr>
+                <tr>
+                    <td>João</td>
+                    <td>Santos</td>
+                </tr>
+                <tr>
+                    <td>Jonas</td>
+                    <td>Neto</td>
+                </tr>
+                <tr>
+                    <td>Adriana</td>
+                    <td>Jesus</td>
+                </tr>
+                <tr>
+                    <td>Gabriel</td>
+                    <td>Pinho</td>
+                </tr>
+                <tr class="last">
+                    <td>Maria</td>
+                    <td>Santos</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
