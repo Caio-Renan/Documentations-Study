@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+p {
+    text-align: center;
+    color: green;
+}
+
+#id2 {
+    text-align: center;
+    color: yellowgreen;
+}
+
+.center {
+    text-align: center;
+    color: red;
+}
+
+p.center2 {
+    text-align: center;
+    color: goldenrod;
+}
+
+#center {
+    text-align: center;
+}
+
+p.center3 {
+    text-align: center;
+    color: orange;
+}
+
+p.large {
+    font-size: 200%;
+}
+
+* {
+    text-indent: 20pt;
+}
+
+h1#center4, h2#center4, p#center4 {
+    color: royalblue;
+    text-align: center;
+}
+
+div {
+    font-size: 12pt;
+}
+
+span {
+    font-weight: bold;
+}

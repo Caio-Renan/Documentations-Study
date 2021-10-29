@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+div.examples p {
+    text-align: center;
+    font-size: 14pt;
+}
+
+div.example-effect p {
+    text-align: center;
+    font-size: 14pt;
+    font-family: 'Sofia', sans-serif;
+}
+
+/*font-family: 'Zen Kurenaido', sans-serif;*/
+p.one {
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+/*font-family: 'Irish Grover', cursive;*/
+
+p.two {
+    font-family: 'Irish Grover', cursive;
+}
+
+/*font-family: 'Cairo', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Festive', cursive;
+font-family: 'Irish Grover', cursive;*/
+
+p.three {
+    font-family: 'Cairo', sans-serif;
+}
+
+p.four {
+    font-family: 'Dancing Script', cursive;
+}
+
+p.five {
+    font-family: 'Festive', cursive;
+    font-size: 20px;
+    text-shadow: 6px 6px 6px #ababab;
+}
+
+p.six {
+    font-family: 'Irish Grover', cursive;
+    font-size: 20px;
+    text-shadow: 6px 6px 6px #ababab;
+}

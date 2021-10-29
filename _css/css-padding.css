@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+h3 {
+    padding: 5px;
+    text-align: center;
+}
+
+h3#um {
+    border: 2px solid steelblue;
+    padding: 0px;
+}
+
+h3#dois {
+    border: 2px solid steelblue;
+    padding: 10px;
+}
+
+h3#tres {
+    border: 2px solid steelblue;
+    padding: 25px;
+}
+
+h3#quatro {
+    border: 2px solid orangered;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+
+h3#cinco {
+    border: 2px solid orangered;
+    padding: 0%;
+}
+
+h3#seis {
+    border: 2px solid orangered;
+    padding: 10%;
+}
+
+h3#sete {
+    border: 2px solid orangered;
+    padding: 25%;
+}
+
+h3#oito {
+    border: 2px solid orangered;
+    padding: inherit;
+}
+
+h3#nove {
+    border: 2px solid orange;
+    padding: 10px 20px 30px 40px;
+}
+
+h3#dez {
+    background-color: palegreen;
+    padding: 0px;
+    margin: 10px auto 15px auto;
+    width: 300px;
+}
+
+h3#onze {
+    background-color: royalblue;
+    margin: 15px auto 10px auto;
+    padding: 25px;
+    width: 300px;
+}
+
+h3#doze {
+    background-color: palegreen;
+    margin: 15px auto 10px auto;
+    padding: 0px;
+    width: 300px;
+}
+
+h3#treze {
+    background-color: royalblue;
+    margin: 15px auto 10px auto;
+    padding: 25px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+div#exemplos {
+    padding: 15px;
+}

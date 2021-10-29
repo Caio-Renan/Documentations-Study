@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+h3 {
+    padding: 5px;
+    text-align: center;
+}
+
+h3#um {
+    border-color: steelblue;
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 5px;
+}
+
+h3#dois {
+    border-width: 5px;
+    border-color: steelblue;
+    border-style: dotted solid;
+}
+
+h3#tres {
+    border-width: 5px;
+    border-color: steelblue;
+    border-style: double dashed dotted solid;
+}
+
+h3#quatro {
+    border-width: 5px;
+    border-color: steelblue;
+    border-style: double dotted solid;
+}

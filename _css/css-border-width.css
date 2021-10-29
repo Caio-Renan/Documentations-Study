@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+h3 {
+    padding: 5px;
+    text-align: center;
+}
+
+h3#um {
+    border-style: solid;
+    border-width: 10px;
+}
+
+h3#dois {
+    border-style: double;
+    border-width: thick;
+}
+
+h3#tres {
+    border-style: dashed;
+    border-width: 8pt;
+}
+
+h3#quatro {
+    border-style: dashed;
+    border-width: medium;
+}
+
+h3#cinco {
+    border-style: solid;
+    border-width: 10px 5px 10px 5px;
+}
+
+h3#seis {
+    border-style: double;
+    border-width: 4px 4px 2px 2px;
+}
+
+h3#sete {
+    border-style: dashed;
+    border-width: 5pt 10pt 5pt 10pt;
+}
+
+h3#oito {
+    border-style: dashed;
+    border-width: 20pt 10pt;
+}

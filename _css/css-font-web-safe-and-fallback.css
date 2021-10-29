@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+div.examples p{
+    border: 5px olivedrab solid;
+    margin: 0px 200px 15px 200px;
+    font-size: 16pt;
+    text-align: center;
+    padding: 5px;
+}
+
+p.one {
+    font-family: Arial, sans-serif;
+}
+
+p.two {
+    font-family: Verdana, sans-serif;
+}
+
+p.three {
+    font-family: Helvetica, sans-serif;
+}
+
+p.four {
+    font-family: Tahoma, sans-serif;
+}
+
+p.five {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+p.six {
+    font-family: 'Time New Roman', serif;
+}
+
+p.seven {
+    font-family: Georgia, serif;
+}
+
+p.eight {
+    font-family: Garamond, serif;
+}
+
+p.nine {
+    font-family: 'Courier New', monospace;
+}
+
+p.ten {
+    font-family: 'Brush Script MT', cursive;
+}

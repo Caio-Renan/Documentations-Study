@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+table, tr, th, td {
+    margin: 0 auto 0 auto;
+    border: 2px solid black;
+}
+
+table td {
+    text-align: center;
+}
+
+table td {
+    padding: 3px;
+}
+
+table.one {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table.one th {
+    height: 50px;
+}
+
+table.two {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+table.two td {
+    height: 30px;
+    border-collapse: collapse;
+}
+
+table.two th {
+    height: 60px;
+    border-collapse: collapse;
+}

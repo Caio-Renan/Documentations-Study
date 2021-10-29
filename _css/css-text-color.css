@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+div.example {
+    border: 2px solid steelblue;
+    padding: 8px;
+}
+
+h1.example {
+    text-align: center;
+    text-transform: uppercase;
+    color: olivedrab;
+}
+
+p.example {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: steelblue;
+}
+
+p.one {
+    color: seagreen;
+}
+
+p.two {
+    color: hsl(240, 100%, 50%);
+}
+
+p.three {
+    color: salmon;
+}
+
+div.examples p{
+    padding: 5px;
+    text-align: center;
+}
+
+p.four {
+    color: steelblue;
+    background-color: orange;
+}
+
+p.five {
+    color: seagreen;
+    background-color: lightgreen;
+}
+
+p.six {
+    color: salmon;
+    background-color: lightslategray;
+}

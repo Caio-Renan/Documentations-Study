@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+div.examples {
+    text-align: center;
+}
+
+div.examples a.five, a.six, a.seven {
+    text-align: center;
+    padding: 10px;
+}
+
+div.examples a.six {
+    margin-right: 10vw;
+}
+
+a.one {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: steelblue;
+}
+
+a.two {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: 24px;
+    color: olive;
+    text-decoration: none;
+}
+
+a.three {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    font-size: 24px;
+    color: olive;
+    text-decoration: overline;
+    text-transform: uppercase;
+}
+
+/*Refers to group four*/
+a.four:link {
+    color: olivedrab;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a.four:visited {
+    color: goldenrod;
+}
+
+a.four:hover {
+    color: tomato;
+}
+
+a.four:active {
+    color: steelblue;
+}
+
+/*Refers to group five*/
+a.five:link {
+    color: olivedrab;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: goldenrod;
+}
+
+a.five:visited {
+    color: goldenrod;
+    background-color: tomato;
+}
+
+a.five:hover {
+    color: tomato;
+    background-color: steelblue;
+}
+
+a.five:active {
+    color: steelblue;
+    background-color: olivedrab;
+}
+
+/*Refers to group six*/
+a.six:link, a.six:visited {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: steelblue;
+    display: inline-block;
+}
+
+a.six:hover, a.six:active {
+    background-color: red;
+}
+
+/*Refers to group seven*/
+a.seven:link, a.seven:visited  {
+    color: goldenrod;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: tomato;
+}
+
+a.seven:hover, a.seven:active {
+    background-color: steelblue;
+}
+
+/*Refers to group eight*/
+a.eight {
+    margin-right: 4vw;
+}
+
+a.eight:link {
+    color: steelblue;
+    font-size: 20px;
+    text-decoration: none;
+}
+    
+a.eight:visited  {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+a.eight:hover {
+    font-size: 36px;
+    text-decoration: underline;
+}
+
+a.eight:active {
+    color: olivedrab;
+}
+
+/*Refers to group nine*/
+a.nine:link {
+    color: steelblue;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 4vw;
+}
+    
+a.nine:visited  {
+    color: lightsalmon
+}
+
+a.nine:hover {
+    color: salmon;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+
+a.nine:active {
+    font-size: 250%;
+}
+
+/*Refers to group ten*/
+a.ten:link {
+    color: steelblue;
+    font-size: 20px;
+    text-decoration: none;
+}
+    
+a.ten:visited  {
+    color: orangered;
+}
+
+a.ten:hover {
+    background-color: orange;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+/*Refers to group eleven*/
+a.eleven:link, a.eleven:visited  {
+    color: tomato;
+    font-size: 20px;
+    text-decoration: none;
+    border: 2px solid steelblue;
+    padding: 10px;
+    display: inline-block;
+}
+
+a.eleven:hover, a.seven:active {
+    color: orange;
+    background-color: steelblue;
+}
+
+span.bold {
+    font-weight: bold;
+
+}
+
+div.examples span {
+    border: 1px solid olivedrab;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+}

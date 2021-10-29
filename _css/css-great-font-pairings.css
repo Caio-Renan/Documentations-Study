@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+ol p {
+    text-indent: 0pt;
+}
+
+ul p {
+    text-indent: 0px;
+    text-align: justify;
+}
+
+p.one {font-family: Georgia, 'Times New Roman', Times, serif;}
+
+p.two {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+p.three {font-family: Helvetica, sans-serif;}
+
+p.four {font-family: Garamond;}
+
+p.five {font-family: 'Merriweather', sans-serif;}
+
+p.six {font-family: 'Open Sans', serif;}
+
+p.seven {font-family: 'Ubuntu', sans-serif;}
+
+p.eight {font-family: 'Lora', serif;}
+
+p.nine {font-family: 'Abril Fatface', sans-serif;}
+
+p.ten {font-family: 'Poppins', serif;}
+
+p.eleven {font-family: 'Cinzel', sans-serif;}
+
+p.twelve {font-family: 'Fauna One', serif;}
+
+p.thirteen {font-family: 'Fjala One', sans-serif;}
+
+p.fourteen {font-family: 'Libre Baskerville', serif;}
+
+p.fifteen {font-family: 'Space Mono', sans-serif}
+
+p.sixteen {font-family: 'Muli', serif;}
+
+p.seventeen {font-family: 'Spectral', sans-serif;}
+
+p.eighteen {font-family: 'Rubic', serif;}
+
+p.nineteen {font-family: 'Oswald', sans-serif;}
+
+p.twenty {font-family: 'Noto Sans', serif;}
+
+li {
+    font-size: 14pt;
+}

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+table {
+    margin: 0 auto 0 auto;
+}
+
+table, tr, th, td {
+    border: 2px solid black;
+}
+
+div.examples table, div.examples tr, div.examples th, div.examples td {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+table td {
+    padding: 5px;
+}
+
+table.one, table.three {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+table.one th, table.three th {
+    height: 50px;
+}
+
+table.two, table.four {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+table.two td, table.four td {
+    height: 30px;
+}
+
+table.two th, table.four th {
+    height: 60px;
+    
+}
+
+table.two td, table.two th, table.four td, table.four th {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.three td {
+    height: 45px;
+    padding: 10px;
+    vertical-align: top;
+}
+
+table.four td {
+    height: 25px;
+    padding: 10px;
+    vertical-align: bottom;
+}
+
+span {
+    font-weight: bold;
+}
