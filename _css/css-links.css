@@ -184,11 +184,6 @@ a.eleven:hover, a.seven:active {
     background-color: steelblue;
 }
 
-span.bold {
-    font-weight: bold;
-
-}
-
 div.examples span {
     border: 1px solid olivedrab;
     padding: 10px;

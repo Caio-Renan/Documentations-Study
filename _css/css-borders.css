@@ -5,11 +5,6 @@ h3 {
     text-align: center;
 }
 
-span {
-    font-weight: bold;
-    color: midnightblue;
-}
-
 h3.dotted {
     border-style: dotted;
 }

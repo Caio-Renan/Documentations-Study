@@ -27,3 +27,15 @@ p {
 h1, h2, h3, h4, h5, h6 {
     text-indent: 20pt;
 }
+
+ul {
+    list-style-type: circle;
+}
+
+span.bold {
+    font-weight: bold;
+}
+
+span.doubt {
+    color: steelblue;
+}

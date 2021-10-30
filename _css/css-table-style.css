@@ -127,6 +127,3 @@ table.six td, table.seven td, table.eight td {
 tr.last {
     border-bottom: 4px solid black;
 }
-span {
-    font-weight: bold;
-}
