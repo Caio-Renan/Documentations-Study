@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CSS Layout - width and max-width</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+    <style>
+        div.example1, div.example2, div.example3 {
+            border: 4px solid green;
+            padding: 5px;
+            margin: auto;
+        }
+
+        div.example1 {
+            width: 45vw;
+        }
+
+        div.example2 {
+            width: 500px;
+            margin-top: 20px;
+        }
+
+        div.example3 {
+            max-width: 45vw;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Layout - width and max-width</h1>
+            <h2>Using width, max-width and margin: auto;</h2>
+            <p>Você pode especificar o comprimento de um elemento usando "width: ;", serve principalmente para os elementos block-level.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="example1">Eu tenho 45vw de comprimento.</div>
+            <div class="example2">Eu tenho 500px de comprimento.</div>
+            <p>Use "max-width: ;" para fazer com que o comprimento da div seja variável, ela poderá assumir valores abaixo do valor especificado. Isso faz com que o conteúdo consiga ser visualizado, mesmo com o navegadores estando com um espaço de exibição menor.</p>
+            <p>Veja os exemplos a seguir (mude o tamanho do navegador para verificar a diferença):</p>
+            <div class="example3">Eu tenho um comprimento máximo de 45vw.</div>
+            <p>Perceba que o primeiro exemplo age da mesma forma que o último, isso ocorre porque ambos usam vw.</p>
+        </div>
+    </div>
+</body>
+</html>

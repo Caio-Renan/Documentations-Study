@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.example, div.list li, .example3 {
+    border: 4px solid green;
+    padding: 5px;   
+}
+.example3 {
+    margin: 0 auto 0 auto;
+    width: 35vw;
+}
+
+div.list {
+    text-align: center;
+}
+
+div.list li {
+    display: inline;
+}
+
+div.example2 {
+    text-indent: 25px;
+}
+
+span.block {
+    display: block;
+}
+
+h2.none {
+    display: none;
+}
+
+h2.visibility {
+    visibility: hidden;
+}
