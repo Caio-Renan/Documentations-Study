@@ -36,6 +36,13 @@ span.bold {
     font-weight: bold;
 }
 
+/*Use a propriedade a seguir para trechos que você ficou em dúvida por não ter entendido bem*/
 span.doubt {
     color: steelblue;
+}
+
+/*Use a propriedade a seguir para trechos não sabe se o que você está dizendo é certo.*/
+span.notsure {
+    color: navy;
+    font-weight: bold;
 }

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - The position Property</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+    <style>
+        div.template {
+            position: relative;
+            border: 4px solid green;
+            padding: 10px;
+            margin-bottom: 20px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 20px;
+            max-width: 750px;
+        }
+
+        div.relative, div.relative2, div.relative3, div.relative4, div.relative5, div.relative6 {
+            position: relative;
+            border: 4px solid green;
+            padding: 10px;
+            margin-bottom: 6vw;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 6vw;
+        }
+
+        div.relative7, div.relative8 {
+            position: relative;
+            border: 4px solid green;
+            padding: 10px;
+            margin-bottom: 6vw;
+            margin-top: 6vw;
+        }
+
+        div.absolute, div.absolute2, div.absolute3 {
+            position: absolute;
+            border: 4px solid green;
+            padding: 10px;
+            margin-bottom: 6vw;
+            margin-top: 6vw;
+        }
+
+        div.relative, div.relative2, div.relative3, div.relative4, div.relative5, div.relative6, div.relative7, div.relative8, div.absolute, div.absolute2, div.absolute3 {
+            max-width: 30vw;
+            position: relative; 
+        }
+
+        div.template p {
+            text-indent: 0;
+            margin: 0;
+        }
+        
+        div.static {
+            right: 50px;
+        }
+        
+        div.relative2 {
+            right: 3vw;
+        }
+
+        div.relative3 {
+            top: 3vw;
+        }
+
+        div.relative4 {
+            left: 3vw;
+        }
+
+        div.relative5 {
+            bottom: 3vw;
+        }
+
+        div.relative6 {
+           top: 3vw;
+           bottom: 3vw;
+           right: 3vw;
+           left: 3vw;
+        }
+
+        div.relative7 {
+           left: 0;
+        }
+
+        div.relative8 {
+           right: 10px;
+        }
+
+        p.caption, p.caption2 {
+            display: block;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        p.caption2 {
+            border-bottom: 4px solid green;
+            padding: 5px;
+        }
+
+        div.absolute {
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Layout - The position Property</h1>
+            <p>Use "position: ;" para especificar o tipo de método de posicionamento usado para um elemento (estático, relativo, fixado, absoluto ou pegajoso/espesso).</p>
+            <h2>The position Property</h2>
+            <p>A propriedade position pode receber os valores a seguir:</p>
+            <ul>
+                <li>static</li>
+                <li>relative</li>
+                <li>fixed</li>
+                <li>absolute</li>
+                <li>sticky</li>
+            </ul>
+            <p>Você pode mexer no posicionamento de elementos usando right, left, top and bottom, mas antes é necessário que você defina o valor de "position: ;" e, dependendo do valor selecionado, essas posições podem se comportar de outras formas.</p>
+            <h2>position: static;</h2>
+            <p>Essa é a posição padrão dos elementos HTML. Nessa posição os elementos não serão afetados por valores como left, right, top ou bottom, ele só irá seguir o fluxo padrão de texto.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="template">Essa div tem a propriedade "position: static;".</div>
+            <div class="template">
+                <div class="static">
+                    <p>Essa div tem a propriedade "position: static;". Além disso, ela tem "right: 50px;". Veja que nada mudou.</p>
+                </div>
+            </div>
+            <h2>position: relative;</h2>
+            <p>Ao usar "position: relative;" você permite que o elemento possa receber valores de right, top, bottom ou top em relação ao elemento que o contém. Além disso, nenhum elemento ocupará o espaço que ele deveria estar ocupando normalmente e o elemento se moverá com base no seu lugar de origem.</p>
+            <div class="template">
+                <p class="caption">Elementos que estão centralizados:</p>
+                <div class="relative">
+                    <p>Eu não tenho nenhuma propriedade além de "position: relative;"</p>
+                </div>
+                <div class="relative2">
+                    <p>Eu tenho "right: 3vw;". O elemento foi empurrado para a esquerda em 3vw.</p>
+                </div>
+                <div class="relative3">
+                    <p>Eu tenho "top: 3vw;". O elemento foi empurrado para baixo em 3vw."</p>
+                </div>
+                <div class="relative4">
+                    <p>Eu tenho "left: 3vw;". O elemento foi empurrado para a direita em 3vw."</p>
+                </div>
+                <div class="relative5">
+                    <p>Eu tenho "bottom: 3vw;". O elemento foi empurrado para cima em 3vw."</p>
+                </div>
+                <div class="relative6">
+                    <p>Eu tenho "right: 3vw", "left: 3vw;", "top: 3vw;" e "bottom: 3vw;".</p>
+                </div>
+                <p class="caption2">Elementos que não estão centralizados:</p>
+                <div class="relative7">
+                    <p>Eu tenho "left: 0;". Repare que o "left: 0;" é o lugar onde ele estaria normalmente.</p>
+                </div>
+                <div class="relative8">
+                    <p>Eu tenho "right: 10px;".</p>
+                </div>
+            </div>
+            <h2>position: fixed;</h2>
+            <p>Ao usar "position: fixed;" o elemento irá sempre aparecer num espaço baseado na janela de exibição, mesmo que você mexa na barra de rolagem ele irá aparecer.</p>
+            <p>Ele não deixa um "buraco" no lugar onde deveria estar.</p>
+            <p>Um exemplo disso é o link que fica a direita da página.</p>
+            <h2>position: absolute;</h2>
+            <p>Ao usar "position: absolute;" <span class="notsure">o elemento irá ter suas posições baseadas no elemento posicionado que o contém ou que está mais próximo.</span></p>
+            <p><span class="bold">Obs.:</span> Elementos com posição absoluta são removidos do fluxo normal de texto e podem sobrepor outros elementos.</p>
+            <div class="template">
+                <div class="absolute">
+                    <p></p>
+                </div>
+                <div class="absolute2">
+                    <p></p>
+                </div>
+                <div class="absolute3">
+                    <p></p>
+                </div>
+            </div>
+            <h2>position: sticky;</h2>
+            <p></p>
+            <h2>Positioning Text In an Image</h2>
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>
