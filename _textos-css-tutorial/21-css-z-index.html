@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta meta="viewport" content="width=device-width, initial-scale-1.0"/>
+    <title>CSS Layout - The z-index Property</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+    <link rel="stylesheet" href="../_css/css-z-index.css"/> 
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Layout - The z-index Property</h1>
+            <h2>The z-index Property</h2>
+            <p>Alguns elementos podem sobrepor outros elementos, para definir qual deverá ficar na frente ou atrás use "z-index: ;".</p>
+            <p>Um elemento pode ter um <span class="doubt">"stack order" (refere-se a posição no eixo z)</span> positivo ou negativo. Se um número tem z-index igual a 2 e outro igual a 3, o que tem 3 irá sobrepor o 2, ou seja, aquele que tem o z-index maior ficará por cima dos que tem um menor.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container">
+                <h2>Isto é um exemplo</h2>
+                <img class="one" src="../_imagens/blue-kinstone-menor.png" alt=""/>
+            </div>
+            <p>No caso acima, a imagem tem z-index igual a -1, eu estou pedindo para ele ficar por trás do conteúdo que ele em tese iria sobrepor.</p>
+            <p>Veja exemplos a seguir:</p>
+            <div class="container2">
+                <div class="zindex"><p class="center">z-index: -3;</p></div>
+                <div class="zindex2"><p class="center2">z-index: -2;</p></div>
+                <div class="zindex3"><p class="center3">z-index: -1;</p></div>
+                <div class="zindex4"><p class="center4">z-index: 1;</p></div>
+            </div>
+            <h2>Without z-index</h2>
+            <p>Se você não definir o "z-index: ;" de um elemento, a ordem de sobreposição será baseada na ordem dos elementos no HTML. O último irá sobrepor todos os anteriores, o penúltimo irá sobrepor todos anteriores e assim em diante.</p>
+            <p>O resultado dos exemplos acima pode ser conseguido sem utilizar o "z-index: ;", veja o exemplo a seguir:</p>
+            <div class="container2">
+                <div class="noindex"></div>
+                <div class="noindex2"></div>
+                <div class="noindex3"></div>
+                <div class="noindex4"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

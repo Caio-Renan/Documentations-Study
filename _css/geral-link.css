@@ -7,11 +7,13 @@ body {
 }
 
 div#explicacao {
+    position: relative;
     background-color: azure;
     margin: -8px auto 10vw auto;
     max-width: 65vw;
     padding: 20px;
     min-height: 60vw;
+    z-index: -1;
 }
 
 div#link {
@@ -21,7 +23,6 @@ div#link {
 p {
     font-size: 12pt;
     text-indent: 20pt;
-    
 }
 
 h1, h2, h3, h4, h5, h6 {
