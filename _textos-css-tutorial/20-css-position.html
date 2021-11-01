@@ -6,105 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Layout - The position Property</title>
     <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/css-position.css">
     <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
-    <style>
-        div.template {
-            position: relative;
-            border: 4px solid green;
-            padding: 10px;
-            margin-bottom: 20px;
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 20px;
-            max-width: 750px;
-        }
-
-        div.relative, div.relative2, div.relative3, div.relative4, div.relative5, div.relative6 {
-            position: relative;
-            border: 4px solid green;
-            padding: 10px;
-            margin-bottom: 6vw;
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 6vw;
-        }
-
-        div.relative7, div.relative8 {
-            position: relative;
-            border: 4px solid green;
-            padding: 10px;
-            margin-bottom: 6vw;
-            margin-top: 6vw;
-        }
-
-        div.absolute, div.absolute2, div.absolute3 {
-            position: absolute;
-            border: 4px solid green;
-            padding: 10px;
-            margin-bottom: 6vw;
-            margin-top: 6vw;
-        }
-
-        div.relative, div.relative2, div.relative3, div.relative4, div.relative5, div.relative6, div.relative7, div.relative8, div.absolute, div.absolute2, div.absolute3 {
-            max-width: 30vw;
-            position: relative; 
-        }
-
-        div.template p {
-            text-indent: 0;
-            margin: 0;
-        }
-        
-        div.static {
-            right: 50px;
-        }
-        
-        div.relative2 {
-            right: 3vw;
-        }
-
-        div.relative3 {
-            top: 3vw;
-        }
-
-        div.relative4 {
-            left: 3vw;
-        }
-
-        div.relative5 {
-            bottom: 3vw;
-        }
-
-        div.relative6 {
-           top: 3vw;
-           bottom: 3vw;
-           right: 3vw;
-           left: 3vw;
-        }
-
-        div.relative7 {
-           left: 0;
-        }
-
-        div.relative8 {
-           right: 10px;
-        }
-
-        p.caption, p.caption2 {
-            display: block;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        p.caption2 {
-            border-bottom: 4px solid green;
-            padding: 5px;
-        }
-
-        div.absolute {
-            right: 0px;
-        }
-    </style>
 </head>
 <body>
     <div id="link">
@@ -132,6 +35,7 @@
             </div>
             <h2>position: relative;</h2>
             <p>Ao usar "position: relative;" você permite que o elemento possa receber valores de right, top, bottom ou top em relação ao elemento que o contém. Além disso, nenhum elemento ocupará o espaço que ele deveria estar ocupando normalmente e o elemento se moverá com base no seu lugar de origem.</p>
+            <p>Veja os exemplos a seguir:</p>
             <div class="template">
                 <p class="caption">Elementos que estão centralizados:</p>
                 <div class="relative">
@@ -167,21 +71,53 @@
             <h2>position: absolute;</h2>
             <p>Ao usar "position: absolute;" <span class="notsure">o elemento irá ter suas posições baseadas no elemento posicionado que o contém ou que está mais próximo.</span></p>
             <p><span class="bold">Obs.:</span> Elementos com posição absoluta são removidos do fluxo normal de texto e podem sobrepor outros elementos.</p>
-            <div class="template">
-                <div class="absolute">
-                    <p></p>
-                </div>
-                <div class="absolute2">
-                    <p></p>
-                </div>
-                <div class="absolute3">
-                    <p></p>
-                </div>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="template2">
+                <div class="absolute">Eu não tenho nenhuma propriedade além de "position: absolute;"</div>
+                <div class="absolute2">Eu tenho "right: 0vw;". O elemento foi para o canto direito do "elemento-pai".</div>
+                <div class="absolute3">Eu tenho "right: 15vw;". O elemento foi empurrado para a esquerda em 15vw.</div>
+                <div class="absolute4">Eu tenho "top: 0vw;" e "right: 30vw;"". O elemento foi para o topo do "elemento-pai" e andou 30vw da direita para a esquerda.</div>
+                <div class="absolute5">Eu tenho "top: 15vw;" e "right: 30vw;"". O elemento andou 15vw de cima para baixo e 30vw da direita para a esquerda.</div>
+                <div class="absolute6">Eu tenho "left: 0vw;" e "bottom: 0vw;". O elemento foi para o canto inferior esquerdo do "elemento-pai".</div>
+                <div class="absolute7">Eu tenho "bottom: 15vw;". O elemento foi empurrado para cima em 15vw.</div>
+                <div class="absolute8">Eu estou invadindo o espaço do elemento vizinho.</div>
             </div>
             <h2>position: sticky;</h2>
-            <p></p>
+            <p><span class="notsure">Acho que a melhor forma de explicar como funciona um elemento com "position: sticky;" é "lembrar do congelar paínel do excel", é um elemento que acompanhará a sua tela de exibição conforme você rola no momento em que ele em tese deveria deixar de ser visto.</span></p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="template3">
+                <div class="sticky">Eu estou "grudado"</div>
+                <p>Lorem ipsum dolor sit amet. Eum ipsum doloribus eos voluptatum minus ut exercitationem quia qui laboriosam galisum et beatae quam qui numquam quae quo cupiditate ratione. Id enim nesciunt in quidem tempora quo exercitationem dicta? Non voluptas sunt ut ipsa fugit est sapiente beatae At quia nihil. Ad cupiditate laudantium et rerum facere ea amet aspernatur hic libero illum et totam quaerat qui recusandae natus.</p>
+                <p>Aut nihil veniam non nesciunt unde aut reprehenderit omnis vel nihil voluptatibus vel nesciunt nesciunt. Ut rerum galisum qui aspernatur adipisci eum dolorem nihil vel quia velit qui soluta iure ut expedita tempore. At recusandae illo sed sunt quis et ipsam fugit eos quod beatae ut aspernatur deserunt et molestiae deleniti hic sint consectetur?</p>
+                <p>Et aperiam enim aut eveniet repellendus ad libero perferendis et alias autem est nostrum perferendis qui doloremque consectetur. Ut quisquam alias ut dolorum galisum quo necessitatibus harum quo doloribus quisquam ad sint enim.</p>
+            </div>
             <h2>Positioning Text In an Image</h2>
-            <p></p>
+            <p>É possível posicionar um texto em vários lugares específicos numa imagem.</p>
+            <p><span class="bold">Exemplo de como posicionar no canto superior esquerdo:</span></p>
+            <div class="img">
+                <img src="../_imagens/fundo-minish-cap.jpg" alt="">
+                <div class="upleft">Canto superior esquerdo.</div>
+            </div>
+            <p><span class="bold">Exemplo de como posicionar no canto superior direito:</span></p>
+            <div class="img">
+                <img src="../_imagens/fundo-minish-cap.jpg" alt="">
+                <div class="upright">Canto superior direito.</div>
+            </div>
+            <p><span class="bold"><span class="notsure">Exemplo de como posicionar no centro:</span></span></p>
+            <div class="img">
+                <img src="../_imagens/fundo-minish-cap.jpg" alt="">
+                <div class="center">Centro</div>
+            </div>
+            <p><span class="bold">Exemplo de como posicionar no canto inferior esquerdo:</span></p>
+            <div class="img">
+                <img src="../_imagens/fundo-minish-cap.jpg" alt="">
+                <div class="lowleft">Canto inferior esquerdo.</div>
+            </div>
+            <p><span class="bold">Exemplo de como posicionar no canto inferior direito:</span></p>
+            <div class="img">
+                <img src="../_imagens/fundo-minish-cap.jpg" alt="">
+                <div class="lowright">Canto inferior direito.</div>
+            </div>
         </div>
     </div>
 </body>
