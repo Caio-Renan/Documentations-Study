@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+div.container, div.container2, div.container3, div.container4, div.container5, div.container6 {
+    width: 40vw;
+    height: 10vw;
+    margin: 0 auto 0 auto;
+    border: 2px solid #ccddcc;
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px;
+}
+
+div.container {
+    overflow: scroll; 
+}
+
+div.container2 {
+    overflow: visible;
+    color: black;
+}
+
+div.hidden {
+    overflow: hidden;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+
+div.container3 {
+    overflow: hidden;
+}
+
+div.container4 {
+    overflow: scroll;
+}
+
+div.container5, div.container6 {
+    width: 40vw;
+    height: 17vw;
+}
+
+div.container5 {
+    overflow: auto;
+}
+
+div.container6 {
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
