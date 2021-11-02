@@ -13,7 +13,7 @@ div#explicacao {
     max-width: 65vw;
     padding: 20px;
     min-height: 60vw;
-    z-index: -1;
+    z-index: 4;
 }
 
 div#link {
@@ -44,6 +44,12 @@ span.doubt {
 
 /*Use a propriedade a seguir para trechos não sabe se o que você está dizendo é certo.*/
 span.notsure {
-    color: navy;
+    color: #04AA6D;
+    font-weight: bold;
+}
+
+/*Use a propriedade a seguir para trechos que você, obrigatoriamente, terá que voltar por não ser pro seu nível ainda.*/
+span.seeya {
+    color: orangered;
     font-weight: bold;
 }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - clear and clearfix</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/css-clear.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Layout - clear and clearfix</h1>
+            <h2>The clear Property</h2>
+            <p>Ao definirmos um valor para "float: ;" em um elemento, os seguintes irão ser afetados. Para resolver isso, basta utilizar a propriedade "clear: ;".</p>
+            <p>Essa propriedade pode receber os valores a seguir:</p>
+            <ul>
+                <li><span class="bold">none</span> - O elemento não será empurrado para baixo do elemento que está localizado na direita ou esquerda.</li>
+                <li><span class="bold">left</span> - O elemento será empurrado para baixo do elemento que está localizado na esquerda.</li> 
+                <li><span class="bold">right</span> - O elemento será empurrado para baixo do elemento que está localizado na direita.</li>
+                <li><span class="bold">both</span> - O elemento será empurrado para baixo do elemento que está localizado na direita ou esquerda..</li>
+                <li><span class="bold">inherit</span> - O elemento herda o valor do clear do elemento-pai.</li>
+            </ul>
+            <p>Você deve espelhar o valor de clear e de float dos elementos que você deseja manipular. Se um elemento está com "float: right;" e você deseja que o seguinte vá para baixo, o valor de clear também deve ser right.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <p><span class="bold">Sem usar o clear:</span></p>
+            <div class="container">
+                <div class="left">"float: left;".</div>
+                <div class="none">Sem mudança do valor no clear.</div>
+            </div>
+            <p class="clear"><span class="bold">Usando clear:</span></p>
+            <div class="container">
+                <div class="left">"float: left;".</div>
+                <div class="clearl">"clear: left;".</div>
+            </div>
+            <h2>The clearfix Hack</h2>
+            <p>Se um elemento flutuante for maior que a caixa de conteúdo do elemento, ele irá "vazar". Para resolver isso, basta usar um "clearfix hack".</p>
+            <p>O primeiro consiste em usar "overflow: auto;" no elemento-pai. Veja os exemplos a seguir:</p>
+            <p><span class="bold">Sem clearfix:</span></p>
+            <div class="container2">
+                <img class="fr" src="../_imagens/chapeu.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor...</p>
+            </div>
+            <p class="clear"><span class="bold">Com clearflix:</span></p>
+            <div class="container3">
+                <img class="fr" src="../_imagens/chapeu.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor...</p>
+            </div>
+            <p class="clear">Porém, dependendo do padding e margin dos elementos é possível que apareça uma barra de rolagem. Por isso, muitos usam um clearfix hack mais moderno, veja a seguir:</p>
+            <p><span class="bold">Sem clearfix:</span></p>
+            <div class="container2">
+                <img class="fr" src="../_imagens/chapeu.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor...</p>
+            </div>
+            <p class="clear"><span class="bold">Com clearflix moderno:</span></p>
+            <div class="container4">
+                <img class="fr" src="../_imagens/chapeu.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor...</p>
+            </div>
+            <p>Eu só vou entender melhor como funciona esse clearflix mais pra frente.</p>
+        </div>
+    </div>
+</body>
+</html>

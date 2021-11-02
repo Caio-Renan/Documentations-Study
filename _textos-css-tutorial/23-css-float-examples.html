@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - Float Examples</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+    <style>
+        .navbar, ul {
+            margin: 20px auto 20px auto;
+            width: 60%;
+            height: 4vw;
+            background-color: lightgreen;
+            outline: 2px solid darkgreen;
+        }
+
+        div.item {
+            width: fit-content;
+            border: 2px solid black;
+            padding: 5px;
+            height: 4vw;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            width: fit-content;
+            border: 2px solid black;
+            padding: 5px;
+            height: 4vw;
+            margin: 0;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .li:hover {
+            background-color: #04AA6D;
+        }
+
+        .first {
+            background-color: green;
+            width: fit-content;
+            height: 4vw;
+            padding: 5px;
+            border: 2px solid black;
+        }
+
+        div.container, div.small-container, .box, .box2, .box3, .box4, .box5, .img, .img2, .img3, .navbar {
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        div.container, div.small-container {
+            height: fit-content;
+            width: fit-content;
+            margin: 20px auto 20px auto;
+        }
+
+        div.container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .box, .box2, .box3, .box4, .box5, .img, .img2, div.small-container, li {
+            float: left;
+        }
+
+        .box, .box2, .box3, .box4, .box5 {
+            padding: 50px;
+        }
+
+        .box, .box2, .box3, .img, .img2, div.small-container {
+            width: 33.33%;
+        }
+
+        .box4, .box5 {
+            width: 50%;
+        }
+
+        .box, .box4 {
+            background-color: #bbb; 
+        }
+
+        .box2, .box5 {
+            background-color: #ccc; 
+        }
+
+        .box3 {
+            background-color: #ddd;
+        }
+
+        .img, .img2, .img3 {
+            border: 2px solid #04AA6D;
+       
+        }
+
+        .img, .img2, .img3 {
+            padding: 10px;
+        }
+
+        .img2, .img3 {
+            margin: 5px;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Layout - Float Examples</h1>
+            <p>Aqui terão exemplos comuns de utilização do float.</p>
+            <h2>Grid of Boxes / Equal Width Boxes</h2>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="container">
+                <div class="box">Caixa 1.</div>
+                <div class="box2">Caixa 2.</div>
+                <div class="box3">Caixa 3.</div>
+            </div>
+            <div class="container">
+                <div class="box4">Caixa 4.</div>
+                <div class="box5">Caixa 5.</div>
+            </div>
+            <p class="clear">Para os exemplos acima foi necessário usar "box-sizing: border-box;", pois o box-sizing faz com que um elemento não quebre para a próxima linha quando seu conteúdo extrapola o comprimento da caixa. Eu só vou entender melhor como funciona mais pra frente.</p>
+            <h2>Images Side By Side</h2>
+            <p>Veja o exemplo a seguir:</p>
+            <p><span class="bold">Exemplo sem espaço entre as fotos:</span></p>
+            <div class="container">
+                <img class="img" src="../_imagens/blue-kinstone-menor.png" alt=""/>
+                <img class="img" src="../_imagens/green-kinstone-menor.png" alt=""/>
+                <img class="img" src="../_imagens/red-kinstone-menor.png" alt=""/>
+            </div>
+            <p class="clear">Nesse caso, há somente 1 elemento-pai e 3 filhos (imagens). Eu não consegui adicionar padding a eles de modo que ficassem alinhados e sem dar um valor absoluto ao width. Veja como fica ao tentar adicionar espaço entre as imagens:</p> 
+            <div class="container">
+                <img class="img2" src="../_imagens/blue-kinstone-menor.png" alt=""/>
+                <img class="img2" src="../_imagens/green-kinstone-menor.png" alt=""/>
+                <img class="img2" src="../_imagens/red-kinstone-menor.png" alt=""/>
+            </div>
+            <p class="clear"><span class="bold">Exemplo com espaços entre as fotos:</span></p>
+            <div class="container">
+                <div class="small-container"><img class="img3" src="../_imagens/blue-kinstone-menor.png" alt=""/></div>
+                <div class="small-container"><img class="img3" src="../_imagens/green-kinstone-menor.png" alt=""/></div>
+                <div class="small-container"><img class="img3" src="../_imagens/red-kinstone-menor.png" alt=""/></div>
+            </div>
+            <p>Nesse caso, há 1 "elemento-vô", 3 "elementos-pai" e 3 "filhos".</p>
+            <h2>Equal Height Boxes</h2>
+            <p><span class="seeya">Eu só vou entender melhor como funciona mais pra frente.</span></p>
+            <h2>Navigation Menu</h2>
+            <p>Você pode criar um menu horizontal usando float:</p>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+            <p class="clear">Jeito certo:</p>
+            <div class="navbar">
+                <div class="first">Home</div>
+                <div class="item">Notícias</div>
+                <div class="item">Contato</div>
+                <div class="item">Sobre</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+div.container {
+    width: 90%;
+    height: 3.5vw;
+    margin: 20px auto 20px auto;
+    
+}
+
+div.container2 {
+    border: 1px solid gray;
+    height: fit-content;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+}
+
+div.container3 {
+    border: 1px solid gray;
+    height: fit-content;
+    width: fit-content;
+    margin: 20px auto 20px auto;
+}
+
+div.container4 {
+    border: 1px solid gray;
+    height: 3vw;
+    width: fit-content;
+    margin: 20px auto 20px auto;
+}
+
+div.buttonl, div.buttonr {
+    width: 8vw;
+    height: 2.5vw;
+    color: white;
+    padding: 0.5vw;
+    text-align: center;
+}
+
+div.buttonl {
+    background-color: red;
+}
+
+div.buttonr {
+    background-color: steelblue;
+}
+
+div.left, div.left2, div.left3, div.left4, div.right, div.right2, div.right3, div.right4, div.normal, div.normal2, div.normal3, div.normal4 {
+    width: 3vw;
+    height: 3vw;
+}
+
+div.left, div.left2, div.left3, div.left4, div.buttonl, img.fl {
+    float: left;
+}
+
+div.right, div.right2, div.right3, div.right4, div.buttonr, img.fr {
+    float: right;
+}
+
+div.left, div.right, div.normal {
+    background-color: lightgreen;
+}
+
+div.left2, div.right2, div.normal2 {
+    background-color: #04AA6D;
+}
+
+div.left3, div.right3, div.normal3 {
+    background-color: green;
+}
+
+div.left4, div.right4, div.normal4 {
+    background-color: darkgreen;
+}
+
+.clear {
+    clear: both;
+}
+
+img.fn {
+    float: none;
+}
