@@ -8,54 +8,91 @@
     <link rel="stylesheet" href="../_css/geral-link.css"/>
     <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
     <style>
-        .navbar, ul {
-            margin: 20px auto 20px auto;
-            width: 60%;
-            height: 4vw;
-            background-color: lightgreen;
-            outline: 2px solid darkgreen;
+        div.container2 {
+            background-color: white;
+            margin: 0 auto 0 auto;
+            width: 100%;
+            height: fit-content;
+            overflow: hidden;
+        }
+        
+        div.small-container2 {
+            padding: 15px;
+            margin: 0;
+            width: 30%;
+            overflow: hidden;
         }
 
-        div.item {
-            width: fit-content;
-            border: 2px solid black;
-            padding: 5px;
-            height: 4vw;
+        div.small-container3 {
+            float: right;
+            padding: 0;
             margin: 0;
+            width: 70%;
+            overflow: hidden;
+        }
+
+        div.small-container3 h1, div.small-container3 p {
+            text-align: left;
+            text-indent: 0;
+        }
+
+        div.header, div.footer, div.leftbox {
+            color: white;
+        }
+
+        div.header, div.footer {
+            background-color: #04AA6D;
+        }
+
+        div.header {
+            padding: 50px;
+            font-size: 18pt;
+        }
+
+        div.footer {
+            padding: 30px;
+            font-size: 12pt;
+        }
+        
+        div.leftbox {
+            background-color: green;
+            padding: 8px;
+            margin: 10px auto 10px auto;
+            width: 150px;
+            text-align: left;
+        }
+
+        div.leftbox:hover {
+            background-color: darkgreen;
         }
 
         ul {
-            list-style: none;
+            list-style-type: none;
             padding: 0;
+            width: 60%;
+            margin: 0 auto 0 auto;
+            background-color: lightgreen;
+            outline: 2px solid darkgreen;
+            overflow: hidden;
         }
 
-        li {
-            width: fit-content;
-            border: 2px solid black;
-            padding: 5px;
-            height: 4vw;
-            margin: 0;
-            text-align: center;
-        }
-
-        a {
+        li a {
+            display: inline-block;
+            padding: 14px;
             text-decoration: none;
             text-align: center;
+            color: black;
         }
         
-        .li:hover {
+        li:hover {
             background-color: #04AA6D;
         }
 
         .first {
             background-color: green;
-            width: fit-content;
-            height: 4vw;
-            padding: 5px;
-            border: 2px solid black;
         }
 
-        div.container, div.small-container, .box, .box2, .box3, .box4, .box5, .img, .img2, .img3, .navbar {
+        div.container, div.small-container, .box, .box2, .box3, .box4, .box5, .img, .img2, .img3, div.small-container2, div.small-container3 {
             box-sizing: border-box;
             text-align: center;
         }
@@ -72,7 +109,7 @@
             display: table;
         }
 
-        .box, .box2, .box3, .box4, .box5, .img, .img2, div.small-container, li {
+        .box, .box2, .box3, .box4, .box5, .img, .img2, div.small-container, li, div.small-container2 {
             float: left;
         }
 
@@ -113,7 +150,7 @@
             margin: 5px;
         }
 
-        .clear {
+        .clear, div.footer {
             clear: both;
         }
     </style>
@@ -161,18 +198,34 @@
             <h2>Navigation Menu</h2>
             <p>Você pode criar um menu horizontal usando float:</p>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li class="first"><a href="#">Home</a></li>
                 <li><a href="#">Notícias</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Sobre</a></li>
             </ul>
-            <p class="clear">Jeito certo:</p>
-            <div class="navbar">
-                <div class="first">Home</div>
-                <div class="item">Notícias</div>
-                <div class="item">Contato</div>
-                <div class="item">Sobre</div>
+            <p><span class="doubt">Por que o ul só aderiu a altura do conteúdo após ter a propriedade "overflow: hidden;"?</span></p>
+            <h2>Web Layout Example</h2>
+            <p>É comum fazer um layout inteiro de uma página usando float.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <p><span class="bold">Jeito que eu fiz:</span></p>
+            <div class="header">Chania</div>
+            <div class="container2">
+                <div class="small-container2">
+                    <div class="leftbox">The Flight</div>
+                    <div class="leftbox">The City</div>
+                    <div class="leftbox">The Island</div>
+                    <div class="leftbox">The Food</div>
+                </div>
+                <div class="small-container3">
+                    <h1>The City</h1>
+                    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p> 
+                    <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+                </div>
             </div>
+            <div class="footer">Footer Text</div>
+            <p>A principal diferença do jeito que eu fiz para a que está no site é que eu não usei "ul" para fazer o menu e eu usei mais divs.</p>
+            <h2>More Examples</h2>
+            <p></p>
         </div>
     </div>
 </body>
