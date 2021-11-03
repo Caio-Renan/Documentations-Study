@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+div.website {
+    background-color: white;
+}
+
+div.website ul {
+    list-style-type: none;
+}
+
+div.website li a {
+    text-decoration: none;
+}
+
+div.navmenu2 {
+    background-color: #1898E0;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+div.navmenu2 ul {
+    margin: 0;
+    padding: 0;
+}
+
+div.navmenu2 li {
+    background-color: #1898E0;
+    padding: 15px;
+}
+
+div.navmenu2 li:hover, div.container3 li a:hover {
+    background-color: #006494;
+}
+
+div.container3 {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+div.container3 ul {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 25%;
+    margin: 0;
+    padding: 0;
+}
+
+div.container3 li a:hover {
+    color: white;
+}
+
+div.navmenu2 li.first2 {
+    background-color: #247BA0;
+}
+
+div.container3 li {
+    width: 10vw;
+    margin: 0 auto 0 auto;
+}
+
+div.container3 li a {
+    background-color: #DFE9F5;
+    display: block;
+    color: black;
+    padding: 8px;
+    margin: 0px auto 5px auto;  
+}
+
+div.container3 li a.selected    {
+    background-color: navy;
+    color: white;
+}
+
+div.article {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px 0 20px;
+}
+
+div.article h1, div.article p {
+    text-align: left;
+    text-indent: 0;
+}
+
+div.mainheader {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+div.mainheader h1 {
+    box-sizing: border-box;
+    background-color: steelblue;
+    color: white;
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    padding: 37px;
+    text-align: center;
+    text-indent: 0;
+}
+
+div.container4 {
+    box-sizing: border-box;
+    height: fit-content;
+    width: 75%;
+}
+
+div.footer2 {
+    box-sizing: border-box;
+    background-color: #006494;
+    width: 100%;
+    padding: 30px;
+}
+
+/* First Letter*/
+.flleft {
+    font-size: 300%;
+    width: 6vw;
+    line-height: 80%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.imgcaption {
+    text-align: center;
+}
+
+img.right, div.imgcaption {
+    border: 1px dotted #04AA6D;
+    margin: 0 0 10px 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+div.imgcaption, .right, div.small-container3, div.article, div.mainheader, div.container4 {
+    float: right;
+}
+
+div.container2 {
+    background-color: white;
+    margin: 0 auto 0 auto;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+div.small-container2 {
+    padding: 15px;
+    margin: 0;
+    width: 30%;
+    overflow: hidden;
+}
+
+div.small-container3 {
+    padding: 0;
+    margin: 0;
+    width: 70%;
+    overflow: hidden;
+}
+
+div.small-container3 h1, div.small-container3 p {
+    text-align: left;
+    text-indent: 0;
+}
+
+div.small-container3 p {
+    padding: 5px;
+}
+
+div.header, div.footer, div.leftbox, div.navmenu2 a, div.footer2 {
+    color: white;
+}
+
+div.header, div.footer {
+    background-color: #04AA6D;
+}
+
+div.header {
+    padding: 50px;
+    font-size: 18pt;
+}
+
+div.footer {
+    padding: 30px;
+    font-size: 12pt;
+}
+
+div.leftbox {
+    background-color: green;
+    padding: 8px;
+    margin: 10px auto 10px auto;
+    width: 150px;
+    text-align: left;
+}
+
+div.leftbox:hover {
+    background-color: darkgreen;
+}
+
+div.navmenu ul {
+    list-style-type: none;
+    padding: 0;
+    width: 60%;
+    margin: 0 auto 0 auto;
+    background-color: lightgreen;
+    outline: 2px solid darkgreen;
+    overflow: hidden;
+}
+
+div.navmenu li a {
+    display: inline-block;
+    padding: 14px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+div.navmenu li:hover {
+    background-color: #04AA6D;
+}
+
+div.navmenu .first {
+    background-color: green;
+}
+
+div.container, div.small-container, .box, .box2, .box3, .box4, .box5, .img, .img2, .img3, div.small-container2, div.small-container3 {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+div.container, div.small-container {
+    height: fit-content;
+    width: fit-content;
+    margin: 20px auto 20px auto;
+}
+
+div.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.box, .box2, .box3, .box4, .box5, .img, .img2, div.small-container, div.navmenu li, div.navmenu2 li, div.small-container2, .flleft {
+    float: left;
+}
+
+.box, .box2, .box3, .box4, .box5 {
+    padding: 50px;
+}
+
+.box, .box2, .box3, .img, .img2, div.small-container {
+    width: 33.33%;
+}
+
+.box4, .box5 {
+    width: 50%;
+}
+
+.box, .box4 {
+    background-color: #bbb; 
+}
+
+.box2, .box5 {
+    background-color: #ccc; 
+}
+
+.box3 {
+    background-color: #ddd;
+}
+
+.img, .img2, .img3 {
+    border: 2px solid #04AA6D;
+
+}
+
+.img, .img2, .img3 {
+    padding: 10px;
+}
+
+.img2, .img3 {
+    margin: 5px;
+}
+
+.clear, div.footer, .container3, div.footer2 {
+    clear: both;
+}
