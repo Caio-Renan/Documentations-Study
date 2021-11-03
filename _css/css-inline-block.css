@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+span.i, span.b, span.ib {
+    width: 8vw;
+    height: 4vw;
+    padding: 5px;
+    border: 1px solid steelblue;
+    background-color: #04AA6D;
+}
+
+span.i {
+    display: inline;
+}
+
+span.b {
+    display: block;
+}
+
+span.ib {
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+div.nav {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto 0 auto;
+    background-color: #04AA6D;
+}
+
+li {
+    display: inline-block;
+    background-color: #04AA6D;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-left: 0;
+    margin-right: 0;
+}
