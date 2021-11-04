@@ -15,10 +15,7 @@ div.template {
 div.template2 {
     position: relative;
     border: 4px solid green;
-    margin-bottom: auto;
-    margin-top: auto;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
     height: 58vw;
     width: 58vw;
     padding: 5px;
