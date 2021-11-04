@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/* MIXED */
+/* Second div*/
+div.descendant, div.child, div.sibling, div.general-sibling, div.sibling3 {
+    border: 4px solid steelblue;
+}
+
+/* Third div */
+div.sibling2, div.test {
+    border: 4px solid orange;
+}
+
+/* Green border */
+div.container {
+    border: 4px solid #04AA6D;
+}
+
+/* width: 80% */
+div.container {
+    width: 80%;
+}
+
+/* Centralized */
+div.container, img {
+    margin: 0 auto 0 auto;
+}
+
+/* padding: 10px */
+div.descendant p, div.sibling + div.sibling2, div.sibling + h2, div.general-sibling ~ h2, div.child > img {
+    padding: 10px;
+}
+
+/* background-color */
+div.child > h3 , div.sibling + div.sibling2, div.sibling + h2, div.general-sibling ~ h2 {
+    background-color: #04AA6D;
+}
+
+/* SPECIFIC */
+img {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Descendant Selector */
+div.descendant p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Child Selector */
+div.child > h3 {
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div.child > img {
+    border: 4px solid orangered;
+    border-radius: 16px;
+}
+
+/* Just to show that it doesn't work */
+div.sibling2 + h3 {
+    background-color: #04AA6D;
+    padding: 10px;
+}

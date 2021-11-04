@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/css-combinators.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Combinators</h1>
+            <h2>CSS Combinators</h2>
+            <p>Um combinador é algo que explica a relação entre dois seletores.</p>
+            <p>Um seletor CSS pode possuir mais de um seletor simples. Entre eles nós podemos incluir um combinador.</p>
+            <p>Nós temos quatro combinadores diferentes:</p>
+            <ul>
+                <li><span class="bold">Seletor descendente (espaço)</span> - Vai alterar um elemento descendente específico de um elemento-pai específico;</li>
+                <li><span class="bold">Seletor de filho (>)</span> - Vai alterar todos os elementos filhos de um elemento-pai específico;</li>
+                <li><span class="bold">Seletor de irmão adjacente (+)</span> - Vai alterar um elemento-filho específico que vem logo a seguir de um elemento-pai específico;</li>
+                <li><span class="bold">Seletor de irmão geral (~)</span> - Vai alterar um elemento-filho específico que vem a seguir (não necessariamente o que vem logo depois) do e um elemento-pai específico.</li>
+            </ul>
+
+            <h2>Descendant Selector</h2>
+            <p>Você tem utilizado bastante esse, ele vai mexer com todos os elementos que são descendentes de um elemento.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container">
+                <div class="descendant">
+                    <h1>Eu sou um h1!</h1>
+                    <h2>Eu sou um h2!</h2>
+                    <h3>Eu sou um h3!</h3>
+                    <div class="test">
+                        <h2>Eu sou um h2!</h2>
+                        <p>Eu sou um parágrafo!</p>
+                    </div>
+                    <p>Eu sou um parágrafo!</p>
+                    <img src="../_imagens/blue-kinstone-menor.png" alt="">
+                </div>
+            </div>
+
+            <h2>Child Selector (>)</h2>
+            <p>Você deve usar esse seletor quando quiser alterar todos os elementos filhos de um elemento específico.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <p><span class="bold">Usando "div.child (borda azul) > h3" e "div.child (borda azul) > img":</span></p>
+            <div class="container">
+                <div class="child">
+                    <h1>Eu sou um h1!</h1>
+                    <h2>Eu sou um h2!</h2>
+                    <h3>Eu sou um h3!</h3>
+                    <h2>Eu sou um h2!</h2>
+                    <h3>Eu sou um h3!</h3>
+                    <div class="test">
+                        <h2>Eu sou um h2!</h2>
+                        <p>Eu sou um parágrafo!</p>
+                        <h3>Eu sou um h3!</h3>
+                    </div>
+                    <h3>Eu sou um h3!</h3>
+                </div>
+                <p>Eu sou um parágrafo!</p>
+                <img src="../_imagens/blue-kinstone-menor.png" alt="">
+            </div>
+            <br/>
+            <div class="container">
+                <h1>Eu sou um h1!</h1>
+                <h2>Eu sou um h2!</h2>
+                <h3>Eu sou um h3!</h3>
+                <div class="child">
+                    <p>Eu sou um parágrafo!</p>
+                    <img src="../_imagens/blue-kinstone-menor.png" alt="">
+                </div>
+            </div>
+            <p>A principal diferença entre esse e o anterior é que o anterior alteraria TODOS os h3 e as img que estivessem dentro da div selecionada, mesmo que esse h3 ou img estivessem dentro de outro elemento, coisa que o seletor de filho não faz.</p>
+            <h2>Adjacent Sibling Selector (+)</h2>
+            <p>Para um elemento ser irmão do outro ele devem ter o mesmo elemento pai e adjacente significa que é um elemento que vem logo a seguir. Ou seja, o seletor de irmão adjacente é um seletor que seleciona um elemento irmão que vem a seguir.</p>
+            <p>Veja o exemplos a seguir:</p>
+            <p><span class="bold">Usando "div.sibling (borda azul) + div.sibiling2 (borda laranja)"":</span></p>
+            <div class="container">
+                <div class="sibling">
+                    <h1>Eu sou um h1!</h1>
+                </div>
+                <div class="sibling2">
+                    <h2>Eu sou um h2!</h2>
+                    <h3>Eu sou um h3!</h3>
+                </div>
+                <div class="sibling">
+                    <h1>Eu sou um h1!</h1>
+                </div>
+                <div class="sibling2">
+                    <h2>Eu sou um h2!</h2>
+                    <h3>Eu sou um h3!</h3>
+                </div>
+                <p>Eu sou um parágrafo!</p>
+                <img src="../_imagens/blue-kinstone-menor.png" alt="">
+            </div>
+            <p><span class="bold">Usando "div.sibling (borda azul) + h2":</span></p>
+            <div class="container">
+                <div class="sibling">
+                    <h1>Eu sou um h1!</h1>
+                </div>
+                <h2>Eu sou um h2!</h2>
+                <h3>Eu sou um h3!</h3>
+                <div class="sibling">
+                    <h1>Eu sou um h1!</h1>
+                </div>
+                <h2>Eu sou um h2!</h2>
+                <h3>Eu sou um h3!</h3>
+                <p>Eu sou um parágrafo!</p>
+                <img src="../_imagens/blue-kinstone-menor.png" alt="">
+            </div>
+            <p><span class="bold">Usando "div.sibling (borda azul) + h3":</span></p>
+            <div class="container">
+                <div class="sibling3">
+                    <h1>Eu sou um h1!</h1>
+                </div>
+                <h2>Eu sou um h2!</h2>
+                <h3>Eu sou um h3!</h3>
+                <div class="sibling3">
+                    <h1>Eu sou um h1!</h1>
+                </div>
+                <h2>Eu sou um h2!</h2>
+                <h3>Eu sou um h3!</h3>
+                <p>Eu sou um parágrafo!</p>
+                <img src="../_imagens/blue-kinstone-menor.png" alt="">
+            </div>
+            <p>Veja que não funcionou, pois h3 não é um elemento que vem logo a seguir do div.sibling (borda azul).</p>
+
+            <h2>General Sibling Selector (~)</h2>
+            <p>Você deve usar esse seletor quando quiser alterar todos os elementos que vem depois de um elemento específico.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <p><span class="bold">Usando "div.general-sibling (borda azul) ~ h2":</span></p>
+            <div class="container">
+                <div class="general-sibling">
+                    <h1>Eu sou um h1!</h1>
+                </div>
+                <h2>Eu sou um h2!</h2>
+                <h3>Eu sou um h3!</h3>
+                <p>Eu sou um parágrafo!</p>
+                <h2>Eu sou um h2!</h2>
+                <div class="general-sibling">
+                    <h1>Eu sou um h1!</h1>
+                </div>
+                <h2>Eu sou um h2!</h2>
+                <h3>Eu sou um h3!</h3>
+                <p>Eu sou um parágrafo!</p>
+                <h2>Eu sou um h2!</h2>
+                <img src="../_imagens/blue-kinstone-menor.png" alt="">
+            </div>
+            <p>Veja que todos os h2, mesmo aqueles que não vinham logo a seguir do "div. general-sibling" mudaram.</p>
+            <div class="container">
+                <div class="general-sibling">
+                    <h1>Eu sou um h1!</h1>
+                </div>
+                <h2>Eu sou um h2!</h2>
+                <h3>Eu sou um h3!</h3>
+                <p>Eu sou um parágrafo!</p>
+                <h2>Eu sou um h2!</h2>
+                <div class="test">
+                    <h2>Eu sou um h2!</h2>
+                </div>
+                <h2>Eu sou um h2!</h2>
+                <div class="general-sibling">
+                    <h1>Eu sou um h1!</h1>
+                </div>
+                <h2>Eu sou um h2!</h2>
+                <h3>Eu sou um h3!</h3>
+                <p>Eu sou um parágrafo!</p>
+                <h2>Eu sou um h2!</h2>
+                <img src="../_imagens/blue-kinstone-menor.png" alt="">
+            </div>
+            <p>O exemplo acima mostrou que se o elemento que você selecionou estiver dentro de outra div que não seja a que você selecionou, não ocorrerá nada, mesmo vindo depois do elemento que você selecionou. Repare no que ocorreu com o h2 dentro da borda laranja.</p>
+        </div>
+    </div>
+</body>
+</html>
