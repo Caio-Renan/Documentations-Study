@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-classes</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+    <style>
+        /* First div */
+        div.example4, div.example6 {
+            border: 4px solid salmon;
+        }
+
+        /* Second div*/
+        div.container1 {
+            border: 4px solid steelblue;
+        }
+
+        /* Third div */
+        div.container2 {
+            border: 4px solid orange;
+        }
+
+        /* fourth div */
+        div.container3 {
+            border: 4px solid orangered;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        div.example a:link {
+            color: lightseagreen;
+        }
+
+        div.example a:visited {
+            color: steelblue;
+        }
+
+        div.example a:hover {
+            color: #04AA6D;
+            font-size: 24px;
+            text-decoration: underline;
+        }
+
+        div.example a:active {
+            color: darkgreen;
+        }
+
+        div.example2 {
+            margin: 0 auto 0 auto;
+            text-align: center;
+            width: 80%;
+            padding: 30px;
+            background-color: lightseagreen;
+        }
+
+        div.example3 {
+            text-indent: 20px;
+            margin: 5px;
+        }
+
+        div.example3 p {
+            display: none;
+        }
+
+        div.example3:hover p {
+            display: block;
+            background-color: lightseagreen;
+            padding: 30px;
+        }
+
+        div.example4 p:first-child  {
+            display: block;
+            background-color: lightseagreen;
+            padding: 5px;
+        }
+
+        p i:first-child {
+            color: lightseagreen;
+            text-decoration: underline;
+        }
+
+        q:lang(quote)
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Pseudo-classes</h1>
+            <h2>What are Pseudo-classes?</h2>
+            <p>Uma pseudoclasse é usada para definir um estado especial de um elemento.</p>
+            <p>Algumas aplicações são:</p>
+            <ul>
+                <li>Estilizar um elemento quando o mouse passar por cima dele ou quando receber um click;</li>
+                <li>Fazer com um que o estilo de um link mude após ele já ter sido visitado uma vez;</li>
+                <li>Estilizar um elemento quando ele receber um click.</li>
+            </ul>
+            <h2>Syntax</h2>
+            <p>A sintaxe das pseudoclasses é assim:</p>
+            <p>selector:pseudo-class {property: value;}</p>
+            <p>A pseudoclasse tem que estar ao lado do ":".</p>
+            <h2>Anchor Pseudo-classes</h2>
+            <p>Um link pode ser mostrado de diferentes formas.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="example">
+                <a target="_blank" href="../_textos-css-tutorial/15-css-links.html">Entenda melhor como isso funciona clicando aqui!</a>
+            </div>
+            <p>No caso acima eu usei "a:link{}" "a:visited{}" "a:hover{}" "a:active{}", nessa ordem.</p>
+            <h2>Pseudo-classes and HTML Classes</h2>
+            <p>Você pode combinar pseuclasses com classes (class) do HTML. O caso acima é um exemplo, ele está dentro de uma div com class definida.</p>
+            <h2>Hover on div</h2>
+            <p>"":hover{}" faz com que algo aconteça quando o mouse passa por cima do elemento. Você pode usar isso em qualquer elemento.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="example2">Exemplo.</div>
+            <h2>Simple Tooltip Hover</h2>
+            <p>Você pode usar o hover para criar algo parecido com as dicas que aparecem quando você passa o mouse por cima.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="example3">Passe o mouse aqui para receber a dica!
+                <p>Dica.</p>
+            </div>
+            <h2>CSS - The :first-child Pseudo-class</h2>
+            <p>Use ":first-child{}" para fazer com que quando um elemento específico seja o primeiro filho de um elemento pai ele tenha um estilo próprio.</p>
+            <h2>Match the first "p" element</h2>
+            <p>Veja o exemplo do uso de ":first-child{}" a seguir:</p>
+            <p><span class="bold">Usando "div.example4 p:first-child{}":</span></p>
+            <div class="example4">
+                <p>Eu sou um parágrafo</p>
+                <div class="container1">
+                    <p>Eu sou um parágrafo</p>
+                </div>
+                <div class="container2">
+                    <h1>Eu sou um h1!</h1>
+                    <p>Eu sou um parágrafo</p>
+                </div>
+                <div class="container3">
+                    <p>Eu sou um parágrafo</p>
+                    <h1>Eu sou um h1!</h1>
+                    <p>Eu sou um parágrafo</p>
+                </div>
+                <p>Eu sou um parágrafo</p>
+            </div>
+            <h2>Match the first "i" element in all "p" elements</h2>
+            <p>No caso abaixo eu usei o ":first-child" para fazer com que sempre que a tag "i" fosse usada pela primeira vez dentro de um elemento-pai (p) ela ficasse com uma estilização diferente.</p>
+            <div class="example5">
+                <p>Eu sou um <i>"parágrafo (estou entre tag i)"</i> e <i>eu</i> estou entre uma tag i.</p>
+                <p><i>Eu</i> estou entre uma tag i e eu também sou um <i>"parágrafo (estou entre tag i)"</i>.</p>
+            </div>
+            <h2>Match all "i" elements in all first child "p" elements</h2>
+            <p>No caso abaixo eu usei o ":first-child" para fazer com que todas as tags "i" que fossem usadas numa tag "p" que fosse o primeiro elemento-filho de um elemento-pai ficassem com uma estilização diferente. Confuso, né? Veja o exemplo e entenderá.</p>
+            <div class="example6">
+                <p>Eu sou um <i>"parágrafo (estou entre tag i)"</i> e <i>eu</i> estou entre uma tag i.</p>
+                <div class="container1">
+                    <p>Eu sou um <i>"parágrafo (estou entre tag i)"</i> e <i>eu</i> estou entre uma tag i.</p>
+                    <p>Eu sou um <i>"parágrafo (estou entre tag i)"</i> e <i>eu</i> estou entre uma tag i.</p>
+                </div>
+                <p>Eu sou um <i>"parágrafo (estou entre tag i)"</i> e <i>eu</i> estou entre uma tag i.</p>
+                <div class="container2">
+                    <p>Eu sou um <i>"parágrafo (estou entre tag i)"</i> e <i>eu</i> estou entre uma tag i.</p>
+                    <p>Eu sou um <i>"parágrafo (estou entre tag i)"</i> e <i>eu</i> estou entre uma tag i.</p>
+                </div>
+            </div>
+            <h2>CSS - The :lang Pseudo-class</h2>
+            <p>Use "<code>:lang(){quotes: "";}"</code> para definir regras especiais para diferentes linguaguens.</p>
+            <p>No exemplo abaixo, tudo que estivesse entre a tag q de classe "quote" ficasse entre aspas.</p>
+            <p><q class="quote">Ele disse: Olá!</q> Já comecei a achá-lo gentil.</p>
+            <p><q class="quote">Meu nome é Caio.</q></p>
+        </div>
+    </div>
+</body>
+</html>
