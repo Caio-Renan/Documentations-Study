@@ -6,91 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Pseudo-classes</title>
     <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/css-pseudo-classes.css"/>
     <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
-    <style>
-        /* First div */
-        div.example4, div.example6 {
-            border: 4px solid salmon;
-        }
-
-        /* Second div*/
-        div.container1 {
-            border: 4px solid steelblue;
-        }
-
-        /* Third div */
-        div.container2 {
-            border: 4px solid orange;
-        }
-
-        /* fourth div */
-        div.container3 {
-            border: 4px solid orangered;
-        }
-
-        a {
-            display: block;
-            width: 100%;
-            text-decoration: none;
-            color: black;
-            text-align: center;
-            font-size: 18px;
-        }
-
-        div.example a:link {
-            color: lightseagreen;
-        }
-
-        div.example a:visited {
-            color: steelblue;
-        }
-
-        div.example a:hover {
-            color: #04AA6D;
-            font-size: 24px;
-            text-decoration: underline;
-        }
-
-        div.example a:active {
-            color: darkgreen;
-        }
-
-        div.example2 {
-            margin: 0 auto 0 auto;
-            text-align: center;
-            width: 80%;
-            padding: 30px;
-            background-color: lightseagreen;
-        }
-
-        div.example3 {
-            text-indent: 20px;
-            margin: 5px;
-        }
-
-        div.example3 p {
-            display: none;
-        }
-
-        div.example3:hover p {
-            display: block;
-            background-color: lightseagreen;
-            padding: 30px;
-        }
-
-        div.example4 p:first-child  {
-            display: block;
-            background-color: lightseagreen;
-            padding: 5px;
-        }
-
-        p i:first-child {
-            color: lightseagreen;
-            text-decoration: underline;
-        }
-
-        q:lang(quote)
-    </style>
 </head>
 <body>
     <div id="link">
@@ -156,6 +73,7 @@
             </div>
             <h2>Match all "i" elements in all first child "p" elements</h2>
             <p>No caso abaixo eu usei o ":first-child" para fazer com que todas as tags "i" que fossem usadas numa tag "p" que fosse o primeiro elemento-filho de um elemento-pai ficassem com uma estilização diferente. Confuso, né? Veja o exemplo e entenderá.</p>
+            <p><span class="bold">Usando "p:first-child i {}":</span></p>
             <div class="example6">
                 <p>Eu sou um <i>"parágrafo (estou entre tag i)"</i> e <i>eu</i> estou entre uma tag i.</p>
                 <div class="container1">
@@ -169,10 +87,20 @@
                 </div>
             </div>
             <h2>CSS - The :lang Pseudo-class</h2>
-            <p>Use "<code>:lang(){quotes: "";}"</code> para definir regras especiais para diferentes linguaguens.</p>
-            <p>No exemplo abaixo, tudo que estivesse entre a tag q de classe "quote" ficasse entre aspas.</p>
-            <p><q class="quote">Ele disse: Olá!</q> Já comecei a achá-lo gentil.</p>
-            <p><q class="quote">Meu nome é Caio.</q></p>
+            <p>Use "<code>:lang(){quotes: "";}"</code> para definir regras especiais para diferentes linguagens.</p>
+            <p>No exemplo abaixo, tudo que estivesse entre a tag q de classe "quote" ficasse entre colchetes.</p>
+            <p><span class="bold">"q:lang(quote) {}":</span></p>
+            <p><q lang="quote">Ele disse: Olá!</q> Já comecei a achá-lo gentil.</p>
+            <p><q lang="quote">Meu nome é Caio.</q></p>
+            <h2>More Examples</h2>
+            <h3>Use of :focus</h3>
+            <p>":focus {}" aparentemente é usado para formulários quando você deseja que a parte do input reaja de alguma forma quando receber um click.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <p><span class="bold">Usando "input:focus {}":</span></p>
+            <form action="/action_page.php" method="get">
+                <p>Primeiro nome: <input type="text" name="fname"></p>
+                <p>Último nome: <input type="text" name="lname"></p>
+            </form>
         </div>
     </div>
 </body>

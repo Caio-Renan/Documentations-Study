@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+/* First div */
+div.example4, div.example6 {
+    border: 4px solid salmon;
+}
+
+/* Second div*/
+div.container1 {
+    border: 4px solid steelblue;
+}
+
+/* Third div */
+div.container2 {
+    border: 4px solid orange;
+}
+
+/* fourth div */
+div.container3 {
+    border: 4px solid orangered;
+}
+
+a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+}
+
+div.example a:link {
+    color: lightseagreen;
+}
+
+div.example a:visited {
+    color: steelblue;
+}
+
+div.example a:hover {
+    color: #04AA6D;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+div.example a:active {
+    color: darkgreen;
+}
+
+div.example2 {
+    margin: 0 auto 0 auto;
+    text-align: center;
+    width: 80%;
+    padding: 30px;
+    background-color: lightseagreen;
+}
+
+div.example3 {
+    text-indent: 20px;
+    margin: 5px;
+}
+
+div.example3 p {
+    display: none;
+}
+
+div.example3:hover p {
+    display: block;
+    background-color: lightseagreen;
+    padding: 30px;
+}
+
+div.example4 p:first-child  {
+    display: block;
+    background-color: lightseagreen;
+    padding: 5px;
+}
+
+p:first-child i {
+    color: lightseagreen;
+    text-decoration: underline;
+}
+
+q:lang(quote) {
+    quotes: "[" "]";
+}
+
+input:focus {
+    background-color: steelblue;
+}
