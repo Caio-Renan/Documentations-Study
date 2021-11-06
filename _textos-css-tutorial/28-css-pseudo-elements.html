@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-elements</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/css-pseudo-elements.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Pseudo-elements</h1>
+            <h2>What are Pseudo-Elements?</h2>
+            <p>Um pseudo-elemento é usado para estilizar partes específicas de um elemento.</p>
+            <p>Algumas aplicações são:</p>
+            <ul>
+                <li>Estilizar a primeira letra ou linha de um elemento;</li>
+                <li>Inserir conteúdo depois ou antes do conteúdo de um elemento.</li>
+            </ul>
+
+            <h2>Syntax</h2>
+            <p>A sintaxe dos pseudo-elementos é assim:</p>
+            <p>selector::pseudo-element {property: value;}</p>
+
+            <h2>The ::first-line Pseudo-element</h2>
+            <p>Use "::first-line {}" para adicionar uma estilização especial para a primeira linha de um texto.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <p><span class="bold">Usando "div.container p::first-line" e "div.test p::first-line":</span></p>
+            <div class="container">
+                <h1>Exemplo</h1>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. [...]</p>
+                <div class="test">
+                    <h1>Exemplo</h1>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. [...]</p>
+                    <h1>Exemplo</h1>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+                <h1>Exemplo</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. [...]"</p>
+            </div>
+            <p>Obs.: Esse pseudo-elemento só funciona em elementos block-level.</p>
+            <p>Você pode usar as propriedades a seguir nesse pseudo-elemento:</p>
+            <ul>
+                <li>font properties</li>
+                <li>color properties</li>
+                <li>background properties</li>
+                <li>word-spacing</li>
+                <li>letter-spacing</li>
+                <li>text-decoration</li>
+                <li>vertical-align</li>
+                <li>text-transform</li>
+                <li>line-height</li>
+                <li>clear</li>
+            </ul>
+
+            <h2>The ::first-letter Pseudo-element</h2>
+            <p>Use "::first-letter {}" para adicionar uma estilização especial para a primeira palavra de um texto.</p>
+            <p><span class="bold">Usando "div.test2 p::first-letter" e com a estilização do exemplo acima:</span></p>
+            <div class="container">
+                <h1>Exemplo</h1>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. [...]</p>
+                <div class="test2">
+                    <h1>Exemplo</h1>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. [...]</p>
+                    <h1>Exemplo</h1>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+                <h1>Exemplo</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. [...]"</p>
+            </div>
+
+            <h2>Pseudo-elements and HTML Classes</h2>
+            <p>Você pode combinar os pseudo-elementos com as "class" do HTML. Os exemplos acima demonstram isso.</p>
+
+            <h2>Multiple Pseudo-elements</h2>
+            <p>Você pode combinar vários pseudo-elementos. Os exemplos acima demonstram isso.</p>
+
+            <h2>CSS - The ::before Pseudo-element</h2>
+            <p>Use "::before {}" quando quiser inserir algum conteúdo logo antes de um conteúdo de um elemento.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <p><span class="bold">Usando "div.test3 h1::before", "div.test3 p::before" e com a estilização dos exemplos acima:</span></p>
+            <div class="container">
+                <h1>Exemplo</h1>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. [...]</p>
+                <div class="test3">
+                    <h1>Exemplo</h1>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. [...]</p>
+                    <h1>Exemplo</h1>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+                <h1>Exemplo</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. [...]"</p>
+            </div>
+            <p>Aparentemente deve-se usar "content: url();" para adicionar algo.</p>
+
+            <h2>CSS - The ::after Pseudo-element</h2>
+            <p>Use "::after {}" quando quiser inserir algum conteúdo logo antes de um conteúdo de um elemento.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <p><span class="bold">Usando "div.test4 p::after" e com a estilização dos exemplos acima:</span></p>
+            <div class="container">
+                <h1>Exemplo</h1>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. [...]</p>
+                <div class="test4">
+                    <h1>Exemplo</h1>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. [...]</p>
+                    <h1>Exemplo</h1>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+                <h1>Exemplo</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. [...]"</p>
+            </div>
+            <h2>CSS - The ::marker Pseudo-element</h2>
+            <p>Use "::marker {}" para estilizar os marcadores das listas ordenadas ou não ordenadas.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <p><span class="bold">Usando "ul.one li::marker" e "ul.two li::marker":</span></p>
+            <div class="container2">
+                <ul class="one">
+                    <li>Banana;</li>
+                    <li>Maçã;</li>
+                    <li>Café;</li>
+                    <li>Leite.</li>
+                </ul>
+                <ul class="two">
+                    <li>Banana;</li>
+                    <li>Maçã;</li>
+                    <li>Café;</li>
+                    <li>Leite.</li>
+                </ul>
+            </div>
+
+            <h2>CSS - The ::selection Pseudo-element</h2>
+            <p>Use "::selection {}" para mudar a estilização de um texto que tenha sido selecionado pelo usuário.</p>
+            <p>Clique e arraste para algum lado para ver o que ocorre no exemplo a seguir:</p>
+            <p><span class="bold">Usando "div.container3 p::selection{}" e "div.container3 h1::selection{}":</span></p>
+            <div class="container3">
+                <h1>Exemplo</h1>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. [...]</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. [...]</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. [...]"</p>
+            </div>
+            <p>Algumas aplicações para esse pseudo-elemento são:</p>
+            <ul>
+                <li>color</li>
+                <li>background</li>
+                <li>cursor</li>
+                <li>outline</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
