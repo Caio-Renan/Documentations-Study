@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Opacity / Transparency</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+    <style>
+        div.container, div.container2, div.container4 {
+            border: 4px solid salmon;
+            border-radius: 12px;
+        }
+
+        div.small-container {
+            border: 4px solid steelblue;
+            border-radius: 12px;
+        }
+
+        div.container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        div.container2::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        div.container3::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        div.border {
+            width: fit-content;
+            height: fit-content;
+            margin: 0 auto 0 auto;
+            border: 4px solid steelblue;
+            border-radius: 12px;
+        }
+
+        .img img, .img2 img, .img3 img, div.hoverimg img, div.hoverimg2 img {
+            padding: 10px;
+            margin: 0px;
+        }
+
+        .img p, .img2 p, .img3 p {
+            text-indent: 0;
+            font-weight: bold;
+        }
+
+        div.container, div.container2, div.container3, div.small-container {
+            width: 80%;
+            height: fit-content;
+            padding: 10px;
+            margin: 0 auto 0 auto;
+        }
+        
+        div.img img {
+            opacity: 0.2;
+        }
+
+        div.img2 img {
+            opacity: 0.5;
+        }
+
+        div.img3 img, div.hoverimg img:hover {
+            opacity: 1;
+        }
+
+        div.hoverimg img, div.hoverimg2 img:hover {
+            opacity: 0.2;
+        }
+
+        .img, .img2, .img3, div.hoverimg, div.hoverimg2 {
+            width: 33.33%;
+            float: left;
+            text-align: center;
+        }
+
+        div.container3 p {
+            width: 25%;
+            float: left;
+            padding: 30px;
+            text-align: center;
+            text-indent: 0;
+        }
+
+        p.o-01, p.o-03, p.o-06, p.o-1 {
+            background-color: #04AA6D;
+        }
+
+        p.o-01 {
+            opacity: 0.1;
+        }
+
+        p.o-03 {
+            opacity: 0.3;
+        }
+        
+        p.o-06 {
+            opacity: 0.6;
+        }
+
+        p.rgba-01 {
+            background-color: rgba(4,170,109, 0.1);
+        }
+
+        p.rgba-03 {
+            background-color: rgba(4,170,109, 0.3);
+        }
+
+        p.rgba-06 {
+            background-color: rgba(4,170,109, 0.6);
+        }
+
+        p.rgba-1 {
+            background-color: rgba(4,170,109, 1);
+        }
+
+        div.small-container {
+            background-color: #ffffff;
+            opacity: 0.6;
+        }
+
+        div.small-container p {
+            font-weight: bold;
+        }
+
+        div.container4 {
+            padding: 20px;
+            background: url(../_imagens/fundo-minish.jpg);
+        }
+
+        div.container, div.container2, div.container3, div.container3 p, .img, .img2, .img3, div.hoverimg, div.hoverimg2, .img img, .img2 img, .img3 img {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Opacity / Transparency</h1>
+            <p>Use "opacity: ;" para definir a opacidade/transparência de um elemento.</p>
+            <h2>Transparent Image</h2>
+            <p>O valor da opacidade vai de 0 a 1, sendo 1 a opacidade padrão de um elemento e 0 a transparência total (ele não aparecerá).</p>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="container">
+                <div class="img"><div class="border"><img src="../_imagens/chapeu.png" alt=""><p>Opacity: 0.2</p></div></div>
+                <div class="img2"><div class="border"><img src="../_imagens/chapeu.png" alt=""><p>Opacity: 0.5</p></div></div>
+                <div class="img3"><div class="border"><img src="../_imagens/chapeu.png" alt=""><p>Opacity: 1</p></div></div>
+            </div>
+            <h2>Transparent Hover Effect</h2>
+            <p>Você pode usar o ":hover {}" para fazer com que a opacidade mude quando alguém passar o mouse por cima.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="container2">
+                <div class="hoverimg"><div class="border"><img src="../_imagens/blue-kinstone-menor.png" alt=""></div></div>
+                <div class="hoverimg"><div class="border"><img src="../_imagens/green-kinstone-menor.png" alt=""></div></div>
+                <div class="hoverimg"><div class="border"><img src="../_imagens/gold-kinstone-menor.png" alt=""></div></div>
+            </div>
+            <p>Você pode fazer o inverso do que fez acima também! Veja logo abaixo:</p>
+            <div class="container2">
+                <div class="hoverimg2"><div class="border"><img src="../_imagens/blue-kinstone-menor.png" alt=""></div></div>
+                <div class="hoverimg2"><div class="border"><img src="../_imagens/green-kinstone-menor.png" alt=""></div></div>
+                <div class="hoverimg2"><div class="border"><img src="../_imagens/gold-kinstone-menor.png" alt=""></div></div>
+            </div>
+            <h2>Transparent Box</h2>
+            <p>Quando você usar "opacity: ;" para adicionar transparência a um fundo, todos os seus elementos-filhos irão herdar essa transparência, o que pode causar alguns problemas.</p>
+            <p>No exemplo a seguir é possível perceber que fica difícil de ler o texto devido a transparência:</p>
+            <div class="container3">
+                <p class="o-1">Opacity: 1</p>
+                <p class="o-06">Opacity: 0.6</p>
+                <p class="o-03">Opacity: 0.3</p>
+                <p class="o-01">Opacity: 0.1</p>
+            </div>
+            <h2>Transparency using RGBA</h2>
+            <p>Você pode resolver o problema acima se você colocar transparência ao fundo usando RGBA ou HSLA. Veja como o problema foi resolvido no exemplo a seguir:</p>
+            <div class="container3">
+                <p class="rgba-1">Opacity: 1</p>
+                <p class="rgba-06">Opacity: 0.6</p>
+                <p class="rgba-03">Opacity: 0.3</p>
+                <p class="rgba-01">Opacity: 0.1</p>
+            </div>
+            <h2>Text in Transparent Box</h2>
+            <p>Veja uma possível utilização da opacidade a seguir:</p>
+            <div class="container4">
+                <div class="small-container">
+                    <p>Olá! Eu sou um parágrafo dentro de um fundo transparente.</p>
+                </div>
+            </div>
+            <p>Isso acontece, pois a transparência faz com que o conteúdo do fundo possa ser visto.</p>
+        </div>
+    </div>
+</body>
+</html>

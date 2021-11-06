@@ -3,20 +3,24 @@
 body {
     background-color: #78b4e3;
     font-family: Arial;
+    font-size: 100%;
 }
 
 div#explicacao {
+    position: relative;
     background-color: azure;
-    margin: -8px auto 50px auto;
-    max-width: 950px;
+    margin: -8px auto 10vw auto;
+    max-width: 63vw;
     padding: 20px;
-    min-height: 700px;
+    min-height: 60vw;
+    z-index: 4;
 }
 
 p {
     font-size: 12pt;
+    text-indent: 20pt;
 }
 
-* {
+h1, h2, h3, h4, h5, h6 {
     text-indent: 20pt;
 }
