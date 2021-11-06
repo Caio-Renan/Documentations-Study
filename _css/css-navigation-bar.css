@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+div.container {
+    border: 4px solid salmon;
+    border-radius: 12px;
+}
+
+ul {
+    display: block;
+    overflow: hidden;
+    margin: 20px 0;
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+div.right li {
+    float: left;
+}
+
+ul.hornavright {
+    position: relative;
+    width: 100%;
+}
+
+ul.hornavright2  {
+    position: relative;
+    width: 100%;
+}
+
+ul.hornavright, ul.hornavright li {
+    background-color: #04AA6D;
+}
+
+ul.hornavright a {
+    padding: 15px;
+    color: white;
+}
+
+ul.hornavright2, ul.hornavright2 li {
+    background-color: steelblue;
+}
+
+ul.hornavright a:hover {
+    background-color: green;
+}
+
+ul.hornavright2 a:hover {
+    background-color: #1898E0;
+}
+
+ul.hornavright2 a {
+    color: white;
+    padding: 15px;
+}
+
+ul.hornavright a.selected {
+    background-color: darkgreen;
+}
+
+ul.hornavright2 a.selected2 {
+    background-color: #247BA0;
+    color: white;
+}
+
+div.container, div.left, div.right, a, ul {
+    box-sizing: border-box;
+}
+
+div.container {
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+}
+
+div.containter::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+div.left {
+    float: left;
+    width: 35%;
+    height: 100%;
+    padding: 10px;
+}
+
+div.right {
+    float: right;
+    width: 65%;
+    height: 100%;
+    padding: 10px;
+}
+
+a.right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+ul.vertnavleft a {
+    padding: 15px;
+    width: 100%;
+    color: black;
+    background-color: #fff;
+}
+
+ul.vertnavleft a:hover {
+    background-color: #293133;
+    color: white;
+}
+
+ul.vertnavleft a.selected {
+    background-color: darkgreen;
+    color: white;
+}
