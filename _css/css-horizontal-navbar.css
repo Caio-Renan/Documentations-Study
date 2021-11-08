@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+div.center, div.example {
+    border-radius: 12px;
+}
+
+div.center {
+    border: 4px solid salmon;
+    padding: 10px;
+}
+
+div.example {
+    border: 2px solid steelblue;
+    margin: 10px;
+}
+
+div.container5, div.container6, div.small-container, div.small-container2 {
+    margin: 0;
+}
+
+div.container, div.container2, div.container3, div.container4 {
+    display: block;
+    width: 80%;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+div.container6, div.container7 {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+div.container6 {
+    position: sticky;
+    top: 0;
+}
+
+div.container7 {
+    position: sticky;
+    bottom: 0;
+}
+
+div.container5, div.container6, div.container7, div.small-container, div.small-container2 {
+    box-sizing: border-box;
+}
+
+div.container5 {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+div.small-container, div.small-container2 {
+    position: relative;
+    overflow-y: scroll;
+    width: 100%;
+    max-height: 300px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+div.container ul, div.container6 ul, div.container7 ul {
+    background-color: #333;
+}
+
+div.small-container, div.small-container2 {
+    background-color: #1abc9c;
+}
+
+div.container2 ul, div.container3 ul, div.container4 ul {
+    background-color: #222;
+}
+
+div.container2 a:not(.active), div.container3 a:not(.active), div.container4 a:not(.active) {
+    background-color: #333;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a.active {
+    background-color: #04AA6D;
+}
+
+div.container a, div.container2 a, div.container3 a, div.container4 a, div.container6 a, div.container7 a {
+    text-decoration: none;
+    margin: 0;
+}
+
+div.container a, div.container3 a, div.container4 a, div.container6 a, div.container7 a {
+    display: block;
+}
+
+div.container ul li:not(.right), div.container6 ul li:not(.right), div.container7 ul li:not(.right) {
+    float: left;
+}
+
+div.container2 ul li {
+    display: inline;
+}
+
+div.container3 ul li, div.container4 ul li {
+    display: inline-block;
+}
+
+div.container4, div.container5, div.container6, div.container7 {
+    font-size: 0px;
+}
+
+div.container4 a, div.container5 a, div.container5 p, div.container6 a, div.container7 a {
+    font-size: 16px;
+}
+
+div.container5 h1 {
+    font-size: 32px;
+}
+
+div.container5 h2 {
+    font-size: 	24px;
+}
+
+div.container a, div.container2 a, div.container3 a, div.container4 a, div.container6 a, div.container7 a {
+    padding: 15px;
+    color: white;
+}
+
+div.container a:hover:not(.active), div.container2 a:hover:not(.active), div.container3 a:hover:not(.active), div.container4 a:hover:not(.active), div.container6 a:hover:not(.active), div.container7 a:hover:not(.active) {
+    background-color: #111;
+}
+
+div.container ul li.right, div.container2 ul li.right, div.container3 ul li.right, div.container4 ul li.right, div.container6 ul li.right, div.container7 ul li.right {
+    float: right;
+}
+
+.border li:not(.right) {
+    border-right: 1px solid #bbb;
+}
+
+.border li.right {
+    border-left: 1px solid #bbb;
+}
+
+div.article {
+    padding: 15px;
+}
+
+.clear {
+    clear: both;
+}
+
+span.color {
+    color: #04AA6D;
+}
+
+span.color2 {
+    color: green;
+}
+
+span.color3 {
+    color: #1898E0;
+}
+
+span.color4 {
+    color: #247BA0;
+}
+
+span.color5 {
+    color: #333;
+}
+
+span.color6 {
+    color: #111;
+}
+
+div.center p {
+    text-align: center;
+}
+
+div.small-container {
+    float: left;
+    width: 48%
+}
+
+div.small-container2 {
+    float: right;
+    width: 48%;
+}
