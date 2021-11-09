@@ -14,41 +14,59 @@ div.example {
     margin: 10px;
 }
 
-div.container5, div.container6, div.small-container, div.small-container2 {
+div.container5, div.container6, div.container7, div.small-container, div.small-container2, div.small-container3 {
     margin: 0;
 }
 
-div.container, div.container2, div.container3, div.container4 {
+div.container, div.container10, div.container2, div.container3, div.container4 {
     display: block;
     width: 80%;
     height: fit-content;
     margin: 0 auto;
 }
 
-div.container6, div.container7 {
+div.container6, div.container7, div.container8, div.container9 {
     display: block;
-    width: 100%;
     height: fit-content;
     margin: 0 auto;
 }
 
+div.container6, div.container7 {
+    width: 48%;
+}
+
+div.container8, div.container9 {
+    width: 100%;
+}
+
 div.container6 {
-    position: sticky;
+    position: fixed;
     top: 0;
 }
 
 div.container7 {
-    position: sticky;
+    position: fixed;
     bottom: 0;
 }
 
-div.container5, div.container6, div.container7, div.small-container, div.small-container2 {
+ div.container8 {
+    position: sticky;
+    top: 0;
+}
+
+div.container9 {
+    position: sticky;
+    bottom: -0.4px;
+}
+
+div.container5, div.container6, div.container7, div.container8, div.container9 div.small-container, div.small-container2, div.-small-container3 {
     box-sizing: border-box;
 }
 
 div.container5 {
     display: inline-block;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
+    width: 100%;
 }
 
 div.small-container, div.small-container2 {
@@ -58,15 +76,21 @@ div.small-container, div.small-container2 {
     max-height: 300px;
 }
 
+div.small-container3 {
+    position: relative;
+    overflow-y: scroll;
+    width: 100%;
+    max-height: 400px;
+}
+
 ul {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: fit-content;
     overflow: hidden;
 }
 
-div.container ul, div.container6 ul, div.container7 ul {
+div.container ul, div.container6 ul, div.container7 ul, div.container8 ul, div.container9 ul, div.container10 ul {
     background-color: #333;
 }
 
@@ -92,16 +116,16 @@ li a.active {
     background-color: #04AA6D;
 }
 
-div.container a, div.container2 a, div.container3 a, div.container4 a, div.container6 a, div.container7 a {
+div.container a, div.container2 a, div.container3 a, div.container4 a, div.container6 a, div.container7 a, div.container8 a, div.container9 a, div.container10 a {
     text-decoration: none;
     margin: 0;
 }
 
-div.container a, div.container3 a, div.container4 a, div.container6 a, div.container7 a {
+div.container a, div.container3 a, div.container4 a, div.container6 a, div.container7 a, div.container8 a, div.container9 a {
     display: block;
 }
 
-div.container ul li:not(.right), div.container6 ul li:not(.right), div.container7 ul li:not(.right) {
+div.container ul li:not(.right), div.container6 ul li:not(.right), div.container7 ul li:not(.right), div.container8 ul li:not(.right), div.container9 ul li:not(.right), div.container10 ul li:not(.right){
     float: left;
 }
 
@@ -113,32 +137,24 @@ div.container3 ul li, div.container4 ul li {
     display: inline-block;
 }
 
-div.container4, div.container5, div.container6, div.container7 {
+div.container4 {
     font-size: 0px;
 }
 
-div.container4 a, div.container5 a, div.container5 p, div.container6 a, div.container7 a {
+div.container4 a {
     font-size: 16px;
 }
 
-div.container5 h1 {
-    font-size: 32px;
-}
-
-div.container5 h2 {
-    font-size: 	24px;
-}
-
-div.container a, div.container2 a, div.container3 a, div.container4 a, div.container6 a, div.container7 a {
+div.container a, div.container2 a, div.container3 a, div.container4 a, div.container6 a, div.container7 a, div.container8 a, div.container9 a, div.container10 a {
     padding: 15px;
     color: white;
 }
 
-div.container a:hover:not(.active), div.container2 a:hover:not(.active), div.container3 a:hover:not(.active), div.container4 a:hover:not(.active), div.container6 a:hover:not(.active), div.container7 a:hover:not(.active) {
+div.container a:hover:not(.active), div.container2 a:hover:not(.active), div.container3 a:hover:not(.active), div.container4 a:hover:not(.active), div.container6 a:hover:not(.active), div.container7 a:hover:not(.active), div.container8 a:hover:not(.active), div.container9 a:hover:not(.active), div.container10 a:hover:not(.active), .dropbtn:hover {
     background-color: #111;
 }
 
-div.container ul li.right, div.container2 ul li.right, div.container3 ul li.right, div.container4 ul li.right, div.container6 ul li.right, div.container7 ul li.right {
+div.container ul li.right, div.container2 ul li.right, div.container3 ul li.right, div.container4 ul li.right, div.container6 ul li.right, div.container7 ul li.right, div.container8 ul li.right, div.container9 ul li.right, div.container10 ul li.right {
     float: right;
 }
 
@@ -194,4 +210,27 @@ div.small-container {
 div.small-container2 {
     float: right;
     width: 48%;
+}
+
+div.container10 li a, .dropbtn, li.dropdown {
+    display: block;
+    
+}
+
+.dropdown-content a {
+    background-color: #333;
+    min-width: 100px;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
