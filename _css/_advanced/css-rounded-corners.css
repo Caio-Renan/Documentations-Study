@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+.rounded, .rounded2, .rounded3, .rounded4 {
+    border-radius: 15px;
+}
+
+.rounded {
+    border: 4px solid salmon;
+    padding: 15px;
+}
+
+.rounded2, .rounded3, .rounded4, .rounded5, .rounded6, .rounded7, .rounded8, .rounded9, .rounded10, .rounded11 {
+    padding: 50px;
+    margin: 20px auto;
+    width: 60%;
+    text-align: center;
+}
+
+.rounded2 {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.rounded5, .rounded6, .rounded7, .rounded8, .rounded9, .rounded10, .rounded11 {
+    background-color: #04AA6D;
+    font-weight: bold;
+}
+
+.rounded3 {
+    border: 4px solid steelblue;
+}
+
+.rounded4 {
+    background-image: url(../../_imagens/fundo-minish.jpg);
+}
+
+.rounded4 img {
+    display: block;
+    height: 100%;
+}
+
+.rounded5 {
+    border-radius: 30px 20px  40px 10px;
+}
+
+.rounded6 {
+    border-radius: 30px 20px  40px;
+}
+
+.rounded7 {
+    border-radius: 30px 20px;
+}
+
+.rounded8 {
+    border-radius: 30px;
+}
+
+.rounded9 {
+    border-radius: 60px / 15px;
+}
+
+.rounded10 {
+    border-radius: 15px / 60px;
+}
+
+.rounded11 {
+    border-radius: 50%;
+}
