@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Dropdowns</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_imagens/blue-kinstone.png"/>
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container3 {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .dropdown span {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown span, .dropdown-content p {
+            padding: 20px;
+        }
+
+        .dropdown-content p {
+            display: block;
+        }
+
+        .dropdown-content p {
+            display: none;
+            position: absolute;
+            min-width: 250px;
+        }
+
+        .dropdown2 {
+            display: block;
+        }
+
+        .dropdown2, .container2 {
+            width: 30%;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .dropdown-content2 a, .dropdown2 a {
+            padding: 20px;
+        }
+
+        div.dropdown-content2 a {
+            display: none;
+        }
+
+        .dropdown-content p, .dropdown-content2, .dropdown-content3, .dropdown-content4, .dropdown-content6 {
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        div.dropdown-content2 a, div.dropdown-content3 a, div.dropdown-content4 a {
+            background-color: #f9f9f9;
+        }
+
+        .dropdown2 a {
+            display: block;
+        }
+
+        .dropdown p, .dropdown2 p, .dropdown3 p {
+            margin: 0;
+            text-indent: 0;
+        }
+
+        .dropdown2 p {
+            padding: 0;
+        }
+        
+        .dropdown3, .dropdown4 {
+            position: relative;
+            display: inline-block;
+            
+        }
+
+        .dropdown3 a, .dropdown4 a {
+            display: block;
+        }
+
+        .dropdown-content3, .dropdown-content4 {
+            display: none;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .dropdown3 a, .dropdown4 a {
+            padding: 20px;
+        }
+
+        .dropdown-content3 a, .dropdown-content4 a {
+            min-width: 250px;
+        }
+
+        .dropbtn {
+            padding: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .dropdown5 {
+            display: inline-block;
+            position: relative;
+        } 
+
+        .dropdown-content5 {
+            display: none;
+            position: absolute;
+        }
+
+        .dropbtn2 {
+            display: block;
+        }
+
+        img {
+            display: block;
+        }
+        
+        div.container4 {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        div.dropdown:hover .dropdown-content p, div.dropdown2:hover .dropdown-content2 a, .dropdown3:hover .dropdown-content3, .dropdown4:hover .dropdown-content4, .dropdown5:hover div.dropdown-content5, .dropdown6:hover div.dropdown-content6 {
+            display: block;
+        }
+
+        .dropdown:hover span:not(.dropdown-content p), .dropdown2:hover a:not(.dropdown-content2 a), .dropdown3:hover a:not(.dropdown-content3 a), .dropdown4:hover .dropbtn {
+            background-color: green;
+        }
+
+        .dropdown span:not(.dropdown-content p), .dropdown3 a:not(.dropdown-content3 a), .dropdown2 a:not(.dropdown-content2 a), .dropbtn:not(.dropdown-content4 a) {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .dropdown3 a:hover, .dropdown2 a:hover, .dropdown-content4 a:hover, .dropdown-content6 a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .dropbtn3:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .fright {
+            float: right;
+        }
+
+        .fleft, ul li, .small {
+            float: left;
+        }
+
+        .clear {
+            clear: both;
+        }
+        
+        div.container6 {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        /* Dropdown Navbar */
+        div.container5 {
+            position: relative;
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        div.container6 {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        ul a {
+            display: block;
+        }
+
+        ul li {
+            list-style-type: none;
+            margin: 0;
+        }
+
+        a.dropbtn3 {
+            color: white;
+        }
+
+        a.dropbtn3:not(.active) {
+            background-color: #333;
+        }
+
+        a.active {
+            background-color: #04AA6D;
+        }
+
+        a.dropbtn3 {
+            display: inline-block;
+            padding: 20px;
+            width: fit-content;
+        }
+
+        .dropdown6 {
+            display: inline-block;
+        }
+
+        .dropdown-content6 {
+            position: absolute;
+            display: none;
+        }
+
+        .dropdown-content6 a {
+            padding: 20px;
+            background-color: #f9f9f9;
+            min-width: 120px;
+        }
+
+        .small {
+            box-sizing: border-box;
+            position: relative;
+            width: 33.33%;
+            border: 1px solid black;
+        }
+        .container6 a {
+            display: block;
+        }
+
+        .dropdown-content {
+            position: absolute;
+        }
+
+        .dropbtn4:not(img), .dropbtn4 p {
+            padding: 20px;
+        }
+
+        div.container6 span {
+            display: block;
+        }
+
+        .dropdown-content-special {
+            display: block;
+            position: relative;
+        }
+
+        .dropdown-content-special img{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Dropdowns</h1>
+            <h2>Demo: Dropdown Examples</h2>
+            <div class="container6">
+                <div class="small">
+                    <span class="dropbtn4">Dropdown</span>
+                    <div class="dropdown-content">
+                        <p>Hello world!</p>
+                    </div>
+                </div>
+                <div class="small">
+                    <a class="dropbtn4" href="#">Dropdown Menu</a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <div class="small">
+                    <img class="dropbtn4 fright" src="../_imagens/fundo-minish-cap3.jpg" alt="">
+                    <div class="dropdown-content-special">
+                        <img class="right" src="../_imagens/fundo-minish-cap2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <h2>Basic Dropdown</h2>
+            <div class="container2">
+                <div class="dropdown">
+                    <span>Passe o mouse aqui</span>
+                    <div class="dropdown-content">
+                        <p>Olá, mundo!</p>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <h2>Dropdown Menu</h2>
+            <p><span class="bold">Minha 1º tentativa:</span></p>
+            <div class="dropdown2">
+                <p><a href="#">Passe o mouse aqui</a></p>
+                <div class="dropdown-content2">
+                    <p><a href="#">Link 1</a></p>
+                    <p><a href="#">Link 2</a></p>
+                    <p><a href="#">Link 3</a></p>
+                </div>
+            </div>
+            <p>Veja que dessa forma, caso não utilize "position: absolute;", ele não irá sobrepor o conteúdo que está abaixo.</p>
+            <p><span class="bold">Minha 2º tentativa (dessa vez fazendo algo parecido como o site sugere):</span></p>
+            <div class="container2">
+                <div class="dropdown3">
+                    <p><a href="#">Passe o mouse aqui</a></p>
+                    <div class="dropdown-content3">
+                        <p><a href="#">Link 1</a></p>
+                        <p><a href="#">Link 2</a></p>
+                        <p><a href="#">Link 3</a></p>
+                    </div>
+                </div>
+            </div>
+            <p>No caso acima, além do "position: absolute;", o que temos de novo é a utilização do "display: inline-block;", cujo qual não entendi muito bem o motivo de ser utilizado.</p>
+            <p><span class="bold">Como o site sugere:</span></p>
+            <div class="container2">
+                <div class="dropdown4">
+                    <button class="dropbtn">Passe o mouse aqui</button>
+                    <div class="dropdown-content4">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <p><span class="doubt">Não entendi bem o motivo, mas, aparentemente, o hover não funciona em cima do "button.dropbtn", Tentei alguams vezes e não funcionou.</span> Para resolver isso, use o hover em cima do "div.dropdown4".</p>
+            <h2>Right-aligned Dropdown Content</h2>
+            <p>Adicione um "right: 0;" se você quiser que o conteúdo vá da direita para a esquerda, ao invés de da esquerda para a direita.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container3">
+                <div class="dropdown4 fright">
+                    <button class="dropbtn">Direita</button>
+                    <div class="dropdown-content4 right">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <div class="dropdown4 fleft">
+                    <button class="dropbtn">Esquerda</button>
+                    <div class="dropdown-content4 left">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <p class="clear">Haha, Olá!</p>
+            <h2>More Examples</h2>
+            <h3>Dropdown Image</h3>
+            <p><span class="bold">Na esquerda:</span></p>
+            <div class="dropdown5">
+                <img class="dropbtn2" src="../_imagens/fundo-minish-cap3.jpg" alt="">
+                <div class="dropdown-content5">
+                    <img src="../_imagens/fundo-minish-cap2.jpg" alt="">
+                </div>
+            </div>
+            <p><span class="bold">Centralizado:</span></p>
+            <div class="container4">
+                <div class="dropdown5">
+                    <img class="dropbtn2" src="../_imagens/fundo-minish-cap3.jpg" alt="">
+                    <div class="dropdown-content5">
+                        <img src="../_imagens/fundo-minish-cap2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <p><span class="bold">Na direita:</span></p>
+            <div class="container3">
+                <div class="dropdown5 fright">
+                    <img class="dropbtn2" src="../_imagens/fundo-minish-cap3.jpg" alt="">
+                    <div class="dropdown-content5 right">
+                        <img src="../_imagens/fundo-minish-cap2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <h3>Dropdown Navbar</h3>
+            <div class="container5">
+                <ul>
+                    <li class="dropdown6">
+                        <a class="dropbtn3 active" href="#">Home</a>
+                        <div class="dropdown-content6">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </li>
+                    <li class="dropdown6">
+                        <a class="dropbtn3" href="#">Notícias</a>
+                        <div class="dropdown-content6">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </li>
+                    <li class="dropdown6">
+                        <a class="dropbtn3" href="#">Contato</a>
+                        <div class="dropdown-content6">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </li>
+                    <li class="dropdown6 fright">
+                       <a class="dropbtn3" href="#">Sobre</a>
+                        <div class="dropdown-content6 right">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
