@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+.attribute, .attribute2, .attribute3, .attribute4, .attribute5 {
+    border: 4px solid salmon;
+}
+
+.attribute, .attribute2, .attribute3, .attribute4, .attribute5 {
+    border-radius: 12px;
+}
+
+.attribute, .attribute2 {
+    width: 40%;
+}
+
+.attribute, .attribute2, .attribute3, .attribute4, .attribute5 {
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.attribute3, .attribute4, .attribute5 {
+    width: 50%;
+}
+
+.attribute a, .attribute2 a {
+    text-indent: 20px;
+    display: block;
+    margin: 10px;
+}
+
+.attribute a[target], .attribute2 a[target="_blank"] {
+    color: #04AA6D;
+}
+
+.attribute3 img, .attribute4 img, .attribute5 img {
+    margin: 15px;
+    padding: 5px;
+}
+
+.attribute3 img[title~="blue"], .attribute4 img[title~="blue"], .attribute5 img[title~="blue"] {
+    border: 4px solid blue;
+    border-radius: 12px;
+}
+
+.attribute3 img[title~="green"], .attribute4 img[title~="green"], .attribute5 img[title~="green"]{
+    border: 4px solid green;
+    border-radius: 12px;
+}
+
+.attribute3 img[title~="gold"], .attribute4 img[title~="gold"], .attribute5 img[title~="gold"] {
+    border: 4px solid gold;
+    border-radius: 12px;
+}
+
+.attribute3 img[title~="red"], .attribute4 img[title~="red"], .attribute5 img[title~="red"] {
+    border: 4px solid red;
+    border-radius: 12px;
+}
+
+.attribute3 img[title~="kinstone"], .attribute4 img[title~="kinstone"], .attribute5 img[title~="kinstone"] {
+    outline: 4px solid saddlebrown;
+}
+
+[title|=background] {
+    background-color: steelblue;
+    border-radius: 12px;
+}
+
+.attribute4 [title^=background] {
+    background-color: seagreen;
+    border-radius: 12px;
+}
+
+img [title$="bigger"] {
+    outline:sienna;
+    padding: 30px;
+}
+
+.attribute5 img [title*="stone"] {
+    padding: 40px;
+}
