@@ -42,23 +42,23 @@
     border-radius: 12px;
 }
 
-.attribute3 img[title~="green"], .attribute4 img[title~="green"], .attribute5 img[title~="green"]{
+.attribute3 [title~="green"], .attribute4 [title~="green"], .attribute5 [title~="green"]{
     border: 4px solid green;
     border-radius: 12px;
 }
 
-.attribute3 img[title~="gold"], .attribute4 img[title~="gold"], .attribute5 img[title~="gold"] {
+.attribute3 [title~="gold"], .attribute4 [title~="gold"], .attribute5 [title~="gold"] {
     border: 4px solid gold;
     border-radius: 12px;
 }
 
-.attribute3 img[title~="red"], .attribute4 img[title~="red"], .attribute5 img[title~="red"] {
+.attribute3 [title~="red"], .attribute4 [title~="red"], .attribute5 [title~="red"] {
     border: 4px solid red;
     border-radius: 12px;
 }
 
-.attribute3 img[title~="kinstone"], .attribute4 img[title~="kinstone"], .attribute5 img[title~="kinstone"] {
-    outline: 4px solid saddlebrown;
+.attribute3 [title~="kinstone"], .attribute4 [title~="kinstone"], .attribute5 [title~="kinstone"] {
+    outline: 4px solid royalblue;
 }
 
 [title|=background] {
@@ -67,14 +67,37 @@
 }
 
 .attribute4 [title^=background] {
-    background-color: seagreen;
+    background-color: orange;
     border-radius: 12px;
 }
 
-[title$="bigger"] {
+.attribute4 [title$="bigger"], .attribute5 [title$="bigger"]  {
     background-color: navy;
+    border-radius: 12px;
 }
 
 .attribute5 [title*="stone"] {
-    background-color: navy;
+    outline: 4px solid royalblue;
+    outline-offset: 10px;
+}
+
+.attribute4 input[type=text], .attribute4 input[type="number"], .attribute5 input[type="text"], .attribute5 input[type="number"] {
+    display: block;
+}
+
+.attribute4 input[type=text], .attribute4 input[type="number"], attribute4 input[type="button"], .attribute5 input[type="text"], .attribute5 input[type="number"], .attribute5 input[type="button"] {
+    text-align: center;
+    margin: 5px auto;
+}
+
+.attribute5 input[type="text"] {
+    background-color: limegreen;
+}
+
+.attribute5 input[type="number"] {
+    background-color: orange;
+}
+
+.attribute5 input[type="button"] {
+    background-color: steelblue;
 }
