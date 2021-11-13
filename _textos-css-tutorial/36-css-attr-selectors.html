@@ -15,11 +15,26 @@
             <h1>CSS Attribute Selectors</h1>
             <h2>Style HTML Elements With Specific Attributes</h2>
             <p>É possível estilizar elementos do HTML que tem um atributo ou valores de atributos específicos.</p>
+            <h2>Abstract</h2>
+            <p></p>
+            <ul>
+                <li><span class="bold">[attribute="value"]</span> - Seleciona elementos com um atributo e valor específico;<br/><br/><span class="bold2">Exemplos:</span> [target="_blank"], [type="text"], etc.;</li>
+                <br/>
+                <li><span class="bold">[attribute~="value"]</span> - Seleciona elementos com um atributo e palavra específica (separa os nomes por traços irá fazer com que não funcione, separe com espaços);<br/><br/><span class="bold2">Exemplos:</span> [title~="big"], [title~="bold"], etc.;<br/><br/><span class="bold2">O primeiro exemplo afetaria:</span> title="big" e title="big container";<br/><br/><span class="bold2">Não afetariam:</span>  title="big-container" e title="bigcontainer";</li>
+                <br/>
+                <li><span class="bold">[attribute|="value"]</span> - Seleciona elementos com um atributo começando com um valor específico (se estiver "colado" a outra palavra ou separado por espaços, não funcionará);<br/><br/><span class="bold2">Exemplos:</span> [title|="big"], [title|="bold"], etc.;<br/><br/><span class="bold2">O primeiro exemplo afetaria:</span> title="big" e title="big-container";<br/><br/><span class="bold2">Não afetariam:</span> title="big container" e title="bigcontainer";</li>
+                <br/>
+                <li><span class="bold">[attribute^="value"]</span> - Seleciona elementos com um atributo começando com o valor específico (mesmo que esteja junto de outra palavra e separada por espaço ou traço);<br/><br/><span class="bold2">Exemplos:</span>  [title^="big"] e [title^="bold"], etc.;<br/><br/><span class="bold2">O primeiro exemplo afetaria:</span> title="big", title="big-container", title="big container" e title="bigcontainer";</li>
+                <br/>
+                <li><span class="bold">[attribute$="value"]</span> - Seleciona elementos com um atributo terminando com um valor específico.<br/><br/><span class="bold2">Exemplos:</span> [title$="big"], [title$="bold"], etc.;<br/><br/><span class="bold2">O segundo exemplo afetaria:</span> title="bold", title="text-bold", title="text bold" e title="textbold";</li>
+                <br/>
+                <li><span class="bold">[attribute*="value"]</span> - Seleciona elementos com um atributo que contém um valor específico. Ele é bem geral, pode afetar vários elementos.<br/><br/><span class="bold2">Exemplos:</span> [class*=small], [class*=container], etc.;<br/><br/><span class="bold2">O primeiro exemplo afetaria:</span> class="small", class="small-container", class="small container" e class="smallcontainer";</li>
+            </ul>
             <h2>CSS [attribute] Selector</h2>
             <p>Use o seletor [attribute="value"] para selecionar elementos com um atributo e valor específico.</p>
             <p>No exemplo a seguir, todas as tags "a" que tinham "target=''" foram selecionados.</p>
             <div class="attribute">
-                <a href="#">Link 1(não tenho target)</a>
+                <a href="#">Link 1 (não tenho target)</a>
                 <a href="#" target="_blank">Link 2 (tenho "target='_blank'")</a>
                 <a href="#" target="_self">Link 3 (tenho "target='_self'")</a>
             </div>
@@ -27,12 +42,12 @@
             <p>Use o seletor [attribute] para selecionar elementos com um atributo específico.</p>
             <p>No exemplo a seguir, todas as tags "a" que tinham "target='_blank'" foram selecionados.</p>
             <div class="attribute2">
-                <a href="#">Link 1(não tenho target)</a>
+                <a href="#">Link 1 (não tenho target)</a>
                 <a href="#" target="_blank">Link 2 (tenho "target='_blank'")</a>
                 <a href="#" target="_self">Link 3 (tenho "target='_self'")</a>
             </div>
             <h2>CSS [attribute~="value"] Selector</h2>
-            <p>Use o seletor [attribute~="value"] para selecionar elementos com um atributo e valor específico.</p>
+            <p>Use o seletor [attribute~="value"] para selecionar elementos com um atributo e palavra específica.</p>
             <p>No exemplo a seguir, a cor das bordas variam de acordo com o que está escrito no "title" e o "outline" foi adicionado para as imagens que tinha "kinstone" no "title".</p>
             <p><span class="bold">Obs.: Há diferença entre separar com espaço e traços, nesse caso, não separe com traços, pois ele não irá ler, separe com espaços mesmo.</span></p>
             <div class="attribute3">
@@ -63,23 +78,23 @@
             </div>
             <h2>CSS [attribute$="value"] Selector</h2>
             <p>Use o seletor [attribute$="value"] para selecionar elementos com um atributo terminando com um valor específico.</p>
-            <p>No exemplo a seguir, foi adicionando uma cor de fundo diferente aos elementos que tinham "bigger" no "title".</p>
+            <p>No exemplo a seguir, foi adicionando uma cor de fundo diferente aos elementos que tinham "navy" no "title".</p>
             <p><span class="bold">Nesse caso, tanto faz se termina com espaço ou com traços ou se está junto de outra palavra.</span></p>
             <div class="attribute4">
-                <img src="../_imagens/gold-kinstone-menor.png" alt="" title="background gold kinstone bigger">
+                <img src="../_imagens/gold-kinstone-menor.png" alt="" title="background gold kinstone navy">
                 <img src="../_imagens/blue-kinstone-menor.png" alt="" title="background-blue">
                 <img src="../_imagens/green-kinstone-menor.png" alt="" title="background green kinstone">
-                <img src="../_imagens/red-kinstone-menor.png" alt="" title="backgroundredbigger">
+                <img src="../_imagens/red-kinstone-menor.png" alt="" title="backgroundrednavy">
             </div>
             <h2>CSS [attribute*="value"] Selector</h2>
             <p>Use o seletor [attribute$="value"] para selecionar elementos com um atributo que contém um valor específico.</p>
             <p>No exemplo a seguir, foi adicionando um "outline-offset: ;" aos elementos que tinham "stone" no "title".</p>
             <p><span class="bold">Nesse caso, tanto faz se termina com espaço ou com traços ou se está junto de outra palavra.</span></p>
             <div class="attribute5">
-                <img src="../_imagens/gold-kinstone-menor.png" alt="" title="background gold kinstone bigger">
+                <img src="../_imagens/gold-kinstone-menor.png" alt="" title="background gold kinstone navy">
                 <img src="../_imagens/blue-kinstone-menor.png" alt="" title="background-blue">
-                <img src="../_imagens/green-kinstone-menor.png" alt="" title="background green kinstone bigger">
-                <img src="../_imagens/red-kinstone-menor.png" alt="" title="backgroundredbigger">
+                <img src="../_imagens/green-kinstone-menor.png" alt="" title="background green kinstone navy">
+                <img src="../_imagens/red-kinstone-menor.png" alt="" title="backgroundrednavy">
             </div>
             <h2>Styling Forms</h2>
             <p>Os seletores de atributos podem ser úteis para estilizar formulários sem usar classes ou ID.</p>

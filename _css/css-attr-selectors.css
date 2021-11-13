@@ -71,7 +71,7 @@
     border-radius: 12px;
 }
 
-.attribute4 [title$="bigger"], .attribute5 [title$="bigger"]  {
+.attribute4 [title$="navy"], .attribute5 [title$="navy"]  {
     background-color: navy;
     border-radius: 12px;
 }
@@ -100,4 +100,9 @@
 
 .attribute5 input[type="button"] {
     background-color: steelblue;
+}
+
+span.bold2 {
+    font-weight: bold;
+    color: midnightblue;
 }
