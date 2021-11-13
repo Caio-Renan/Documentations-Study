@@ -71,11 +71,10 @@
     border-radius: 12px;
 }
 
-img [title$="bigger"] {
-    outline:sienna;
-    padding: 30px;
+[title$="bigger"] {
+    background-color: navy;
 }
 
-.attribute5 img [title*="stone"] {
-    padding: 40px;
+.attribute5 [title*="stone"] {
+    background-color: navy;
 }

@@ -4,28 +4,31 @@ div.website {
     background-color: white;
 }
 
-div.website ul {
+div.website ul, div.navmenu ul {
     list-style-type: none;
 }
 
-div.website li a {
+div.website li a, div.navmenu li a {
     text-decoration: none;
 }
 
-div.navmenu2 {
+div.navmenu2, div.navmenu2 li {
     background-color: #1898E0;
-    width: 100%;
-    height: fit-content;
-    overflow: hidden;
 }
 
-div.navmenu2 ul {
-    margin: 0;
+div.navmenu2 {
+    width: 100%;
+}
+
+div.navmenu2, div.mainheader h1, div.container4, div.container, div.small-container, div.container2 {
+    height: fit-content;
+}
+
+div.navmenu2 ul, div.container3 ul {
     padding: 0;
 }
 
 div.navmenu2 li {
-    background-color: #1898E0;
     padding: 15px;
 }
 
@@ -33,21 +36,29 @@ div.navmenu2 li:hover, div.container3 li a:hover {
     background-color: #006494;
 }
 
-div.container3 {
+div.container3, div.container3 ul, div.article, div.mainheader, div.mainheader h1, img.right, div.imgcaption, div.container4, div.footer2, div.container, div.small-container, .box, .box2, .box3, .box4, .box5, .img, .img2, .img3, div.small-container2, div.small-container3 {
     box-sizing: border-box;
+}
+
+div.container3, div.container3 ul, div.navmenu li a {
     display: inline-block;
+}
+
+div.container3, div.container3 ul, div.mainheader h1, div.navmenu2 ul, div.small-container2   {
+    margin: 0;   
+}
+
+div.container3, div.article {
     width: 100%;
     height: 100%;
-    margin: 0;
+}
+
+div.container3 {
     padding: 20px;
 }
 
 div.container3 ul {
-    box-sizing: border-box;
-    display: inline-block;
     width: 25%;
-    margin: 0;
-    padding: 0;
 }
 
 div.container3 li a:hover {
@@ -58,9 +69,12 @@ div.navmenu2 li.first2 {
     background-color: #247BA0;
 }
 
+div.container3 li, div.container2, div.navmenu ul {
+    margin: 0 auto;
+}
+
 div.container3 li {
     width: 10vw;
-    margin: 0 auto 0 auto;
 }
 
 div.container3 li a {
@@ -77,43 +91,35 @@ div.container3 li a.selected    {
 }
 
 div.article {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
 }
 
 div.article h1, div.article p {
     text-align: left;
+
+}
+
+div.article h1, div.article p, div.mainheader h1, div.small-container3 h1, div.small-container3 p {
     text-indent: 0;
 }
 
 div.mainheader {
-    box-sizing: border-box;
     width: 100%;
     height: 100%;
 }
 
 div.mainheader h1 {
-    box-sizing: border-box;
     background-color: steelblue;
     color: white;
     width: 100%;
-    height: fit-content;
-    margin: 0;
     padding: 37px;
-    text-align: center;
-    text-indent: 0;
 }
 
 div.container4 {
-    box-sizing: border-box;
-    height: fit-content;
     width: 75%;
 }
 
 div.footer2 {
-    box-sizing: border-box;
     background-color: #006494;
     width: 100%;
     padding: 30px;
@@ -127,46 +133,39 @@ div.footer2 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-div.imgcaption {
-    text-align: center;
-}
-
 img.right, div.imgcaption {
-    border: 1px dotted #04AA6D;
+    border: 4px dotted #04AA6D;
+    border-radius: 10px;
     margin: 0 0 10px 15px;
     padding: 10px;
-    box-sizing: border-box;
 }
 
 div.imgcaption, .right, div.small-container3, div.article, div.mainheader, div.container4 {
     float: right;
 }
 
+div.container2, div.small-container2, div.small-container3, div.navmenu2, div.navmenu ul {
+    overflow: hidden;
+}
+
 div.container2 {
     background-color: white;
-    margin: 0 auto 0 auto;
     width: 100%;
-    height: fit-content;
-    overflow: hidden;
 }
 
 div.small-container2 {
     padding: 15px;
-    margin: 0;
     width: 30%;
-    overflow: hidden;
 }
 
 div.small-container3 {
     padding: 0;
     margin: 0;
     width: 70%;
-    overflow: hidden;
 }
 
 div.small-container3 h1, div.small-container3 p {
     text-align: left;
-    text-indent: 0;
 }
 
 div.small-container3 p {
@@ -194,7 +193,7 @@ div.footer {
 div.leftbox {
     background-color: green;
     padding: 8px;
-    margin: 10px auto 10px auto;
+    margin: 10px auto;
     width: 150px;
     text-align: left;
 }
@@ -204,24 +203,18 @@ div.leftbox:hover {
 }
 
 div.navmenu ul {
-    list-style-type: none;
     padding: 0;
     width: 60%;
-    margin: 0 auto 0 auto;
     background-color: lightgreen;
     outline: 2px solid darkgreen;
-    overflow: hidden;
 }
 
 div.navmenu li a {
-    display: inline-block;
     padding: 14px;
-    text-decoration: none;
-    text-align: center;
     color: black;
 }
 
-div.navmenu li:hover {
+div.navmenu li:hover:not(.first) {
     background-color: #04AA6D;
 }
 
@@ -229,18 +222,16 @@ div.navmenu .first {
     background-color: green;
 }
 
-div.container, div.small-container, .box, .box2, .box3, .box4, .box5, .img, .img2, .img3, div.small-container2, div.small-container3 {
-    box-sizing: border-box;
+div.container, div.small-container, .box, .box2, .box3, .box4, .box5, .img, .img2, .img3, div.small-container2, div.small-container3, div.mainheader h1, div.imgcaption, div.navmenu li a {
     text-align: center;
 }
 
 div.container, div.small-container {
-    height: fit-content;
     width: fit-content;
-    margin: 20px auto 20px auto;
+    margin: 20px auto;
 }
 
-div.container::after {
+div.container::after, div.navmenu::after, div.navmenu2::after {
     content: "";
     clear: both;
     display: table;
@@ -275,8 +266,8 @@ div.container::after {
 }
 
 .img, .img2, .img3 {
-    border: 2px solid #04AA6D;
-
+    border: 4px solid #04AA6D;
+    border-radius: 10px;
 }
 
 .img, .img2, .img3 {
