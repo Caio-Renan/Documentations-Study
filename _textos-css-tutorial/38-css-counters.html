@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Counters</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/css-counters.css"/>
+    <link rel="icon" href="../_imagens/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Counters</h1>
+            <p>Contadores CSS são "variáveis" mantidas pelo CSS, que podem receber regras do CSS para monitorar quantas vezes os contadores foram usados.</p>
+            <p>Os contadores permitem você ajustar a aparência do conteúdo baseado no seu lugar no documento.</p>
+            <h2>Automatic Numbering With Counters</h2>
+            <p>Para trabalharmos com os contadores CSS é preciso usar algumas das propriedades a seguir:</p>
+            <ul>
+                <li><span class="bold">counter-reset</span> - Cria ou reseta um contador. Aqui você deve dar o nome a ele, ele será sua "variável";</li>
+                <li><span class="bold">counter-increment</span> - Aumenta o valor do contador. Aqui você deve escolher um contador, ele receberá valores conforme for usado;</li>
+                <li><span class="bold">content</span> - Define o conteúdo que irá aparecer. Você deve escrever o nome do contador onde você desejar que ele apareça;</li>
+                <li><span class="bold"> </span> - Adiciona o valor de um contador a um elemento.</li>
+            </ul>
+            <p>Para usar um contador CSS, primeiro é preciso usar um "counter-reset: ;".</p>
+            <div class="container">
+                <h1>Usando contadores CSS</h1>
+                <h2>Tutorial de HTML</h2>
+                <h2>Tutorial de CSS</h2>
+                <h2>Tutorial de JavaScript</h2>
+                <h2>Tutorial de Python</h2>
+                <h2>Tutorial de SQL</h2>
+            </div>
+            <div class="container2">
+                <h1>Contando até 5</h1>
+                <h2></h2>
+                <h2></h2>
+                <h2></h2>
+                <h2></h2>
+                <h2></h2>
+            </div>
+            <p>Nos casos acima, primeiro foi usado um "counter-reset: nome-do-contador;" na div principal. Em seguida foi usado um "::before" para cada h2 e lá usei a propriedade "counter-increment: nome-do-contador;" e "content: counter(nome-do-contador) 'conteúdo-que-irá-aparecer-fora-o-contador'".</p>
+            <h2>Nesting Counters</h2>
+            <p>Você pode usar os contadores CSS para criar "aninhamento", é basicamente as hierarquias de títulos que você usa no word.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="container3">
+                <h1>Kinstones</h1>
+                <h2>Blue Kinstone</h2>
+                <h2>Green Kinstone</h2>
+                <h2>Red Kinstone</h2>
+                <h2>Gold Kinstone</h2>
+            </div>
+            <div class="container4">
+                <h1>Armas</h1>
+                <h2>Curto alcance</h2>
+                <h3>Espada</h3>
+                <h3>Machado</h3>
+                <h2>Médio alcance</h2>
+                <h3>Alabarda</h3>
+                <h3>Lança</h3>
+                <h2>Longo alcance</h2>
+                <h3>Arco</h3>
+                <h3>Armas de fogo</h3>
+                <h1>Formas de defesa</h1>
+                <h2>Escudo</h2>
+                <h2>Armadura</h2>
+                <h3>Leve</h3>
+                <h3>Pesada</h3>
+            </div>
+            <p>Nos casos acima, foi necessário colocar o primeiro contador na div que continha todos as hierarquias e os outros contadores até a penúltima hierarquia (exemplo: se tem somente h1 e h2, você fará um contador para o elemento pai deles e um para o h1). Depois disso, basta organizar em "content: ;" onde os contadores irão aparecer.</p>
+            <p>No caso acima ficou assim:</p>
+            <p><span class="bold">Para o h1</span> - content: counter(first-topic) ". ";</p>
+            <p><span class="bold">Para o h2</span> - content: counter(first-topic) "." counter(second-topic) " ";</p>
+            <p><span class="bold">Para o h3</span> - content: counter(first-topic) "." counter(second-topic) "." counter(third-topic) " ";</p>
+            <p>Veja outro exemplo do que pode ser feito com contadores a seguir:</p>
+            <div class="container5">
+                <ol>
+                    <li>item</li>
+                    <li>item
+                    <ol>
+                        <li>item</li>
+                        <li>item</li>
+                        <li>item
+                        <ol>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                        </ol>
+                        </li>
+                        <li>item</li>
+                    </ol>
+                    </li>
+                    <li>item</li>
+                    <li>item</li>
+                </ol>
+                <ol>
+                    <li>item</li>
+                    <li>item</li>
+                </ol>
+            </div>
+            <p>Nos casos acima, foi utilizado "counters" no lugar de "counter" no "content: ;". Usando "counters();", ele mesmo adicionará um novo contador para cada elemento filho que surgir. Você deve escolher o contador mais o que você deseja que venha a seguir (exemplo: counters(contador, ".");, counters(contador, "haha";).</p>
+            <p>Além disso, no exemplo acima foi necessário fazer a tag "li" englobar muitas outras tags. É possível entender melhor o que foi feito vendo o exemplo a seguir, onde cada li tem bordas azul:</p>
+            <div class="container6">
+                <ol>
+                    <li>item</li>
+                    <li>item
+                    <ol>
+                        <li>item</li>
+                        <li>item</li>
+                        <li>item
+                        <ol>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                        </ol>
+                        </li>
+                        <li>item</li>
+                    </ol>
+                    </li>
+                    <li>item</li>
+                    <li>item</li>
+                </ol>
+                <ol>
+                    <li>item</li>
+                    <li>item</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+.container, .container2, .container3, .container4, .container5, .container6 {
+    border: 4px solid salmon;
+    border-radius: 12px;
+}
+
+.container, .container2, .container3, .container4, .container5, .container6 {
+    margin: 20px auto;
+}
+
+.container, .container3, .container4, .container5, .container6 {
+    width: 70%;
+}
+
+.container2 {
+    width: 40%;
+}
+
+.container {
+    counter-reset: section;
+}
+
+.container h2::before {
+    counter-increment: section;
+    content: "Section " counter(section) ": ";
+}
+
+.container2 {
+    counter-reset: counting;
+}
+
+.container2 h2::before {
+    counter-increment: counting;
+    content: counter(counting) "...";
+}
+
+.container3, .container4 {
+    counter-reset: first-topic;
+}
+
+.container3 h1, .container4 h1 {
+    counter-reset: second-topic;
+}
+
+.container3 h2, .container4 h2 {
+    counter-reset: third-topic;
+}
+
+.container3 h1::before, .container4 h1::before {
+    counter-increment: first-topic;
+    content: counter(first-topic) ". ";
+}
+
+.container3 h2::before, .container4 h2::before {
+    counter-increment: second-topic;
+    content: counter(first-topic) "." counter(second-topic) " ";
+}
+
+.container3 h3::before, .container4 h3::before {
+    counter-increment: third-topic;
+    content: counter(first-topic) "." counter(second-topic) "." counter(third-topic) " ";
+}
+
+ol {
+    list-style-type: none;
+}
+
+
+.container5 ol, .container6 ol {
+    counter-reset: first-topic2;
+}
+
+.container5 li::before, .container6 li::before {
+    counter-increment: first-topic2;
+    content: counters(first-topic2, ".") " ";
+}
+
+.container6 li {
+    border: 2px solid steelblue;
+    width: fit-content;
+    margin: 10px;
+    padding: 5px;
+}
