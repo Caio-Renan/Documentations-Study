@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Responsive Table</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_images/blue-kinstone.png"/>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        
+        tr, th, td {
+            padding: 5px;
+        }
+
+        tr th {
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightgreen;
+        }
+
+        div.responsive-table {
+            overflow-x: auto;
+            padding: 20px;
+        }
+
+        div.responsive-table-scroll {
+            overflow-x: scroll;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Responsive Table</h1>
+            <h2>Responsive Table</h2>
+            <p>Uma tabela responsiva vai mostrar uma barra de rolagem horizontal se a tela for muito pequena para mostrar o conteúdo completo.</p>
+            <p>Use a propriedade "overflow-x: auto;" no div que conter a tabela para fazer com que a tabela fique responsiva.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <p style="font-weight: bold;">Deixando o overflow como "auto"</p>
+            <div class="responsive-table">
+                <table>
+                    <tr>
+                      <th>Primeiro nome</th>
+                      <th>Último nome</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                    </tr>
+                    <tr>
+                      <td>Caio</td>
+                      <td>Renan</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                    </tr>
+                    <tr>
+                      <td>João</td>
+                      <td>Fellipe</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                    </tr>
+                    <tr>
+                      <td>Jonas</td>
+                      <td>Maria</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                  </table>
+            </div>
+            <p style="font-weight: bold;">Deixando o overflow como "scroll"</p>
+            <div class="responsive-table-scroll">
+                <table>
+                    <tr>
+                      <th>Primeiro nome</th>
+                      <th>Último nome</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                      <th>Pontos</th>
+                    </tr>
+                    <tr>
+                      <td>Caio</td>
+                      <td>Renan</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                      <td>50</td>
+                    </tr>
+                    <tr>
+                      <td>João</td>
+                      <td>Fellipe</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                      <td>94</td>
+                    </tr>
+                    <tr>
+                      <td>Jonas</td>
+                      <td>Maria</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                      <td>67</td>
+                    </tr>
+                  </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_images/blue-kinstone.png"/>
+    <style>
+        figure{
+            box-sizing: border-box;
+            width: fit-content;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        figure#tres {
+            border: 5px solid steelblue;
+        }
+
+        div#um {
+            background-color: lightgrey;
+            width: 300px;
+            border: 15px solid green;
+            padding: 50px;
+            margin: 20px;
+        }
+
+        h3#dois {
+            width: 80px;
+            border: 10px solid steelblue;
+            padding: 5px;
+            margin: 0px auto 0px auto;
+            text-align: center;
+            text-indent: 0;
+            font-size: 14pt;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Box Model</h1>
+            <h2>The CSS Box Model</h2>
+            <p>O modelo de caixa é basicamente a caixa que fica ao redor de cada elemento html.</p>
+            <p>Ela é formada de várias camadas, a mais externa é o margin, a seguinte é a border, logo depois o padding e por fim o conteúdo.</p>
+            <p>A imagem a seguir define bem como é organizado:</p>
+            <figure>
+                <img src="../_images/box-model.png" alt=""/>
+            </figure>
+            <p>Esse modelo faz com que seja possível adicionarmos uma borda ao redor do conteúdo e manipular a distância entre o conteúdo e a borda (padding) e da borda ao ambiente externo. Veja o exemplo a seguir:</p>
+            <div id="um">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <p>Para colocar exatamente o comprimento ou altura desejado de um elemento é necessário que você saiba como calcular o comprimento e a altura no modelo de caixa.</p>
+            <p>O comprimento total deve ser calculado dessa forma:</p>
+            <ul>
+                <li>Comprimento total do elemento = width + left padding + right padding + left border + right border + left margin + right margin</li>
+            </ul>
+            <p>A altura total deve ser calculada dessa forma:</p>
+            <ul>
+                <li>Altura total do elemento = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</li>
+            </ul>
+            <figure id="tres">
+                <img src="../_images/chapeu.png" alt=""/>
+            </figure>
+            <h3 id="dois">110px</h3>
+            <p>Os 110px vem do 80px de width + 10px da borda esquerda + 10px da borda direita + 5px do padding esquerdo + 5px do padding direito. A imagem tinha 100px, mas, o tamanho final dela ficou igual a 110px devido aos 5px da borda esquerda e 5px da borda direita.</p>
+        </div>
+    </div>
+</body>
+</html>

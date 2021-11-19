@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Opacity / Transparency</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/_tutorial/css-opacity.css"/>
+    <link rel="icon" type="image/x-icon" href="../_images/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Opacity / Transparency</h1>
+            <p>Use "opacity: ;" para definir a opacidade/transparência de um elemento.</p>
+            <h2>Transparent Image</h2>
+            <p>O valor da opacidade vai de 0 a 1, sendo 1 a opacidade padrão de um elemento e 0 a transparência total (ele não aparecerá).</p>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="container">
+                <div class="img"><div class="border"><img src="../_images/chapeu.png" alt=""><p>Opacity: 0.2</p></div></div>
+                <div class="img2"><div class="border"><img src="../_images/chapeu.png" alt=""><p>Opacity: 0.5</p></div></div>
+                <div class="img3"><div class="border"><img src="../_images/chapeu.png" alt=""><p>Opacity: 1</p></div></div>
+            </div>
+            <h2>Transparent Hover Effect</h2>
+            <p>Você pode usar o ":hover {}" para fazer com que a opacidade mude quando alguém passar o mouse por cima.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="container2">
+                <div class="hoverimg"><div class="border"><img src="../_images/blue-kinstone-menor.png" alt=""></div></div>
+                <div class="hoverimg"><div class="border"><img src="../_images/green-kinstone-menor.png" alt=""></div></div>
+                <div class="hoverimg"><div class="border"><img src="../_images/gold-kinstone-menor.png" alt=""></div></div>
+            </div>
+            <p>Você pode fazer o inverso do que fez acima também! Veja logo abaixo:</p>
+            <div class="container2">
+                <div class="hoverimg2"><div class="border"><img src="../_images/blue-kinstone-menor.png" alt=""></div></div>
+                <div class="hoverimg2"><div class="border"><img src="../_images/green-kinstone-menor.png" alt=""></div></div>
+                <div class="hoverimg2"><div class="border"><img src="../_images/gold-kinstone-menor.png" alt=""></div></div>
+            </div>
+            <h2>Transparent Box</h2>
+            <p>Quando você usar "opacity: ;" para adicionar transparência a um fundo, todos os seus elementos-filhos irão herdar essa transparência, o que pode causar alguns problemas.</p>
+            <p>No exemplo a seguir é possível perceber que fica difícil de ler o texto devido a transparência:</p>
+            <div class="container3">
+                <p class="o-1">Opacity: 1</p>
+                <p class="o-06">Opacity: 0.6</p>
+                <p class="o-03">Opacity: 0.3</p>
+                <p class="o-01">Opacity: 0.1</p>
+            </div>
+            <h2>Transparency using RGBA</h2>
+            <p>Você pode resolver o problema acima se você colocar transparência ao fundo usando RGBA ou HSLA. Veja como o problema foi resolvido no exemplo a seguir:</p>
+            <div class="container3">
+                <p class="rgba-1">Opacity: 1</p>
+                <p class="rgba-06">Opacity: 0.6</p>
+                <p class="rgba-03">Opacity: 0.3</p>
+                <p class="rgba-01">Opacity: 0.1</p>
+            </div>
+            <h2>Text in Transparent Box</h2>
+            <p>Veja uma possível utilização da opacidade a seguir:</p>
+            <div class="container4">
+                <div class="small-container">
+                    <p>Olá! Eu sou um parágrafo dentro de um fundo transparente.</p>
+                </div>
+            </div>
+            <p>Isso acontece, pois a transparência faz com que o conteúdo do fundo possa ser visto.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - Float Examples</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/_tutorial/css-float-examples.css"/>
+    <link rel="icon" type="image/x-icon" href="../_images/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Layout - Float Examples</h1>
+            <p>Aqui terão exemplos comuns de utilização do float.</p>
+            <h2>Grid of Boxes / Equal Width Boxes</h2>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="container">
+                <div class="box">Caixa 1.</div>
+                <div class="box2">Caixa 2.</div>
+                <div class="box3">Caixa 3.</div>
+            </div>
+            <div class="container">
+                <div class="box4">Caixa 4.</div>
+                <div class="box5">Caixa 5.</div>
+            </div>
+            <p class="clear">Para os exemplos acima foi necessário usar "box-sizing: border-box;", pois o box-sizing faz com que um elemento não quebre para a próxima linha quando seu conteúdo extrapola o comprimento da caixa. Eu só vou entender melhor como funciona mais pra frente.</p>
+            <h2>Images Side By Side</h2>
+            <p>Veja o exemplo a seguir:</p>
+            <p><span class="bold">Exemplo sem espaço entre as fotos:</span></p>
+            <div class="container">
+                <img class="img" src="../_images/blue-kinstone-menor.png" alt=""/>
+                <img class="img" src="../_images/green-kinstone-menor.png" alt=""/>
+                <img class="img" src="../_images/red-kinstone-menor.png" alt=""/>
+            </div>
+            <p class="clear">Nesse caso, há somente 1 elemento-pai e 3 filhos (imagens). Eu não consegui adicionar padding a eles de modo que ficassem alinhados e sem dar um valor absoluto ao width. Veja como fica ao tentar adicionar espaço entre as imagens:</p> 
+            <div class="container">
+                <img class="img2" src="../_images/blue-kinstone-menor.png" alt=""/>
+                <img class="img2" src="../_images/green-kinstone-menor.png" alt=""/>
+                <img class="img2" src="../_images/red-kinstone-menor.png" alt=""/>
+            </div>
+            <p class="clear"><span class="bold">Exemplo com espaços entre as fotos:</span></p>
+            <div class="container">
+                <div class="small-container"><img class="img3" src="../_images/blue-kinstone-menor.png" alt=""/></div>
+                <div class="small-container"><img class="img3" src="../_images/green-kinstone-menor.png" alt=""/></div>
+                <div class="small-container"><img class="img3" src="../_images/red-kinstone-menor.png" alt=""/></div>
+            </div>
+            <p>Nesse caso, há 1 "elemento-vô", 3 "elementos-pai" e 3 "filhos".</p>
+            <h2>Equal Height Boxes</h2>
+            <p><span class="seeya">Eu só vou entender melhor como funciona mais pra frente.</span></p>
+            <h2>Navigation Menu</h2>
+            <p>Você pode criar um menu horizontal usando float:</p>
+            <div class="navmenu">
+                <ul>
+                    <li class="first"><a href="#">Home</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </div>
+            <p><span class="doubt">Por que o ul só aderiu a altura do conteúdo após ter a propriedade "overflow: hidden;"?</span></p>
+            <h2>Web Layout Example</h2>
+            <p>É comum fazer um layout inteiro de uma página usando float.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <p><span class="bold">Jeito que eu fiz:</span></p>
+            <div class="header">Chania</div>
+            <div class="container2">
+                <div class="small-container2">
+                    <div class="leftbox">The Flight</div>
+                    <div class="leftbox">The City</div>
+                    <div class="leftbox">The Island</div>
+                    <div class="leftbox">The Food</div>
+                </div>
+                <div class="small-container3">
+                    <h1>The City</h1>
+                    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p> 
+                    <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+                </div>
+            </div>
+            <div class="footer">Footer Text</div>
+            <p>A principal diferença do jeito que eu fiz para a que está no site é que eu não usei "ul" para fazer o menu e eu usei mais divs.</p>
+            <h2>More Examples</h2>
+            <h3>Let an image float to the right in a paragraph</h3>
+            <p><img class="right" src="../_images/chapeu.png" alt=""/>
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+            </p>
+                <p>Você pode afastar a imagem do texto usando margin, como no exemplo acima.</p>
+            <h3>Let an image with a caption float to the right</h3>
+            <div class="imgcaption">
+                <img src="../_images/chapeu.png" alt=""/><br/>Eu sou um capuz!
+            </div>
+            <p>
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.
+            This is some text. This is some text. This is some text.    
+            </p>
+            <h3>Style the first letter of a paragraph and let it float left</h3>
+            <p><span class="flleft">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3>Website</h3>
+            <div class="website">
+                <div class="navmenu2">
+                    <ul>
+                        <li class="first2"><a href="" >Home</a></li>
+                        <li><a href="">Notícias</a></li>
+                        <li><a href="">Contatos</a></li>
+                        <li><a href="">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="container3">
+                    <ul>
+                        <li><a class="first3" href="">The Flight</a></li>
+                        <li><a class="selected" href="">The City</a></li>
+                        <li><a href="">The Island</a></li>
+                        <li><a href="">The Food</a></li>
+                        <li><a href="">The People</a></li>
+                        <li><a href="">The History</a></li>
+                        <li><a href="">The Oceans</a></li>
+                    </ul>
+                    <div class="container4">
+                        <div class="mainheader">
+                            <h1>The City</h1>
+                        </div>
+                        <div class="article">
+                            <h1>Chania</h1>
+                            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+                            <p>You will learn more about responsive web pages in a later chapter.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer2">Footer Text</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

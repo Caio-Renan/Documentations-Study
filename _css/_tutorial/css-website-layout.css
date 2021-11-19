@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+.website-layout, .header, .nav-menu, .container, .container2, .small-container, .small-container2, .content, .main-content, .footer {
+    box-sizing: border-box;
+}
+
+.website-layout, .container, .header, .nav-menu, .footer {
+    display: block;
+}
+
+.small-container, .small-container2, .container2 {
+    display: inline-block;
+}
+
+.website-layout, .container2 {
+    width: 100%;
+}
+
+.container2 {
+    border: 2px solid purple;
+}
+
+.container {
+    border: 4px solid green;
+}
+
+.small-container, .small-container2 {
+    border: 2px solid salmon;
+}
+
+.header, .nav-menu, .content, .main-content, .footer {
+    background-color: steelblue;
+}
+
+.content, .main-content {
+    width: 100%;
+}
+
+.website-layout {
+    background-color: lightblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.small-container {
+    width: 15%;
+}
+
+.small-container2 {
+    width: 70%;
+}
+
+.margin-l {
+    margin-left: 10px;
+}
+
+.margin-r {
+    margin-right: 10px;
+}
+
+.small-container, .small-container2 {
+    float: left;
+}
+
+.header, .nav-menu, .container, .footer {
+    margin: 10px;
+}
+
+.header {
+    padding: 40px;
+}
+
+.nav-menu {
+    padding: 20px;
+}
+
+.footer {
+    padding: 30px;
+}
+
+/* Restante */
+
+.header2 {
+    background-color: #1898E0;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+ul {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: #247BA0;
+    border: 2px solid green;
+}
+
+li, a {
+    margin: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    background-color: #247BA0;
+    border: 2px solid salmon;
+}
+
+li:not(.right) {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    width: 150px;
+    border: 2px solid purple;
+}
+
+.abs-right {
+    right: 0;
+}
+
+.dropdown {
+    position: relative; 
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS HSL Colors</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_images/blue-kinstone.png"/>
+    <style>
+        h3 {
+            text-align: center; 
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS HSL Colors</h1>
+            <h2>HSL Value</h2>
+            <p>H(Hue = Matiz) S(Saturation = Saturação) L(Lightness = Claridade)</p>
+            <p>Hue é um grau na paleta de cores de 0 a 360, sendo 0 = vermelho, 120 = verde e 240 = azul.</p>
+            <p>Saturação é uma porcentagem que significa tom de cinza.</p>
+            <p>Claridade também é uma porcentagem. 0% = Escuro, 50% = Nem escuro nem, branco, 100% = Branco.</p>
+            <h3 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h3>
+            <h3 style="background-color:hsl(240, 100%, 50%);">hsl(240, 100%, 50%)</h3>
+            <h3 style="background-color:hsl(39, 100%, 50%);">hsl(39, 100%, 50%)</h3>
+            <h3 style="background-color:hsl(248, 53%, 58%);">hsl(248, 53%, 58%)</h3>
+            <h2>Saturação</h2>
+            <p>Saturação é a intensidade da cor.</p>
+            <p>100% é a cor pura, sem tom de cinza.</p>
+            <p>50% terá 50% de cinza, mas a cor inicial pode ser vista.</p>
+            <p>0% será cinza e a cor inicial não poderá mais ser vista.</p>
+            <h3 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h3>
+            <h3 style="background-color:hsl(0, 80%, 50%);">hsl(0, 80%, 50%)</h3>
+            <h3 style="background-color:hsl(0, 60%, 50%);">hsl(0, 60%, 50%)</h3>
+            <h3 style="background-color:hsl(0, 0%, 50%);">hsl(0, 0%, 50%)</h3>
+            <h2>Claridade</h2>
+            <p>É o quanto de luz você deseja dar a sua cor.</p>
+            <p>0% = Sem luz, logo preto.</p>
+            <p>50% = Nem preto, nem branco.</p>
+            <p>1005 = Branco.</p>
+            <h3 style="background-color:hsl(0, 100%, 0%);">hsl(0, 100%, 0%)</h3>
+            <h3 style="background-color:hsl(0, 100%, 25%);">hsl(0, 100%, 25%)</h3>
+            <h3 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h3>
+            <h3 style="background-color:hsl(0, 100%, 100%);">hsl(0, 100%, 100%)</h3>
+            <h2>Tons de cinza</h2>
+            <p>Nesse caso os tons de cinza são conquistados deixando a saturação e a matiz igual a 0 e mexendo na claridade.</p>
+            <h3 style="background-color:hsl(0, 0%, 0%);">hsl(0, 0%, 0%)</h3>
+            <h3 style="background-color:hsl(0, 0%, 24%);">hsl(0, 0%, 24%)</h3>
+            <h3 style="background-color:hsl(0, 0%, 47%);">hsl(0, 0%, 47%)</h3>
+            <h3 style="background-color:hsl(0, 0%, 100%);">hsl(0, 0%, 100%)</h3>
+            <h2>HSLA</h2>
+            <p>O "A" refere-se ao canal alpha e mexe na opacidade (transparência) da cor.</p>
+            <h3 style="background-color:hsla(9, 100%, 64%, 0);">hsla(9, 100%, 64%, 0)</h3>
+            <h3 style="background-color:hsla(9, 100%, 64%, 0.4);">hsla(9, 100%, 64%, 0.4)</h3>
+            <h3 style="background-color:hsla(9, 100%, 64%, 1);">hsla(9, 100%, 64%, 1)</h3>
+        </div>
+    </div>
+</body>
+</html>

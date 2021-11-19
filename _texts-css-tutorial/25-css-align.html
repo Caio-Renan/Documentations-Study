@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/_tutorial/css-align.css"/>
+    <link rel="icon" type="image/x-icon" href="../_images/blue-kinstone.png"/>
+    <title>CSS Layout - Horizontal & Vertical Align</title>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Layout - Horizontal & Vertical Align</h1>
+            <h2>Center Align Elements</h2>
+            <p>Nós podemos alinhar um elemento de bloco usando "margin: auto;".</p>
+            <p>Definindo o tamanho do elemento irá prevenir que ele vá até a borda de seu recipiente.</p>
+            <div class="margin">
+                <p>Exemplo.</p>
+            </div>
+            <p><span class="notsure">Esse método não terá efeito se width não tiver valor definido.</span></p>
+            <h2>Center Align Text</h2>
+            <p class="aligntext">Exemplo.</p>
+            <h2>Center an Image</h2>
+            <p>Para centralizar uma imagem use "margin: auto;" e transforme-o num bloco.</p>
+            <img class="center" src="../_images/chapeu.png" alt="">
+            <h2>Left and Right Align - Using position</h2>
+            <p>Basta utilizar "position: absolute;" num elemento que está dentro de outro com "position: relative;" e definir em que posição você deseja que ele fique.</p>
+            <div class="container">
+                <p class="position">Lorem ipsum dolor sit amet. Ex doloremque reprehenderit et adipisci numquam eum praesentium quia aut tempore nulla in corporis optio. Et suscipit pariatur vel pariatur sunt non sapiente ipsum est quae delectus.</p>
+            </div>
+            <h2>Left and Right Align - Using float</h2>
+            <p>Basta utilizar "float: ;" num elemento que está dentro de outro com "position: relative;".</p>
+            <div class="container">
+                <p class="float">Lorem ipsum dolor sit amet. Ex doloremque reprehenderit et adipisci numquam eum praesentium quia aut tempore nulla in corporis optio. Et suscipit pariatur vel pariatur sunt non sapiente ipsum est quae delectus.</p>
+            </div>
+            <h2>The clearfix Hack</h2>
+            <p>Se um elemento flutuante for maior que a caixa de conteúdo do elemento, ele irá "vazar". Para resolver isso, basta usar um "clearfix hack".</p>
+            <p><span class="seeya">Eu só vou entender melhor como funciona mais pra frente.</span></p>
+            <p><span class="bold">Sem clearfix:</span></p>
+            <div class="container2">
+                <img class="fr" src="../_images/chapeu.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor...</p>
+            </div>
+            <p><span class="bold">Com clearfix:</span></p>
+            <div class="container3">
+                <img class="fr" src="../_images/chapeu.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor...</p>
+            </div>
+            <h2>Center Vertically - Using padding</h2>
+            <p>Há várias formas de centralizar verticalmente um elemento. Um exemplo simples é utilizar padding top/bottom.</p>
+            <p class="padding">Exemplo.</p>
+            <p>Você também pode usar "text-align: ;" para alinhar verticalmente e horizontalmente.</p>
+            <p class="padding2">Exemplo.</p>
+            <h2>Center Vertically - Using line-height</h2>
+            <p>Você também pode utilizar "line-height: ;" para centralizar, basta colocar o mesmo valor da height.</p>
+            <p class="line-height">Exemplo.</p>
+            <p>Isto só serve para caso o texto caiba em apenas uma linha, caso contrário defina a propriedade assima para o elemento-pai do elemento que possui um texto que caiba em mais de uma linha e adicione ao elemento filho um line-height de 1.5 (acho que é o espaçamento padrão que usamos em trabalhos acadêmicos), display igual a inline-block e vertical-align igual a middle.</p>
+            <div class="line-height2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor...</p></div>
+            <h2>Center Vertically - Using position & transform</h2>
+            <p><span class="seeya">Eu só vou entender melhor como funciona mais pra frente.</span></p>
+            <h2>Center Vertically - Using Flexbox</h2>
+            <p><span class="seeya">Eu só vou entender melhor como funciona mais pra frente.</span></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Image Sprites</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/_tutorial/css-sprites-imagem.css"/>
+    <link rel="icon" type="image/x-icon" href="../_images/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Image Sprites</h1>
+            <h2>Image Sprites</h2>
+            <p>Uma imagem sprite é uma coleção de imagens colocadas em uma única imagem.</p>
+            <p>Ter várias imagens separadas num site pode torná-lo mais lento, pois será necessário fazer mais requisições, isso sem contar que usará mais largura de banda. Por isso, imagens em sprites podem ser úteis.</p>
+            <h2>Image Sprites - Simple Example</h2>
+            <p>Ao invés de usarmos três imagens separadas, usaremos apenas uma imagem que contém as três. Veja o exemplo a seguir:</p>
+            <img class="imgcenter" src="../_images/img_navsprites.gif" alt="">
+            <p>Com o CSS nós podemos mostrar somente a parte da imagem que desejamos, para isso primeiro é necessário colocar um fundo transparente como valor do "scr" da tag img, pois ela não pode ficar vazia. Além disso, dê um "id" a tag "img" e use "background: url() ?(left)px ?(top)px;" para adicionar o sprite e definir sua posição. Também defina a altura e o comprimento do sprite que deseja mostrar usando "height" e "width" respectivamente.</p>
+            <div class="container">
+                <div class="small-container">
+                    <img id="home" src="../_images/transparent-background.png" alt="" width="1" height="1">
+                </div>
+                <div class="small-container">
+                    <img id="left-arrow" src="../_images/transparent-background.png" alt="" width="1" height="1">
+                </div>
+                <div class="small-container">
+                    <img id="right-arrow" src="../_images/transparent-background.png" alt="">
+                </div>
+            </div>
+            <div class="container">
+                <div class="small-container">
+                    <img id="left-arrow"  src="../_images/transparent-background.png" alt="" width="1" height="1">
+                </div>
+                <div class="small-container">
+                    <img id="home" src="../_images/transparent-background.png" alt="" width="1" height="1">
+                </div>
+                <div class="small-container">
+                    <img id="right-arrow" src="../_images/transparent-background.png" alt="">
+                </div>
+            </div>
+            <div class="container">
+                <div class="small-container">
+                    <img id="left-arrow" src="../_images/transparent-background.png" alt="">
+                </div>
+                <div class="small-container">
+                    <img id="right-arrow" src="../_images/transparent-background.png" alt="">
+                </div>
+                <div class="small-container">
+                    <img id="home" src="../_images/transparent-background.png" alt="">
+                </div>
+            </div>
+            <p>Nós podemos até fazer aparecer uma repetição dos sprites que não havia na imagem original.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <img id="duplicated" class="imgcenter" src="../_images/transparent-background.png" alt="">
+            <p>Para fazer isso, eu apenas dobrei o height que a imagem tinha originalmente.</p>
+            <h2 class="clear">Image Sprites - Create a Navigation List</h2>
+            <p>Você pode usar os sprites como links numa lista de navegação.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <p><span class="bold">Jeito que eu fiz:</span></p>
+            <ul>
+                <li><a id="home" href=""></a></li>
+                <li><a id="right-arrow" href="36-css-attr-selectors.html" target="_blank"></a></li>
+                <li><a id="left-arrow" href="34-css-image-gallery.html" target="_blank"></a></li>
+            </ul>
+            <p><span class="bold">Jeito sugerido pelo site:</span></p>
+            <ul class="suggestion">
+                <li id="home"><a href=""></a></li>
+                <li id="right-arrow"><a href="36-css-attr-selectors.html" target="_blank"></a></li>
+                <li id="left-arrow"><a href="34-css-image-gallery.html" target="_blank"></a></li>
+            </ul>
+            <h2>Image Sprites - Hover Effect</h2>
+            <p>Agora nós iremos usar o efeito hover, utilizando de novos sprites que estão contidos numa imagem.</p>
+            <p>A imagem sprite utilizada será essa:</p>
+            <img class="imgcenter" src="../_images/img_navsprites_hover.gif" alt="">
+            <p>Veja o exemplo do tópico anterior com hover adicionado a seguir:</p>
+            <div class="container2">
+                <ul>
+                    <li><a id="home2" href=""></a></li>
+                    <li><a id="right-arrow2" href="36-css-attr-selectors.html" target="_blank"></a></li>
+                    <li><a id="left-arrow2" href="34-css-image-gallery.html" target="_blank"></a></li>
+                </ul>
+            </div>
+            <p>Para fazer esse efeito é necessário mexer nas posições que serão mostradas lá no "background: url();". Nesse caso eu fiz ele mostrar os sprites que estavam logo abaixo.</p>
+        </div>
+    </div>
+</body>
+</html>

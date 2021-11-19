@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="image/x-icon" href="../_images/blue-kinstone.png"/>
+    <style>
+        div.examples p {
+            font-size: 16pt;
+            text-align: center;
+        }
+
+        p.one {
+            font-family: 'Arial', sans-serif;
+        }
+
+        p.two {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        p.three {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        p.four {
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        p.five {
+            font-family: fantasy;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Fonts</h1>
+            <p>É importante ter uma boa escolha de fonte e de suas propriedades como cor e tamanho.</p>
+            <h2>Generic Font Families and Commonly Used Font Fallbacks</h2>
+            <p>No CSS temos 5 famílias de fontes genéricas:</p>
+            <ul>
+                <li><span class="bold">Serif</span> - As fontes terão um traço na borda de cada letra. Cria uma impressão de formalidade e elegância;</li>
+                <li><span class="bold">Sans-serif</span> - As fontes terão somente suas linhas normais. Cria uma impressão moderna e minimalista;</li>
+                <li><span class="bold">Monospace</span> - As fontes terão letras com o mesmo comprimento. Cria uma impressão mecânica;</li>
+                <li><span class="bold">Cursive</span> - As fontes irão se parecer com a escrita humana;</li>
+                <li><span class="bold">Fantasy</span> - As fontes irão ser criativas, "exóticas".</li>
+            </ul>
+            <p>Todas as outras fontes diferentes das que foram citas pertencem a uma dessas fontes genéricas.</p>
+            <h2>Difference Between Serif and Sans-serif Fonts</h2>
+            <p class="one">Minha fonte é da família sans-serif!</p>
+            <p class="two">Minha fonte é da família serif!</p>
+            <p>Obs.: Nos computadores, as fontes serif são mais fáceis de ler.</p>
+            <h2>The CSS font-family Property</h2>
+            <p>Para escolher a fonte use "font-family: ;". Comece colocando a fonte que deseja e em seguida coloque uma fonte de família genérica, para o caso do navegador não ter a que você selecionou. Aparentemente essa precaução de ter dar ao navegador opções de fontes para usar é chamada de "fallback".</p>
+            <p>Obs.: Se o nome da fonte for maior que uma palavra, coloque-a entre aspas simples.</p>
+            <h2>Some Font Examples</h2>
+            <div class="examples">
+                <p class="one">Minha fonte é da família sans-serif! E o nome de minha fonte é "Arial"!</p>
+                <p class="two">Minha fonte é da família serif! E o nome de minha fonte é "Times New Roman"!</p>
+                <p class="three">Minha fonte é da família monospace! E o nome de minha fonte é "Courier New"!</p>
+                <p class="four">Minha fonte é da família cursive! E o nome de minha fonte é Brush Script MT!</p>
+                <p class="five">Minha fonte é da família fantasy!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

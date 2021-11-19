@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - display: inline-block</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/_tutorial/css-inline-block.css"/>
+    <link rel="icon" type="image/x-icon" href="../_images/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Layout - display: inline-block</h1>
+            <h2>The display: inline-block Value</h2>
+            <p>A principal diferença entre o "display: inline;" e o "display: inline-block;" é que o último te permite definir a altura e o comprimento de um elemento. Além disso o padding-top e o padding-bottom são respeitados, coisa que o "display: inline;" não faz.</p>
+            <p>A principal diferença do "display: inline-block" para o "display: block;" é que o primeiro não cria uma quebra de linha depois do elemento, permitindo que os próximos elementos fiquem do seu lado, já o segundo o faz.</p>
+            <p>Veja as diferenças entre eles a seguir:</p>
+            <p>Parte do código CSS dos elementos a seguir: "span.i, span.b, span.ib {width: 8vw; height: 4vw; padding: 5px;}".</p>
+            <p><span class="bold">Inline:</span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="i">Aliquam</span> <span class="i">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet.</p>
+            <p><span class="bold">Veja que</span> mesmo tendo valores de width e height definidos, o elemento não os recebe, permanece com seu tamanho original. Além disso, o padding/margin acaba invadindo os objetos próximos.</p>
+            <p><span class="bold">Block:</span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet.</p>
+            <p><span class="bold">Inline Block:</span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="ib">Aliquam</span> <span class="ib">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet.</p>
+            <h2>Using inline-block to Create Navigation Links</h2>
+            <p>É comum usar "display: inline-block;" para criar uma barra de navegação horizontal.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Nossos clientes</a></li>
+                    <li><a href="#">Nos contate</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

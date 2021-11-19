@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - float and clear</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/_tutorial/css-float.css"/>
+    <link rel="icon" type="image/x-icon" href="../_images/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Layout - float and clear</h1>
+            <p>A propriedade "float: ;" especifica como um elemento deve flutuar. Já a propriedade "clear: ;" especifica quais elementos podem flutuar ao lado do elemento "limpo (clear)" e em qual lado.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="container">
+                <div class="buttonl">"float: left;"</div>
+                <div class="buttonr">"float: right;"</div>
+            </div>
+            <h2 class="clear">The float Property</h2>
+            <p>Use "float: ;" para posicionar e formatar um conteúdo, você pode, por exemplo, colocar uma imagem flutuando na esquerda ou direita de uma caixa.</p>
+            <p>Essa propriedade pode receber os valores a seguir:</p>
+            <ul>
+                <li><span class="bold">left</span></li>
+                <li><span class="bold">right</span></li>
+                <li><span class="bold">none</span></li>
+                <li><span class="bold">inherit</span></li>
+            </ul>
+            <p>No seu uso mais simples é possível usá-lo para fazer o texto se adequar (wrap pra ser mais exato) a imagem posicionada.</p>
+            <h2>Example - float: right;</h2>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container2">
+                <p><img class="fr" src="../_images/chapeu.png" alt="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...</p>
+            </div>
+            <p>O lugar que a imagem irá ficar depende de onde você a colocou no HTML e do valor da propriedade "float: ;".</p>
+            <h2>Example - float: left;</h2>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container2">
+                <p><img class="fl" src="../_images/chapeu.png" alt="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...</p>
+            </div>
+            <h2>Example - No float</h2>
+            <p>Nesse caso, a imagem vai ficar onde você a posicionou no HTML.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container2">
+                <p><img class="fn" src="../_images/chapeu.png" alt="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...</p>
+            </div>
+            <h2>Example - Float Next To Each Other</h2>
+            <p>Normalmente as "div's" ficam posicionadas uma abaixo da outra. Porém, você pode fazer com que ao invés disso sejam posicionados ao lado do outro, para isso basta colocar colocar o valor left ou right para float.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <p><span class="bold">Não adicionando float:</span></p>
+            <div class="container3">
+                <div class="normal"></div>
+                <div class="normal2"></div>
+                <div class="normal3"></div>
+                <div class="normal4"></div>
+            </div>
+            <p><span class="bold">Usando "float: left;":</span></p>
+            <div class="container4">
+                <div class="left"></div>
+                <div class="left2"></div>
+                <div class="left3"></div>
+                <div class="left4"></div>
+            </div>
+            <p class="clear"><span class="bold">Usando "float: right;":</span></p>
+            <div class="container4">
+                <div class="right"></div>
+                <div class="right2"></div>
+                <div class="right3"></div>
+                <div class="right4"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

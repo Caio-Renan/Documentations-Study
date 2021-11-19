@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Horizontal Navigation Bar</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/_tutorial/css-horizontal-navbar.css"/>
+    <link rel="icon" type="image/x-icon" href="../_images/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Horizontal Navigation Bar</h1>
+            <div class="container">
+                <ul class="border">
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li class="right"><a href="#">Sobre</a></li>
+                </ul>
+            </div>
+            <h2 class="clear">Horizontal Navigation Bar</h2>
+            <p>Há duas formas de fazer barras de navegação, uma utiliza "float: ;" e a outra usa "display: inline;".</p>
+            <p>O exemplo acima foi utilizando "float: ;".</p>
+            <h2>Inline List Items</h2>
+            <p>Você pode usar "display: inline;" na tag "li" para fazer com que os itens das lista apareçam um ao lado do outro. Porém, como você já estudou anteriormente, ao colocar esse valor para essa propriedade num elemento, ele não receberá valores como padding, o que é essencial para a criação das barras de navegação. Além disso, ficará um espaço entre os itens que não sai mesmo colocando o margin como 0.</p>
+            <p><span class="bold">Obs.: a cor do "fundo" da barra de navegação é diferente da dos itens de cada lista intencionalmente. É para ficar mais visível o espaçamento que não gostariamos que existisse.</span></p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container2">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </div>
+            <p>Você pode resolver a questão do padding ao colocar "display: inline-block;" na tag "li". Porém, a questão dos espaços entre cada item persistirá.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container3">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </div>
+            <p>Para resolver esse problema (sinceramente, é mais fácil só usar float), veja as dicas que estão nesse <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">site</a>.</p>
+            <p>No exemplo abaixo eu optei por colocar o tamanho da fonte em 0 para todos os elementos menos para a tag "a":</p>
+            <div class="container4">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </div>
+            <h2>Floating List Items</h2>
+            <p>Como foi dito anteriormente, é possível fazer uma barra de navegação usando "float: ;". Nesse caso o valor que daremos será "left", para fazer com que os itens se alinhem na esquerda.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </div>
+            <p>Lembre-se de adicionar "display: block;" a tag "a".</p>
+            <h2>Active/Current Navigation Link</h2>
+            <p>O exemplo que virá a seguir tem um dos itens da lista selecionado. Para fazer isso você deve adicionar uma classe a uma tag "a" que desejar. Algo interessante é que o efeito de ":hover {}" não irá funcionar nele se você colocar exatamente os mesmos seletores (com adição da classe, é claro) logo após adicionar a propriedae ":hover {}". O mesmo vale para caso queira que ele não tenha a mesma cor que os outros.</p>
+            <p>Exemplos:</p>
+            <div class="center">
+                <div class="example">
+                    <p>ul a:hover {background-color: <span class="color">#04AA6D</span>; color: white;}</p>
+                    <p>ul a.selected {background-color: <span class="color2">green</span>; color: white;}</p>
+                </div>
+                <div class="example">
+                    <p>div.navmenu2 li {background-color: <span class="color3">#1898E0</span>;}</p>
+                    <p>div.navmenu2 li.first2 {background-color: <span class="color4">#247BA0</span>;}</p>
+                </div>
+            </div>
+            <p>Você também pode adicionar ":not(.classe-do-elemento-que-não-deve-ser-alterado)" ao hover ou aos seletores que irão alterar alguma propriedade dos elementos. Desse modo, as propriedades que você definir ali não irá afetar aqueles que tem a classe que está entre os parênteses.</p>
+            <div class="center">
+                <div class="example">
+                    <p>div.container2 a:not(.active) {background-color: <span class="color5">#333</span>;}</p>
+                    <p>li a.active {background-color: <span class="color">#04AA6D</span>;}</p>
+                </div>
+                <div class="example">
+                    <p>div.container a:hover:not(.active) {background-color: <span class="color6">#111</span>;}</p>
+                </div>
+            </div>
+            <p>Veja o exemplo da barra de navegação com um item ativo a seguir:</p>
+            <div class="container">
+                <ul>
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </div>
+            <h2>Right-Align Links</h2>
+            <p>Você pode colocar alguns itens na direita, basta usar "float: right;".</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container">
+                <ul>
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li class="right"><a href="#">Sobre</a></li>
+                </ul>
+            </div>
+            <h2>Border Dividers</h2>
+            <p>Você pode dividir cada item da lista usando um "border-right: ;".</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container">
+                <ul class="border">
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li class="right"><a href="#">Sobre</a></li>
+                </ul>
+            </div>
+            <h2>Fixed Navigation Bar</h2>
+            <p>Use "position: fixed;" para fixar uma barra de navegação. Você pode ver esse exemplo no material anterior sobre <a target="_blank" href="31-css-vertical-navbar.html">barras de navegação vertical</a>.</p>
+            <p>Nesse caso, eu preciso fazer com que o "position: fixed;" não se baseei na tela de exibição inicial, mas sim dentro de uma div que eu criei, coisa que não sei fazer ainda. <span class="seeya">Eu só vou entender melhor como funciona mais pra frente.</span></p>
+            <p>Quando voltar, copiar o código abaixo e substituir os containers por container8 e container9.</p>
+            <h2>Sticky Navbar</h2>
+            <p>Você também pode usar "position: sticky;" para fixar uma barra de navegação.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="container5">
+                <div class="small-container">
+                    <div class="container8">
+                        <ul class="border">
+                            <li><a class="active" href="#">Home</a></li>
+                            <li><a href="#">Notícias</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li class="right"><a href="#">Sobre</a></li> 
+                        </ul>
+                    </div>
+                    <div class="article">
+                        <h1>Fixed Top Navigation Bar</h1>
+                        <h2>Scroll this page to see the effect</h2>
+                        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                    </div>
+                </div>
+                <div class="small-container2">
+                    <div class="article">
+                        <h1>Fixed Bottom Navigation Bar</h1>
+                        <h2>Scroll this page to see the effect</h2>
+                        <h2>The navigation bar will stay at the bottom of the page while scrolling</h2>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                        <p>Some text some text some text some text..</p>
+                    </div>
+                    <div class="container9">
+                        <ul class="border">
+                            <li><a class="active" href="#">Home</a></li>
+                            <li><a href="#">Notícias</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li class="right"><a href="#">Sobre</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container5">
+                <div class="small-container3">
+                    <h1>Scroll Down</h1>
+                    <p>Scroll down to see the sticky effect.</p>
+                    <div class="container8">
+                        <ul class="sticky border">
+                            <li><a class="active" href="#">Home</a></li>
+                            <li><a href="#">Notícias</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li class="right"><a href="#">Sobre</a></li>
+                        </ul>
+                    </div>
+                    <div class="article">
+                        <h3>Sticky Navigation Bar Example</h3>
+                        <p>The navbar will <strong>stick</strong> to the top when you reach its scroll position.</p>
+                        <p><strong>Note:</strong> Internet Explorer do not support sticky positioning and Safari requires a -webkit- prefix.</p>
+                        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                        <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    </div>
+                </div>
+            </div>
+            <h2>More Examples</h2>
+            <h3>Responsive Topnav</h3>
+            <p><span class="seeya">Eu só vou entender melhor como funciona mais pra frente.</span></p>
+            <h3>Respoonsive Sidenav</h3>
+            <p><span class="seeya">Eu só vou entender melhor como funciona mais pra frente.</span></p>
+            <h2>Dropdown Navbar</h2>
+            <p>Com tudo que aprendeu até agora é possível fazer barras de navegação com "dropdown".</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container10">
+                <ul>
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Dropdown</a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </li>
+                    <li class="right"><a href="#">Sobre</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
