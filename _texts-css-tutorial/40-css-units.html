@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/_tutorial/css-units.css"/>
+    <link rel="icon" type="icon/x-image" href="../_images/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Units</h1>
+            <h2>CSS Units</h2>
+            <p>O CSS tem várias unidades diferentes para comprimentos.</p>
+            <p>Comprimento é o número seguido de uma unidade de comprimento, com 10px, 2em, etc.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <div class="container">
+                <h1>Eu tenho 30px de tamanho.</h1>
+                <h2>Eu tenho 2.5em de tamanho.</h2>
+                <p>Eu tenho 18pt de tamanho.</p>
+            </div>
+            <p><span class="bold">Obs.:</span> um espaço em branco não pode aparecer entre o número e a unidade (exemplo: 10 px, 20 pt, etc.), mas, caso o valor do número seja igual a 0, a undiade pode ser omitida.</p>
+            <p>Temos dois tipos de comprimentos: absoluto e relativo.</p>
+            <h2>Absolute Lengths</h2>
+            <p>Ao escolher uma unidade de comprimento absoluto para um elemento, aquela unidade terá sempre um tamanho específico, que não será alterado.</p>
+            <p>Esse tipo de comprimento não é muito recomendado, pois os tamanhos da tela variam bastante. Porém, eles podem ser utilizados quando o meio de saída é conhecido, como um layout de impressão.</p>
+            <p>Veja os exemplos de unidades de comprimento absoluto a seguir:</p>
+            <ul>
+                <li><span class="bold">cm</span> - centimetros;</li>
+                <li><span class="bold">mm</span> - milimetros;</li>
+                <li><span class="bold">in</span> - polegadas (1in = 96px = 2.54cm);</li>
+                <li><span class="bold">px</span> - pixels (1px = 1/96th de 1 polegada);</li>
+                <li><span class="bold">pt</span> - pontos (1pt = 1/72 de 1 polegada);</li>
+                <li><span class="bold">pc</span> - picas (1pc = 12pt).</li>
+            </ul>
+            <p><span class="bold">Obs.:</span> pixels (px) são relativos ao dispositivo de visualização. Para dispositivos de baixo dpi, 1px é um pixel de dispositivo (ponto) da tela. Para impressoras e telas de alta resolução, 1px implica vários pixels de dispositivo.</p>
+            <h2>Relative Lengths</h2>
+            <p>Unidades de comprimento relativo especificam o comprimento de um elemento com base em outra propriedade de comprimento. Elas escalam melhor entre diferentes meios de exibição.</p>
+            <ul>
+                <li><span class="bold">em</span> - Relativo ao tamanho da fonte do elemento (2em significa 2 vezes o tamanho da fonte atual);</li>
+                <li><span class="bold">ex</span> - relativo a altura x da fonte atual (raramente usada);</li>
+                <li><span class="bold">ch</span> - relativo a largura (width) do "0";</li>
+                <li><span class="bold">rem</span> - relativo ao tamanho da fonte do elemento raiz;</li>
+                <li><span class="bold">vw</span> - relativo a 1% da largura (width) da janela de exibição;</li>
+                <li><span class="bold">vh</span> - relativo a 1% da altura (height) da janela de exibição;</li>
+                <li><span class="bold">vmin</span> - relativo a 1% da altura (height) da dimensão menor da janela de exibição;</li>
+                <li><span class="bold">vmax</span> - relativo a 1% da altura (height) da dimensão maior da janela de exibição;</li>
+                <li><span class="bold">%</span> - relativo ao elemento-pai.</li>
+            </ul>
+            <p>Veja os exemplos a seguir (redefina o tamanho da janela de exibição para ver como irão se comportar):</p>
+            <div class="separation">
+                <p class="examples">Eu tenho 24 pixels de tamanho.<span class="em"> Eu tenho 0.5em.</span><span class="em2"> Eu tenho 1.5em.</span></p>
+            </div>
+            <div class="separation">
+                <p class="examples">Eu tenho 24 pixels de tamanho.<span class="ex"> Eu tenho 1ex.</span><span class="ex2"> Eu tenho 2ex.</span></p>
+            </div>
+            <div class="separation">
+                <p class="examples">Eu tenho 24 pixels de tamanho.<span class="ch"> Eu tenho 1ch.</span><span class="ch2"> Eu tenho 2ch.</span></p>
+            </div>
+            <div class="separation">
+                <p class="examples">Eu tenho 24 pixels de tamanho.<span class="rem"> Eu tenho 1rem.</span><span class="rem2"> Eu tenho 2rem.</span></p>
+            </div>
+            <div class="separation">
+                <p class="vw">Eu tenho 1.5vw de tamanho.</p>
+                <p class="vw2">Eu tenho 2.5vw de tamanho.</p>
+            </div>
+            <div class="separation">
+                <p class="vh">Eu tenho 2.5vh de tamanho.</p>
+                <p class="vh2">Eu tenho 5vh de tamanho.</p>
+            </div>
+            <div class="separation">
+                <p class="vmin">Eu tenho 2.5vmin de tamanho.</p>
+                <p class="vmin2">Eu tenho 5vmin de tamanho.</p>
+            </div>
+            <div class="separation">
+                <p class="vmax">Eu tenho 1vmax de tamanho.</p>
+                <p class="vmax2">Eu tenho 2vmax de tamanho.</p>
+            </div>
+            <div class="separation">
+                <p class="examples">Eu tenho 24 pixels de tamanho.<span class="percent">Eu tenho 0.5em.</span><span class="percent2"> Eu tenho 1.5em.</span></p>
+            </div>
+            <p><span class="bold">Dicas.:</span></p>
+            <ul>
+                <li>As unidades "em" e "rem" são práticas na criação de layouts perfeitamente escaláveis.</li>
+                <li>Janela de exibição é igual ao tamanho da janela do navegador, se a janela de exibição for igual a 50 cm, 1vw é igual a 0.5cm.</li>
+            </ul>  
+        </div>
+    </div>
+</body>
+</html>
