@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="icon" type="icon/x-image" href="../_images/blue-kinstone.png"/>
+    <style>
+        .blue {
+            color: blue;
+        }
+
+        .brown {
+            color: brown;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Specificity</h1>
+            <h2>What is Specificity?</h2>
+            <p>Se há uma ou mais regras de CSS conflitantes que se dirigem a um mesmo elemento, o navegador seguirá algumas regras para determinar qual é mais específica e, portanto, a que será considerada.</p>
+            <p>Pense na especificidade como uma pontuação/classificação que determina qual declaração de estilo será aplicada, em última instância, a um elemento.</p>
+            <p>O seletor universal (*) tem uma pequena especificidade, enquanto o seletor por ID é altamente específico.</p>
+            <p>A especificidade costuma ser a razão de uma regra CSS não ser aplicada para algum elemento, embora pareça que deveria ser.</p>
+            <h2>Specificity Hierarchy</h2>
+            <p>Cada seletor tem seu lugar na hierarquia de especificidade. Há 4 categorias que definem o nível de especificidade de um seletor:</p>
+            <p><span class="bold">Inline styles</span> - Um estilo inline é anexado diretamente ao elemento a ser estilizado, dentro da tag usando "style=''".</p>
+            <p><span class="bold">Ids</span> - Um ID é um indetificador único para os elementos da página, como por exemplo: #navbar.</p>
+            <p><span class="bold">Classes, attributes and pseudo-classes</span> - Esta categoria inclui: .classes, [attributes] e pseudo-classes como :hover, :focus, etc.</p>
+            <p><span class="bold">Elements and pseudo-elements</span> - Esta categoria inclui nome de elementos e pseudo-elementos como por exemplo: h1, div, :before and :after.</p>
+            <h2>How to Calculate Specificity?</h2>
+            <p>É possível calcular, literalmente, o nível de especificidade de um elemento, veja como fazer isso a seguir.</p>
+            <p>Comece com 0, adicione 1000 para o atributo de estilo, adicione 100 para cada ID e adicione 10 para cada atributo, classe ou pseudo-classe e adicione 1 para cada nome de elemento ou pseudo-elemento.</p>
+            <p>Considere os 3 fragmentos de códigos a seguir:</p>
+            <p>A: h1</p>
+            <p>B: #content h1</p>
+            <p>C: <span class="blue">&lt</span><span class="brown">div</span><span class="red"> id</span><span class="blue">="content"&gt&lt</span><span class="brown">h1</span><span class="red"> style</span><span class="blue">="color: #ffffff"&gt</span>Cabeçalho<span class="blue">&lt</span><span class="brown">/h1</span><span class="blue">&gt&lt</span><span class="brown">/div</span><span class="blue">&gt</span></p>
+            <p>A especificidade de A é 1 (um elemento)</p>
+            <p>A especificidade de B é 101 (uma referência ID e um elemento)</p>
+            <p>A especificidade de C é 1000 (inline styling)</p>
+            <p>Como 1 &lt 101 &lt 1000, a terceira regra (C) tem um nível maior de especificidade e, portanto, será aplicado.</p>
+            <h2>Specificity Rules</h2>
+            <p><span class=bold>Especificidade igual: a última regra conta</span> - Se a mesma regra for duas vezes numa folha de estilo externa, a última (a que está mais abaix) será aplicada.</p>
+            <p><span class=bold>Seletores de ID tem uma especificidade maior do que um seletor de atributo</span> - div#a > #a > div[id=a].</p>
+            <p><span class=bold>Seletores contextuais são mais específicos do que um único seletor de elemento</span> - As estilizações feitas dentro da tag style no arquivo HTML estão mais próximas dos elementos, portanto, elas vencem as estilizações feitas externamente.</p>
+            <p><span class="bold">Um seletor de classe vence qualquer número de seletores de elemento</span> - Um seletor de classe, como .container vence div, h1, p, etc.</p>
+            <p><span class="bold">O seletor universal e valores herdados tem especificidade de 0</span> - *, body * e similares tem um nível de especificidade de 0. Valores herdados também tem uma especificidade de 0.</p>
+        </div>
+    </div>
+</body>
+</html>
