@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS The !important Rule</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/_tutorial/css-important-rule.css"/>
+    <link rel="icon" type="icon/x-image" href="../_images/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS The !important Rule</h1>
+            <h2>What is !important?</h2>
+            <p>A regra "!important" no CSS é usada para adicionar mais importância para propriedades/valores que o normal.</p>
+            <p>Na verdade, se você usar a regra "!important", isso vai substituirá todas as regras de estilizações anteirores para aquela propriedade específica daquele elemento.</p>
+            <p>Veja o exemplo a seguir:</p>
+            <div class="container">
+                <p>Defini que todo "p" terá essa cor e coloquei !important nessa definição.</p>
+                <p id="test">Defini que o "p" com minha ID terá cor "orangered" e tamanho de 18px.</p>
+                <p class="test">Defini que o "p" com minha classe terá cor "red" e tamanho de 20px.</p>
+            </div>
+            <p>Veja que mesmo com a primeira definação tendo menos especificidade, ela substituiu todas as outras que envolviam a cor do elemento "p", mas não as outras propriedades, ou seja, o "!important" funciona para as propriedades que você escolher de um seletor.</p>
+            <h2>Important About !important</h2>
+            <p>A única forma de substituir um regra "!important" é incluir outra regra "!important" numa declaração com mesma (ou maior) especificidade no código fonte, mas aqui começa um problema. Isso faz com que o código CSS fique confuso e a depuração difícil.</p>
+            <p>Veja o que acontece no exemplo acima, quando todas as propriedades de cor recebem !important.</p>
+            <div class="container2">
+                <p>Defini que todo "p" terá essa cor e coloquei !important nessa definição.</p>
+                <p id="test">Defini que o "p" com minha ID terá cor "orangered" e tamanho de 18px.</p>
+                <p class="test">Defini que o "p" com minha classe terá cor "red" e tamanho de 20px.</p>
+            </div>
+            <p><span class="bold">Dica.:</span> é bom saber sobre a regra "!important", você verá isso em alguns códigos fontes, porém só use quando for realmente necessário.</p>
+            <p>Veja que no fim ninguém substituiu ninguém.</p>
+            <h2>Maybe One or Two Fair Uses of !important</h2>
+            <p>Uma forma de usar "important!" é se você ter que sobreescrever um estilo que não pode ser sobreescrito de outra forma. Isso pode ocorrer quando você está trabalhando com um Sistema de Gerenciamento de Conteúdo (CMS - Content Management System) e não puder editar o código CSS.</p>
+            <p>Outra forma é pressupor que você quer um visual especial para botões de uma página.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <p><span class="bold">Não usando !important</span></p>
+            <a class="button" href="">Tutorial CSS</a>
+            <div class="container3">
+                <a href="">Tutorial HTML</a>
+                <a class="button" href="">Tutorial JavaScript</a>
+            </div>
+            <p><span class="bold">Usando !important</span></p>
+            <a class="button" href="">Tutorial CSS</a>
+            <div class="container4">
+                <a href="">Tutorial HTML</a>
+                <a class="button" href="">Tutorial JavaScript</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
