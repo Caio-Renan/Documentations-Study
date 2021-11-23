@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.container, .container2, .container4, .container5, .container6, .container7, .container8 {
+    border: 4px solid salmon;
+}
+
+.container3 {
+    border: calc(25px/3) solid salmon;
+    border-radius: calc(3.33px * 3);
+}
+
+.container, .container2, .container4, .container5, .container6, .container7, .container8 {
+    border-radius: 12px;
+}
+
+.container, .container2, .container3, .container4, .container5, .container6, .container7, .container8 {
+    display: block;
+    padding: 50px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.container {
+    width: 80%;
+}
+
+.container4 {
+    width: 40%;
+}
+
+.container2, .container3 {
+    width: calc(80% - 150px);
+}
+
+.container5 {
+    width: max(50%, 600px);
+}
+
+.container6 {
+    width: max(50%, 250px);
+}
+
+.container7 {
+    width: min(50%, 250px);
+}
+
+.container8 {
+    width: min(50%, 600px);
+}

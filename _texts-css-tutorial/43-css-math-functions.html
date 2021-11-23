@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Math Functions</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css//_tutorial/css-math-functions.css"/>
+    <link rel="icon" type="icon/x-image" href="../_images/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Math Functions</h1>
+            <p>As função de matemática do CSS permitem expressões matemáticas serem usadas como valores de uma propriedade.</p>
+            <h2>The calc() Function</h2>
+            <h3>CSS Syntax</h3>
+            <p>calc(expression)</p>
+            <p>expression - Necessária. É uma expressão matemática. O resultado será usado como o valor da propriedade. Pode utilizar os operadores: +, -, * e /.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <p><span class="bold">Modelo de comparação:</span></p>
+            <div class="container">width: 80%;<br/><br/>border: 4px solid salmon;<br/><br/>border-radius: 12px;</div>
+            <p><span class="bold">Calculando o tamanho de uma div usando uma expressão:</span></p>
+            <div class="container2">width: cal(80% - 150px);</div>
+            <p><span class="bold">Calculando o tamanho e o raio de uma borda usando uma expressão:</span></p>
+            <div class="container3">width: cal(80% - 150px);<br/><br/>border: calc(25px/3) solid salmon;<br/><br/>border-radius: calc(3.33px * 3);</div>
+            <h2>The max() Function</h2>
+            <p>A função max() usa o maior valor, de uma lista devalores separados por vírgula, como o valor da propriedade.</p>
+            <h3>CSS Syntax</h3>
+            <p>max(valor1, valor2, ...)</p>
+            <p>valor1, valor2, ... - Necessário. Uma lista de valores separados por vírgulas, onde o maior deles será escolhido.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <p><span class="bold">Modelo de comparação:</span></p>
+            <div class="container4">width: 50%;</div>
+            <p><span class="bold">Calculando o tamanho de uma div usando uma expressão:</span></p>
+            <div class="container5">width: max(50%, 600px);</div>
+            <div class="container6">width: max(50%, 250px);</div>
+            <h2>The min() Function</h2>
+            <p>A função min() usa o menor valor, de uma lista devalores separados por vírgula, como o valor da propriedade.</p>
+            <h3>CSS Syntax</h3>
+            <p>min(valor1, valor2, ...)</p>
+            <p>valor1, valor2, ... - Necessário. Uma lista de valores separados por vírgulas, onde o menor deles será escolhido.</p>
+            <p>Veja os exemplos a seguir:</p>
+            <p><span class="bold">Modelo de comparação:</span></p>
+            <div class="container4">width: 50%;</div>
+            <p><span class="bold">Calculando o tamanho de uma div usando uma expressão:</span></p>
+            <div class="container7">width: min(50%, 250px);</div>
+            <div class="container8">width: min(50%, 600px);</div>
+        </div>
+    </div>
+</body>
+</html>
