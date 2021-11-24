@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-ws, .navbar2-ws {
+    display: block;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.navbar-ws {
+    margin: -8px -8px 0px -8px;
+}
+
+.navbar2-ws {
+    position: sticky;
+    top: 0;
+    margin: 0 -8px;
+}
+
+.navbar-ws ul, .navbar2-ws ul, .navbar3-ws ul {
+    overflow: hidden;
+}
+
+.navbar-ws ul, .navbar2-ws ul, .navbar3-ws ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-ws li, .navbar2-ws li, .navbar3-ws li {
+    list-style-type: none;
+}
+
+.navbar-ws a, .navbar2-ws a, .navbar3-ws a {
+    display: block;
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+}
+
+.navbar-ws a, .navbar2-ws a {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.navbar-ws a:not(.logo) {
+    padding: 30px;
+    margin: 0;
+}
+
+.navbar2-ws a {
+    padding: 15px;
+}
+
+.navbar2-ws ul {
+    background-color: #247BA0;
+}
+
+.navbar2-ws a {
+    color: white;
+}
+
+.navbar-ws img {
+    display: block;
+    margin: 0 15px;
+}
+
+.logo {
+    padding: 5px;
+}
+
+.navbar-ws li, .navbar2-ws li, .navbar3-ws {
+    float: left;
+}
+
+.navbar-ws a:hover:not(.dropdown-content-ws a, .logo) {
+    background-color: #206b8b;
+    color: white;
+}
+
+.navbar-ws img {
+    opacity: 0.7;
+}
+
+.navbar-ws img:hover {
+    opacity: 1;
+}
+
+.navbar-ws .fright, .navbar2-ws .fright, .main-content-ws, .side-content-ws, .footer-ws {
+    float: right;
+}
+
+.navbar-ws .right, .navbar2-ws .right {
+    right: 0;
+}
+
+.navbar-ws:after, .navbar2-ws:after, .navbar3-ws:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.content-page-ws {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 -8px;
+}
+
+/* #cce4ee;  #ebf5fa*/
+
+.navbar3-ws {
+    position: sticky;
+    top: 46;
+    width: 20%;
+    background-color: #ebf5fa;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.navbar3-ws a:hover:not(.main) {
+    background-color: #d0e1e9;
+}
+
+.main-content-ws {
+    width: 65%;
+}
+
+.footer-ws {
+    width: 80%;
+}
+
+.side-content-ws {
+    width: 15%;
+}
+
+.navbar3-ws a:not(.main) {
+    margin: 5px 0;
+}
+
+.navbar3-ws a {
+    padding: 5px;
+    text-indent: 20px;
+}
+
+.navbar3-ws, .main-content-ws, .side-content-ws, .content-page-ws, .footer-ws {
+    border: 1px solid black;
+}
+
+.navbar3-ws .main {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
