@@ -14,33 +14,35 @@
         <div id="explicacao">
             <h1>CSS Website Layout</h1>
             <h2>Website Layout</h2>
-            <p></p>
+            <p>Um website geralmente é dividido em cabeçalho, menus, conteúdo e um rodapé:</p>
             <div class="website-layout">
+                <div class="header">Cabeçalho</div>
+                <div class="nav-menu">Menu de navegação</div>
                 <div class="container">
-                    <div class="header">Cabeçalho</div>
-                    <div class="nav-menu">Menu de navegação</div>
-                    <div class="container2">
-                        <div class="small-container margin-l">
-                            <div class="content">Conteúdo</div>
-                        </div>
-                        <div class="small-container2">
-                            <div class="main-content">Conteúdo principal</div>
-                        </div>
-                        <div class="small-container margin-r">
-                            <div class="content">Conteúdo</div>
-                        </div>
+                    <div class="small-container">
+                        <div class="side-content">Conteúdo</div>
                     </div>
-                    <div class="footer">Rodapé</div>
+                    <div class="small-container2">
+                        <div class="main-content">Conteúdo principal</div>
+                    </div>
+                    <div class="small-container">
+                        <div class="side-content">Conteúdo</div>
+                    </div>
                 </div>
+                <div class="footer">Rodapé</div>
             </div>
             <h2>Header</h2>
+            <p>Um cabeçalho geralmente é localizado no topo de um website (ou logo abaixo de um menu de navegação). Ele geralmente contém uma logo ou o nome do website:</p>
             <div class="header2">Cabeçalho</div>
             <h2>Navigation Bar</h2>
-            <div>
-                <ul class="navbar">
-                    <li><a class="button" href="">Home</a></li>
+            <p>Uma barra de navegação contém uma lista de links para ajudar na navegação dos visitantes no website:</p>
+            <div class="navbar">
+                <ul>
                     <li class="dropdown">
-                        <a class="button selected" href="">Notícias</a>
+                        <a class="dropbtn active" href="">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropbtn selected" href="">Notícias</a>
                         <div class="dropdown-content">
                             <a href="">Link 1</a>
                             <a href="">Link 2</a>
@@ -48,16 +50,16 @@
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a class="button" href="">Contato</a>
+                        <a class="dropbtn" href="">Contato</a>
                         <div class="dropdown-content">
                             <a href="">Link 1</a>
                             <a href="">Link 2</a>
                             <a href="">Link 3</a>
                         </div>
                     </li>
-                    <li class="dropdown right">
-                        <a  class="button" href="">Sobre</a>
-                        <div class="dropdown-content abs-right">
+                    <li class="dropdown fright">
+                        <a  class="dropbtn" href="">Sobre</a>
+                        <div class="dropdown-content right"> 
                             <a href="">Link 1</a>
                             <a href="">Link 2</a>
                             <a href="">Link 3</a>
@@ -66,8 +68,448 @@
                 </ul>
             </div>
             <h2>Content</h2>
-            <p></p>
-
+            <p>O layout dessa sessão geralmente depende do usuário escolhido. Os layouts mais comuns costumam ser um (ou combinações) destes a seguir:</p>
+            <ul>
+                <li><span class="bold">1 coluna</span> - Geralmente é utilizada para navegadores mobile;</li>
+                <li><span class="bold">2 colunas</span> - Geralmente é utilizada para tablets e laptops;</li>
+                <li><span class="bold">3 colunas</span> - Somente é utilizada para desktops.</li>
+            </ul>
+            <p>Para usar qualquer um desses layouts, basta dividir 100% pelo número de colunas e usar esse resultado como valor do width da div que contém o texto. Além disso, faça a div que contém o conteúdo flutuar para a esquerda e coloque-a dentro de outra div.</p>
+            <h3>3 colunas</h3>
+            <div class="website-layout2">
+                <div class="header2">Cabeçalho</div>
+                <div class="navbar">
+                    <ul>
+                        <li class="dropdown">
+                            <a class="dropbtn active" href="">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn selected" href="">Notícias</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn" href="">Contato</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown fright">
+                            <a  class="dropbtn" href="">Sobre</a>
+                            <div class="dropdown-content right"> 
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h2>Coluna</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                    <div class="column">
+                        <h2>Coluna</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                    <div class="column">
+                        <h2>Coluna</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                </div>
+            </div>
+            <h3>2 colunas</h3>
+            <div class="website-layout2">
+                <div class="header2">Cabeçalho</div>
+                <div class="navbar">
+                    <ul>
+                        <li class="dropdown">
+                            <a class="dropbtn active" href="">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn selected" href="">Notícias</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn" href="">Contato</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown fright">
+                            <a  class="dropbtn" href="">Sobre</a>
+                            <div class="dropdown-content right"> 
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="column2">
+                            <h2>Coluna</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                    <div class="column2">
+                        <h2>Coluna</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                </div>
+            </div>
+            <h3>1 coluna</h3>
+            <div class="website-layout2">
+                <div class="header2">Cabeçalho</div>
+                <div class="navbar">
+                    <ul>
+                        <li class="dropdown">
+                            <a class="dropbtn active" href="">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn selected" href="">Notícias</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn" href="">Contato</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown fright">
+                            <a  class="dropbtn" href="">Sobre</a>
+                            <div class="dropdown-content right"> 
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="column3">
+                        <h2>Coluna</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                </div>
+            </div>
+            <p>Você também pode fazer um layout de 4 colunas, basta mexer na porcentagem do width da coluna.</p>
+            <p><span class="seeya">Aqui eles recomendam usar um recurso chamado "media queries" para fazer com que quando o site for aberto num celular, o layout vire de 1 coluna só. Eu só vou entender melhor como funciona mais pra frente.</span></p>
+            <h2>Unequal Columns</h2>
+            <p>O conteúdo principal é a maior e mais importante parte de um site.</p>
+            <p>É comum termos colunas com tamanhos desiguais, onde o conteúdo principal costuma ter uma coluna maior e a(s) coluna(s) menores costuma(m) utilizada(s) como uma navegação alternativa ou para especificar informações relevantes para o conteúdo principal. Você pode mudar as larguras como desejar, desde que no fim a soma delas resulte em 100%.</p>
+            <p>Veja alguns exemplos a seguir:</p>
+            <p><span class="bold">Largura de 75% para o conteúdo principal e 25% para o conteúdo secundário:</span></p>
+            <div class="website-layout2">
+                <div class="header2">Cabeçalho</div>
+                <div class="navbar">
+                    <ul>
+                        <li class="dropdown">
+                            <a class="dropbtn active" href="">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn selected" href="">Notícias</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn" href="">Contato</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown fright">
+                            <a  class="dropbtn" href="">Sobre</a>
+                            <div class="dropdown-content right"> 
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="main-content2">
+                        <h2>Coluna</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                    <div class="side-content2">
+                        <h2>Coluna</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                </div>
+            </div>
+            <p><span class="bold">Largura de 70% para o conteúdo principal e 15% para o conteúdo secundário:</span></p>
+            <div class="website-layout2">
+                <div class="header2">Cabeçalho</div>
+                <div class="navbar">
+                    <ul>
+                        <li class="dropdown">
+                            <a class="dropbtn active" href="">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn selected" href="">Notícias</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn" href="">Contato</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown fright">
+                            <a  class="dropbtn" href="">Sobre</a>
+                            <div class="dropdown-content right"> 
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="side-content3">
+                        <h2>Canto</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="main-content3">
+                        <h2>Conteúdo principal</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                    <div class="side-content3">
+                        <h2>Canto</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <p><span class="bold">Largura de 50% para o conteúdo principal e 25% para o conteúdo secundário:</span></p>
+            <div class="website-layout2">
+                <div class="header2">Cabeçalho</div>
+                <div class="navbar">
+                    <ul>
+                        <li class="dropdown">
+                            <a class="dropbtn active" href="">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn selected" href="">Notícias</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn" href="">Contato</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown fright">
+                            <a  class="dropbtn" href="">Sobre</a>
+                            <div class="dropdown-content right"> 
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="side-content4">
+                        <h2>Canto</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="main-content4">
+                        <h2>Conteúdo principal</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                    <div class="side-content4">
+                        <h2>Canto</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <p><span class="bold">Obs.:</span> aparentemente tem que tomar cuidado com o tamanho do conteúdo, pois aparentemente ele começa a sair da caixa, mesmo com "box-sizing: border-box;".</p>
+            <h2>Footer</h2>
+            <p>O rodapé fica no fundo da página e costuma conter informações como copyright e informações de contato.</p>
+            <div class="website-layout2">
+                <div class="header2">Cabeçalho</div>
+                <div class="navbar">
+                    <ul>
+                        <li class="dropdown">
+                            <a class="dropbtn active" href="">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn selected" href="">Notícias</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn" href="">Contato</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown fright">
+                            <a  class="dropbtn" href="">Sobre</a>
+                            <div class="dropdown-content right"> 
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="side-content3">
+                        <h2>Canto</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="main-content3">
+                        <h2>Conteúdo principal</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                    <div class="side-content3">
+                        <h2>Canto</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="footer2">Rodapé</div>
+            </div>
+            <h2>Responsive Website Layout</h2>
+            <p><span class="seeya">Aqui eles recomendam usar um recurso chamado "media queries" para fazer com que o tipo de layout mude conforme a largura da tela de exibição. Eu só vou entender melhor como funciona mais pra frente.</span></p>
+            <div class="website-layout3">
+                <div class="header2">Wiki: Zelda Minish Cap</div>
+                <div class="navbar2">
+                    <ul>
+                        <li class="dropdown">
+                            <a class="dropbtn active" href="">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn selected" href="">Notícias</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropbtn" href="">Contato</a>
+                            <div class="dropdown-content">
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="dropdown fright">
+                            <a  class="dropbtn" href="">Sobre</a>
+                            <div class="dropdown-content right"> 
+                                <a href="">Link 1</a>
+                                <a href="">Link 2</a>
+                                <a href="">Link 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="main-content5">
+                        <div class="section">
+                            <h2>The Legend of Zelda: The Minish Cap</h2>
+                            <h5>Informações sobre o jogo, 24 de novembro, 2021</h5>
+                            <img class="centralized" src="../_images/fundo-minish-cap2.jpg" alt="">
+                            <p>The Legend of Zelda: The Minish Cap (ゼルダの伝説 ふしぎのぼうし Zelda no Densetsu Fushigi no Bōshi?, "The Legend of Zelda: The Mysterious Hat") é o décimo segundo jogo na série Legend of Zelda, desenvolvido para Game Boy Advance pela Flagship, e publicado pela Nintendo. Foi lançado no Japão e na Europa em Novembro de 2004, e na América do Norte e na Austrália em Janeiro e Abril de 2005, respectivamente. The Minish Cap é a primeira aventura single-player original de Zelda a ser lançada para uma plataforma portátil desde The Legend of Zelda: Oracle of Ages e Oracle of Seasons em 2001.</p>
+                            <p>The Minish Cap é o terceiro jogo Zelda a ser lançado que gira em torno da Espada Quádrupla, os outros jogos sendo The Legend of Zelda: Four Swords e The Legend of Zelda: Four Swords Adventures. O jogo é um prelúdio para o resto dos jogos Four Swords e revela algumas informações sobre a história de fundo dos jogos. O jogo é baseado em torno da ideia de um "gorro" ou chapéu mágico, chamado Ezlo, o qual Link pode usar para encolher para o tamanho de um Picori, os quais referem a si mesmos como Minish, uma raça de seres do tamanho de um polegar que vivem secretamente por toda Hyrule.</p>
+                        </div>
+                        <div class="section">
+                            <h2>Jogabilidade</h2>
+                            <p><img class="fright margin-img" src="../_images/gameplay.png" alt="">The Minish Cap apresenta uma série de melhorias que beneficiam do poder do Game Boy Advance mais e inspiram-se fortemente na jogabilidade dos títulos Zelda anteriores (ou seja, os três primeiros). O ângulo da câmera do jogo é muito mais próximo do chão, permitindo mais detalhes. No Mundo Superior e nas masmorras, o jogo substitui a tradicional interface com imagens associadas aos itens ou ações, pelos botões do portátil Game Boy, de forma semelhante à interface em títulos 3D como The Legend of Zelda: Ocarina of Time e The Legend of Zelda: The Wind Waker. Inimigos incluem criaturas conhecidas do universo Zelda, como os Keatons. Link também pode executar ações especiais, desencadeadas pelos botões L e R. Com o botão R, Link pode, por exemplo, rolar enquanto corre, um movimento também inspirado pelos jogos Zelda em 3D.</p>
+                        </div>
+                        <div class="section">
+                            <h2>Lançamento</h2>
+                            <p>The Minish Cp foi único jogo na série Zelda a ser lançado em territórios Europeus antes do mercado Norte-Americano. A principal razão citada para isto foi o Nintendo DS. Como o lançamento Europeu do DS estava previsto para o Outono de 2005, a Nintendo Européia fez de The Minish Cap o seu grande lançamento portátil no Natal. Por outro lado, a Nintendo da América reteve o seu lançamento para não canibalizar o mercado do DS..</p>
+                        </div>
+                        <div class="section">
+                            <h2>Galeria</h2>
+                            <div class="container3">
+                                <div class="small-container3">
+                                    <a target="_blank" href="../_images/galery-bigger.png"><img src="../_images/galery.png" alt=""></a>
+                                    <p>Box art da versão Japonesa</p>
+                                </div>
+                                <div class="small-container3">
+                                    <a target="_blank" href="../_images/galery2-bigger.png"><img src="../_images/galery2.png" alt=""></a>
+                                    <p>Box art da versão PAL</p>
+                                </div>
+                                <div class="small-container3">
+                                    <a target="_blank" href="../_images/galery3-bigger.png"><img src="../_images/galery3.png" alt=""></a>
+                                    <p>Box art da versão Norte Americana</p>
+                                </div>
+                                <div class="small-container4">
+                                    <a target="_blank" href="../_images/galery4-bigger.png"><img src="../_images/galery4.png" alt=""></a>
+                                    <p>Box art da versão Australiana</p>
+                                </div>
+                                <div class="small-container4">
+                                    <a target="_blank" href="../_images/galery5-bigger.png"><img src="../_images/galery5.png" alt=""></a>
+                                    <p>Box art da versão PAL em conjunto com o GBA SP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-content5">
+                        <div class="section">
+                            <h2>Kinstones</h2>
+                            <p>Kinstones são medalhões místicos verdes, vermelhos, azuis e dourados que podem render Rúpias e Pedaços de Coração, e em várias ocorrências, começam eventos de sidequest quando duas Pedaços Kinstone de cor idêntica e forma complementar são fundidos.</p>
+                            <h3>Blue kinstone</h3>
+                            <img class="centralized" src="../_images/blue-kinstone-menor.png" alt="">
+                            <h3>Green kinstone</h3>
+                            <img class="centralized" src="../_images/green-kinstone-menor.png" alt="">
+                            <h3>Red kinstone</h3>
+                            <img class="centralized" src="../_images/red-kinstone-menor.png" alt="">
+                            <h3>Gold kinstone</h3>
+                            <img class="centralized" src="../_images/gold-kinstone-menor.png" alt="">
+                            <h2>Fontes</h2>
+                            <a target="_blank" href="https://zelda.fandom.com/pt-br/wiki/The_Legend_of_Zelda:_The_Minish_Cap">Zelda Minish Cap Wiki</a>
+                            <a target="_blank" href="https://zelda.fandom.com/wiki/Kinstone">Kinstone</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer2">Rodapé</div>
+            </div>
+            <p>Por algum motivo ele coloca cada "seção" dentro de uma div, coisa que não foi necessária nos exemplos anteriores.</p>
         </div>
     </div>
 </body>

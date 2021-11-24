@@ -7,6 +7,7 @@ body {
 }
 
 div#explicacao {
+    box-sizing: border-box;
     position: relative;
     background-color: azure;
     margin: -8px auto 10vw auto;
