@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+.centered {
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+}
+
+.border2, .border3, .border4, .border5, .border6, .border7, .border8, .border9, .border10, .border11, .border12, .border13, .border14, .border15 {
+    border: 10px solid transparent;
+    padding: 20px;
+    text-align: center;
+}
+
+.border2 {
+    border-image: url(../../_images/border.png) 30 round;
+}
+
+.border3 {
+    border-image: url(../../_images/border.png) 30 stretch;
+}
+
+.border4 {
+    border-image: url(../../_images/border.png) 50 round;
+}
+
+.border5 {
+    border-image: url(../../_images/border.png) 20% round;
+}
+
+.border6 {
+    border-image: url(../../_images/border.png) 30% round;
+}
+
+.border7 {
+    border-image: url(../../_images/border.png) 20 round;
+}
+
+.border8 {
+    border-image: url(../../_images/border.png) 30 round;
+}
+
+.border9 {
+    border-image: url(../../_images/border.png) 40 round;
+}
+
+.border10 {
+    border-image: url(../../_images/border.png) 10 stretch;
+}
+
+.border11 {
+    border-image: url(../../_images/border.png) 20 stretch;
+}
+
+.border12 {
+    border-image: url(../../_images/border.png) 30 stretch;
+}
+
+.border13 {
+    border-image: url(../../_images/border.png) 40 stretch;
+}
+
+.border14 {
+    border-image: url(../../_images/border.png) 50% round;
+}
+
+.border15 {
+    border-image: url(../../_images/border.png) 50% stretch;
+}
+
+.brown {
+    color: brown;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}

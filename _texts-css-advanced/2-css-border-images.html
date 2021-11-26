@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Border Images</title>
+    <link rel="stylesheet" href="../_css/geral-link.css"/>
+    <link rel="stylesheet" href="../_css/_advanced/css-border-images.css"/>
+    <link rel="icon" type="image/x-icon" href="../_images/blue-kinstone.png"/>
+</head>
+<body>
+    <div id="link">
+        <div id="explicacao">
+            <h1>CSS Border Images</h1>
+            <div class="border">
+                <h2>CSS Border Images</h2>
+                <p>With the CSS border-image property, you can set an image to be used as the border around an element.</p>
+            </div>
+            <h2>CSS border-image Property</h2>
+            <p>The property has three parts:</p>
+            <ul>
+                <li>The image to use as the border</li>
+                <li>Where to slice the image</li>
+                <li>Define whether the middle sections should be repeated or stretched (esticado)</li>
+            </ul>
+            <p>We will use the following image (called "border.png"):</p>
+            <img class="centered" src="../_images/border.png" alt="">
+            <p>The border-image property takes the image and slices it into nine sections, like a tic-tac-toe board. It then places the corners at the corners, and the middle sections are repeated or stretched (esticado) as you specify.</p>
+            <p><span class="bold">Note:</span> For border-image to work, the element also needs the border property set!</p>
+            <p>Here, the middle sections of the image are repeated to create the border:</p>
+            <div class="border2">An image as a border!</div>
+            <p>Here is the code:</p>
+            <p><span class="brown">.border2</span> {
+                <span class="red">border</span>: <span class="blue">10px solid transparent</span>;
+                <span class="red">padding</span>: <span class="blue">20px</span>;
+                <span class="red">border-image</span>: <span class="blue">url(../_images/border.png) 30 round</span>;
+                <span class="red">text-align</span>: <span class="blue">center</span>;
+            }</p>
+            <p>Here, the middle sections of the image are stretched to create the border:</p>
+            <div class="border3">An image as a border!</div>
+            <p>Here is the code:</p>
+            <p><span class="brown">.border2</span> {
+                <span class="red">border</span>: <span class="blue">10px solid transparent</span>;
+                <span class="red">padding</span>: <span class="blue">20px</span>;
+                <span class="red">border-image</span>: <span class="blue">url(../_images/border.png) 30 stretch</span>;
+                <span class="red">text-align</span>: <span class="blue">center</span>;
+            }</p>
+            <p><span class="bold">Tip:</span> The border-image property is actually a shorthand property for the border-image-source, border-image-slice, border-image-width, border-image-outset and border-image-repeat properties.</p>
+            <h2>CSS border-image - Different Slice Values</h2>
+            <p>Different slice values completely changes the look of the border:</p>
+            <p>Example 1:</p>
+            <div class="border4">border-image: url(../_images/border.png) 50 round;</div>
+            <p>Example 2:</p>
+            <div class="border5">border-image: url(../_images/border.png) 20% round;</div>
+            <p>Example 3:</p>
+            <div class="border6">border-image: url(../_images/border.png) 50% round;</div>
+            <p>Example 4:</p>
+            <div class="border7">border-image: url(../_images/border.png) 20 round;</div>
+            <p>Example 5:</p>
+            <div class="border8">border-image: url(../_images/border.png) 30 round;</div>
+            <p>Example 6:</p>
+            <div class="border9">border-image: url(../_images/border.png) 40 round;</div>
+            <p>Example 7:</p>
+            <div class="border10">border-image: url(../_images/border.png) 10 stretch;</div>
+            <p>Example 8:</p>
+            <div class="border11">border-image: url(../_images/border.png) 20 stretch;</div>
+            <p>Example 9:</p>
+            <div class="border12">border-image: url(../_images/border.png) 30 stretch;</div>
+            <p>Example 10:</p>
+            <div class="border13">border-image: url(../_images/border.png) 40 stretch;</div>
+            <p>Example 11:</p>
+            <div class="border14">border-image: url(../_images/border.png) 50% round;</div>
+            <p>Example 12:</p>
+            <div class="border15">border-image: url(../_images/border.png) 50% stretch;</div>
+            <p>Apparently the lines that connecs each corner desappear if you choose a slice value above certain value.</p>
+        </div>
+    </div>
+</body>
+</html>
