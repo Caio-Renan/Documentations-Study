@@ -4,21 +4,20 @@ body {
     background-color: #78b4e3;
     font-family: Arial;
     font-size: 100%;
+    background-image: url(../_images/minish-cap.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
 }
 
 div#explicacao {
     box-sizing: border-box;
     position: relative;
     background-color: azure;
-    margin: -8px auto 10vw auto;
-    max-width: 63vw;
+    margin: -0.5rem 12rem 3rem 12rem;
     padding: 20px;
-    min-height: 60vw;
-    z-index: 4;
-}
-
-div#link {
-    background: url(../_images/minish-cap.png) no-repeat fixed right top;
+    height: 100vw;
+    z-index: 2;
 }
 
 p {
@@ -53,4 +52,17 @@ span.notsure {
 span.seeya {
     color: orangered;
     font-weight: bold;
+}
+
+@media screen and (max-width: 1050px) {
+    body {
+        background-image: none;
+        background-repeat: none;
+        background-position: none;
+        background-attachment: none;
+    }
+
+    div#explicacao {
+        margin: -0.5rem 6rem 6rem 6rem;
+    }
 }

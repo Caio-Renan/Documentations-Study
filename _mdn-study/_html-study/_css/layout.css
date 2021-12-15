@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+body {
+    background-color: #78b4e3;
+    font-family: Arial;
+    font-size: 100%;
+    background-image: url(../_images/minish-cap.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+
+.content {
+    box-sizing: border-box;
+    position: relative;
+    background-color: azure;
+    margin: -0.5rem 12rem 3rem 12rem;
+    padding: 20px;
+    z-index: 2;
+}
+
+/* Correct it after. You must make it be always centralized */
+.caption {
+    box-sizing: border-box;
+    display: block;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    background-color: azure;
+    border: 4px solid #04AA6D;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.caption span {
+    display: block;
+}
+
+p {
+    font-size: 12pt;
+    text-indent: 20pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-indent: 20pt;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+span.bold {
+    font-weight: bold;
+}
+
+/* Use for a part you didn't understand very well */
+span.doubt {
+    color: steelblue;
+}
+
+/* Use for a part you typed or modified and weren't sure if it was correct */
+span.notsure {
+    color: #04AA6D;
+    font-weight: bold;
+}
+
+/* Use for a part you will understand more after some steps */
+span.seeya {
+    color: orangered;
+    font-weight: bold;
+}
+
+/* Use for you know that you must use it in Anki */
+span.anki {
+    color: salmon;
+}
+
+/* Use for a text you typed or modified */
+span.iwrote {
+    font-style: italic;
+    font-weight: bold;
+}
+
+span.interesting {
+    color: brown;
+}
+
+.content span.anki::before {
+    content: "Anki: ";
+    font-weight: bold;
+}
+
+body {
+    counter-reset: counter;
+}
+
+h1 {
+    counter-reset: counter2;
+}
+
+h2 {
+    counter-reset: counter3;
+}
+
+h3 {
+    counter-reset: counter4;
+}
+
+h1::before {
+    counter-increment: counter;
+    content: counter(counter) ". ";
+}
+
+h2:before {
+    counter-increment: counter2;
+    content: counter(counter) "." counter(counter2) ". ";
+}
+
+h3::before {
+    counter-increment: counter3;
+    content: counter(counter) "." counter(counter2) "." counter(counter3) ". ";
+}
+
+h4::before {
+    counter-increment: counter4;
+    content: counter(counter) "." counter(counter2) "." counter(counter3) ". ";
+    content: counter(counter) "." counter(counter2) "." counter(counter3) "." counter(counter4) ". ";
+}
+
+@media screen and (max-width: 1050px) {
+    body {
+        background-image: none;
+        background-repeat: none;
+        background-position: none;
+        background-attachment: none;
+    }
+
+    .content {
+        margin: -0.5rem 6rem 6rem 6rem;
+    }
+}

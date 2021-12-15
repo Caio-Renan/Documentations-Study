@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDN HTML</title>
+    <link rel="stylesheet" href="../_css/layout.css">
+    <style>
+        .centered {
+            display: block;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .margin-bottom {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="caption">
+        <span>Caption</span><br/>
+        <span class="iwrote">I wrote</span>
+        <span class="anki">Anki</span>
+        <span class="doubt">Doubt</span>
+        <span class="notsure">Not sure</span>
+        <span class="seeya">Seeya</span>
+        <span class="interesting">Interesting</span>
+    </div>
+    <div class="content">
+        <!--
+            Some tags you might need to use:
+
+            Use for a text you typed or modified 
+            <span class="iwrote"> </span>
+                
+            Use for you know that you must use it in Anki
+            <span class="anki"> </span>
+
+            Use for a part you didn't understand very well
+            <span class="doubt"> </span>
+
+            Use for a part you typed or modified and weren't sure if it was correct
+            <span class="notsure"> </span>
+
+            Use for a part you will understand more after some steps
+            <span class="seeya"> </span>
+
+            Use for a part you considered interesting
+            <span class="interesting"> </span>
+        -->
+        <h1>HTML: HyperText Markup Language</h1>
+        <p>HTML (HyperText Markup Language/<span class="iwrote">Linguagem de marcação de hipertexto</span>) defines the meaning and structure of web content.<span class="iwrote"> You can define where some content will stay at and using "tags" you will define if something will be considered as a image, table, paragraph, etc.</span></p>
+        <p>"Hypertext" refers to links that connect web pages to one another, either within a single website or between websites.</p>
+        <p>HTML uses "markup <span class="iwrote">(marcações)</span>" to annotate text, images, and other content for display in a Web browser.<span class="iwrote"> Some examples of them are: &lthead&gt, &lttitle&gt, &ltbody&gt, etc.</span></p>
+        <p>The name of an element inside a tag is case insensitive. That is, it can be written in uppercase, lowercase, or a mixture.</p>
+        <p><span class="anki">"Talk about HTML: "</span></p>
+        <p><span class="anki">"Reply: pieces of text above."</span></p>
+        <h2>Introduction to HTML</h2>
+        <p>At its heart, HTML is a fairly simple language made up of elements.<span class="iwrote"> Using that you can define if something is a paragraph, a table, a link, etc., and define a document structure, determining if the document has a header, a footer, if has three or two collons, etc.</span></p>
+        <h2>Getting started with HTML</h2>
+        <h3>What is HTML</h3>
+        <p><span class="iwrote">It isn't a programming language but a <strong>markup language.</strong></span></p>
+        <p>HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content</p>
+        <h3>Anatomy of an HTML element</h3>
+        <p>The element is the opening tag, followed by content, followed by the closing tag. Take a look in a typical element structure ahead: </span></p>
+        <div class="centered margin-bottom"><img src="../_images/typical-element.jpeg" alt=""></div>
+        <div class="centered"><img src="../_images/typical-element2.png" alt=""></div>
+        <p><span class="interesting">Elements and tags aren't the same things. Tags begin or end an element in source code, whereas elements are part of the DOM, the document model for displaying the page in the browser.</span></p>
+        <h4>Nesting elements</h4>
+        <p><span class="iwrote"><strong>Nesting (aninhamento)</strong> is the act of put an element inside of another element. You can't an element inside and outside of another, or it's totally inside or totatlly outside.</span></p>
+        <h4>Block versus inline elements</h4>
+        <ul>
+            <li>Block levels elements form a visible block on a page. <span class="iwrote">Use it when you want that your element break to the next rown.</span> A block-level element wouldn't be nested inside an inline element.  Block-level elements are usually structural elements on the page like header, paragraph, etc.</li>
+            <li>Inline elements are contained within block-level elements, and surround only small parts of the document's content (not entire paragraphs or groupings of content).<span class="iwrote"> It will not cause break row and is often used with text, like links, emphazed parts, etc.</span></li>
+        </ul>
+        <p><span class="iwrote">These informations above don't should be applied in CSS box model concepts, it's only for HTML elements and it isn't changed by CSS activity.</span></p>
+        <p><span class="iwrote">Here you can see each element categories and more stuffs about them: <a href="https://html.spec.whatwg.org/multipage/indices.html#element-content-categories">elements</a>.</span></p>
+        <h4>Empty elements</h4>
+        <p>Empty elements are elements used to insert/embed something in document, such as &ltimg&gt.</p>
+        <h3>Attributes</h3>
+        <h4>Boolean attributes</h4>
+        <p><span class="iwrote">Boolean (boleano) attributes are attributes which has written without values. They can only have one value, which is often equal as the attribute name and is optional. Example: disabled="disabled".</span></p>
+        <p><span class="iwrote">Take a look how an attribute looks like ahead: </span></p>
+        <div class="centered"><img src="../_images/typical-attribute.png" alt=""></div>
+        <h4>Omitting quotes around attribute values</h4>
+        <p><span class="iwrote">You can omit an attribute's quotes but it can cause problems, so don't do that.</span></p>
+        <h4>Single or double quotes?</h4>
+        <p><span class="iwrote">You can use either one, but after you've choosed one, you only can use the other inside your attribute values.</span></p>
+        <p><span class="iwrote">If you want to use the same quote inside your attribute value, use <a href='https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#entity_references_including_special_characters_in_html' title='That&apos;s an example!' target='_blank'>HTML entities</a>.</span></p>
+        <h3>Anatomy of an HTML document</h3>
+        <ol>
+            <li>&lt!DOCTYPE html&gt</li>
+            <li>&lthtml&gt&lt/html&gt: It's sometimes know as the <strong>root element</strong></li>
+            <li>&lthead&gt&lt/head&gt</li>
+            <li>&ltmeta charset="utf-8"&gt: This element specifies the character set for your document to UTF-8</li>
+            <li>&lttitle&gt&lt/title&gt</li>
+            <li>&ltbody&gt&lt/body&gt</li>
+        </ol>
+        <h3>Entity references: Including special characters in HTML</h3>
+        <ul>
+            <li>&lt; - &amp;lt</li>
+            <li>&gt; - &amp;gt</li>
+            <li>&quot; - &amp;quot</li>
+            <li>&apos; - &amp;apos</li>
+            <li>&amp; - &amp;amp</li>
+        </ul>
+        <h3>HTML comments</h3>
+        <p><span class="iwrote">Everything inside &lt!-- --&gt will be considered as a commentary.</span></p>
+        <h2>What's in the head? Metadata in HTML</h2>
+        <p><span class="iwrote">Metadata are data that describe data, for example: informations about who made some document (the document are the "data" and the informations are "metadata"). The head tag is responsible for the metadata of the document.</p>
+        <h3>Adding a title</h3>
+        <p><span class="iwrote">The &lttitle&gt element will appear when someone bookmark your page, aside the icon of your page, will be used in search results, etc.</span></p>
+        <h3>Metadata: the &ltmeta&gt element</h3>
+        <p>&ltmeta&gt is the official way of to add metadata to your HTML document.</p>
+        <h4>Specifying your document's character encoding</h4>
+        <p><span class="iwrote">Use the attribute " charset='' " to set your document's character encoding.</span></p>
+        <h4>Adding an author and description</h4>
+        <p></p>
+    </div>
+</body>
+</html>
