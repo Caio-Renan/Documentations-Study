@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDN HTML</title>
+    <link rel="stylesheet" href="../_css/layout.css">
+    <link rel="stylesheet" href="../_css/_practicing/web-forms-practice.css">
+</head>
+<body>
+    <div class="caption">
+        <span>Caption</span><br/>
+        <span class="iwrote">I wrote</span>
+        <span class="anki">Anki</span>
+        <span class="doubt">Doubt</span>
+        <span class="notsure">Not sure</span>
+        <span class="seeya">Seeya</span>
+        <span class="interesting">Interesting</span>
+    </div>
+    <div class="content">
+        <h1>Forms Practice</h1>
+        <form class="example" action="">
+            <ul>
+                <li>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="user_name">
+                </li>
+                <li>
+                    <label for="mail">E-mail: </label>
+                    <input type="email" id="mail" name="user_email">
+                </li>
+                <li>
+                    <label for="msg">Message: </label>
+                    <textarea id="msg" name="user_message">Let a message for us!</textarea>
+                </li>
+                <li class="button">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    <button type="button">Button</button>
+                </li>
+            </ul>
+        </form>
+        <!--
+        <form class="example2" action="">
+            <ul>
+                <li>
+                    <label for="name"></label>
+                    <input type="text" id="name">
+                </li>
+                <li>
+                    <label for="msg"></label>
+                    <textarea id="msg"></textarea>
+                </li>
+                <li>
+                    <input type="button">
+                </li>
+            </ul>
+        </form>
+        -->
+        <h1>Abstract</h1>
+        <ul>
+            <li>&lt;li&gt; is used to make the stylization easier;</li>
+            <li><span class="notsure">Use 'for' attribute to link the label tag to input tag. For it, put the same name of the input ID. It's good because it create a relation between the label and the form control;</span></li>
+            <li>The type attribute defines the way the &lt;input&gt; element appears and behaves.</li>
+            <li>Unlike the input tag you will if you want to let something previously typed in a textarea tag, you must write it inside the tag.</li>
+            <li>The main advantage of the &lt;button&gt; element is that the &lt;input&gt; element only allows plain text in its label whereas the &lt;button&gt; element allows full HTML content, allowing more complex, creative button content.</li>
+        </ul>
+    </div>
+</body>
+</html>

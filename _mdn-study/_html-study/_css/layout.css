@@ -1,9 +1,13 @@
 @charset "UTF-8";
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     background-color: #78b4e3;
     font-family: Arial;
-    font-size: 100%;
+    font-size: 16px;
     background-image: url(../_images/minish-cap.png);
     background-repeat: no-repeat;
     background-position: right top;
@@ -14,9 +18,10 @@ body {
     box-sizing: border-box;
     position: relative;
     background-color: azure;
-    margin: -0.5rem 12rem 3rem 12rem;
-    padding: 20px;
-    z-index: 2;
+    min-height: 80rem;
+    margin: -0.8rem 19.2rem 3rem 19.2rem;
+    padding: 2rem;
+    z-index: -1;
 }
 
 /* Correct it after. You must make it be always centralized */
@@ -24,12 +29,12 @@ body {
     box-sizing: border-box;
     display: block;
     position: fixed;
-    top: 40px;
-    left: 40px;
+    top: 4.85rem;
+    left: 4.85rem;
     background-color: azure;
-    border: 4px solid #04AA6D;
-    border-radius: 8px;
-    padding: 10px;
+    border: 0.4rem solid #04AA6D;
+    border-radius: 0.8rem;
+    padding: 1rem;
 }
 
 .caption span {
@@ -136,6 +141,10 @@ h4::before {
     }
 
     .content {
-        margin: -0.5rem 6rem 6rem 6rem;
+        margin: -0.8rem 9.6rem 9.6rem 9.6rem;
+    }
+
+    .caption {
+        left: 0;
     }
 }

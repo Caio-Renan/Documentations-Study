@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/* I intend to practice here, therefore I could repeat some codes or not simplify them merging in a single declaration */
+
+/* First form */
+
+.example li {
+    list-style-type: none;
+}
+
+.example ul {
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+}
+
+.example li {
+    margin-bottom: 2rem;
+}
+
+.example {
+    width: 45rem;
+    margin: 0 auto 2rem auto;
+}
+
+.example label {
+    width: 10rem;
+    display: inline-block;
+    text-align: right;
+}
+
+.example input, .example textarea {
+    font: 1.6rem sans-serif;
+    width: 30rem;
+    box-sizing: border-box;
+}
+
+textarea {
+    vertical-align: top;
+    height: 10rem;
+}
+
+.button {
+    padding-left: 10.4rem;
+}
+
+.example button {
+    padding: 1rem 2rem;
+}
+
+/* Second form */
+
