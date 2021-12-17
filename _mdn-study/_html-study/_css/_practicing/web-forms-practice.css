@@ -2,6 +2,7 @@
 
 /* I intend to practice here, therefore I could repeat some codes or not simplify them merging in a single declaration */
 
+/* Your first form */
 /* First form */
 
 .example li {
@@ -51,3 +52,57 @@ textarea {
 
 /* Second form */
 
+.example2 {
+    box-sizing: border-box;
+    width: 60rem;
+    padding: 2rem;
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-radius: 1rem;
+}
+
+.example2 ul {
+    padding: 0;
+    margin: 0;
+}
+
+.example2 li {
+    list-style-type: none;
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+.example2 .button input {
+    width: 45rem;
+    padding: 1rem 0;
+}
+
+.example2 input, .example2 label, .example2 textarea {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.example2 input, .example2 textarea {
+    width: 45rem;
+}
+
+/* How to structure a web form */
+/* First form */
+
+.example3 {
+    width: 35rem;
+    margin: 0 auto 2rem auto;
+}
+
+.example3 fieldset {
+    margin: 0 auto 2rem auto;
+}
+
+.example3 label {
+    text-align: left;
+    width: 12rem;
+}
+
+.example3 input, .example3 label {
+    display: inline-block;
+}

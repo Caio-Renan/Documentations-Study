@@ -19,7 +19,7 @@
         <span class="interesting">Interesting</span>
     </div>
     <div class="content">
-        <h1>Forms Practice</h1>
+        <h1>Your first form</h1>
         <form class="example" action="">
             <ul>
                 <li>
@@ -32,7 +32,7 @@
                 </li>
                 <li>
                     <label for="msg">Message: </label>
-                    <textarea id="msg" name="user_message">Let a message for us!</textarea>
+                    <textarea id="msg" name="user_message">I'm inside the textarea tag. Let a message for us!</textarea>
                 </li>
                 <li class="button">
                     <button type="submit">Submit</button>
@@ -41,30 +41,67 @@
                 </li>
             </ul>
         </form>
-        <!--
+        <p>Look the difference of not make the relationship between label and input using id and for attribute ahead:</p>
         <form class="example2" action="">
             <ul>
                 <li>
-                    <label for="name"></label>
-                    <input type="text" id="name">
+                    <label for="name">Name: </label>
+                    <input type="text" name="user_name">
                 </li>
                 <li>
-                    <label for="msg"></label>
-                    <textarea id="msg"></textarea>
+                    <label for="msg">Message: </label>
+                    <textarea name="user_message"></textarea>
                 </li>
-                <li>
-                    <input type="button">
+                <li class="button">
+                    <input value="My type is 'button'" type="button">
                 </li>
             </ul>
         </form>
-        -->
-        <h1>Abstract</h1>
+        <h2>Abstract and useful informations</h2>
         <ul>
             <li>&lt;li&gt; is used to make the stylization easier;</li>
             <li><span class="notsure">Use 'for' attribute to link the label tag to input tag. For it, put the same name of the input ID. It's good because it create a relation between the label and the form control;</span></li>
             <li>The type attribute defines the way the &lt;input&gt; element appears and behaves.</li>
             <li>Unlike the input tag you will if you want to let something previously typed in a textarea tag, you must write it inside the tag.</li>
             <li>The main advantage of the &lt;button&gt; element is that the &lt;input&gt; element only allows plain text in its label whereas the &lt;button&gt; element allows full HTML content, allowing more complex, creative button content.</li>
+        </ul>
+        <h1>How to structure a web form</h1>
+        <form class="example3" action="">
+            <fieldset>
+                <legend>Test grades</legend>
+                <p>
+                    <label for="math-grade">Mathematic</label>
+                    <input type="range" id="math-grade">
+                </p>
+                <p>
+                    <label for="chemistry-grade">Chemistry</label>
+                    <input type="range" id="chemistry-gradee">
+                </p>
+                <p>
+                    <label for="geo-grade">Geography</label>
+                    <input type="range" id="geo-grade">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Clothing size</legend>
+                <p>
+                    <input type="radio" id="s-size" value="S">
+                    <label for="s-size">S</label>
+                </p>
+                <p>
+                    <input type="radio" id="l-size" value="L">
+                    <label for="l-size">L</label>
+                </p>
+                <p>
+                    <input type="radio" id="xl-size" value="XL">
+                    <label for="xl-size">XL</label>
+                </p>
+            </fieldset>
+        </form>
+        <h2>Abstract and useful informations</h2>
+        <ul>
+            <li><span class="iwrote">Use fieldset tag to group of labels which have the same purpose;</span></li>
+            <li><span class="iwrote">Always use legends tags if you want to make an form with more acessibility. Screen readers will read them first for each label and then each content inside the labels tags.</span></li>
         </ul>
     </div>
 </body>
