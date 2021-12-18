@@ -24,3 +24,9 @@
  - [ ] < input > types
  - Documentations:
  - [ ] Useful lists (probably I will only study some of them)
+
+ <h3>Web Forms</h3>
+ <h4>Progress:</h4>
+ 
+- [ ] Core forms learning pathway
+- [ ] Advanced form articles
