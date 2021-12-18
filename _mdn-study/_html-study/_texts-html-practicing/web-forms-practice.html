@@ -21,6 +21,7 @@
     <div class="content">
         <h1>Your first form</h1>
         <p>Click or move the mouse on the labels tags to see the relationship.</p>
+        <p><strong>First form:</strong></p>
         <form class="example" action="">
             <ul>
                 <li>
@@ -28,7 +29,7 @@
                     <input type="text" id="name" name="user_name">
                 </li>
                 <li>
-                    <label for="mail">E-mail: </label>
+                    <label for="mail">Email: </label>
                     <input type="email" id="mail" name="user_email">
                 </li>
                 <li>
@@ -43,14 +44,15 @@
             </ul>
         </form>
         <p>Look the difference of not make the relationship between label and input using id and for attribute ahead (try to clik on the labels tags):</p>
+        <p><strong>Second form:</strong></p>
         <form class="example2" action="">
             <ul>
                 <li>
-                    <label for="name">Name: </label>
+                    <label>Name: </label>
                     <input type="text" name="user_name">
                 </li>
                 <li>
-                    <label for="msg">Message: </label>
+                    <label>Message: </label>
                     <textarea name="user_message"></textarea>
                 </li>
                 <li class="button">
@@ -68,6 +70,7 @@
             <li><span class="iwrote">You can make a relationship between the label tag and input tag nesting the input tag inside label tag, but it isn't considered the best way of do it.</span></li>
         </ul>
         <h1>How to structure a web form</h1>
+        <p><strong>First form:</strong></p>
         <form class="example3" action="">
             <fieldset>
                 <legend>Test grades</legend>
@@ -87,23 +90,27 @@
             <fieldset>
                 <legend>Clothing size</legend>
                 <p>
-                    <input type="radio" id="s-size" value="S">
+                    <input type="radio" name="size" id="s-size" value="S">
                     <label for="s-size">S</label>
                 </p>
                 <p>
-                    <input type="radio" id="l-size" value="L">
+                    <input type="radio" name="size" id="l-size" value="L">
                     <label for="l-size">L</label>
                 </p>
                 <p>
-                    <input type="radio" id="xl-size" value="XL">
+                    <input type="radio" name="size" id="xl-size" value="XL">
                     <label for="xl-size">XL</label>
                 </p>
             </fieldset>
         </form>
+        <p><strong>Second form:</strong></p>
         <form class="example4" action="">
-            <label for="username">Name: <abbr title="required" aria-label="required">*</abbr></label>
-            <input type="text" id="username" name="username">
+            <p>
+                <label for="username">Name: <abbr title="required" aria-label="required">*</abbr></label>
+                <input type="text" id="username" name="username">
+            </p>
         </form>
+        <p><strong>Third form:</strong></p>
         <form class="example5" action="">
             <fieldset>
                 <legend>Name</legend>
@@ -121,6 +128,7 @@
                 </p>
             </fieldset>
         </form>
+        <p><strong>Fourth form:</strong></p>
         <form class="example6" action="">
             <h1>Request form</h1>
             <p>Required fields are followed by <strong><abbr title="required" aria-label="required">*</abbr></strong>.</p>
@@ -131,8 +139,8 @@
                     <input type="text" id="name">
                 </p>
                 <p>
-                    <label for="e-mail">E-mail:<strong><abbr title="required" aria-label="required">*</abbr></strong></label>
-                    <input type="email" id="e-mail">
+                    <label for="email">Email:<strong><abbr title="required" aria-label="required">*</abbr></strong></label>
+                    <input type="email" id="email">
                 </p>
                 <p>
                     <label for="tel-number">Number:<strong><abbr title="required" aria-label="required">*</abbr></strong></label>
@@ -142,15 +150,15 @@
                     <legend>Your current level</legend>
                     <ul>
                         <li>
-                            <input type="radio" id="beginner" value="B">
+                            <input type="radio" name="level" id="beginner" value="B">
                             <label for="beginner">Beginner</label> 
                         </li>
                         <li>
-                            <input type="radio" id="intermediate" value="I">
+                            <input type="radio" name="level" id="intermediate" value="I">
                             <label for="">Intermediate</label>
                         </li>
                         <li>
-                            <input type="radio" id="advanced" value="A">
+                            <input type="radio" name="level" id="advanced" value="A">
                             <label for="">Advanced</label>
                         </li>
                     </ul>
@@ -162,15 +170,15 @@
                     <legend>Which JavaScript framework do you want to learn first?</legend>
                     <ul>
                         <li>
-                            <input type="radio" id="bootstrap" value="B">
+                            <input type="radio" name="js-framework" id="bootstrap" value="B">
                             <label for="bootstrap">Bootstrap</label>
                         </li>
                         <li>
-                            <input type="radio" id="angularjs" value="A">
+                            <input type="radio" name="js-framework" id="angularjs" value="A">
                             <label for="angularjs">AngularJS</label>  
                         </li>
                         <li>
-                            <input type="radio" id="ember-js" value="E">
+                            <input type="radio" name="js-framework" id="ember-js" value="E">
                             <label for="ember-js">Ember.js</label>  
                         </li>
                     </ul>
@@ -179,15 +187,15 @@
                     <legend>Which CSS framework do you want to learn first?</legend>
                     <ul>
                         <li>
-                            <input type="radio" id="semantic-ui" value="S">
+                            <input type="radio" name="css-framework" id="semantic-ui" value="S">
                             <label for="semantic-ui">Semantic UI</label>
                         </li>
                         <li>
-                            <input type="radio" id="pure" value="P">
+                            <input type="radio" name="css-framework" id="pure" value="P">
                             <label for="pure">Pure</label>
                         </li>
                         <li>
-                            <input type="radio" id="miligram" value="M">
+                            <input type="radio" name="css-framework" id="miligram" value="M">
                             <label for="miligram">Miligram</label>
                         </li>
                     </ul>
@@ -206,8 +214,8 @@
                     </select>
                 </p>
                 <p>
-                    <label for="comment"></label>
-                    <textarea name="" id="comment" placeholder="Let a message for us:"></textarea>
+                    <label for="msg">Message:</label>
+                    <textarea name="" id="msg" placeholder="Let a message for us about what are you waiting for of us:"></textarea>
                 </p>
             </section>
             <section>
@@ -224,6 +232,209 @@
             <li>Lists are recommended for structuring multiple checkboxes or radio buttons.</li>
             <li>Each separate section of functionality should be contained in a separate <section> element, with &lt;fieldset&gt; elements to contain radio buttons.</li>
         </ul>
+        <h1>Basic native form controls</h1>
+        <p><strong>First form:</strong></p>
+        <form class="example7" action="">
+            <h1>Some input text boolean attributes</h1>
+            <fieldset>
+                <legend>Bolean attributes</legend>
+                <section>
+                    <ul>
+                        <li>
+                            <label for="readonly">Readonly: </label>
+                            <input type="text" id="readonly" readonly value="My vale can be changed using JavaScript or something similar.">
+                        </li>
+                        <li>
+                            <label for="disabled">Disabled: </label>
+                            <input type="text" id="disabled" disabled>
+                        </li>
+                        <li>
+                            <label for="placeholder">Placeholder: </label>
+                            <input type="text" id="placeholder" placeholder="Hi! I'm an placeholder! I will desappear after your click here.">
+                        </li>
+                        <li>
+                            <label for="size">Size: </label>
+                            <input type="text" id="size" size="35" placeholder="I have an size boolean attribute equal to 35.">
+                        </li>
+                        <li>
+                            <label for="max-length">Max-length: </label>
+                            <input type="text" id="max-length" maxlength="12" placeholder="You can only digit twelve characters.">
+                        </li>
+                        <li>
+                            <label for="spell-checking">Spellcheck: </label>
+                            <input type="text" id="spell-checking" placeholder="It will only works on browsers that supports it." spellcheck>
+                        </li>
+                    </ul>
+                </section>
+            </fieldset>
+            <p>
+                <button type="reset">Reset</button>
+            </p>
+        </form>
+        <p><strong>Second form:</strong></p>
+        <form class="example8" action="">
+            <h1>Password attribute</h1>
+            <ul>
+                <li>
+                    <label for="password">Password: <strong><abbr title="required" aria-label="required">*</abbr></strong></label>
+                    <input type="password" id="password">
+                </li>
+            </ul>
+            <span>
+                <button type="reset">Reset</button>
+            </span>
+        </form>
+        <p><strong>Third form:</strong></p>
+        <form class="example8" action="">
+            <h1>Hidden attribute</h1>
+            <p>It's useful for whoever will receive the form and is commonly changed by JavaScript, user won't interact with that.</p>
+            <ul>
+                <li>
+                    <label for="hidden">Hidden: <strong><abbr title="required" aria-label="required">*</abbr></strong></label>
+                    <input type="hidden" id="hidden" value="123456">
+                </li>
+            </ul>
+            <span>
+                <button type="reset">Reset</button>
+            </span>
+        </form>
+        <p><strong>Fourth form:</strong></p>
+        <form class="example9" action="">
+            <section>
+                <h1>Checkbox attribute</h1>
+                <fieldset>
+                    <legend>Choose all the frameworks do you intend to learn</legend>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="bootstrap" name="framework" value="bootstrap" checked>
+                            <label for="bootstrap">Bootstrap</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="angularjs" name="framework" value="angularjs">
+                            <label for="angularjs">AngularJS</label>  
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ember-js" name="framework" value="ember-js">
+                            <label for="ember-js">Ember.js</label>  
+                        </li>
+                    </ul>
+                </fieldset>
+            </section>
+            <section>
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+            </section>
+        </form>
+        <p><strong>Fifth form: </strong></p>
+        <form class="example10" action="">
+            <section>
+                <h1>Radio attribute</h1>
+                <fieldset>
+                    <legend>Whats is your favorite JavaScript framework</legend>
+                    <ul>
+                        <li>
+                            <input id="bootstrap" name="framework" type="radio">
+                            <label for="bootstrap">Bootstrap</label>
+                        </li>
+                        <li>
+                            <input id="angularjs" name="framework" type="radio">
+                            <label for="angularjs">AngularJS</label>
+                        </li>
+                        <li>
+                            <input id="ember-js" name="framework" type="radio">
+                            <label for="ember-js">Ember.js</label>
+                        </li>
+                        <li>
+                            <input id="other" name="framework" type="radio" checked>
+                            <label for="other">Other</label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </section>
+            <section>
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+            </section>
+        </form>
+        <p><strong>Sixth form: </strong></p>
+        <form class="example11" action="">
+            <h1>Image button</h1>
+            <p>
+                <input type="image" alt="Click me!" src="../_images/blue-kinstone-menor.png">
+            </p>
+        </form>
+        <p><strong>Seventh form: </strong></p>
+        <form class="example12" action="">
+            <input type="file" name="file" id="file" accept="image/*" multiple>
+        </form>
+        <p><strong>Eighth form: </strong></p>
+        <form class="example13" action="">
+            <h1>Autofocus boolean attribute</h1>
+            <section>
+                <fieldset>
+                    <legend>How is your progress so far?</legend>
+                    <ul>
+                        <li>
+                            <input id="first" name="progress" type="checkbox">
+                            <label for="first">Your first form</label>
+                        </li>
+                        <li>
+                            <input id="second" name="progress" type="checkbox">
+                            <label for="second">How to structure a web form</label>
+                        </li>
+                        <li>
+                            <input id="third" name="progress" type="checkbox" autofocus>
+                            <label for="third">Basic native form controls</label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </section>
+            <section>
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+            </section>
+        </form>
+        <h2>Abstract and useful informations</h2>
+        <ul>
+            <li>
+                If the image button is used to submit the form, this control doesn't submit its value — instead, the X and Y coordinates of the click on the image are submitted (the coordinates are relative to the image, meaning that the upper-left corner of the image represents the coordinate (0, 0)). The coordinates are sent as two key/value pairs:
+                <ul>
+                    <li>The X value key is the value of the name attribute followed by the string ".x".</li>
+                    <li>The Y value key is the value of the name attribute followed by the string ".y".</li>
+                </ul>
+            </li>
+            <li>Use the boolean attribute "multiple" to allow the user to select multiple files with a file type input.</li>
+            <li>On some mobile devices, the file picker can access photos, videos, and audio captured directly by the device's camera and microphone by adding capture information to the accept attribute, using some of these values "camera", "camcorder" and "microphone".</li>
+            <li>Only one form-associated element can have an autofocus boolean attribute.</li>
+        </ul>
+        <h1>The HTML5 input types</h1>
+        <p><strong>First form: </strong></p>
+        <p>See what happen if you don't digit a valide email and try to send it.</p>
+        <form class="example14" action="">
+            <h1>Email attribute</h1>
+            <p>
+                <label for="email">Your email: <strong><abbr title="required" arial-label="required">*</abbr></strong></label>
+                <input id="email" type="email">
+            </p>
+            <p>
+                <label for="emails">Recovery emails: </label>
+                <input type="email" id="emails" placeholder="Separe them using commas" multiple>
+            </p>
+            <fieldset>
+                <ul>
+                    <li>
+                        <button type="submit">Send now</button>
+                    </li>
+                    <li>
+                        <button type="reset">Reset</button>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+        <h2>Abstract and useful informations</h2>
     </div>
 </body>
 </html>

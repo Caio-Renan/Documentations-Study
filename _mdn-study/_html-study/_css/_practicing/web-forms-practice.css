@@ -2,18 +2,19 @@
 
 /* I intend to practice here, therefore I could repeat some codes or not simplify them merging in a single declaration */
 
+/* Runs in more than one form */
+.example, .example2, .example3, .example4, .example5, .example6, .example7, .example8, .example9, .example10, .example11, .example12, .example13, .example14 {
+    border: 1px solid gray;
+    border-radius: 1rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
 /* Your first form */
 /* First form */
 
 .example li {
     list-style-type: none;
-}
-
-.example ul {
-    margin: 0 auto;
-    padding: 2rem;
-    border: 1px solid gray;
-    border-radius: 1rem;
 }
 
 .example li {
@@ -55,10 +56,6 @@ textarea {
 .example2 {
     box-sizing: border-box;
     width: 60rem;
-    padding: 2rem;
-    margin: 0 auto;
-    border: 1px solid gray;
-    border-radius: 1rem;
 }
 
 .example2 ul {
@@ -87,7 +84,7 @@ textarea {
 }
 
 /* How to structure a web form */
-/* Runs in all forms */
+/* Runs in more than one form */
 .example3, .example3 fieldset, .example4, .example4 fieldset, .example5, .example5 fieldset {
     margin: 0 auto 2rem auto;
 }
@@ -98,9 +95,14 @@ textarea {
     width: 35rem;
 }
 
+.example3 p {
+    text-indent: 0;
+    margin-left: 2rem;
+}
+
 .example3 label {
     text-align: left;
-    width: 12rem;
+    width: 10rem;
 }
 
 .example3 input, .example3 label {
@@ -118,13 +120,21 @@ textarea {
     padding: 2rem;
 }
 
-.example4 {
-    border: 1px solid gray;
-    border-radius: 1rem;
+.example4 label, .example5 label, .example4 input, .example5 input {
+    display: inline-block;
+}
+
+.example4 label, .example5 label {
+    width: 7rem;
+}
+
+.example4 p, .example5 p {
+    text-indent: 0;
+    margin-left: 2rem;
 }
 
 /* Fourth form */
-.example6 .contact p {
+.example6 .contact p, .example6 .wishes p {
     text-indent: 0;
 }
 
@@ -138,34 +148,28 @@ textarea {
 }
 
 .example6 {
-    padding: 2rem;
-    border: 1px solid gray;
-    border-radius: 1rem;
     width: 50rem;
-    margin: 0 auto;
 }
 
 .example6 li {
     list-style-type: none;
 }
 
-.example6 .contact p {
+.example6 .contact p, .example6 .wishes p {
     padding-left: 7rem;
 }
 
-.example6 label, .example6 input {
+.example6 label, .example6 input, .example6 .wishes textarea {
     display: inline-block;
 }
 
-.example6 .contact label {
+.example6 .contact label:not(.contact fieldset label), .example6 .wishes [for="msg"] {
     text-align: left;
     width: 8rem;
 }
 
-
-.example6 .contact fieldset, .example6 .contact input:not(.contact fieldset input), .example6 .interest fieldset  {
+.example6 .contact fieldset, .example6 .contact input:not(.contact fieldset input), .example6 .interest fieldset, .example6 .wishes textarea  {
     float: right;
-    
 }
 
 .example6 fieldset {
@@ -181,4 +185,278 @@ textarea {
     display: block;
     padding: 0.5rem;
     margin: 0 auto;
+}
+
+.example6 textarea {
+    width: 33rem;
+}
+
+.example6 .wishes p {
+    overflow: hidden;
+}
+
+/* Basic native form controls */
+
+/* First form */
+.example7 {
+    width: 75rem;
+}
+
+.example7 h1, .example7 h2, .example7 h3 {
+    counter-reset: none;
+}
+
+.example7 body::before, .example7 h1::before, .example7 h2::before, .example7 h3::before, .example7 h4::before {
+    counter-increment: none;
+    content: none;
+}
+
+.example7 li {
+    list-style-type: none;
+    margin-bottom: 2rem;
+}
+
+.example7 label, .example7 input {
+    display: inline-block;
+}
+
+.example7 label {
+    width: 9rem;
+}
+
+.example7 input:not(.example7 #size) {
+    width: 40rem;
+}
+
+.example7 fieldset {
+    width: 55rem;
+    margin: 2rem auto;
+}
+
+.example7 p {
+    text-indent: 0;
+}
+
+.example7 button {
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* Second form */
+.example8 {
+    width: 40rem;
+}
+
+.example8 h1, .example8 h2, .example8 h3 {
+    counter-reset: none;
+}
+
+.example8 body, .example8 h1::before, .example8 h2::before, .example8 h3::before, .example8 h4::before {
+    counter-increment: none;
+    content: none;
+}
+
+.example8 ul {
+    margin: 0;
+    padding: 0;
+}
+
+.example8 li {
+    list-style-type: none;
+    margin-left: 2.8rem;
+}
+
+.example8 label, .example8 input {
+    display: inline-block;
+}
+
+.example8 label {
+    width: 9rem;
+    text-align: left;
+}
+
+.example8 input {
+    width: 20rem;
+}
+
+.example8 span {
+    margin-top: 2rem;
+    display: block;
+}
+
+.example8 button {
+    display: block;
+    padding: 1rem;
+    margin: 0 auto
+}
+
+/* Fourth form and Fifth form */
+
+.example9, .example10 {
+    width: 40rem;
+}
+
+.example9 fieldset, .example10 fieldset {
+    width: 25rem;
+    margin: 2rem auto;
+}
+
+/* Fourth form */
+
+.example9 h1, .example9 h2, .example9 h3 {
+    counter-reset: none;
+}
+
+.example9 body::before, .example9 h1::before, .example9 h2::before, .example9 h3::before, .example9 h4::before {
+    counter-increment: none;
+    content: none;
+}
+
+.example9 li {
+    list-style-type: none;
+}
+
+.example9 button {
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* Fifth form */
+
+.example10 h1, .example10 h2, .example10 h3 {
+    counter-reset: none;
+}
+
+.example10 body::before, .example10 h1::before, .example10 h2::before, .example10 h3::before, .example10 h4::before {
+    counter-increment: none;
+    content: none;
+}
+
+.example10 li {
+    list-style-type: none;
+}
+
+.example10 button {
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* Sixth form */
+
+.example11 h1, .example11 h2, .example11 h3 {
+    counter-reset: none;
+}
+
+.example11 body::before, .example11 h1::before, .example11 h2::before, .example11 h3::before, .example11 h4::before {
+    counter-increment: none;
+    content: none;
+}
+
+.example11 {
+    width: 30rem;
+}
+
+.example11 input {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Seventh form */
+
+.example12 {
+    width: 35rem;
+}
+
+/* Eighth form */
+
+.example13 h1, .example13 h2, .example13 h3 {
+    counter-reset: none;
+}
+
+.example13 body::before, .example13 h1::before, .example13 h2::before, .example13 h3::before, .example13 h4::before {
+    counter-increment: none;
+    content: none;
+}
+
+.example13 {
+    width: 50rem;
+}
+
+.example13 li {
+    list-style-type: none;
+}
+
+.example13 ul {
+    margin: 0;
+    padding: 0;
+}
+
+.example13 fieldset {
+    width: 25rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.example13 button {
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* The HTML5 input types */
+/* First form */
+.example14 h1, .example14 h2, .example14 h3 {
+    counter-reset: none;
+}
+
+.example14 body::before, .example14 h1::before, .example14 h2::before, .example14 h3::before, .example14 h4::before {
+    counter-increment: none;
+    content: none;
+}
+
+.example14 {
+    width: 35rem;
+}
+
+.example14 label, .example14 input {
+    display: inline-block;
+}
+
+.example14 ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.example14 fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.example14 li {
+    list-style-type: none;
+    margin-left: 1rem;
+}
+
+.example14 p {
+    text-indent: 0;
+    text-align: right;
+    overflow: hidden;
+}
+
+.example14 input {
+    width: 20rem;
+    margin-left: 1rem;
+}
+
+.example14 button {
+    display: block;
+}
+
+.example14 input, .example14 li {
+    float: right;
 }
