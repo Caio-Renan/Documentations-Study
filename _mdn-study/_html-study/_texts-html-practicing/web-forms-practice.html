@@ -20,6 +20,7 @@
     </div>
     <div class="content">
         <h1>Your first form</h1>
+        <p>Click or move the mouse on the labels tags to see the relationship.</p>
         <form class="example" action="">
             <ul>
                 <li>
@@ -41,7 +42,7 @@
                 </li>
             </ul>
         </form>
-        <p>Look the difference of not make the relationship between label and input using id and for attribute ahead:</p>
+        <p>Look the difference of not make the relationship between label and input using id and for attribute ahead (try to clik on the labels tags):</p>
         <form class="example2" action="">
             <ul>
                 <li>
@@ -64,6 +65,7 @@
             <li>The type attribute defines the way the &lt;input&gt; element appears and behaves.</li>
             <li>Unlike the input tag you will if you want to let something previously typed in a textarea tag, you must write it inside the tag.</li>
             <li>The main advantage of the &lt;button&gt; element is that the &lt;input&gt; element only allows plain text in its label whereas the &lt;button&gt; element allows full HTML content, allowing more complex, creative button content.</li>
+            <li><span class="iwrote">You can make a relationship between the label tag and input tag nesting the input tag inside label tag, but it isn't considered the best way of do it.</span></li>
         </ul>
         <h1>How to structure a web form</h1>
         <form class="example3" action="">
@@ -98,10 +100,129 @@
                 </p>
             </fieldset>
         </form>
+        <form class="example4" action="">
+            <label for="username">Name: <abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" id="username" name="username">
+        </form>
+        <form class="example5" action="">
+            <fieldset>
+                <legend>Name</legend>
+                <p>
+                    <label for="your">Your: <abbr title="required" aria-label="required">*</abbr></label>
+                    <input type="text" id="your">
+                </p>
+                <p>
+                    <label for="father">Father: </label>
+                    <input type="text" id="father">
+                </p>
+                <p>
+                    <label for="mother">Mother: </label>
+                    <input type="text" id="mother">
+                </p>
+            </fieldset>
+        </form>
+        <form class="example6" action="">
+            <h1>Request form</h1>
+            <p>Required fields are followed by <strong><abbr title="required" aria-label="required">*</abbr></strong>.</p>
+            <section class="contact">
+                <h2>Contact information</h2>
+                <p>
+                    <label for="name">Name:<strong><abbr title="required" aria-label="required">*</abbr></strong></label>
+                    <input type="text" id="name">
+                </p>
+                <p>
+                    <label for="e-mail">E-mail:<strong><abbr title="required" aria-label="required">*</abbr></strong></label>
+                    <input type="email" id="e-mail">
+                </p>
+                <p>
+                    <label for="tel-number">Number:<strong><abbr title="required" aria-label="required">*</abbr></strong></label>
+                    <input type="tel" id="tel-number">
+                </p>
+                <fieldset>
+                    <legend>Your current level</legend>
+                    <ul>
+                        <li>
+                            <input type="radio" id="beginner" value="B">
+                            <label for="beginner">Beginner</label> 
+                        </li>
+                        <li>
+                            <input type="radio" id="intermediate" value="I">
+                            <label for="">Intermediate</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="advanced" value="A">
+                            <label for="">Advanced</label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </section>
+            <section class="interest">
+                <h2>Your interest</h2>
+                <fieldset>
+                    <legend>Which JavaScript framework do you want to learn first?</legend>
+                    <ul>
+                        <li>
+                            <input type="radio" id="bootstrap" value="B">
+                            <label for="bootstrap">Bootstrap</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="angularjs" value="A">
+                            <label for="angularjs">AngularJS</label>  
+                        </li>
+                        <li>
+                            <input type="radio" id="ember-js" value="E">
+                            <label for="ember-js">Ember.js</label>  
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Which CSS framework do you want to learn first?</legend>
+                    <ul>
+                        <li>
+                            <input type="radio" id="semantic-ui" value="S">
+                            <label for="semantic-ui">Semantic UI</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="pure" value="P">
+                            <label for="pure">Pure</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="miligram" value="M">
+                            <label for="miligram">Miligram</label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </section>
+            <section class="wishes">
+                <h2>About your wishes</h2>
+                <p>
+                    <label for="time-studying">How long do you intend to study?</label>
+                    <select name="time-spent" id="time-studying">
+                        <option value="one-week">1 week</option>
+                        <option value="two-week">2 weeks</option>
+                        <option value="one-month">1 month</option>
+                        <option value="three-months">3 months</option>
+                        <option value="six-months">6 months</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="comment"></label>
+                    <textarea name="" id="comment" placeholder="Let a message for us:"></textarea>
+                </p>
+            </section>
+            <section>
+                <p>
+                    <button type="submit">Send your request</button>
+                </p>
+            </section>
+        </form>
         <h2>Abstract and useful informations</h2>
         <ul>
             <li><span class="iwrote">Use fieldset tag to group of labels which have the same purpose;</span></li>
             <li><span class="iwrote">Always use legends tags if you want to make an form with more acessibility. Screen readers will read them first for each label and then each content inside the labels tags.</span></li>
+            <li><span class="iwrote">Use &lt;abbr title="required" aria-label="required"&gt;*&lt;/abbr&gt; to required fields.</span></li>
+            <li>Lists are recommended for structuring multiple checkboxes or radio buttons.</li>
+            <li>Each separate section of functionality should be contained in a separate <section> element, with &lt;fieldset&gt; elements to contain radio buttons.</li>
         </ul>
     </div>
 </body>
