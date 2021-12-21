@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="../_css/_practicing/web-form-exercise.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Formulário de cadastro</div>
+        <div>Campos necessário são seguidos de <strong><abbr title="required" arial-label="required">*</abbr></strong>.</div>
+        <form action="">
+            <div class="personal-information">
+                <div class="pers-info title">Informações pessoais</div>
+                <div class="box">
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" placeholder="Insira seu nome aqui" required>
+                </div>
+                <div class="box">
+                    <label for="marital-status">Estado civil</label>
+                    <select name="" id="marital-status">
+                        <option value="------">------</option>
+                        <option value="Solteiro">Solteiro</option>
+                        <option value="Casado">Casado</option>
+                        <option value="Separado">Separado</option>
+                        <option value="Divorciado">Divorciado</option>
+                        <option value="Viúvo">Viúvo</option>
+                    </select>
+                </div>
+                <div class="box">
+                    <label for="cpf">CPF</label>
+                    <input type="number" id="cpf" placeholder="Digite apenas os números" required>
+                </div>
+                <div class="box">
+                    <label for="rg">RG</label>
+                    <input type="number" id="rg" placeholder="Digite apenas os números" required>
+                </div>
+                <div class="box">
+                    <label for="oab">OAB</label>
+                    <input type="text" id="oab" placeholder="UFXXXXXX" required>
+                </div>
+                <div class="box">
+                    <label for="birthday">Data de nascimento</label>
+                    <input type="date" name="birthday" required>
+                </div>
+                <div class="box">
+                    <input type="radio" id="male" name="gender">
+                    <label for="male">Masculino</label>
+                    <input type="radio" id="female" name="gender">
+                    <label for="">Feminino</label> 
+                    <label for="">Outro (Qual?)</label>
+                    <input type="text" id="other" name="gender">
+                    <input type="radio" id="notsay" name="gender">
+                    <label for="">Prefiro não dizer</label>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="contact-title">Contato</div>
+                <div class="box">
+                    <label for="cellphone">Número (celular)</label>
+                    <input type="tel" id="cellphone" placeholder="(XX) 9XXXX-YYYY" required>
+                </div>
+                <div class="box">
+                    <label for="telephone">Número (telefone residencial)</label>
+                    <input type="tel" id="telephone" placeholder="XXXX-YYYY">
+                </div>
+                <div class="box">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Insira seu e-mail aqui" required>
+                </div>
+                <div class="box">
+                    <label for="email">Confirme seu e-mail</label>
+                    <input type="email" id="email" placeholder="Insira seu e-mail aqui" required>
+                </div>
+            </div>
+            <div class="workplace">
+                <div class="workplace-title">Endereço de seu local de trabalho</div>
+                <div class="box">
+                    <label for="workplace-number">CEP</label>
+                    <input type="number" id="workplace-number" placeholder="XXXXX-YYY" required>
+                </div>
+                <div class="box">
+                    <label for="workplace-address">Endereço</label>
+                    <input type="text" id="workplace-address" placeholder="" required>
+                </div>
+                <div class="box">
+                    <label for="">Número</label>
+                    <input type="number" placeholder="">
+                </div>
+                <div class="box">
+                    <label for="">Cidade</label>
+                    <input type="text" placeholder="" required>
+                </div>
+                <div class="box">
+                    <label for="">Bairro</label>
+                    <input type="text" placeholder="" required>
+                </div>
+                <div class="box">
+                    <label for="">Complemento</label>
+                    <input type="text" placeholder="">
+                </div>
+            </div>
+            <div class="house">
+                <div class="house-title">Seu endereço</div>
+                <div class="box">
+                    <label for="">CEP</label>
+                    <input type="number" placeholder="XXXXX-YYY"
+                </div>
+                <div class="box">
+                    <label for="">Endereço</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="box">
+                    <label for="">Número</label>
+                    <input type="number" placeholder="">
+                </div>
+                <div class="box">
+                    <label for="">Cidade</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="box">
+                    <label for="">Bairro</label>
+                    <input type="text" placeholder="">
+                </div>
+                <div class="box">
+                    <label for="">Complemento</label>
+                    <input type="text" placeholder="">
+                </div>
+            </div>
+            <div class="user">
+                <div class="house-title">Informações de usuário</div>
+                <div class="box">
+                    <label for="">Usuário</label>
+                    <input type="text" placeholder="" required>
+                </div>
+                <div class="box">
+                    <label for="">Senha</label>
+                    <input type="password" placeholder="Insira sua senha aqui" required>
+                </div>
+                <div class="box">
+                    <label for="">Confirme sua senha</label>
+                    <input type="password" placeholder="Insira sua senha aqui" required>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
