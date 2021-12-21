@@ -18,17 +18,161 @@ body {
     align-items: center;
     background: linear-gradient(135deg, #4568dc, #b06ab3);
     font-size: 16px;
+    padding: 1rem;
 }
 
 .container {
     background-color: white;
     max-width: 80rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     width: 100%;
     padding: 3rem 4rem;
 }
 
-/* .personal-information {
+.container .title {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.3rem;
+    width: 3rem;
+    background: linear-gradient(135deg, #4568dc, #b06ab3);
+}
+
+/* .personal-information, .contact, .workplace, .house, .user */
+/* .pers-info-title, .contact-title, .workplace-title, .house-title, .user-title*/
+
+
+
+.personal-information, .contact, .workplace, .house, .user {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .personal-information {
+    margin: 2rem 0 1.2rem 0;
+}
+
+form .personal-information .box {
+    width: calc(100% / 2 - 2rem);
+    margin-bottom: 0.5rem;
+}
+
+.personal-information .box input:not(.gender input), .personal-information .box select {
+    height: 4.5rem;
     width: 100%;
+    outline: none;
+    border-radius: 0.5rem;
+    border-bottom-width: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.personal-information .box input:focus, .personal-information .box input:focus:valid {
+    border-color: #b06ab3;
+}
+
+.personal-information .box legend {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    padding-left: 1.5rem;
+}
+
+form .gender .gender-title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.button {
+    display: flex;
+    flex: 0 1 100%;
+    height: 4.5rem;
+    margin: 4.5rem 0 0 0;
+        
+}
+
+.button input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    outline: none;
+    color: white;
+    background: linear-gradient(135deg, #4568dc, #b06ab3);
+    justify-content: center;
+    cursor: pointer;
+}
+
+.box {
+    position: relative;
+    /* flex: 0 1 50%; */
+}
+
+.personal-information .gender {
+    flex: 0 1 100%;
+}
+
+.personal-information label:not(.gender label), .contact label, .workplace label, .house label, .user label {
+    display: flex;
+    flex: 0 1 100%;
+}
+
+.personal-information input:not(.gender input), .contact input, .workplace input, .house input, .user input {
+    display: flex;
+    flex: 0 1 100%;
+}
+
+.pers-info-title, .contact-title, .workplace-title, .house-title, .user-title {
+    flex: 0 1 100%;
+}
+
+/* .personal-information, .contact, .workplace, .house, .user {
+    display: none;
 } */
+
+.contact, .workplace, .house, .user {
+    display: none;
+}
+
+
+label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: -5s;
+}
+
+input:focus ~ label {
+    top: -2rem;
+    font-size: 12px;
+}
+
+/*
+#test {
+    display: none;
+}
+
+#test:checked ~ form > .logoff, #test:checked ~ .fright  {
+    display: block;
+}
+
+#test:checked ~ form > .login, #test:checked, #test:checked ~ [for="test"] {
+    display: none;
+}
+
+
+.fright {
+    float: right;
+}
+*/

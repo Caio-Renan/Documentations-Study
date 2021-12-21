@@ -5,18 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
-    <link rel="stylesheet" href="../_css/_practicing/web-form-exercise.css">
+    <link rel="stylesheet" href="../_css/_practicing/web-form-personal-exercise.css">
 </head>
 <body>
     <div class="container">
         <div class="title">Formulário de cadastro</div>
         <div>Campos necessário são seguidos de <strong><abbr title="required" arial-label="required">*</abbr></strong>.</div>
         <form action="">
-            <div class="personal-information">
-                <div class="pers-info title">Informações pessoais</div>
+
+            <!-- First step (Personal information) -->
+
+            <section class="personal-information">
+                <div class="pers-info-title">Informações pessoais</div>
                 <div class="box">
-                    <label for="name">Nome completo</label>
-                    <input type="text" id="name" placeholder="Insira seu nome aqui" required>
+                    <legend>Nome completo</legend>
+                    <label for="name">Insira seu nome completo aqui</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="box">
+                    <legend>OAB</legend>
+                    <label for="oab">UFXXXXXX</label>
+                    <input type="text" id="oab" required>
+                </div>
+                <div class="box">
+                    <legend>CPF</legend>
+                    <label for="cpf">Digite apenas os números</label>
+                    <input type="number" id="cpf" required>
+                </div>
+                <div class="box">
+                    <legend>RG</legend>
+                    <label for="rg">Digite apenas os números</label>
+                    <input type="number" id="rg" required>
                 </div>
                 <div class="box">
                     <label for="marital-status">Estado civil</label>
@@ -30,120 +49,139 @@
                     </select>
                 </div>
                 <div class="box">
-                    <label for="cpf">CPF</label>
-                    <input type="number" id="cpf" placeholder="Digite apenas os números" required>
-                </div>
-                <div class="box">
-                    <label for="rg">RG</label>
-                    <input type="number" id="rg" placeholder="Digite apenas os números" required>
-                </div>
-                <div class="box">
-                    <label for="oab">OAB</label>
-                    <input type="text" id="oab" placeholder="UFXXXXXX" required>
-                </div>
-                <div class="box">
                     <label for="birthday">Data de nascimento</label>
                     <input type="date" name="birthday" required>
                 </div>
-                <div class="box">
-                    <input type="radio" id="male" name="gender">
-                    <label for="male">Masculino</label>
-                    <input type="radio" id="female" name="gender">
-                    <label for="">Feminino</label> 
-                    <label for="">Outro (Qual?)</label>
-                    <input type="text" id="other" name="gender">
-                    <input type="radio" id="notsay" name="gender">
-                    <label for="">Prefiro não dizer</label>
+                <div class="box gender">
+                    <div class="options">
+                        <div class="gender-title">Gênero</div>
+                        <input type="radio" id="male" name="gender">
+                        <label for="male">Masculino</label>
+                        <input type="radio" id="female" name="gender">
+                        <label for="female">Feminino</label>
+                        <input type="radio" name="gender">
+                        <label for="other">Outro (Qual?)</label>
+                        <input type="text" id="other" name="gender">
+                        <input type="radio" id="notsay" name="gender">
+                        <label for="">Prefiro não dizer</label>
+                    </div>
                 </div>
-            </div>
-            <div class="contact">
+                <div class="button">
+                    <input type="submit" value="Registre-se">
+                </div>
+            </section>
+
+            <!-- Second step (Contact)-->
+
+            <section class="contact">
                 <div class="contact-title">Contato</div>
                 <div class="box">
-                    <label for="cellphone">Número (celular)</label>
-                    <input type="tel" id="cellphone" placeholder="(XX) 9XXXX-YYYY" required>
+                    <legend>Número (celular)</legend>
+                    <label for="cellphone">(XX) 9XXXX-YYYY</label>
+                    <input type="tel" id="cellphone" required>
                 </div>
                 <div class="box">
-                    <label for="telephone">Número (telefone residencial)</label>
-                    <input type="tel" id="telephone" placeholder="XXXX-YYYY">
+                    <legend>Número (telefone residencial)</legend>
+                    <label for="telephone">XXXX-YYYY</label>
+                    <input type="tel" id="telephone">
                 </div>
                 <div class="box">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="Insira seu e-mail aqui" required>
+                    <legend>E-mail</legend>
+                    <label for="email">Insira seu e-mail aqui</label>
+                    <input type="email" id="email" required>
                 </div>
                 <div class="box">
-                    <label for="email">Confirme seu e-mail</label>
-                    <input type="email" id="email" placeholder="Insira seu e-mail aqui" required>
+                    <legend>Confirme seu e-mail</legend>
+                    <label for="email">Insira seu e-mail aqui</label>
+                    <input type="email" id="email" required>
                 </div>
-            </div>
-            <div class="workplace">
+            </section>
+
+            <!-- Third step (Workplace) -->
+
+            <section class="workplace">
                 <div class="workplace-title">Endereço de seu local de trabalho</div>
                 <div class="box">
-                    <label for="workplace-number">CEP</label>
-                    <input type="number" id="workplace-number" placeholder="XXXXX-YYY" required>
+                    <legend>CEP</legend>
+                    <label for="workplace-zip-code">XXXXX-YYY</label>
+                    <input type="number" id="workplace-number" required>
                 </div>
                 <div class="box">
                     <label for="workplace-address">Endereço</label>
-                    <input type="text" id="workplace-address" placeholder="" required>
+                    <input type="text" id="workplace-address" required>
                 </div>
                 <div class="box">
-                    <label for="">Número</label>
-                    <input type="number" placeholder="">
+                    <label for="workplace-number">Número</label>
+                    <input type="number" id="workplace-number">
                 </div>
                 <div class="box">
-                    <label for="">Cidade</label>
-                    <input type="text" placeholder="" required>
+                    <label for="workplace-city">Cidade</label>
+                    <input type="text" id="workplace-city" required>
                 </div>
                 <div class="box">
-                    <label for="">Bairro</label>
-                    <input type="text" placeholder="" required>
+                    <label for="workplace-neighborhood">Bairro</label>
+                    <input type="text" id="workplace-neighborhood" required>
                 </div>
                 <div class="box">
-                    <label for="">Complemento</label>
-                    <input type="text" placeholder="">
+                    <label for="workplace-complement">Complemento</label>
+                    <input type="text" for="workplace-complement">
                 </div>
-            </div>
-            <div class="house">
+            </section>
+
+            <!-- Fourth step (House) -->
+
+            <section class="house">
                 <div class="house-title">Seu endereço</div>
                 <div class="box">
-                    <label for="">CEP</label>
-                    <input type="number" placeholder="XXXXX-YYY"
+                    <legend>CEP</legend>
+                    <label for="house-zip-code">XXXXX-YYY</label>
+                    <input type="number" id="workplace-number" required>
                 </div>
                 <div class="box">
-                    <label for="">Endereço</label>
-                    <input type="text" placeholder="">
+                    <label for="house-address">Endereço</label>
+                    <input type="text" id="workplace-address" required>
                 </div>
                 <div class="box">
-                    <label for="">Número</label>
-                    <input type="number" placeholder="">
+                    <label for="house-number">Número</label>
+                    <input type="number" id="workplace-number">
                 </div>
                 <div class="box">
-                    <label for="">Cidade</label>
-                    <input type="text" placeholder="">
+                    <label for="house-city">Cidade</label>
+                    <input type="text" id="workplace-city" required>
                 </div>
                 <div class="box">
-                    <label for="">Bairro</label>
-                    <input type="text" placeholder="">
+                    <label for="house-neighborhood">Bairro</label>
+                    <input type="text" id="workplace-neighborhood" required>
                 </div>
                 <div class="box">
-                    <label for="">Complemento</label>
-                    <input type="text" placeholder="">
+                    <label for="house-complement">Complemento</label>
+                    <input type="text" for="workplace-complement">
                 </div>
-            </div>
-            <div class="user">
-                <div class="house-title">Informações de usuário</div>
+            </section>
+
+            <!-- Fift step (User) -->
+
+            <section class="user">
+                <div class="user-title">Informações de usuário</div>
                 <div class="box">
-                    <label for="">Usuário</label>
-                    <input type="text" placeholder="" required>
+                    <legend>Nome de usuário</legend>
+                    <label for="username">Insira seu nome de usuário aqui</label>
+                    <input type="text" id="user" name="username" required>
                 </div>
                 <div class="box">
-                    <label for="">Senha</label>
-                    <input type="password" placeholder="Insira sua senha aqui" required>
+                    <legend>Senha</legend>
+                    <label for="password">Insira sua senha aqui</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
                 <div class="box">
-                    <label for="">Confirme sua senha</label>
-                    <input type="password" placeholder="Insira sua senha aqui" required>
+                    <legend>Confirme sua senha</legend>
+                    <label for="password-confirmation">Insira sua senha aqui</label>
+                    <input type="password" id="password-confirmation" name="password-confirmation" required>
                 </div>
-            </div>
+                <div class="button">
+                    <input type="submit" value="Registre-se">
+                </div>
+            </section>
         </form>
     </div>
 </body>
