@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+/*
+    Main references: https://www.youtube.com/watch?v=okbByPWS1Xc, https://youtu.be/VCsNIRXNsmY
+    My main goal was to try to make a form how "professionals" usually do, I learned some things very interesting like how innapropriated is to use placeholder in a UX point of view, I learned a hack to fake a click interaction using checkbox and radio attributtes (I used that to make a "nav-bar" while I i'm not studying JavaScript),  and I needed to study CSS flexbox a bit.
+        
+    Notes:
+    - Organize your code. Study the organization section of MDN articles.
+    - Some stuffs won't work yet, because you don't know how to use JavaScript yet.
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +25,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #4568dc, #b06ab3);
+    background: linear-gradient(135deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
     font-size: 16px;
     padding: 1rem;
 }
@@ -31,8 +40,9 @@ body {
 
 .container .title {
     position: relative;
-    font-size: 2.5rem;
-    font-weight: 500;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
 }
 
 .container .title::before {
@@ -42,13 +52,18 @@ body {
     bottom: 0;
     height: 0.3rem;
     width: 3rem;
-    background: linear-gradient(135deg, #4568dc, #b06ab3);
+    background: linear-gradient(135deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
 }
 
 /* .personal-information, .contact, .workplace, .house, .user */
 /* .pers-info-title, .contact-title, .workplace-title, .house-title, .user-title*/
 
-
+.pers-info-title, .contact-title, .workplace-title, .house-title, .user-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    flex: 0 1 100%;
+}
 
 .personal-information, .contact, .workplace, .house, .user {
     display: flex;
@@ -56,39 +71,68 @@ body {
     justify-content: space-between;
 }
 
-form .personal-information {
+form .personal-information, form .contact, form .workplace, form .house, form .user {
     margin: 2rem 0 1.2rem 0;
 }
 
-form .personal-information .box {
+form .personal-information .box, form .contact .box, form .workplace .box, form .house .box, form .user .box {
+    display: flex;
+    flex-wrap: wrap;
     width: calc(100% / 2 - 2rem);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.personal-information .box input:not(.gender input), .personal-information .box select {
-    height: 4.5rem;
+.personal-information .placeholder input, .contact .placeholder input, .workplace .placeholder input, .house .placeholder input, .user .placeholder input:not(#show) {
+    padding: 3.2rem 1rem 0 1rem;
+    height: 6rem;
+    max-height: 6rem;
     width: 100%;
+}
+
+.personal-information .placeholder input, .personal-information #marital-status, .personal-information #birthday, .contact .placeholder input, .workplace .placeholder input, .house .placeholder input, .user .placeholder input:not(#show) {
     outline: none;
+    border: 1px solid #ccc;
     border-radius: 0.5rem;
     border-bottom-width: 0.2rem;
     transition: all 0.3s ease;
 }
 
-.personal-information .box input:focus, .personal-information .box input:focus:valid {
-    border-color: #b06ab3;
+.personal-information #marital-status, .personal-information #birthday {
+    padding-left: 1rem;
+    height: 4rem;
+    width: 20rem;
+    font-size: 16px;
 }
 
-.personal-information .box legend {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    border: 1px solid #ccc;
-    padding-left: 1.5rem;
+.gender .options {
+    display: flex;
+    flex: 0 70%;
+    justify-content: space-between;
+}
+
+.gender label {
+    margin-left: -7rem; 
+}
+
+.gender input {
+    margin-left: 1rem;
+}
+
+.personal-information .box input:focus, .personal-information .box #marital-status:focus, .personal-information .box #marital-status:valid, .personal-information .box #birthday:focus, .personal-information .box #birthday:valid, .personal-information .box input:valid, .contact .box input:focus, .contact .box input:valid, .workplace .box input:focus, .workplace .box input:valid, .house .box input:focus, .house .box input:valid, .user .box input:not(#show):focus, .user .box input:not(#show):valid {
+    border-color: rgba(110,123,251,1);
+}
+
+.personal-information .box legend, .contact .box legend, .workplace .box legend, .house .box legend, .user .box legend, .personal-information .birthday, .personal-information .marital-status {
+    display: flex;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 form .gender .gender-title {
-    font-size: 2rem;
-    font-weight: 500;
+    flex: 0 1 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .button {
@@ -96,66 +140,213 @@ form .gender .gender-title {
     flex: 0 1 100%;
     height: 4.5rem;
     margin: 4.5rem 0 0 0;
-        
 }
 
-.button input {
+.button [type="submit"] {
     width: 100%;
     height: 100%;
     border: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    outline: none;
+    color: white;
+    background: linear-gradient(135deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
+    justify-content: center;
+    cursor: pointer;
+}
+
+[for="gpi"], [for="gc"], [for="gbwp"], [for="gbh"], [for="gwp"], [for="gh"], [for="gu"] {
+    display: inline-block;
+    width: 13%;
+    height: 2rem;
+    margin-right: 3.6rem;
     font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: 0.1rem;
     outline: none;
     color: white;
-    background: linear-gradient(135deg, #4568dc, #b06ab3);
     justify-content: center;
+    text-align: center;
     cursor: pointer;
 }
 
-.box {
-    position: relative;
-    /* flex: 0 1 50%; */
+[for="gpi"], [for="gc"], [for="gbwp"], [for="gbh"], [for="gwp"], [for="gh"], [for="gu"] {
+    background: linear-gradient(135deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
+}
+
+#gpi, #gc, #gwp, #gh, #gu {
+    display: none;
+}
+/*
+[for="gpi"] {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+*/
+/* Go to personal information section */
+
+#gpi:checked ~ .contact, #gpi:checked ~ .workplace, #gpi:checked ~ .house, #gpi:checked ~ .user {
+    display: none;
+}
+
+#gpi:checked ~ .personal-information {
+    display: flex;
+}
+
+#gpi:checked ~ [for="gpi"] {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+/* Go to contact section */
+#gc:checked ~ .personal-information, #gc:checked ~ .workplace, #gc:checked ~ .house, #gc:checked ~ .user {
+    display: none;
+}
+
+#gc:checked ~ .contact {
+    display: flex;
+}
+
+#gc:checked ~ [for="gc"] {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+/* Go to workplace section */
+
+#gwp:checked ~ .personal-information, #gwp:checked ~ .contact, #gwp:checked ~ .house, #gwp:checked ~ .user {
+    display: none;
+}
+
+#gwp:checked ~ .workplace {
+    display: flex;
+}
+
+#gwp:checked ~ [for="gwp"] {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+/* Go to house section */
+
+#gh:checked ~ .personal-information, #gh:checked ~ .workplace, #gh:checked ~ .contact, #gh:checked ~ .user {
+    display: none;
+}
+
+#gh:checked ~ .house{
+    display: flex;
+}
+
+#gh:checked ~ [for="gh"] {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+/* Go to user section */
+
+#gu:checked ~ .personal-information, #gu:checked ~ .workplace, #gu:checked ~ .house, #gu:checked ~ .contact {
+    display: none;
+}
+
+#gu:checked ~ .user {
+    display: flex;
+}
+
+#gu:checked ~ [for="gu"] {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+/* Try to understand why you had to do what is going next after make the template work in all pages */
+
+.marital-status {
+    display: flex;
+    flex: 0 1 100%;
 }
 
 .personal-information .gender {
-    flex: 0 1 100%;
-}
-
-.personal-information label:not(.gender label), .contact label, .workplace label, .house label, .user label {
     display: flex;
     flex: 0 1 100%;
 }
 
-.personal-information input:not(.gender input), .contact input, .workplace input, .house input, .user input {
+.personal-information .placeholder label, .contact label, .workplace label, .house label, .user label:not(.show) {
     display: flex;
     flex: 0 1 100%;
 }
 
-.pers-info-title, .contact-title, .workplace-title, .house-title, .user-title {
+.personal-information .placeholder input, .contact input, .workplace input, .house input, .user input:not(#show) {
+    display: flex;
     flex: 0 1 100%;
+}
+
+/* This part is diferent of the standarad, could be changed after some implementations */
+
+.container form .user .entire-row #user {
+    width: calc(100% / 2 - 2rem);
+    flex: none;
+}
+
+.container form .user .entire-row {
+    width: 100%;
+}
+
+.container form .user .entire-row {
+    width: 100%;
 }
 
 /* .personal-information, .contact, .workplace, .house, .user {
     display: none;
 } */
 
-.contact, .workplace, .house, .user {
+ .contact, .workplace, .house, .user {
     display: none;
 }
 
+.placeholder {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+    position: relative;
+}
 
-label {
+.placeholder label:not(.show) {
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    bottom: 2rem;
+    left: 1.2rem;
     pointer-events: none;
     transition: -5s;
 }
 
-input:focus ~ label {
-    top: -2rem;
+.placeholder input:not(#show):focus + label, .placeholder input:not(#show):valid + label {
+    bottom: auto;
+    top: 10px;
     font-size: 12px;
+}
+
+.placeholder input:not(#show):focus, .placeholder input:not(#show):valid {
+    bottom: auto;
+    top: 10px;
+    font-size: 16px;
+}
+
+.show {
+    position: absolute;
+    display: none;
+    bottom: 1rem;
+    right: 1.1rem;
+    line-height: 4rem;
+    cursor: pointer;
+}
+
+#show {
+    display: none;
+}
+
+.container .placeholder input:focus ~ .show, .container .placeholder input:valid ~ .show {
+    display: block;
+}
+
+.container form .user .placeholder #password {
+    padding: 3.2rem 7.3rem 0 1rem;
+}
+
+.container form .user .placeholder #password-confirmation {
+    padding: 3.2rem 7.3rem 0 1rem;
 }
 
 /*
@@ -175,4 +366,3 @@ input:focus ~ label {
 .fright {
     float: right;
 }
-*/

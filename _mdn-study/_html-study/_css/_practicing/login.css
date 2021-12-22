@@ -16,11 +16,11 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #4568dc, #b06ab3);
+    background: linear-gradient(135deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
     font-size: 16px;
 }
 
-.container {
+#container {
     max-width: 40rem;
     width: 100%;
     min-height: 30rem;
@@ -30,9 +30,9 @@ body {
     background-color: white;
 }
 
-.container .title {
+#container .title {
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 800;
     margin-bottom: 3rem;
 }
 
@@ -54,17 +54,29 @@ body {
     flex: 0 1 100%;
 }
 
-.box input {
+.box #user, .box #password {
     height: 4rem;
-    padding: 3.2rem 8rem 0 1rem;
     margin-bottom: 1rem;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    border-bottom-width: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.box #user {
+    padding: 3.2rem 1rem 0 1rem;
+}
+
+.box #password {
+    padding: 3.2rem 7.2rem 0 1rem;
 }
 
 .show {
     position: absolute;
     display: none;
     bottom: 2rem;
-    right: 1rem;
+    right: 1.2rem;
     line-height: 4rem;
     cursor: pointer;
 }
@@ -81,15 +93,19 @@ body {
     display: none;
 }
 
-.box input:focus + label, .box input:focus, .box input:valid + label, .box input:valid {
+#container .box input:focus + label, #container .box input:focus, #container .box input:valid + label, #container .box input:valid {
     height: 6rem;
     bottom: auto;
     top: 10px;
     font-size: 12px;
 }
 
-.box input:focus ~ .show, .box input:valid ~ .show {
+#container .box input:focus ~ .show, #container .box input:valid ~ .show {
     display: block;
+}
+
+#container .box input:focus, #container .box input:valid {
+    border-color: rgba(110,123,251,1);
 }
 
 .button {
@@ -104,15 +120,16 @@ body {
     height: 100%;
     color: white;
     cursor: pointer;
+    font-weight: 700;
     border: none;
     outline: none;
     letter-spacing: 0.1rem;
-    background: linear-gradient(135deg, #4568dc, #b06ab3);
+    background: linear-gradient(135deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
 }
 
 a {
     text-decoration: none;
-    color: #4568dc;
+    color: rgba(110,123,251,1);
 }
 
 p {
