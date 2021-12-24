@@ -20,6 +20,16 @@ body {
     font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+    color: rgba(110,123,251,1);
+}
+
+p {
+    display: block;
+    text-align: center;
+}
+
 #container {
     max-width: 40rem;
     width: 100%;
@@ -72,6 +82,28 @@ body {
     padding: 3.2rem 7.2rem 0 1rem;
 }
 
+#container .box input:focus + label, #container .box input:valid + label {
+    height: 6rem;
+    bottom: auto;
+    top: 10px;
+    font-size: 12px;
+}
+
+#container .box input:focus, #container .box input:valid {
+    height: 6rem;
+    bottom: auto;
+    top: 10px;
+    font-size: 16px;
+}
+
+#container .box input:focus ~ .show, #container .box input:valid ~ .show {
+    display: block;
+}
+
+#container .box input:focus, #container .box input:valid {
+    border-color: rgba(110,123,251,1);
+}
+
 .show {
     position: absolute;
     display: none;
@@ -93,21 +125,6 @@ body {
     display: none;
 }
 
-#container .box input:focus + label, #container .box input:focus, #container .box input:valid + label, #container .box input:valid {
-    height: 6rem;
-    bottom: auto;
-    top: 10px;
-    font-size: 12px;
-}
-
-#container .box input:focus ~ .show, #container .box input:valid ~ .show {
-    display: block;
-}
-
-#container .box input:focus, #container .box input:valid {
-    border-color: rgba(110,123,251,1);
-}
-
 .button {
     display: flex;
     flex: 0 1 100%;
@@ -125,14 +142,4 @@ body {
     outline: none;
     letter-spacing: 0.1rem;
     background: linear-gradient(135deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
-}
-
-a {
-    text-decoration: none;
-    color: rgba(110,123,251,1);
-}
-
-p {
-    display: block;
-    text-align: center;
 }

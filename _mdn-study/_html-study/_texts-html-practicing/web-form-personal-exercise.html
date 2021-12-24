@@ -11,18 +11,29 @@
     <!-- 
         Main references: https://www.youtube.com/watch?v=okbByPWS1Xc, https://youtu.be/VCsNIRXNsmY
         My main goal was to try to make a form how "professionals" usually do, I learned some things very interesting like how innapropriated is to use placeholder in a UX point of view, I learned a hack to fake a click interaction using checkbox and radio attributtes (I used that to make a "nav-bar" while I i'm not studying JavaScript),  and I needed to study CSS flexbox a bit.
-        
+    -->
+
+    <!-- 
         Notes:
-        - Organize your code. Study the organization section of MDN articles.
-        - Some stuffs won't work yet, because you don't know how to use JavaScript yet.
+        - [X] = Solved, [ ] = Not solved;
+        - It has a bad UX. The button only shows in the last section, therefore if the user is out of it, he won't get to see what is missing to register data; [ ]
+        - Is better to use arrows or do that the user only could go to another section if he has filled all required inputs; [ ] 
+        - It needs responsivity; [ ]
+        - It need validations; [ ]
+        - The button that indicate other gender isn't working as I wanted; [ ]
+        - The show password button doesn't works, because you haven't learned JavaScript yet; [ ]
     -->
 
     <div class="container">
         <div class="title">Formulário de cadastro</div>
-        <!-- <div>Campos necessário são seguidos de <strong><abbr title="minlength="1" required" arial-label="required  ">*</abbr></strong>.</div> -->
+        <!-- 
+            I could add it in each section:
+            <div>Campos necessário são seguidos de <strong><abbr title="required" arial-label="required">*</abbr></strong>.</div>
+        -->
         <form action="">
 
             <!-- Navbar -->
+            
             <input type="radio" id="gpi" name="other-section" checked>
             <label for="gpi"></label>
             <input type="radio" id="gc" name="other-section">
@@ -34,7 +45,7 @@
             <input type="radio" id="gu" name="other-section">
             <label for="gu"></label>
 
-            <!-- First step (Personal information) -->
+            <!-- First section (personal information) -->
                 
             <section class="personal-information">
                 <div class="pers-info-title">Informações pessoais</div>
@@ -88,10 +99,13 @@
                         <label for="male">Masculino</label>
                         <input type="radio" id="female" name="gender">
                         <label for="female">Feminino</label>
-                        <!-- I don't know how to work with that yet
-                        <input type="radio" name="gender">
-                        <label for="other">Outro (Qual?)</label>
-                        <input type="text" id="other" name="gender">
+                        <!-- 
+                            I can use it later:
+
+                            <input type="radio" name="gender">
+                            <label for="other">Outro (Qual?)</label>
+                            <input type="text" id="other" name="gender">
+
                         -->
                         <input type="radio" id="notsay" name="gender">
                         <label for="notsay">Prefiro não dizer</label>
@@ -99,7 +113,7 @@
                 </div>
             </section>
 
-            <!-- Second step (Contact)-->
+            <!-- Second section (contact)-->
 
             <section class="contact">
                 <div class="contact-title">Contato</div>
@@ -133,7 +147,7 @@
                 </div>
             </section>
 
-            <!-- Third step (Workplace) -->
+            <!-- Third section (workplace) -->
 
             <section class="workplace">
                 <div class="workplace-title">Endereço de seu local de trabalho</div>
@@ -181,7 +195,7 @@
                 </div>
             </section>
 
-            <!-- Fourth step (House) -->
+            <!-- Fourth section (house) -->
 
             <section class="house">
                 <div class="house-title">Seu endereço</div>
@@ -229,7 +243,7 @@
                 </div>
             </section>
 
-            <!-- Fift step (User) -->
+            <!-- Fifth section (user) -->
 
             <section class="user">
                 <div class="user-title">Informações de usuário</div>
@@ -258,11 +272,13 @@
                         <input type="checked" id="show">
                     </div>
                 </div>
-                <div class="button">
-                    <input type="submit" value="Registre-se">
-                    
-                </div>
             </section>
+
+            <!-- Register button -->
+
+            <div class="button">
+                <input type="submit" value="Registre-se">
+            </div>
         </form>
     </div>
 </body>

@@ -1,12 +1,24 @@
 @charset "UTF-8";
 
 /*
-    Main references: https://www.youtube.com/watch?v=okbByPWS1Xc, https://youtu.be/VCsNIRXNsmY
-    My main goal was to try to make a form how "professionals" usually do, I learned some things very interesting like how innapropriated is to use placeholder in a UX point of view, I learned a hack to fake a click interaction using checkbox and radio attributtes (I used that to make a "nav-bar" while I i'm not studying JavaScript),  and I needed to study CSS flexbox a bit.
-        
     Notes:
-    - Organize your code. Study the organization section of MDN articles.
-    - Some stuffs won't work yet, because you don't know how to use JavaScript yet.
+    - 1rem = 10px;
+    - I've tried to keep some spacing proportions, but I think that's missing a lot.
+    - Pay attention to indents of commentaries, with them, you will be capable of knowing what the commentary encompasses if something is a subsection or not, etc.
+*/
+
+/*
+    Main sections commentaries:
+    - Stylizations of titles and subtitles
+    - Stylization of sections
+    - Stylization of content boxes
+    - Stylization of some inputs
+    - Stylization of some labels
+    - Stylization of register button
+    - Stylization of placeholder
+    - Stylization of the show password button
+    - Specific stylizations
+    - Stylization of section change button
 */
 
 * {
@@ -38,6 +50,8 @@ body {
     padding: 3rem 4rem;
 }
 
+/*  Stylizations of titles and subtitles */
+
 .container .title {
     position: relative;
     font-size: 3rem;
@@ -55,9 +69,6 @@ body {
     background: linear-gradient(135deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
 }
 
-/* .personal-information, .contact, .workplace, .house, .user */
-/* .pers-info-title, .contact-title, .workplace-title, .house-title, .user-title*/
-
 .pers-info-title, .contact-title, .workplace-title, .house-title, .user-title {
     font-size: 2rem;
     font-weight: 700;
@@ -65,15 +76,29 @@ body {
     flex: 0 1 100%;
 }
 
+.personal-information .box legend, .contact .box legend, .workplace .box legend, .house .box legend, .user .box legend, .personal-information .birthday, .personal-information .marital-status {
+    display: flex;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+form .gender .gender-title {
+    flex: 0 1 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/*  Stylization of sections */
+
 .personal-information, .contact, .workplace, .house, .user {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-form .personal-information, form .contact, form .workplace, form .house, form .user {
     margin: 2rem 0 1.2rem 0;
 }
+
+/*  Stylization of content boxes */
 
 form .personal-information .box, form .contact .box, form .workplace .box, form .house .box, form .user .box {
     display: flex;
@@ -81,6 +106,8 @@ form .personal-information .box, form .contact .box, form .workplace .box, form 
     width: calc(100% / 2 - 2rem);
     margin-bottom: 1rem;
 }
+
+/* Stylization of some inputs */
 
 .personal-information .placeholder input, .contact .placeholder input, .workplace .placeholder input, .house .placeholder input, .user .placeholder input:not(#show) {
     padding: 3.2rem 1rem 0 1rem;
@@ -104,39 +131,50 @@ form .personal-information .box, form .contact .box, form .workplace .box, form 
     font-size: 16px;
 }
 
-.gender .options {
+.personal-information .placeholder input, .contact input, .workplace input, .house input, .user input:not(#show) {
     display: flex;
-    flex: 0 70%;
-    justify-content: space-between;
-}
-
-.gender label {
-    margin-left: -7rem; 
+    flex: 0 1 100%;
 }
 
 .gender input {
     margin-left: 1rem;
 }
 
+.gender .options {
+    display: flex;
+    flex: 0 70%;
+    justify-content: space-between;
+}
+
+/*      :focus e :valid. Change the color by click */
+
 .personal-information .box input:focus, .personal-information .box #marital-status:focus, .personal-information .box #marital-status:valid, .personal-information .box #birthday:focus, .personal-information .box #birthday:valid, .personal-information .box input:valid, .contact .box input:focus, .contact .box input:valid, .workplace .box input:focus, .workplace .box input:valid, .house .box input:focus, .house .box input:valid, .user .box input:not(#show):focus, .user .box input:not(#show):valid {
     border-color: rgba(110,123,251,1);
 }
 
-.personal-information .box legend, .contact .box legend, .workplace .box legend, .house .box legend, .user .box legend, .personal-information .birthday, .personal-information .marital-status {
-    display: flex;
-    font-weight: 600;
-    margin-bottom: 1rem;
+/*  Stylization of some labels */
+
+.gender label {
+    margin-left: -7rem; 
 }
 
-form .gender .gender-title {
+.personal-information .placeholder label, .contact label, .workplace label, .house label, .user label:not(.show) {
+    display: flex;
     flex: 0 1 100%;
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
 }
+
+.placeholder label:not(.show) {
+    position: absolute;
+    bottom: 2rem;
+    left: 1.2rem;
+    pointer-events: none;
+    transition: -5s;
+}
+
+/*  Stylization of register button */
 
 .button {
-    display: flex;
+    display: none;
     flex: 0 1 100%;
     height: 4.5rem;
     margin: 4.5rem 0 0 0;
@@ -156,146 +194,7 @@ form .gender .gender-title {
     cursor: pointer;
 }
 
-[for="gpi"], [for="gc"], [for="gbwp"], [for="gbh"], [for="gwp"], [for="gh"], [for="gu"] {
-    display: inline-block;
-    width: 13%;
-    height: 2rem;
-    margin-right: 3.6rem;
-    font-size: 1.8rem;
-    font-weight: 500;
-    letter-spacing: 0.1rem;
-    outline: none;
-    color: white;
-    justify-content: center;
-    text-align: center;
-    cursor: pointer;
-}
-
-[for="gpi"], [for="gc"], [for="gbwp"], [for="gbh"], [for="gwp"], [for="gh"], [for="gu"] {
-    background: linear-gradient(135deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
-}
-
-#gpi, #gc, #gwp, #gh, #gu {
-    display: none;
-}
-/*
-[for="gpi"] {
-    background: linear-gradient(135deg, #000428, #004e92);
-}
-*/
-/* Go to personal information section */
-
-#gpi:checked ~ .contact, #gpi:checked ~ .workplace, #gpi:checked ~ .house, #gpi:checked ~ .user {
-    display: none;
-}
-
-#gpi:checked ~ .personal-information {
-    display: flex;
-}
-
-#gpi:checked ~ [for="gpi"] {
-    background: linear-gradient(135deg, #000428, #004e92);
-}
-
-/* Go to contact section */
-#gc:checked ~ .personal-information, #gc:checked ~ .workplace, #gc:checked ~ .house, #gc:checked ~ .user {
-    display: none;
-}
-
-#gc:checked ~ .contact {
-    display: flex;
-}
-
-#gc:checked ~ [for="gc"] {
-    background: linear-gradient(135deg, #000428, #004e92);
-}
-
-/* Go to workplace section */
-
-#gwp:checked ~ .personal-information, #gwp:checked ~ .contact, #gwp:checked ~ .house, #gwp:checked ~ .user {
-    display: none;
-}
-
-#gwp:checked ~ .workplace {
-    display: flex;
-}
-
-#gwp:checked ~ [for="gwp"] {
-    background: linear-gradient(135deg, #000428, #004e92);
-}
-
-/* Go to house section */
-
-#gh:checked ~ .personal-information, #gh:checked ~ .workplace, #gh:checked ~ .contact, #gh:checked ~ .user {
-    display: none;
-}
-
-#gh:checked ~ .house{
-    display: flex;
-}
-
-#gh:checked ~ [for="gh"] {
-    background: linear-gradient(135deg, #000428, #004e92);
-}
-
-/* Go to user section */
-
-#gu:checked ~ .personal-information, #gu:checked ~ .workplace, #gu:checked ~ .house, #gu:checked ~ .contact {
-    display: none;
-}
-
-#gu:checked ~ .user {
-    display: flex;
-}
-
-#gu:checked ~ [for="gu"] {
-    background: linear-gradient(135deg, #000428, #004e92);
-}
-
-/* Try to understand why you had to do what is going next after make the template work in all pages */
-
-.marital-status {
-    display: flex;
-    flex: 0 1 100%;
-}
-
-.personal-information .gender {
-    display: flex;
-    flex: 0 1 100%;
-}
-
-.personal-information .placeholder label, .contact label, .workplace label, .house label, .user label:not(.show) {
-    display: flex;
-    flex: 0 1 100%;
-}
-
-.personal-information .placeholder input, .contact input, .workplace input, .house input, .user input:not(#show) {
-    display: flex;
-    flex: 0 1 100%;
-}
-
-/* This part is diferent of the standarad, could be changed after some implementations */
-
-.container form .user .entire-row #user {
-    width: calc(100% / 2 - 2rem);
-    flex: none;
-}
-
-.container form .user .entire-row {
-    width: 100%;
-}
-
-.container form .user .entire-row {
-    width: 100%;
-}
-
-/* .personal-information, .contact, .workplace, .house, .user {
-    display: none;
-} */
-
- .contact, .workplace, .house, .user {
-    display: none;
-}
+/* Stylization of placeholder */
 
 .placeholder {
     display: flex;
@@ -304,25 +203,8 @@ form .gender .gender-title {
     position: relative;
 }
 
-.placeholder label:not(.show) {
-    position: absolute;
-    bottom: 2rem;
-    left: 1.2rem;
-    pointer-events: none;
-    transition: -5s;
-}
-
-.placeholder input:not(#show):focus + label, .placeholder input:not(#show):valid + label {
-    bottom: auto;
-    top: 10px;
-    font-size: 12px;
-}
-
-.placeholder input:not(#show):focus, .placeholder input:not(#show):valid {
-    bottom: auto;
-    top: 10px;
-    font-size: 16px;
-}
+/*  Stylization of the show password button */
+/*      Obs.: I tried to do the spacing between text and the show password "button" to be equal to 10px */
 
 .show {
     position: absolute;
@@ -337,9 +219,27 @@ form .gender .gender-title {
     display: none;
 }
 
+/*      :focus and :valid. They do the text go upward. */
+
+.placeholder input:not(#show):focus + label, .placeholder input:not(#show):valid + label {
+    bottom: auto;
+    top: 10px;
+    font-size: 12px;
+}
+
+.placeholder input:not(#show):focus, .placeholder input:not(#show):valid {
+    bottom: auto;
+    top: 10px;
+    font-size: 16px;
+}
+
 .container .placeholder input:focus ~ .show, .container .placeholder input:valid ~ .show {
     display: block;
 }
+
+/*  Specific stylizations */
+/*      Don't let the text get close to the show password button */
+/*          Obs.: I tried to do the spacing between text and the show password "button" to be equal to 10px */
 
 .container form .user .placeholder #password {
     padding: 3.2rem 7.3rem 0 1rem;
@@ -349,20 +249,146 @@ form .gender .gender-title {
     padding: 3.2rem 7.3rem 0 1rem;
 }
 
+/*      They do that an entire row be filled, don't giving space to any block stay aside of it */
+
+.container form .user .entire-row #user {
+    width: calc(100% / 2 - 2rem);
+    flex: none;
+}
+
+.container form .user .entire-row {
+    width: 100%;
+}
+
+/*      Disable sections */
+
+.contact, .workplace, .house, .user {
+    display: none;
+}
+
+/*      I should try to understand the reason that I needed to do it because I didn't understand the origin of that */
+
+.marital-status {
+    display: flex;
+    flex: 0 1 100%;
+}
+
+/*      They do the box fill the entire row */
+
+.personal-information .gender {
+    display: flex;
+    flex: 0 1 100%;
+}
+
+/*  Stylization of section change button */
+/*      Disable inputs */
+
+#gpi, #gc, #gwp, #gh, #gu {
+    display: none;
+}
+
+/*      Button stylization */
+
+[for="gpi"], [for="gc"], [for="gbwp"], [for="gbh"], [for="gwp"], [for="gh"], [for="gu"] {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 2rem;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+
+/*          Button color stylization */
+
+[for="gpi"], [for="gc"], [for="gbwp"], [for="gbh"], [for="gwp"], [for="gh"], [for="gu"] {
+    background: linear-gradient(135deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
+}
+
+#gpi:checked ~ [for="gpi"] {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+#gc:checked ~ [for="gc"] {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+#gwp:checked ~ [for="gwp"] {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+#gh:checked ~ [for="gh"] {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+#gu:checked ~ [for="gu"] {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+/*      Go to personal information secetion */
+
+#gpi:checked ~ .contact, #gpi:checked ~ .workplace, #gpi:checked ~ .house, #gpi:checked ~ .user, #gpi:checked ~ .button {
+    display: none;
+}
+
+#gpi:checked ~ .personal-information {
+    display: flex;
+}
+
+/*      Go to contact section */
+
+#gc:checked ~ .personal-information, #gc:checked ~ .workplace, #gc:checked ~ .house, #gc:checked ~ .user, #gc:checked ~ .button {
+    display: none;
+}
+
+#gc:checked ~ .contact {
+    display: flex;
+}
+
+/*      Go to workplace section */
+
+#gwp:checked ~ .personal-information, #gwp:checked ~ .contact, #gwp:checked ~ .house, #gwp:checked ~ .user, #gwp:checked ~ .button {
+    display: none;
+}
+
+#gwp:checked ~ .workplace {
+    display: flex;
+}
+
+/*      Go to house section */
+
+#gh:checked ~ .personal-information, #gh:checked ~ .workplace, #gh:checked ~ .contact, #gh:checked ~ .user, #gh:checked ~ .button {
+    display: none;
+}
+
+#gh:checked ~ .house {
+    display: flex;
+}
+
+/*      Go to user section */
+
+#gu:checked ~ .personal-information, #gu:checked ~ .workplace, #gu:checked ~ .house, #gu:checked ~ .contact {
+    display: none;
+}
+
+#gu:checked ~ .user, #gu:checked ~ .button {
+    display: flex;
+}
+
 /*
-#test {
-    display: none;
-}
+    The code next is just in case of I forget how the hack that fakes an click interaction works.
+    O código a seguir é somente para o caso de eu esquecer como funciona o hack que finge uma interação de click.
 
-#test:checked ~ form > .logoff, #test:checked ~ .fright  {
-    display: block;
-}
+    #test {
+        display: none;
+    }
 
-#test:checked ~ form > .login, #test:checked, #test:checked ~ [for="test"] {
-    display: none;
+    #test:checked ~ form > .logoff, #test:checked ~ .fright  {
+        display: block;
+    }
 }
-
-
-.fright {
-    float: right;
-}
+*/
