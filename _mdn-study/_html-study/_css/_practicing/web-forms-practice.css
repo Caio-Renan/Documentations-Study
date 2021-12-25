@@ -409,7 +409,7 @@ textarea {
 /* The HTML5 input types */
 /* Runs in more than one form */
 
-.example15, .example16, .example17, .example18, .example19  {
+.example15, .example16, .example17, .example18, .example19, .example20, .example21  {
     border: 1px solid gray;
     border-radius: 1rem;
     margin: 0 auto;
@@ -420,11 +420,11 @@ textarea {
     list-style-type: none;
 }
 
-.example15 body, .example15 h1, .example15 h2, .example15 h3, .example16 body, .example16 h1, .example16 h2, .example16 h3, .example17 body, .example17 h1, .example17 h2, .example17 h3, .example18 body, .example18 h1, .example18 h2, .example18 h3, .example19 body, .example19 h1, .example19 h2, .example19 h3 {
+.example15 body, .example15 h1, .example15 h2, .example15 h3, .example16 body, .example16 h1, .example16 h2, .example16 h3, .example17 body, .example17 h1, .example17 h2, .example17 h3, .example18 body, .example18 h1, .example18 h2, .example18 h3, .example19 body, .example19 h1, .example19 h2, .example19 h3, .example20 body, .example20 h1, .example20 h2, .example20 h3 {
     counter-reset: none;
 }
 
-.example15 h1::before, .example15 h2::before, .example15 h3::before, .example16 h1::before, .example16 h2::before, .example16 h2::before, .example16 h3::before, .example17 h1::before, .example17 h2::before, .example17 h2::before, .example17 h3::before, .example18 h1::before, .example18 h2::before, .example18 h2::before, .example18 h3::before, .example19 h1::before, .example19 h2::before, .example19 h2::before, .example19 h3::before  {
+.example15 h1::before, .example15 h2::before, .example15 h3::before, .example16 h1::before, .example16 h2::before, .example16 h2::before, .example16 h3::before, .example17 h1::before, .example17 h2::before, .example17 h2::before, .example17 h3::before, .example18 h1::before, .example18 h2::before, .example18 h2::before, .example18 h3::before, .example19 h1::before, .example19 h2::before, .example19 h2::before, .example19 h3::before, .example20 h1::before, .example20 h2::before, .example20 h2::before, .example20 h3::before  {
     counter-increment: none;
     content: none;
 }
@@ -577,6 +577,83 @@ textarea {
 }
 
 .example19 [type="submit"]{
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* Seventh form */
+
+.example20 {
+    width: 60rem;
+}
+
+.example20 [type="submit"]{
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* Eighth form */
+
+.example21 {
+    width: 30rem;
+}
+
+.example21 input:not([type="submit"]) {
+    width: 20rem;
+    margin: 3rem;
+}
+
+.example21 [type="submit"]{
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.example21 label {
+    display: block;
+    margin: 2rem 0;
+}
+
+/* Other form controls */
+/* Runs in more than one form */
+
+.examples-container body, .examples-container h1, .examples-container h2, .examples-container h3 {
+    counter-reset: none;
+}
+
+.examples-container h1::before, .examples-container h2::before, .examples-container h3::before, .examples-container h4::before {
+    counter-increment: none;
+    content: none;
+}
+
+.example22, .example22 section {
+    border: 1px solid gray;
+    border-radius: 1rem;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.example22 {
+    width: 45rem;
+}
+
+.example22 section {
+    width: 35rem;
+}
+
+.example22 textarea {
+    margin-left: 3rem;
+}
+
+.example22 label {
+    display: block;
+    margin: 2rem 0 2rem 3rem;
+}
+
+.example22 [type="submit"] {
     display: block;
     padding: 1rem;
     margin: 0 auto;
