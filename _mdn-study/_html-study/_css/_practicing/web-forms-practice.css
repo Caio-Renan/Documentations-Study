@@ -409,7 +409,7 @@ textarea {
 /* The HTML5 input types */
 /* Runs in more than one form */
 
-.example15, .example16, .example17, .example18  {
+.example15, .example16, .example17, .example18, .example19  {
     border: 1px solid gray;
     border-radius: 1rem;
     margin: 0 auto;
@@ -420,11 +420,11 @@ textarea {
     list-style-type: none;
 }
 
-.example15 body, .example15 h1, .example15 h2, .example15 h3, .example16 body, .example16 h1, .example16 h2, .example16 h3, .example17 body, .example17 h1, .example17 h2, .example17 h3, .example18 body, .example18 h1, .example18 h2, .example18 h3 {
+.example15 body, .example15 h1, .example15 h2, .example15 h3, .example16 body, .example16 h1, .example16 h2, .example16 h3, .example17 body, .example17 h1, .example17 h2, .example17 h3, .example18 body, .example18 h1, .example18 h2, .example18 h3, .example19 body, .example19 h1, .example19 h2, .example19 h3 {
     counter-reset: none;
 }
 
-.example15 h1::before, .example15 h2::before, .example15 h3::before, .example16 h1::before, .example16 h2::before, .example16 h2::before, .example16 h3::before, .example17 h1::before, .example17 h2::before, .example17 h2::before, .example17 h3::before, .example18 h1::before, .example18 h2::before, .example18 h2::before, .example18 h3::before  {
+.example15 h1::before, .example15 h2::before, .example15 h3::before, .example16 h1::before, .example16 h2::before, .example16 h2::before, .example16 h3::before, .example17 h1::before, .example17 h2::before, .example17 h2::before, .example17 h3::before, .example18 h1::before, .example18 h2::before, .example18 h2::before, .example18 h3::before, .example19 h1::before, .example19 h2::before, .example19 h2::before, .example19 h3::before  {
     counter-increment: none;
     content: none;
 }
@@ -552,4 +552,32 @@ textarea {
     display: inline-block;
     padding: 0.5rem;
     margin: 0 2rem;
+}
+
+/* Fifth form */
+
+.example18 {
+    width: 65rem;
+}
+
+.example18 input:not([type="submit"]) {
+    width: 6rem;
+}
+
+.example18 [type="submit"]{
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* Sixth form */
+
+.example19 {
+    width: 45rem;
+}
+
+.example19 [type="submit"]{
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
 }
