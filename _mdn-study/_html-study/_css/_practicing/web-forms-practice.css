@@ -596,6 +596,15 @@ textarea {
 
 /* Eighth form */
 
+.example21 body, .example21 h1, .example21 h2, .example21 h3 {
+    counter-reset: none;
+}
+
+.example21 h1::before, .example21 h2::before, .example21 h3::before, .example h4::before {
+    counter-increment: none;
+    content: none;
+}
+
 .example21 {
     width: 30rem;
 }
@@ -628,12 +637,24 @@ textarea {
     content: none;
 }
 
-.example22, .example22 section {
+.example23 [type="submit"], .example24 [type="submit"], .example25 [type="submit"]{
+    display: block;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+/* First form */
+
+.example22, .example22 section, .example23, .example24, .example25 {
     border: 1px solid gray;
     border-radius: 1rem;
     margin: 0 auto;
     padding: 2rem;
     margin-bottom: 2rem;
+}
+
+.example23, .example24, .example25 {
+    width: 50rem;
 }
 
 .example22 {

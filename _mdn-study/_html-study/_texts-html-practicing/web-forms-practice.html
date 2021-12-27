@@ -582,6 +582,7 @@
         </form>
         <p><strong>Eighth form:</strong></p>
         <form action="" class="example21">
+            <h1>Color value</h1>
             <p>
                 <label for="">Select your favorite color</label>
                 <input type="color">
@@ -627,6 +628,114 @@
                     <input type="submit" value="Send now">
                 </p>
             </form>
+            <p><strong>Second form:</strong></p>
+            <form action="" class="example23">
+                <label for="js-framework">What is your favorite JavaScript framework?</label>
+                <select name="js-framework" id="js-framework">
+                    <option value="notreplied" selected></option>
+                    <option>Bootstrap</option>
+                    <option>AngularJS</option>
+                    <option>Ember.js</option>
+                </select>
+                <div class="button">
+                    <input type="submit" value="Send now">
+                </div>
+            </form>
+            <p><strong>Third form:</strong></p>
+            <form action="" class="example24">
+                <h1>Using optgroup tag</h1>
+                <h2>Without label attribute inside the optgroup tag</h2>
+                <label for="js-framework">What is your favorites frameworks?</label>
+                <select name="js-framework" id="js-framework">
+                    <optgroup>
+                        <option value="notreplied" selected>-------</option>
+                        <option>Bootstrap</option>
+                        <option>AngularJS</option>
+                        <option>Ember.js</option>
+                    </optgroup>
+                    <optgroup>
+                        <option value="notreplied2" selected>-------</option>
+                        <option value="option1">Semantic UI</option>
+                        <option value="option2">Pure</option>
+                        <option value="option3">Miligram</option>
+                    </optgroup>
+                </select>
+                <h2>With label attribute inside the optgroup tag</h2>
+                <label for="js-framework">What is your favorites frameworks?</label>
+                <select name="js-framework" id="js-framework">
+                    <optgroup label="JavaScript frameworks">
+                        <option value="notreplied" selected>-------</option>
+                        <option>Bootstrap</option>
+                        <option>AngularJS</option>
+                        <option>Ember.js</option>
+                    </optgroup>
+                    <optgroup label="CSS frameworks">
+                        <option value="notreplied2" selected>-------</option>
+                        <option value="option1">Semantic UI</option>
+                        <option value="option2">Pure</option>
+                        <option value="option3">Miligram</option>
+                    </optgroup>
+                </select>
+                <h2>Size attribute inside the select tag</h2>
+                <label for="food">What is your favorites food?</label>
+                <select name="food" id="food" size="10">
+                    <optgroup label="Fruits">
+                        <option value="notreplied" selected>-------</option>
+                        <option>Banana</option>
+                        <option>Apple</option>
+                        <option>Orange</option>
+                    </optgroup>
+                    <optgroup label="Pastas">
+                        <option value="notreplied2" selected>-------</option>
+                        <option>Pizza</option>
+                        <option>Noodle</option>
+                        <option>Spaghetti</option>
+                    </optgroup>
+                </select>
+                <div class="button">
+                    <input type="submit" value="Send now">
+                </div>
+            </form>
+            <p><strong>Fourth form</strong></p>
+            <form action="" class="example25">
+                <h1>Multiple boolean attribute</h1>
+                <label for="js-framework">What JavaScript framework do you intend to study?</label>
+                <select name="js-framework" id="js-framework" multiple>
+                    <option value="notreplied"></option>
+                    <option>Bootstrap</option>
+                    <option>AngularJS</option>
+                    <option>Ember.js</option>
+                </select>
+                <div class="button">
+                    <input type="submit" value="Send now">
+                </div>
+            </form>
+            <p><strong>Fifth form</strong></p>
+            <!--
+                Isn't working I don't know why
+
+            <form action="" class="example26">
+                <h1>Autocomplete box (using datalist and list inside the input box)</h1>
+                <h2>To newer browsers</h2>
+                <label for="food">What is your favorite food?</label>
+                <input type="text" id="food" list="food">
+                <datalist id="food">
+                    <option value="Pizza">Pizza</option>
+                    <option value="Noodle">Noodle</option>
+                    <option value="Spaghetti">Spaghetti</option>
+                </datalist>
+                <h2>To older browser</h2>
+                <label for="food-suggestion">What is your favorite food?</label>
+                <input type="text" id="food-suggestion" list="food">
+                <datalist>
+                    <label for="">What is your </label>
+                    <input type="text">
+                    <option>Pizza</option>
+                    <option>Noodle</option>
+                    <option>Spaghetti</option>
+                </datalist>
+            </form>
+            -->
         </div>
         <h2>Abstract and useful informations</h2>
         <ul>
