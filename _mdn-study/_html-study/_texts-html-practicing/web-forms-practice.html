@@ -22,7 +22,7 @@
         <h1>Your first form</h1>
         <p>Click or move the mouse on the labels tags to see the relationship.</p>
         <p><strong>First form:</strong></p>
-        <form class="example" action="">
+        <form class="example" action="" method="post">
             <ul>
                 <li>
                     <label for="name">Name: </label>
@@ -45,7 +45,7 @@
         </form>
         <p>Look the difference of not make the relationship between label and input using id and for attribute ahead (try to clik on the labels tags):</p>
         <p><strong>Second form:</strong></p>
-        <form class="example2" action="">
+        <form class="example2" action="" method="post">
             <ul>
                 <li>
                     <label>Name: </label>
@@ -62,6 +62,7 @@
         </form>
         <h2>Abstract and useful informations</h2>
         <ul>
+            <li>Widgets = form controls</li>
             <li>&lt;li&gt; is used to make the stylization easier;</li>
             <li><span class="notsure">Use 'for' attribute to link the label tag to input tag. For it, put the same name of the input ID. It's good because it create a relation between the label and the form control;</span></li>
             <li>The type attribute defines the way the &lt;input&gt; element appears and behaves.</li>
@@ -69,22 +70,29 @@
             <li>The main advantage of the &lt;button&gt; element is that the &lt;input&gt; element only allows plain text in its label whereas the &lt;button&gt; element allows full HTML content, allowing more complex, creative button content.</li>
             <li><span class="iwrote">You can make a relationship between the label tag and input tag nesting the input tag inside label tag, but it isn't considered the best way of do it.</span></li>
         </ul>
+        <h2>Take a look later</h2>
+        <ul>
+            <li><span class="seeya"><a href="https://www.smashingmagazine.com/2018/08/ux-html5-mobile-form-part-1/">UX Mobile Form</a></span></li>
+            <li><span class="seeya"><a href="https://www.smashingmagazine.com/2011/11/extensive-guide-web-form-usability/">WEB form usability</a></span></li>
+            <li><span class="seeya"><a href="https://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php">Best practices for buttons</a></span></li>
+            <li><span class="seeya"><a href="https://www.uxmatters.com/mt/archives/2010/03/pagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php">Multi-page forms</a></span></li>
+        </ul>
         <h1>How to structure a web form</h1>
         <p><strong>First form:</strong></p>
-        <form class="example3" action="">
+        <form class="example3" action="" method="post">
             <fieldset>
                 <legend>Test grades</legend>
                 <p>
                     <label for="math-grade">Mathematic</label>
-                    <input type="range" id="math-grade">
+                    <input type="range" id="math-grade" name="math_grade">
                 </p>
                 <p>
                     <label for="chemistry-grade">Chemistry</label>
-                    <input type="range" id="chemistry-gradee">
+                    <input type="range" id="chemistry-grade" name="chemistry-grade">
                 </p>
                 <p>
                     <label for="geo-grade">Geography</label>
-                    <input type="range" id="geo-grade">
+                    <input type="range" id="geo-grade" name="geo-grade">
                 </p>
             </fieldset>
             <fieldset>
@@ -104,47 +112,47 @@
             </fieldset>
         </form>
         <p><strong>Second form:</strong></p>
-        <form class="example4" action="">
+        <form class="example4" action="" method="post">
             <p>
                 <label for="username">Name: <abbr title="required" aria-label="required">*</abbr></label>
-                <input type="text" id="username" name="username">
+                <input type="text" id="username" name="user_name">
             </p>
         </form>
         <p><strong>Third form:</strong></p>
-        <form class="example5" action="">
+        <form class="example5" action="" method="post">
             <fieldset>
                 <legend>Name</legend>
                 <p>
                     <label for="your">Your: <abbr title="required" aria-label="required">*</abbr></label>
-                    <input type="text" id="your">
+                    <input type="text" id="your" name="user_name">
                 </p>
                 <p>
                     <label for="father">Father: </label>
-                    <input type="text" id="father">
+                    <input type="text" id="father" name="father_name">
                 </p>
                 <p>
                     <label for="mother">Mother: </label>
-                    <input type="text" id="mother">
+                    <input type="text" id="mother" name="mother_name">
                 </p>
             </fieldset>
         </form>
         <p><strong>Fourth form:</strong></p>
-        <form class="example6" action="">
+        <form class="example6" action="" method="post">
             <h1>Request form</h1>
             <p>Required fields are followed by <strong><abbr title="required" aria-label="required">*</abbr></strong>.</p>
             <section class="contact">
                 <h2>Contact information</h2>
                 <p>
                     <label for="name">Name:<strong><abbr title="required" aria-label="required">*</abbr></strong></label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" name="user_name">
                 </p>
                 <p>
                     <label for="email">Email:<strong><abbr title="required" aria-label="required">*</abbr></strong></label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" name="email">
                 </p>
                 <p>
                     <label for="tel-number">Number:<strong><abbr title="required" aria-label="required">*</abbr></strong></label>
-                    <input type="tel" id="tel-number">
+                    <input type="tel" id="tel-number" name="tel_number">
                 </p>
                 <fieldset>
                     <legend>Your current level</legend>
@@ -215,7 +223,7 @@
                 </p>
                 <p>
                     <label for="msg">Message:</label>
-                    <textarea name="" id="msg" placeholder="Let a message for us about what are you waiting for of us:"></textarea>
+                    <textarea name="message" id="msg" placeholder="Let a message for us about what are you waiting for of us:"></textarea>
                 </p>
             </section>
             <section>
@@ -226,15 +234,18 @@
         </form>
         <h2>Abstract and useful informations</h2>
         <ul>
+            <li><span class="iwrote">Never nest a form tag inside another form tag;</span></li>
             <li><span class="iwrote">Use fieldset tag to group of labels which have the same purpose;</span></li>
             <li><span class="iwrote">Always use legends tags if you want to make an form with more acessibility. Screen readers will read them first for each label and then each content inside the labels tags.</span></li>
-            <li><span class="iwrote">Use &lt;abbr title="required" aria-label="required"&gt;*&lt;/abbr&gt; to required fields.</span></li>
-            <li>Lists are recommended for structuring multiple checkboxes or radio buttons.</li>
+            <li><span class="iwrote">Labels are so useful to acessibility;</span></li>
+            <li><span class="iwrote">You can create a relations between label and a input if you nest the input inside the label tag;</span></li>
+            <li><span class="iwrote">Use &lt;abbr title="required" aria-label="required"&gt;*&lt;/abbr&gt; to required fields;</span></li>
+            <li>Lists are recommended for structuring multiple checkboxes or radio buttons;</li>
             <li>Each separate section of functionality should be contained in a separate <section> element, with &lt;fieldset&gt; elements to contain radio buttons.</li>
         </ul>
         <h1>Basic native form controls</h1>
         <p><strong>First form:</strong></p>
-        <form class="example7" action="">
+        <form class="example7" action="" method="post">
             <h1>Some input text boolean attributes</h1>
             <fieldset>
                 <legend>Bolean attributes</legend>
@@ -242,27 +253,27 @@
                     <ul>
                         <li>
                             <label for="readonly">Readonly: </label>
-                            <input type="text" id="readonly" readonly value="My vale can be changed using JavaScript or something similar.">
+                            <input type="text" id="readonly" name="reandoly" readonly value="My vale can be changed using JavaScript or something similar.">
                         </li>
                         <li>
                             <label for="disabled">Disabled: </label>
-                            <input type="text" id="disabled" disabled>
+                            <input type="text" id="disabled" name="disabled" disabled>
                         </li>
                         <li>
                             <label for="placeholder">Placeholder: </label>
-                            <input type="text" id="placeholder" placeholder="Hi! I'm an placeholder! I will desappear after your click here.">
+                            <input type="text" id="placeholder" name="placeholder" placeholder="Hi! I'm an placeholder! I will desappear after your click here.">
                         </li>
                         <li>
                             <label for="size">Size: </label>
-                            <input type="text" id="size" size="35" placeholder="I have an size boolean attribute equal to 35.">
+                            <input type="text" id="size" size="35" name="size" placeholder="I have an size boolean attribute equal to 35.">
                         </li>
                         <li>
                             <label for="max-length">Max-length: </label>
-                            <input type="text" id="max-length" maxlength="12" placeholder="You can only digit twelve characters.">
+                            <input type="text" id="max-length" name="max_length" maxlength="12" placeholder="You can only digit twelve characters.">
                         </li>
                         <li>
                             <label for="spell-checking">Spellcheck: </label>
-                            <input type="text" id="spell-checking" placeholder="It will only works on browsers that supports it." spellcheck>
+                            <input type="text" id="spell-checking" name="spell_checking" placeholder="It will only works on browsers that supports it." spellcheck>
                         </li>
                     </ul>
                 </section>
@@ -272,12 +283,12 @@
             </p>
         </form>
         <p><strong>Second form:</strong></p>
-        <form class="example8" action="">
+        <form class="example8" action="" method="post">
             <h1>Password attribute</h1>
             <ul>
                 <li>
                     <label for="password">Password: <strong><abbr title="required" aria-label="required">*</abbr></strong></label>
-                    <input type="password" id="password">
+                    <input type="password" id="password" name="password">
                 </li>
             </ul>
             <span>
@@ -285,13 +296,13 @@
             </span>
         </form>
         <p><strong>Third form:</strong></p>
-        <form class="example8" action="">
+        <form class="example8" action="" method="post">
             <h1>Hidden attribute</h1>
             <p>It's useful for whoever will receive the form and is commonly changed by JavaScript, user won't interact with that.</p>
             <ul>
                 <li>
                     <label for="hidden">Hidden: <strong><abbr title="required" aria-label="required">*</abbr></strong></label>
-                    <input type="hidden" id="hidden" value="123456">
+                    <input type="hidden" id="hidden" name="hidden" value="123456">
                 </li>
             </ul>
             <span>
@@ -299,7 +310,7 @@
             </span>
         </form>
         <p><strong>Fourth form:</strong></p>
-        <form class="example9" action="">
+        <form class="example9" action="" method="post">
             <section>
                 <h1>Checkbox attribute</h1>
                 <fieldset>
@@ -327,7 +338,7 @@
             </section>
         </form>
         <p><strong>Fifth form: </strong></p>
-        <form class="example10" action="">
+        <form class="example10" action="" method="post">
             <section>
                 <h1>Radio attribute</h1>
                 <fieldset>
@@ -359,18 +370,18 @@
             </section>
         </form>
         <p><strong>Sixth form: </strong></p>
-        <form class="example11" action="">
+        <form class="example11" action="" method="post">
             <h1>Image button</h1>
             <p>
-                <input type="image" alt="Click me!" src="../_images/blue-kinstone-menor.png">
+                <input type="image" name="image_selected" alt="Click me!" src="../_images/blue-kinstone-menor.png">
             </p>
         </form>
         <p><strong>Seventh form: </strong></p>
-        <form class="example12" action="">
+        <form class="example12" action="" method="post">
             <input type="file" name="file" id="file" accept="image/*" multiple>
         </form>
         <p><strong>Eighth form: </strong></p>
-        <form class="example13" action="">
+        <form class="example13" action="" method="post">
             <h1>Autofocus boolean attribute</h1>
             <section>
                 <fieldset>
@@ -413,15 +424,15 @@
         <h1>The HTML5 input types</h1>
         <p><strong>First form: </strong></p>
         <p>See what happen if you don't digit a valide email and try to send it.</p>
-        <form class="example14" action="">
+        <form class="example14" action="" method="post">
             <h1>Email value</h1>
             <p>
                 <label for="email">Your email: <strong><abbr title="required" arial-label="required">*</abbr></strong></label>
-                <input id="email" type="email">
+                <input id="email" type="email"name="email">
             </p>
             <p>
                 <label for="emails">Recovery emails: </label>
-                <input type="email" id="emails" placeholder="Separe them using commas" multiple>
+                <input type="email" id="emails" name="recovery_email" placeholder="Separe them using commas" multiple>
             </p>
             <fieldset>
                 <ul>
@@ -435,7 +446,7 @@
             </fieldset>
         </form>
         <p><strong>Second form:</strong></p>
-        <form class="example15">
+        <form class="example15" method="post">
             <h1>Search value</h1>
             <p>
                 <label for="search">Search: </label>
@@ -443,7 +454,7 @@
             </p>
         </form>
         <p><strong>Third form:</strong></p>
-        <form class="example16">
+        <form class="example16" method="post">
             <h1>Telephone value</h1>
             <ul>
                 <li>
@@ -456,7 +467,7 @@
             </ul>
         </form>
         <p><strong>Fourth form:</strong></p>
-        <form class="example17">
+        <form class="example17" method="post">
             <h1>Url value</h1>
             <fieldset>
                 <legend>Links of your social medias:</legend>
@@ -481,48 +492,48 @@
             </fieldset>
         </form>
         <p><strong>Fifth form:</strong></p>
-        <form class="example18">
+        <form class="example18" method="post">
             <h1>Numeric value</h1>
             <h2>Has nothing special</h2>
             <p>
                 <label for="age">How old are you?</label>
-                <input type="number" id="age">
+                <input type="number" id="age" name="user_age">
             </p>
             <h2>Has min attribute</h2>
             <p>
-                <label for="">How many do you intend to donate? (Note that it starts by 10)</label>
-                $ <input type="number" min="10">
+                <label for="min-attribute">How many do you intend to donate? (Note that it starts by 10)</label>
+                $ <input type="number" id="min-attribute" name="donate" min="10">
             </p>
             <h2>Has max attribute</h2>
             <p>
-                <label for="">How many do you intend to donate? (Note that it don't exceed 1000)</label>
-                $ <input type="number" max="1000">
+                <label for="max-attribute">How many do you intend to donate? (Note that it don't exceed 1000)</label>
+                $ <input type="number" id="max-attribute" name="donate" max="1000">
             </p>
             <h2>Step attribute equal "1"</h2>
             <p>
-                <label for="">How many do you to buy? (Note that it will only accept entire numbers.</label>
-                <input type="number">
+                <label for="step-attribute">How many do you to buy? (Note that it will only accept entire numbers.</label>
+                <input type="number" id="step-attribute" name="amount">
             </p>
             <h2>Step attribute equal "any" and utilization of max and min attribute</h2>
             <p>
-                <label for="">Math test grade:</label>
-                <input type="number" min="0" max="10" step="any">
+                <label for="step-attribute2">Math test grade:</label>
+                <input type="number" id="step-attribute2" name="math_grade" min="0" max="10" step="any">
             </p>
             <h2>Step attribute equal "0.1" and utilization of max and min attribute</h2>
             <p>
-                <label for="">Define the interest rate (number between 0 - 1)</label>
-                <input type="number" min="0" max="1" step="0.1">
+                <label for="step-max-min">Define the interest rate (number between 0 - 1)</label>
+                <input type="number" id="step-max-min" name="interest_rate" min="0" max="1" step="0.1">
             </p>
             <p>
                 <input type="submit" value="Send now">
             </p>
         </form>
         <p><strong>Sixth form:</strong></p>
-        <form action="" class="example19">
+        <form action="" class="example19" method="post">
             <h1>Range value</h1>
             <p>
-                <label for="">How much did you like the ux?</label>
-                0 <input type="range" min="0" max="10"> 10
+                <label for="ux-satisfaction-rate">How much did you like the ux?</label>
+                0 <input type="range" name="ux_satisfaction_rate" min="0" max="10"> 10
             </p>
             <p>
                 <input type="submit" value="Send now">
@@ -530,62 +541,62 @@
         </form>
         <p><span class="seeya">Come back here after study JavaScript to learn how to make the slider show the actual value.</span></p>
         <p><strong>Seventh form:</strong></p>
-        <form action="" class="example20">
+        <form action="" class="example20" method="post">
             <h1>Datetime-local attribute</h1>
             <p>
-                <label for="">Birthday date</label>
-                <input type="date">
+                <label for="birthday-date">Birthday date</label>
+                <input type="date" id="birthday-date" name="birthday_date">
             </p>
             <p>
                 <input type="submit" value="Send now">
             </p>
             <h1>Datetime-local attribute</h1>
             <p>
-                <label for="">Time and date of arrival</label>
-                <input type="datetime-local">
+                <label for="datetime-local">Time and date of arrival</label>
+                <input type="datetime-local" id="datetime-local" name="date_time_arrival">
             </p>
             <p>
                 <input type="submit" value="Send now">
             </p>
             <h1>Month attribute</h1>
             <p>
-                <label for="">Course start date</label>
-                <input type="month">
+                <label for="month-attr">Course start date</label>
+                <input type="month" id="month-attr" name="course_start_date">
             </p>
             <p>
                 <input type="submit" value="Send now">
             </p>
             <h1>Time attribute</h1>
             <p>
-                <label for="">Arrival time</label>
-                <input type="time">
+                <label for="time-attr">Arrival time</label>
+                <input type="time" id="time-attr" name="arrival_time">
             </p>
             <p>
                 <input type="submit" value="Send now">
             </p>
             <h1>Week attribute</h1>
             <p>
-                <label for="">Select your vacation week</label>
-                <input type="week">
+                <label for="week-attr">Select your vacation week</label>
+                <input type="week" id="week-attr" name="vacation_week">
             </p>
             <p>
                 <input type="submit" value="Send now">
             </p>
             <h1>Date attribute and utilization of min, max and step attribute</h1>
             <p>
-                <label for="">Select your vacation date of the current month</label>
-                <input type="date" min="2021-12-01" max="2021-12-31" step="3">
+                <label for="date-min-max-step">Select your vacation date of the current month</label>
+                <input type="date" id="date-min-max-step" name="vacation_date" min="2021-12-01" max="2021-12-31" step="3">
             </p>
             <p>
                 <input type="submit" value="Send now">
             </p>
         </form>
         <p><strong>Eighth form:</strong></p>
-        <form action="" class="example21">
+        <form action="" class="example21" method="post">
             <h1>Color value</h1>
             <p>
-                <label for="">Select your favorite color</label>
-                <input type="color">
+                <label for="color-value">Select your favorite color</label>
+                <input type="color" id="color-value" name="favorite_color">
             </p>
             <p>
                 <input type="submit" value="Send now">
@@ -598,38 +609,38 @@
         <h1>Other form controls</h1>
         <div class="examples-container">
             <p><strong>First form:</strong></p>
-            <form action="" class="example22">
+            <form action="" class="example22" method="post">
                 <section>
                     <h1>Text area tag</h1>
-                    <label for="">Try to type inside the next input</label>
-                    <textarea></textarea>
+                    <label for="textarea">Try to type inside the next input</label>
+                    <textarea id="textarea" name="textarea_example"></textarea>
                 </section>
                 <section>
                     <h2>Cols and rows attributes</h2>
-                    <label for="">Try to type inside the next input</label>
-                    <textarea cols="10" rows="10"></textarea>
+                    <label for="cols-rows">Try to type inside the next input</label>
+                    <textarea id="cols-rows" name="textarea_example2" cols="10" rows="10"></textarea>
                 </section>
                 <section>
                     <h2>Wrap equal to "soft" (default value)</h2>
-                    <label for="">Try to type inside the next input</label>
-                    <textarea cols="30" rows="20" wrap="soft"></textarea>
+                    <label for="soft-wrap">Try to type inside the next input</label>
+                    <textarea id="soft-wrap" name="textarea_example3" cols="30" rows="20" wrap="soft"></textarea>
                 </section>
                 <section>
                     <h2>Wrap equal to "hard"</h2>
-                    <label for="">Try to type inside the next input</label>
-                    <textarea cols="30" rows="20" wrap="hard"></textarea>
+                    <label for="hard-wrap">Try to type inside the next input</label>
+                    <textarea id="hard-wrap" name="textarea_example3" cols="30" rows="20" wrap="hard"></textarea>
                 </section>
                 <section>
                     <h2>Wrap equal to off</h2>
-                    <label for="">Try to type inside the next input</label>
-                    <textarea wrap="off"></textarea>
+                    <label for="off-wrap">Try to type inside the next input</label>
+                    <textarea id="off-wrap" name="textarea_example4" wrap="off"></textarea>
                 </section>
                 <p>
                     <input type="submit" value="Send now">
                 </p>
             </form>
             <p><strong>Second form:</strong></p>
-            <form action="" class="example23">
+            <form action="" class="example23" method="post">
                 <label for="js-framework">What is your favorite JavaScript framework?</label>
                 <select name="js-framework" id="js-framework">
                     <option value="notreplied" selected></option>
@@ -642,7 +653,7 @@
                 </div>
             </form>
             <p><strong>Third form:</strong></p>
-            <form action="" class="example24">
+            <form action="" class="example24" method="post">
                 <h1>Using optgroup tag</h1>
                 <h2>Without label attribute inside the optgroup tag</h2>
                 <label for="js-framework">What is your favorites frameworks?</label>
@@ -697,7 +708,7 @@
                 </div>
             </form>
             <p><strong>Fourth form</strong></p>
-            <form action="" class="example25">
+            <form action="" class="example25" method="post">
                 <h1>Multiple boolean attribute</h1>
                 <label for="js-framework">What JavaScript framework do you intend to study?</label>
                 <select name="js-framework" id="js-framework" multiple>
@@ -714,7 +725,7 @@
             <!--
                 Isn't working I don't know why
 
-            <form action="" class="example26">
+            <form action="" class="example26" method="post">
                 <h1>Autocomplete box (using datalist and list inside the input box)</h1>
                 <h2>To newer browsers</h2>
                 <label for="food">What is your favorite food?</label>
