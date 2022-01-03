@@ -77,6 +77,7 @@
             <li><span class="seeya"><a href="https://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php">Best practices for buttons</a></span></li>
             <li><span class="seeya"><a href="https://www.uxmatters.com/mt/archives/2010/03/pagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php">Multi-page forms</a></span></li>
         </ul>
+
         <h1>How to structure a web form</h1>
         <p><strong>First form:</strong></p>
         <form class="example3" action="" method="post">
@@ -240,9 +241,11 @@
             <li><span class="iwrote">Labels are so useful to acessibility;</span></li>
             <li><span class="iwrote">You can create a relations between label and a input if you nest the input inside the label tag;</span></li>
             <li><span class="iwrote">Use &lt;abbr title="required" aria-label="required"&gt;*&lt;/abbr&gt; to required fields;</span></li>
+            <li><span class="iwrote">The title value of the abbr tag will appear when it be hovered and the aria-label ensure that it will be read by screen readers;</span></li>
             <li>Lists are recommended for structuring multiple checkboxes or radio buttons;</li>
             <li>Each separate section of functionality should be contained in a separate <section> element, with &lt;fieldset&gt; elements to contain radio buttons.</li>
         </ul>
+
         <h1>Basic native form controls</h1>
         <p><strong>First form:</strong></p>
         <form class="example7" action="" method="post">
@@ -378,6 +381,7 @@
         </form>
         <p><strong>Seventh form: </strong></p>
         <form class="example12" action="" method="post">
+            <h1>It will only accept images due the accept attribute</h1>
             <input type="file" name="file" id="file" accept="image/*" multiple>
         </form>
         <p><strong>Eighth form: </strong></p>
@@ -410,6 +414,10 @@
         </form>
         <h2>Abstract and useful informations</h2>
         <ul>
+            <li>HTML form text fields are simple plain text input controls. This means that you cannot use them to perform rich text editing (bold, italic, etc.). All rich text editors you'll encounter are custom widgets created with HTML, CSS, and JavaScript;</li>
+            <li>Single line text fields have only one true constraint: if you type text with line breaks, the browser removes those line breaks before sending the data to the server;</li>
+            <li><span class="iwrote">After send a data in a password type input it will be sent in a plain text, being horrible in secure issues;</span></li>
+            <li>&lt;input&gt; only accepts plain text as content;</li>
             <li>
                 If the image button is used to submit the form, this control doesn't submit its value — instead, the X and Y coordinates of the click on the image are submitted (the coordinates are relative to the image, meaning that the upper-left corner of the image represents the coordinate (0, 0)). The coordinates are sent as two key/value pairs:
                 <ul>
@@ -419,8 +427,9 @@
             </li>
             <li>Use the boolean attribute "multiple" to allow the user to select multiple files with a file type input.</li>
             <li>On some mobile devices, the file picker can access photos, videos, and audio captured directly by the device's camera and microphone by adding capture information to the accept attribute, using some of these values "camera", "camcorder" and "microphone".</li>
-            <li>Only one form-associated element can have an autofocus boolean attribute.</li>
+            <li>Only one form-associated element can have an autofocus boolean attribute.</li>   
         </ul>
+
         <h1>The HTML5 input types</h1>
         <p><strong>First form: </strong></p>
         <p>See what happen if you don't digit a valide email and try to send it.</p>
@@ -604,8 +613,16 @@
         </form>
         <h2>Abstract and useful informations</h2>
         <ul>
-            <li></li>
+            <li><span class="iwrote">If you use the multiple boolean attribute inside the email type input, you must to separe each email by commas;</span></li>
+            <li>Client-side validation is to easy to turn off;</li>
+            <li>The values of a search field can be automatically saved and re-used to offer auto-completion across multiple pages of the same website;</li>
+            <li><span class="seeya">How to show the slider controls value.</span></li>
         </ul>
+        <h2>Take a look later</h2>
+        <ul>
+            <li><span class="seeya"><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></span></li>
+        </ul>
+        
         <h1>Other form controls</h1>
         <div class="examples-container">
             <p><strong>First form:</strong></p>
@@ -750,7 +767,7 @@
         </div>
         <h2>Abstract and useful informations</h2>
         <ul>
-            <li></li>
+            <li>The main difference between a <textarea> and a regular single line text field is that users are allowed to include hard line breaks (i.e. pressing return) that will be included when the data is submitted;</li>
         </ul>
     </div>
 </body>

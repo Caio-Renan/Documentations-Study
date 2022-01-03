@@ -366,8 +366,17 @@ textarea {
 
 /* Seventh form */
 
+.example12 h1, .example12 h2, .example12 h3 {
+    counter-reset: none;
+}
+
+.example12 body::before, .example12 h1::before, .example12 h2::before, .example12 h3::before, .example12 h4::before {
+    counter-increment: none;
+    content: none;
+}
+
 .example12 {
-    width: 35rem;
+    width: 45rem;
 }
 
 /* Eighth form */
