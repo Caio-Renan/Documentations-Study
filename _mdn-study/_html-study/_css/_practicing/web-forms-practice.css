@@ -113,6 +113,10 @@ textarea {
     text-indent: auto;
 }
 
+.example3 fieldset {
+    padding: 2rem;
+}
+
 /* Second form and third form */
 
 .example4, .example5 {
@@ -654,7 +658,7 @@ textarea {
 
 /* First form */
 
-.example22, .example22 section, .example23, .example24, .example25 {
+.example22, .example22 section, .example23, .example24, .example25, .example26 {
     border: 1px solid gray;
     border-radius: 1rem;
     margin: 0 auto;
@@ -662,7 +666,7 @@ textarea {
     margin-bottom: 2rem;
 }
 
-.example23, .example24, .example25 {
+.example23, .example24, .example25, .example26 {
     width: 50rem;
 }
 
@@ -687,4 +691,36 @@ textarea {
     display: block;
     padding: 1rem;
     margin: 0 auto;
+}
+
+/* Progress */
+
+.container {
+    width: 30rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+.container progress {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Styling Web Forms */
+/* Legend */
+
+.example3 fieldset {
+    position: relative;
+}
+
+.example3 legend {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    border-top-left-radius: 1rem;
 }

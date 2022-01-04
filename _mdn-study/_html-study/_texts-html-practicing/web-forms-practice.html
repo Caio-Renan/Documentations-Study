@@ -739,23 +739,21 @@
                 </div>
             </form>
             <p><strong>Fifth form</strong></p>
-            <!--
-                Isn't working I don't know why
-
+           
             <form action="" class="example26" method="post">
                 <h1>Autocomplete box (using datalist and list inside the input box)</h1>
                 <h2>To newer browsers</h2>
-                <label for="food">What is your favorite food?</label>
-                <input type="text" id="food" list="food">
-                <datalist id="food">
+                <label for="favorite-suggestion">What is your favorite food?</label>
+                <input type="text" id="favorite-suggestion" list="food2">
+                <datalist id="food2">
                     <option value="Pizza">Pizza</option>
                     <option value="Noodle">Noodle</option>
                     <option value="Spaghetti">Spaghetti</option>
                 </datalist>
                 <h2>To older browser</h2>
-                <label for="food-suggestion">What is your favorite food?</label>
-                <input type="text" id="food-suggestion" list="food">
-                <datalist>
+                <label for="food-suggestion2">What is your favorite food?</label>
+                <input type="text" id="food-suggestion2" list="food3">
+                <datalist id="food3">
                     <label for="">What is your </label>
                     <input type="text">
                     <option>Pizza</option>
@@ -763,11 +761,34 @@
                     <option>Spaghetti</option>
                 </datalist>
             </form>
-            -->
+           
+            <h2>Progress bar</h2>
+            <div class="container">
+                <progress></progress>
+            </div>
+            <div class="container">
+                <h3>60%</h3>
+                <progress max="100" value="60">60/100</progress>
+            </div>
         </div>
         <h2>Abstract and useful informations</h2>
         <ul>
-            <li>The main difference between a <textarea> and a regular single line text field is that users are allowed to include hard line breaks (i.e. pressing return) that will be included when the data is submitted;</li>
+            <li>The main difference between a &lt;textarea&gt; and a regular single line text field is that users are allowed to include hard line breaks (i.e. pressing return) that will be included when the data is submitted;</li>
+            <li>The soft value (default), means the text submitted is not wrapped but the text rendered by the browser is wrapped. The hard value, which means both the submitted and rendered texts are wrapped;</li>
+            <li>When you are using options tags you can use the value attribute to make the selected option to be sent in a shorted or different word;</li>
+            <li>When you are using datalists you must match the list attribute value inside the input element and the datalist id;</li>
+            <li>The content inside the &lt;progress&gt; element is a fallback for browsers that don't support the element and for screen readers to vocalize it;</li>
+            <li><span class="seeya">How to use &lt;meter&gt; to change color according to progress, etc.</span></li>
+        </ul>
+
+        <h1>Styling web forms</h1>
+        <h2>Abstract and useful informations</h2>
+        <ul>
+            <li></li>
+        </ul>
+        <h2>Take a look later</h2>
+        <ul>
+            <li><span class="seeya"><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></span></li>
         </ul>
     </div>
 </body>
