@@ -243,7 +243,7 @@
             <li><span class="iwrote">Use &lt;abbr title="required" aria-label="required"&gt;*&lt;/abbr&gt; to required fields;</span></li>
             <li><span class="iwrote">The title value of the abbr tag will appear when it be hovered and the aria-label ensure that it will be read by screen readers;</span></li>
             <li>Lists are recommended for structuring multiple checkboxes or radio buttons;</li>
-            <li>Each separate section of functionality should be contained in a separate <section> element, with &lt;fieldset&gt; elements to contain radio buttons.</li>
+            <li>Each separate section of functionality should be contained in a separate &lt;section&gt; element, with &lt;fieldset&gt; elements to contain radio buttons.</li>
         </ul>
 
         <h1>Basic native form controls</h1>
@@ -782,6 +782,93 @@
         </ul>
 
         <h1>Styling web forms</h1>
+        <div class="examples-container">
+            <p><strong>First form:</strong></p>
+            <form action="" method="post" class="example27">
+                <h1>Registration form</h1>
+                <fieldset>
+                    <legend>Personal information</legend>
+                    <label for="name2">Your name:</label>
+                    <input type="text" id="name2" name="user_name">
+                    <label for="age2">Age:</label>
+                    <input type="number" id="age2" name="user_age">
+                    <label for="message2">Let a message for us:</label>
+                    <textarea name="message2" id="message2"></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Your preferences</legend>
+                    <h2>How much do you like these frameworks:</h2>
+                    <fieldset>
+                        <legend>CSS frameworks</legend>
+                        <label for="semantic-ui2">Semantic UI</label>
+                        0 <input type="range" id="semantic-ui2" name="semantic_ui2"> 10
+                        <label for="pure2">Pure</label>
+                        0 <input type="range" id="pure2" name="pure2"> 10
+                        <label for="miligram2">Miligram</label>
+                        0 <input type="range" id="miligram2" name="miligram2"> 10
+                    </fieldset>
+                    <fieldset>
+                        <legend>JavaScript frameworks</legend>
+                        <label for="bootstrap2">Bootstrap</label>
+                        0 <input type="range" id="bootstrap2" name="bootstrap2"> 10
+                        <label for="angularjs2">AngularJS</label>
+                        0 <input type="range" id="angularjs2" name="angularjs2"> 10
+                        <label for="emberjs2">Ember.js</label>
+                        0 <input type="range" id="emberjs2" name="emberjs2"> 10
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                    <legend>Planning</legend>
+                    <fieldset>
+                        <legend>Choose all the frameworks do you intend to learn</legend>
+                        <fieldset>
+                            <legend>CSS frameworks</legend>
+                            <input type="checkbox" id="semantic-ui-intention" name="css-framework_intention">
+                            <label for="semantic-ui-intention">Semantic UI</label>
+                            <input type="checkbox" id="pure-intention" name="css-framework_intention">
+                            <label for="pure-intention">Pure</label>
+                            <input type="checkbox" id="miligram-intention" name="css-framework_intention">
+                            <label for="miligram-intention">Miligram</label> 
+                        </fieldset>
+                        <fieldset>
+                            <legend>JavaScript frameworks</legend>
+                            <input type="checkbox" id="bootstrap-intention" name="js-framework_intention" value="Bootstrap">
+                            <label for="bootstrap-intention">Bootstrap</label>
+                            <input type="checkbox" id="angularjs-intention" name="js-framework_intention" value="Angularjs">
+                            <label for="angularjs-intention">AngularJS</label>  
+                            <input type="checkbox" id="ember-js-intention" name="js-framework_intention" value="Ember-js">
+                            <label for="ember-js-intention">Ember.js</label>  
+                        </fieldset>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Which JavaScript framework do you want to learn first?</legend>
+                        <fieldset>
+                            <legend>JavaScript framework</legend>
+                            <input type="radio" name="first-js-framework" id="bootstrap" value="Bootstrap">
+                            <label for="bootstrap">Bootstrap</label>
+                            <input type="radio" name="first-js-framework" id="angularjs" value="AngularJS">
+                            <label for="angularjs">AngularJS</label>  
+                            <input type="radio" name="first-js-framework" id="ember-js" value="Ember.js">
+                            <label for="ember-js">Ember.js</label>
+                            <input type="radio" name="first-js-framework" id="none" value="None">
+                            <label for="none">None of them</label>
+                        </fieldset>
+                        <legend>Which CSS framework do you want to learn first?</legend>
+                        <fieldset>
+                            <legend>CSS framework</legend>
+                            <input type="radio" name="first-css-framework" id="semantic-ui" value="Semantic-UI">
+                            <label for="semantic-ui">Semantic UI</label>
+                            <input type="radio" name="first-css-framework" id="pure" value="Pure">
+                            <label for="pure">Pure</label>
+                            <input type="radio" name="first-css-framework" id="miligram" value="Miligram">
+                            <label for="miligram">Miligram</label>
+                            <input type="radio" name="first-css-framework" id="none" value="None">
+                            <label for="none">None of them</label>
+                        </fieldset>
+                    </fieldset>
+                </fieldset>
+            </form>
+        </div>
         <h2>Abstract and useful informations</h2>
         <ul>
             <li></li>

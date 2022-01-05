@@ -724,3 +724,16 @@ textarea {
     color: white;
     border-top-left-radius: 1rem;
 }
+
+.example27 {
+    display: block;
+    margin: 0 auto;
+    width: 80rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+}
+
+.example27 fieldset {
+    width: 60rem;
+    margin: 2rem auto;
+}
