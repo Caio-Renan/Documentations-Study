@@ -728,12 +728,98 @@ textarea {
 .example27 {
     display: block;
     margin: 0 auto;
-    width: 80rem;
+    width: 70rem;
     border: 1px solid gray;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.example27 ul, .example27 li {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.example27 li {
+    display: block;
+    list-style-type: none;
+    margin: 2rem 0;
+}
+
+.personal-information, .your-preferences, .planning, .talk-to-us {
+    position: relative;
+    width: 60rem;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.personal-information > legend, .your-preferences > legend, .planning > legend, .talk-to-us > legend, .css-fw-preferences > legend, .js-fw-preferences > legend, .css-fw-intention > legend, .js-fw-intention > legend, .first-css-fw > legend, .first-js-fw > legend {
+    position: absolute;
+    background-color: rgba(110,123,251,1);
+    color: white;
+    padding: 0.5rem;
+}
+
+.personal-information > legend, .your-preferences > legend, .planning > legend, .talk-to-us > legend {
+    top: -1px;
+    left: -1px;
+    border-bottom-right-radius: 1rem;
+}
+
+.css-fw-preferences > legend, .js-fw-preferences > legend, .css-fw-intention > legend, .js-fw-intention > legend, .first-css-fw > legend, .first-js-fw > legend {
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 1rem;
+}
+
+.framework-intention, first-framework {
     border-radius: 1rem;
 }
 
-.example27 fieldset {
-    width: 60rem;
+.css-fw-intention, .js-fw-intention, .css-fw-preferences, .js-fw-preferences, .first-css-fw, .first-js-fw {
+    border-radius: 1rem 1rem 0 1rem;
+}
+
+.personal-information, .your-preferences, .planning, .talk-to-us {
+    border-radius: 0 1rem 1rem 1rem;
+}
+
+.framework-intention, .first-framework {
+    width: 45rem;
+    padding: 2rem;
     margin: 2rem auto;
+}
+
+.css-fw-preferences, .js-fw-preferences, .css-fw-intention, .js-fw-intention, .first-css-fw, .first-js-fw {
+    padding: 4rem 2rem;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.css-fw-preferences, .js-fw-preferences {
+    width: 35rem;
+}
+
+.your-preferences label {
+    display: inline-block;
+    width: 15rem;
+}
+
+.personal-information label {
+    display: inline-block;
+    width: 15rem;
+}
+
+.personal-information input {
+    width: 25rem;
+}
+
+.example27 .personal-information [id="age2"] {
+    width: 5rem;
+}
+
+.example27 button {
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
 }

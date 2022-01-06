@@ -786,42 +786,66 @@
             <p><strong>First form:</strong></p>
             <form action="" method="post" class="example27">
                 <h1>Registration form</h1>
-                <fieldset>
+                <fieldset class="personal-information">
                     <legend>Personal information</legend>
-                    <label for="name2">Your name:</label>
-                    <input type="text" id="name2" name="user_name">
-                    <label for="age2">Age:</label>
-                    <input type="number" id="age2" name="user_age">
-                    <label for="message2">Let a message for us:</label>
-                    <textarea name="message2" id="message2"></textarea>
+                    <ul>
+                        <li>
+                            <label for="name2">Your name:</label>
+                            <input type="text" id="name2" name="user_name">
+                        </li>
+                        <li>
+                            <label for="age2">Age:</label>
+                            <input type="number" id="age2" min="1" max="130" name="user_age">
+                        </li>
+                        <li>
+                            <label for="email2">Email:</label>
+                            <input type="email" id="email2" name="user_email">
+                        </li>
+                    </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class="your-preferences">
                     <legend>Your preferences</legend>
                     <h2>How much do you like these frameworks:</h2>
-                    <fieldset>
+                    <fieldset class="css-fw-preferences">
                         <legend>CSS frameworks</legend>
-                        <label for="semantic-ui2">Semantic UI</label>
-                        0 <input type="range" id="semantic-ui2" name="semantic_ui2"> 10
-                        <label for="pure2">Pure</label>
-                        0 <input type="range" id="pure2" name="pure2"> 10
-                        <label for="miligram2">Miligram</label>
-                        0 <input type="range" id="miligram2" name="miligram2"> 10
+                        <ul>
+                            <li>
+                                <label for="semantic-ui2">Semantic UI:</label>
+                                0 <input type="range" id="semantic-ui2" name="semantic_ui_preference"> 10
+                            </li>
+                            <li>
+                                <label for="pure2">Pure:</label>
+                                0 <input type="range" id="pure2" name="pure_preference"> 10
+                            </li>
+                            <li>
+                                <label for="miligram2">Miligram:</label>
+                                0 <input type="range" id="miligram2" name="miligram_preference"> 10
+                            </li>
+                        </ul>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="js-fw-preferences">
                         <legend>JavaScript frameworks</legend>
-                        <label for="bootstrap2">Bootstrap</label>
-                        0 <input type="range" id="bootstrap2" name="bootstrap2"> 10
-                        <label for="angularjs2">AngularJS</label>
-                        0 <input type="range" id="angularjs2" name="angularjs2"> 10
-                        <label for="emberjs2">Ember.js</label>
-                        0 <input type="range" id="emberjs2" name="emberjs2"> 10
+                        <ul>
+                            <li>
+                                <label for="bootstrap2">Bootstrap:</label>
+                                0 <input type="range" id="bootstrap2" name="bootstrap_preference"> 10
+                            </li>
+                            <li>
+                                <label for="angularjs2">AngularJS:</label>
+                                0 <input type="range" id="angularjs2" name="angularjs_preference"> 10
+                            </li>
+                            <li>
+                                <label for="emberjs2">Ember.js:</label>
+                                0 <input type="range" id="emberjs2" name="emberjs_preference"> 10
+                            </li>
+                        </ul>
                     </fieldset>
                 </fieldset>
-                <fieldset>
+                <fieldset class="planning">
                     <legend>Planning</legend>
-                    <fieldset>
+                    <fieldset class="framework-intention">
                         <legend>Choose all the frameworks do you intend to learn</legend>
-                        <fieldset>
+                        <fieldset class="css-fw-intention">
                             <legend>CSS frameworks</legend>
                             <input type="checkbox" id="semantic-ui-intention" name="css-framework_intention">
                             <label for="semantic-ui-intention">Semantic UI</label>
@@ -830,7 +854,7 @@
                             <input type="checkbox" id="miligram-intention" name="css-framework_intention">
                             <label for="miligram-intention">Miligram</label> 
                         </fieldset>
-                        <fieldset>
+                        <fieldset class="js-fw-intention">
                             <legend>JavaScript frameworks</legend>
                             <input type="checkbox" id="bootstrap-intention" name="js-framework_intention" value="Bootstrap">
                             <label for="bootstrap-intention">Bootstrap</label>
@@ -840,21 +864,9 @@
                             <label for="ember-js-intention">Ember.js</label>  
                         </fieldset>
                     </fieldset>
-                    <fieldset>
-                        <legend>Which JavaScript framework do you want to learn first?</legend>
-                        <fieldset>
-                            <legend>JavaScript framework</legend>
-                            <input type="radio" name="first-js-framework" id="bootstrap" value="Bootstrap">
-                            <label for="bootstrap">Bootstrap</label>
-                            <input type="radio" name="first-js-framework" id="angularjs" value="AngularJS">
-                            <label for="angularjs">AngularJS</label>  
-                            <input type="radio" name="first-js-framework" id="ember-js" value="Ember.js">
-                            <label for="ember-js">Ember.js</label>
-                            <input type="radio" name="first-js-framework" id="none" value="None">
-                            <label for="none">None of them</label>
-                        </fieldset>
-                        <legend>Which CSS framework do you want to learn first?</legend>
-                        <fieldset>
+                    <fieldset class="first-framework">
+                        <legend>Which framework do you want to learn first?</legend>
+                        <fieldset class="first-css-fw">
                             <legend>CSS framework</legend>
                             <input type="radio" name="first-css-framework" id="semantic-ui" value="Semantic-UI">
                             <label for="semantic-ui">Semantic UI</label>
@@ -863,10 +875,33 @@
                             <input type="radio" name="first-css-framework" id="miligram" value="Miligram">
                             <label for="miligram">Miligram</label>
                             <input type="radio" name="first-css-framework" id="none" value="None">
-                            <label for="none">None of them</label>
+                            <label for="none">None</label>
+                        </fieldset>
+                        <fieldset class="first-js-fw">
+                            <legend>JavaScript framework</legend>
+                            <input type="radio" name="first-js-framework" id="bootstrap" value="Bootstrap">
+                            <label for="bootstrap">Bootstrap</label>
+                            <input type="radio" name="first-js-framework" id="angularjs" value="AngularJS">
+                            <label for="angularjs">AngularJS</label>  
+                            <input type="radio" name="first-js-framework" id="ember-js" value="Ember.js">
+                            <label for="ember-js">Ember.js</label>
+                            <input type="radio" name="first-js-framework" id="none" value="None">
+                            <label for="none">None</label>
                         </fieldset>
                     </fieldset>
                 </fieldset>
+                <fieldset class="talk-to-us">
+                    <legend>Talk to us</legend>
+                    <ul>
+                        <li>
+                            <label for="message2">Let a message for us:</label>
+                            <textarea name="message2" id="message2"></textarea>
+                        </li>
+                    </ul>
+                </fieldset>
+                <div class="button2">
+                    <button type="submit">Send now</button>
+                </div>
             </form>
         </div>
         <h2>Abstract and useful informations</h2>
