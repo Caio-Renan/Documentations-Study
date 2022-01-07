@@ -822,4 +822,83 @@ textarea {
     display: block;
     padding: 1rem;
     margin: 0 auto;
+    cursor: pointer;
+}
+
+.example27 input, .example27 textarea, .example27 button {
+    box-sizing: border-box;
+}
+
+.example27 input[type="text"], .example27 input[type="radio"], .example27 input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.example27 textarea {
+    overflow: auto;
+    padding: 1rem;
+}
+
+.your-preferences input {
+    border: 1px solid rgba(110,123,251,1);
+    border-radius: 10px;
+    padding: 0.2rem;
+}
+
+.example27 input[type="checkbox"] {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: -0.5rem;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+}
+
+.example27 input[type="checkbox"]::before {
+    content: "✔";
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    right: 2px;
+    visibility: hidden;
+    color: rgba(110,123,251,1);
+}
+
+.example27 input[type="checkbox"]:checked {
+    border: 1px solid rgba(110,123,251,1);
+}
+
+.example27 input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+
+.example27 input[type="checkbox"]:disabled {
+    border-color: black;
+    background: #ddd;
+    color: gray;
+}
+
+.example27 input[type="radio"] {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid gray;
+    vertical-align: -0.1rem;
+    border-radius: 50%;
+}
+
+.example27 input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    width: 1.1rem;
+    height: 1.1rem;
+    bottom: 1px;
+    right: 1px;
+    border-radius: 50%;
+    background-color: rgba(110,123,251,1);
+    visibility: hidden;
+}
+
+.example27 input[type="radio"]:checked::before {
+    visibility: visible;
 }
