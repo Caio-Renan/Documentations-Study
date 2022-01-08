@@ -755,7 +755,7 @@ textarea {
 
 .personal-information > legend, .your-preferences > legend, .planning > legend, .talk-to-us > legend, .css-fw-preferences > legend, .js-fw-preferences > legend, .css-fw-intention > legend, .js-fw-intention > legend, .first-css-fw > legend, .first-js-fw > legend {
     position: absolute;
-    background-color: rgba(110,123,251,1);
+    background: linear-gradient(135deg, #8360c3, #2ebf91);
     color: white;
     padding: 0.5rem;
 }
@@ -840,7 +840,7 @@ textarea {
 }
 
 .your-preferences input {
-    border: 1px solid rgba(110,123,251,1);
+    border: 1px solid #8360c3;
     border-radius: 10px;
     padding: 0.2rem;
 }
@@ -861,11 +861,11 @@ textarea {
     bottom: 0;
     right: 2px;
     visibility: hidden;
-    color: rgba(110,123,251,1);
+    color: #8360c3;
 }
 
 .example27 input[type="checkbox"]:checked {
-    border: 1px solid rgba(110,123,251,1);
+    border: 1px solid #8360c3;
 }
 
 .example27 input[type="checkbox"]:checked::before {
@@ -895,10 +895,58 @@ textarea {
     bottom: 1px;
     right: 1px;
     border-radius: 50%;
-    background-color: rgba(110,123,251,1);
+    background-color: #8360c3;
     visibility: hidden;
 }
 
 .example27 input[type="radio"]:checked::before {
     visibility: visible;
+}
+
+.example27 input[type="file"] {
+    visibility: hidden;
+    /* MDM recommendation
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    */
+}
+
+.example27 label[for="profile-picture"] {
+    display: block;
+    box-shadow: 1px 1px 3px #ccc;
+    background: linear-gradient(135deg, #8360c3, #2ebf91);
+    color: white;
+    padding: 1rem 0;
+    width: 25rem;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.example27 label[for="profile-picture"]:hover {
+    background: linear-gradient(to left, #8360c3, #2ebf91);
+}
+
+.example27 select {
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0.2rem 2rem;
+    
+}
+
+.select {
+    position: relative;
+    width: fit-content;
+}
+
+.example27 .select::after {
+    display: block;
+    position: absolute;
+    content: "▼";
+    height: 1rem;
+    width: 1rem;
+    font-size: 1rem;
+    top: 5px;
+    right: 5px;
 }
