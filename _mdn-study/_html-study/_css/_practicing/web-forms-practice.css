@@ -553,6 +553,7 @@ textarea {
 
 .example17 input {
     width: 35rem;
+    padding: 0.3rem 0.6rem;
 }
 
 .example17 p {
@@ -812,10 +813,11 @@ textarea {
 
 .personal-information input {
     width: 25rem;
+    margin: 0.5rem 0;
 }
 
 .example27 .personal-information [id="age2"] {
-    width: 5rem;
+    width: 25rem;
 }
 
 .example27 button {
@@ -949,4 +951,69 @@ textarea {
     font-size: 1rem;
     top: 5px;
     right: 5px;
+}
+
+.example17 input:required {
+    border: 1px solid black;
+}
+
+.example17 input:optional {
+    border: 1px solid silver;
+}
+
+.example17 span  {
+    position: relative;
+}
+
+.example17 input:required + span::after {
+    position: absolute;
+    content:"Required";
+    padding: 0.1rem 1.5rem;
+    top: -3.1rem;
+    right: 0;
+    background-color: black;
+    color: white;
+}
+
+.example17 input:invalid {
+    border: 1px solid red;
+}
+
+.example17 input:invalid + span::before {
+    position: absolute;
+    content: "✖";
+    color: red;
+    right: -2rem;
+}
+
+.example17 input:valid + span::before {
+    position: absolute;
+    content: "✓";
+    color: green;
+    right: -2rem;
+}
+
+.personal-information span {
+    position: relative;
+}
+
+.personal-information span::after {
+    position: absolute;
+    padding: 0.1rem 1.5rem;
+    font-size: 1.2rem;
+    top: -2.5rem;
+    right: 0;
+}
+
+.personal-information input:required + span::after {
+    background-color: black;
+    color: white;
+    content: "Required"
+}
+
+.personal-information input:out-of-range + span::after {
+    background-color: red;
+    color: white;
+    content: "Outside allowable value range";
+    width: 24rem;
 }

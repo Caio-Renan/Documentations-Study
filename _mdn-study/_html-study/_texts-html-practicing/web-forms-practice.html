@@ -483,15 +483,17 @@
                 <ul>
                     <li>
                         <label for="url">LinkedIn: </label>
-                        <input type="url" id="url" name="linkedin">
+                        <input type="url" id="url" name="linkedin" required>
+                        <span></span>
                     </li>
                     <li>
                         <label for="url">Instagram: </label>
-                        <input type="url" id="url" name="instagram">
+                        <input type="url" id="url" name="instagram" optional>
                     </li>
                     <li>
                         <label for="url">GitHub</label>
-                        <input type="url" id="url" name="github">
+                        <input type="url" id="url" name="github" required>
+                        <span></span>
                     </li>
                 </ul>
                 <p>
@@ -791,15 +793,16 @@
                     <ul>
                         <li>
                             <label for="name2">Your name:</label>
-                            <input type="text" id="name2" name="user_name">
+                            <input type="text" id="name2" name="user_name" required>
                         </li>
                         <li>
-                            <label for="age2">Age:</label>
-                            <input type="number" id="age2" min="1" max="130" name="user_age">
+                            <label for="age2">Age (must be 12+)::</label>
+                            <input type="number" id="age2" min="12" max="130" name="user_age" required>
+                            <span></span>
                         </li>
                         <li>
                             <label for="email2">Email:</label>
-                            <input type="email" id="email2" name="user_email">
+                            <input type="email" id="email2" name="user_email" required>
                         </li>
                         <li>
                             <label for="profile-picture">Send your profile picture</label>
